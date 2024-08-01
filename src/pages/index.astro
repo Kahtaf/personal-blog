@@ -8,18 +8,22 @@ import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
 
 const blog = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
+  .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
 const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
+  .filter((project) => !project.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
+  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
 const allwork = (await getCollection("work"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
-  .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
+  .sort(
+    (a, b) =>
+      new Date(b.data.dateStart).valueOf() -
+      new Date(a.data.dateStart).valueOf()
+  )
+  .slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
 
 const work = await Promise.all(
   allwork.map(async (item) => {
@@ -27,57 +31,123 @@ const work = await Promise.all(
     return { ...item, Content };
   })
 );
-
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Nano <span class="text-xl">👋🏻</span> 
+      Hey, I'm Kahtaf <span class="text-xl">👋🏻</span>
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I am a minimal, seo friendly, accessible portfolio and blog for developers. 
-            I am an even more lightweight version of my popular theme
-            <Link href="https://github.com/markhorn-dev/astro-sphere" aria-label="Astro Sphere on Github" external>
-              Astro Sphere
-            </Link>.
-            I have a lighthouse scores of 100 across the board for performance, 
-            accesibility, best practices and SEO.
-          </p>
-          <p class="animate">
-            I come packed with full type safety, a sitemap, an rss feed, markdown 
-            and mdx support (use components in your markdown) through astro integrations.
-            I am styled with tailwind and come preconfigured with light, dark and 
-            system/os theme preferences out of the box.
-          </p>
-          <p class="animate">
-            Visit
-            <Link href="https://github.com/markhorn-dev/astro-nano" aria-label="Astro Nano on Github" external>
-              Astro Nano on Github
-            </Link>
-            to fork the repository, read the docs or one-click deploy on Vercel or Netlify. 
+            I'm a software engineer from Toronto currently exploring innovations
+            in security, data privacy and AI. I specialize in leading
+            engineering teams to craft high quality products.
           </p>
         </article>
       </section>
 
       <section class="animate space-y-6">
+        <h5 class="font-semibold text-black dark:text-white">
+          Notable Achievements
+        </h5>
+        <article class="space-y-4">
+          <ul class="animate list-disc">
+            <li>
+              <p>
+                Invented a <Link
+                  href={"https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11831407"}
+                  external
+                  aria-label={`Non-custodial Techniques for Data Encryption and Decryption`}
+                >
+                  few
+                </Link>
+                <Link
+                  href={"https://ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12047496"}
+                  external
+                  aria-label={`Non-custodial Techniques for Granular Encryption and Decryption`}
+                >
+                  patents
+                </Link> around securing data non-custodially
+              </p>
+            </li>
+            <li>
+              <p>
+                Drove the development behind <Link
+                  href={"https://docs.vana.org/api/api-authentication/authorization"}
+                  external
+                  aria-label={`Non-custodial Techniques for Data Encryption and Decryption`}
+                >
+                  Vana's authentication system
+                </Link>, empowering secure login for thousands across various
+                partnering applications
+              </p>
+            </li>
+            <li>
+              <p>
+                Led the engineering team behind <Link
+                  href={"https://www.rdatadao.org/"}
+                  external
+                  aria-label={`Reddit Data DAO`}
+                >
+                  r/datadao
+                </Link>, the world's first Data DAO, featured in <Link
+                  href={"https://techcrunch.com/2024/04/13/vana-plans-to-let-users-rent-out-their-reddit-data-to-train-ai/"}
+                  external
+                  aria-label={`Vana plans to let users rent out their Reddit data to train AI`}
+                >
+                  TechCrunch
+                </Link>
+              </p>
+            </li>
+            <li>
+              <p>
+                Founder of <Link
+                  href={"https://bitspice.net/"}
+                  external
+                  aria-label={`BitSpice Software Studio`}
+                >
+                  BitSpice
+                </Link>, a software studio focused on building experiences that
+                showcase digital craftsmanship
+              </p>
+            </li>
+            <li>
+              <p>
+                Built an Android <Link
+                  href={"https://play.google.com/store/apps/details?id=com.bitspice.automate"}
+                  external
+                  aria-label={`AutoMate - Car Dashboard`}
+                >
+                  app
+                </Link> with 1M+ downloads, featured on <Link
+                  href={"https://lifehacker.com/automate-turns-your-phone-into-an-android-auto-style-da-1695925050"}
+                  external
+                  aria-label={`AutoMate - Car Dashboard`}
+                >
+                  Lifehacker
+                </Link>
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
-          </h5>
-          <Link href="/blog">
-            See all posts
-          </Link>
+          <h5 class="font-semibold text-black dark:text-white">Latest posts</h5>
+          <Link href="/blog"> See all posts </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
-          ))}
+          {
+            blog.map((post) => (
+              <li>
+                <ArrowCard entry={post} />
+              </li>
+            ))
+          }
         </ul>
       </section>
 
@@ -86,27 +156,25 @@ const work = await Promise.all(
           <h5 class="font-semibold text-black dark:text-white">
             Work Experience
           </h5>
-          <Link href="/work">
-            See all work
-          </Link>
+          <Link href="/work"> See all work </Link>
         </div>
         <ul class="flex flex-col space-y-4">
-          {work.map(entry => (
-            <li>
-              <div class="text-sm opacity-75">
-                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-              </div>
-              <div class="font-semibold text-black dark:text-white">
-                {entry.data.company}
-              </div>
-              <div class="text-sm opacity-75">
-                {entry.data.role}
-              </div>
-              <article>
-                <entry.Content />
-              </article>
-            </li>
-          ))}
+          {
+            work.map((entry) => (
+              <li>
+                <div class="text-sm opacity-75">
+                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+                </div>
+                <div class="font-semibold text-black dark:text-white">
+                  {entry.data.company}
+                </div>
+                <div class="text-sm opacity-75">{entry.data.role}</div>
+                <article>
+                  <entry.Content />
+                </article>
+              </li>
+            ))
+          }
         </ul>
       </section>
 
@@ -115,40 +183,47 @@ const work = await Promise.all(
           <h5 class="font-semibold text-black dark:text-white">
             Recent projects
           </h5>
-          <Link href="/projects">
-            See all projects
-          </Link>
+          <Link href="/projects"> See all projects </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {projects.map(project => (
-            <li>
-              <ArrowCard entry={project} />
-            </li>
-          ))}
+          {
+            projects.map((project) => (
+              <li>
+                <ArrowCard entry={project} />
+              </li>
+            ))
+          }
         </ul>
       </section>
 
       <section class="animate space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
-          Let's Connect
-        </h5>
+        <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
         <article>
           <p>
-            If you want to get in touch with me about something or just to say hi,
-            reach out on social media or send me an email.
+            If you want to get in touch with me about something or just to say
+            hi, reach out on social media or send me an email.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
-          {SOCIALS.map(SOCIAL => (
-            <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
-              </Link>
-              {"/"}
-            </li>
-          ))}
+          {
+            SOCIALS.map((SOCIAL) => (
+              <li class="flex gap-x-2 text-nowrap">
+                <Link
+                  href={SOCIAL.HREF}
+                  external
+                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                >
+                  {SOCIAL.NAME}
+                </Link>
+                {"/"}
+              </li>
+            ))
+          }
           <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+            <Link
+              href={`mailto:${SITE.EMAIL}`}
+              aria-label={`Email ${SITE.NAME}`}
+            >
               {SITE.EMAIL}
             </Link>
           </li>
