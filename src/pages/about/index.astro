@@ -2,7 +2,8 @@
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import { ABOUT } from "@consts";
-import Link from "@components/Link.astro";
+// Link intentionally not used on this page right now
+// import Link from "@components/Link.astro";
 ---
 
 <PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
@@ -15,34 +16,20 @@ import Link from "@components/Link.astro";
       <section>
         <article class="space-y-4">
           <p class="animate">
-            It's often said that it takes 10,000 hours to master a craft. Over
-            the years, I've been fortunate to dedicate significantly more time
-            than that to software engineering. While my focus has evolved
-            throughout my career, one constant has been my commitment to working
-            with emerging technologies to create high-quality products.
+            I’m a builder who cares about speed <em>and</em> correctness. My
+            default mode is: write the spec, ship a prototype, tighten the tests,
+            then iterate with real metrics (latency, cost, failures, retention).
           </p>
 
           <p class="animate">
-            I strongly believe in being proud of what you build. It's not about
-            ego, but about the satisfaction that comes from creating something
-            of lasting value and quality. Craftsmanship in software engineering
-            goes beyond functionality, it's a commitment to excellence in every
-            line of code, every user interface, and every system architecture.
-            I've even won an <Link
-              href={"https://www.instagram.com/p/B9ITGXIha1c"}
-              external
-              aria-label={`Craftsmanship award`}
-            >
-              award
-            </Link> for it.
+            I move fast, but I don’t ship garbage: clear specs, tight tests,
+            review loops, monitoring, and boring reliability.
           </p>
 
           <p class="animate">
-            I thrive on the challenge of bringing ideas to life, from concept to
-            completion. Something fun about me: over the last decade, I've
-            maintained a long list of ideas for projects to build that intrigue
-            me. Some of these ideas will never see the light of day, while
-            others have turned into products used by thousands of people.
+            I like taking an idea from 0 → production, owning the sharp edges
+            (security, privacy, scaling), and leaving behind systems people can
+            actually build on.
           </p>
         </article>
       </section>
@@ -53,36 +40,14 @@ import Link from "@components/Link.astro";
         </h5>
         <article class="space-y-4">
           <p class="animate">
-            I lead engineering at <Link
-              href={"https://vana.org"}
-              external
-              aria-label={"Vana"}
-            >
-              Vana
-            </Link>, where we are pioneering user-owned data and the AI models
-            derived from it. We built the world's first <Link
-              href={"https://rdatadao.org"}
-              external
-              aria-label={"Reddit Data DAO"}
-            >
-              Data DAO
-            </Link>, which gained over 100,000 users over a weekend. We've also
-            built an <Link
-              href={"https://github.com/vana-com/personal-server"}
-              external
-              aria-label={"Personal Server"}
-            >
-              open-source
-            </Link> personal and private AI assistant that understands your data.
+            Right now I’m a Technical Lead at OpenDataLabs, focused on
+            privacy-first data portability: writing specs, driving alignment, and
+            shipping production implementations.
           </p>
           <p class="animate">
-            Currently, we are building the first decentralized <Link
-              href={"https://satori.vana.org"}
-              external
-              aria-label={"Vana Satori Testnet"}
-            >
-              network
-            </Link> for user-owned data.
+            I tend to own the full surface area—TypeScript/Python services,
+            Postgres, and the infra edge (GCP + Cloudflare)—so things actually
+            ship and stay shipped.
           </p>
         </article>
       </section>
@@ -93,30 +58,20 @@ import Link from "@components/Link.astro";
         </h5>
         <article class="space-y-4">
           <p class="animate">
-            At <Link
-              href={"https://www.applyboard.com"}
-              external
-              aria-label={"ApplyBoard"}
-            >
-              ApplyBoard
-            </Link>, I was the tech lead for the newly formed AI team, where I
-            designed the MLOps pipeline to enable AI interactions across our
-            suite of applications.
+            Previously at Vana I led teams across backend/frontend/data/ML,
+            shipped consumer apps to 100k+ users, and built privacy-sensitive
+            platform primitives like OAuth-based permissioning.
           </p>
           <p class="animate">
-            Before then, I spent a few years consulting at <Link
-              href={"https://eviden.com/about-us/legacy-brands/appcentrica/"}
-              external
-              aria-label={"AppCentrica"}
-            >
-              AppCentrica
-            </Link> where I led the Java and AWS practices, architecting and building
-            products for small startups to large enterprises.
+            Earlier, I shipped an AI image generation product that reached 1M+
+            users, and I’ve spent years doing the unglamorous work that makes
+            systems scale: performance fixes, cost cuts (including ~90% cloud
+            spend reduction), and operational hardening.
           </p>
           <p class="animate">
-            I started my career at IBM, where I was an engineer for the
-            WebSphere Application Server team. I did my bachelors of engineering
-            at University of Toronto.
+            Before that: ApplyBoard (MLOps pipeline + production APIs),
+            AppCentrica (consulting + delivery across cloud/app stacks), and IBM
+            (WebSphere install/upgrade flows). University of Toronto alum.
           </p>
         </article>
       </section>
