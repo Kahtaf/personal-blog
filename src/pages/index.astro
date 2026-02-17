@@ -36,99 +36,96 @@ const work = await Promise.all(
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hey, I'm Kahtaf <span class="text-xl">👋🏻</span>
+      Hey, I'm Kahtaf
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I'm a software engineer from Toronto currently exploring innovations
-            in security, data privacy and AI. I specialize in leading
-            engineering teams to craft high quality products.
+            I'm a software engineer in Toronto. I lead teams at startups,
+            mostly building at the intersection of security, data privacy and AI.
+            I run a small studio on the side for ideas I can't let go of.
           </p>
         </article>
       </section>
 
       <section class="animate space-y-6">
         <h5 class="font-semibold text-black dark:text-white">
-          Notable Achievements
+          Some things I've shipped
         </h5>
         <article class="space-y-4">
           <ul class="animate list-disc">
             <li>
               <p>
-                Invented a <Link
-                  href={"https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11831407"}
-                  external
-                  aria-label={`Non-custodial Techniques for Data Encryption and Decryption`}
-                >
-                  few
-                </Link>
-                <Link
-                  href={"https://ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12047496"}
-                  external
-                  aria-label={`Non-custodial Techniques for Granular Encryption and Decryption`}
-                >
-                  patents
-                </Link> around securing data non-custodially
-              </p>
-            </li>
-            <li>
-              <p>
-                Drove the development behind <Link
-                  href={"https://docs.vana.org/api/api-authentication/authorization"}
-                  external
-                  aria-label={`Non-custodial Techniques for Data Encryption and Decryption`}
-                >
-                  Vana's authentication system
-                </Link>, empowering secure login for thousands across various
-                partnering applications
-              </p>
-            </li>
-            <li>
-              <p>
-                Led the engineering team behind <Link
-                  href={"https://www.rdatadao.org/"}
-                  external
-                  aria-label={`Reddit Data DAO`}
-                >
-                  r/datadao
-                </Link>, the world's first Data DAO, featured in <Link
-                  href={"https://techcrunch.com/2024/04/13/vana-plans-to-let-users-rent-out-their-reddit-data-to-train-ai/"}
-                  external
-                  aria-label={`Vana plans to let users rent out their Reddit data to train AI`}
-                >
-                  TechCrunch
-                </Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                Founder of <Link
-                  href={"https://bitspice.net/"}
-                  external
-                  aria-label={`BitSpice Software Studio`}
-                >
-                  BitSpice
-                </Link>, a software studio focused on building experiences that
-                showcase digital craftsmanship
-              </p>
-            </li>
-            <li>
-              <p>
                 Built an Android <Link
-                  href={"https://play.google.com/store/apps/details?id=com.bitspice.automate"}
+                  href={"https://bitspice.net/automate/"}
                   external
                   aria-label={`AutoMate - Car Dashboard`}
                 >
                   app
-                </Link> with 1M+ downloads, featured on <Link
+                </Link> that hit 1M+ downloads. <Link
                   href={"https://lifehacker.com/automate-turns-your-phone-into-an-android-auto-style-da-1695925050"}
                   external
                   aria-label={`AutoMate - Car Dashboard`}
                 >
                   Lifehacker
+                </Link> picked it up
+              </p>
+            </li>
+            <li>
+              <p>
+                Led the design and implementation of the <Link
+                  href={"https://www.binance.com/en/square/post/17605050021105/"}
+                  external
+                  aria-label={`Vana Data Portability Protocol`}
+                >
+                  Vana Data Portability Protocol
                 </Link>
+              </p>
+            </li>
+            <li>
+              <p>
+                Led the team that built <Link
+                  href={"https://www.rdatadao.org/"}
+                  external
+                  aria-label={`Reddit Data DAO`}
+                >
+                  r/datadao
+                </Link>, the first Data DAO. <Link
+                  href={"https://techcrunch.com/2024/04/13/vana-plans-to-let-users-rent-out-their-reddit-data-to-train-ai/"}
+                  external
+                  aria-label={`Vana plans to let users rent out their Reddit data to train AI`}
+                >
+                  TechCrunch
+                </Link> wrote about it
+              </p>
+            </li>
+            <li>
+              <p>
+                Hold a couple of <Link
+                  href={"/docs/patents/11831407.pdf"}
+                  external
+                  aria-label={`Non-custodial Techniques for Data Encryption and Decryption`}
+                >
+                  patents
+                </Link> on non-custodial data <Link
+                  href={"/docs/patents/12047496.pdf"}
+                  external
+                  aria-label={`Non-custodial Techniques for Granular Encryption and Decryption`}
+                >
+                  encryption
+                </Link>
+              </p>
+            </li>
+            <li>
+              <p>
+                Run <Link
+                  href={"https://bitspice.net/"}
+                  external
+                  aria-label={`BitSpice Software Studio`}
+                >
+                  BitSpice
+                </Link>, a small software studio where I build things I want to exist
               </p>
             </li>
           </ul>
@@ -165,13 +162,21 @@ const work = await Promise.all(
           {
             work.map((entry) => (
               <li>
-                <div class="text-sm opacity-75">
-                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-                </div>
                 <div class="font-semibold text-black dark:text-white">
-                  {entry.data.company}
+                  {entry.data.role}
                 </div>
-                <div class="text-sm opacity-75">{entry.data.role}</div>
+                <div class="flex justify-between">
+                  <div class="text-sm opacity-75">
+                    {entry.data.companyUrl ? (
+                      <Link href={entry.data.companyUrl} external>{entry.data.company}</Link>
+                    ) : (
+                      entry.data.company
+                    )}
+                  </div>
+                  <div class="text-sm opacity-75">
+                    {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+                  </div>
+                </div>
                 <article>
                   <entry.Content />
                 </article>
@@ -203,8 +208,7 @@ const work = await Promise.all(
         <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
         <article>
           <p>
-            If you want to get in touch with me about something or just to say
-            hi, reach out on social media or send me an email.
+            Say hi, send me a link, tell me I'm wrong about something.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
