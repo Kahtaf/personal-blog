@@ -48,6 +48,10 @@ article {
     @apply font-sans text-current underline underline-offset-2;
     @apply decoration-black/15 dark:decoration-white/30;
     @apply transition-colors duration-300 ease-in-out;
+
+    /* Mobile-friendly: allow long URLs to wrap instead of blowing up layout */
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
   article a:hover {
     @apply text-black dark:text-white;

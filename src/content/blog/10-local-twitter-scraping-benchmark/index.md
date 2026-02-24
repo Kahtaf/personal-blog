@@ -1,10 +1,10 @@
 ---
-title: "Scraping Twitter/X Locally: A Practical Benchmark of Agent Browser vs Camofox (Camoufox) vs Scrapling"
-description: "A painfully detailed experiment comparing three local scraping approaches on X: reliability, cookie/session handling, scrolling depth, and practical gotchas."
+title: "A Local Scraping Benchmark: agent-browser vs Camoufox (via camofox-browser) vs Scrapling"
+description: "A painfully detailed experiment comparing three local scraping tools on a hostile, JS-heavy target: reliability, session handling, scrolling depth, and practical gotchas."
 date: "Feb 24 2026"
 ---
 
-**TL;DR:** If you want to scrape X reliably from a local machine *without paying for the X API*, you need a real browser session plus a stealthy fingerprint. In my tests, **Camofox (Camoufox via the camofox-browser server + OpenClaw tool)** and **agent-browser (Playwright-like CLI with a storage state)** both loaded and scrolled authenticated X pages. **Scrapling** (even with the same cookies injected) consistently returned effectively empty content for X in this environment. Cookies are necessary, but not sufficient: **fingerprint and automation signals matter more than people want to admit**.
+**TL;DR:** If you want to scrape a modern, hostile, JS-heavy site locally, you need a real browser session plus a stealthy fingerprint. In my tests, **Camoufox (accessed via the `camofox-browser` server + OpenClaw `camofox_*` tools)** and **agent-browser (Playwright-like CLI with a storage state)** both loaded and scrolled authenticated pages. **Scrapling** (even with the same cookies injected) consistently returned effectively empty content for this target in this environment. Cookies are necessary, but not sufficient: **fingerprint and automation signals matter more than people want to admit**.
 
 This post is intentionally over-documented. We’ll cut it down later.
 
@@ -14,7 +14,7 @@ This post is intentionally over-documented. We’ll cut it down later.
 
 I wanted to answer one question with evidence:
 
-> If I run everything locally (no paid scraping APIs), what’s the most reliable way to scrape X/Twitter search results and timelines?
+> If I run everything locally (no paid scraping APIs), what’s the most reliable way to scrape a site like X (Twitter) that’s designed to resist automation?
 
 And a closely related question:
 
@@ -23,7 +23,7 @@ And a closely related question:
 To test that, I compared three “local scraping” approaches inside **OpenClaw**:
 
 1. **Agent Browser** (OpenClaw skill / CLI): a fast browser automation CLI with Playwright-style primitives.
-2. **Camofox (Camoufox)** via the **camofox-browser** OpenClaw plugin: a server wrapping Camoufox (a hardened Firefox build optimized for anti-bot evasion).
+2. **Camoufox (via `camofox-browser`)**: a server + OpenClaw plugin that wraps Camoufox (a hardened Firefox build optimized for anti-bot evasion). The OpenClaw tool names are `camofox_*`.
 3. **Scrapling** (Python): a scraping framework with static HTTP fetchers and browser-based dynamic fetchers.
 
 I started with Reddit as a warm-up target (because it has a nice JSON endpoint) and then moved to X, which is basically the boss fight of “scrape it like a normal web page.”
@@ -40,17 +40,17 @@ I started with Reddit as a warm-up target (because it has a nice JSON endpoint) 
 - Skill repo (OpenClaw workspace skill): `skills/agent-browser` (in my OpenClaw workspace)
 - CLI help shows Playwright-like commands: `open`, `wait`, `scroll`, `get count`, `eval`, etc.
 
-### Camofox / Camoufox
+### Camoufox vs `camofox-browser` vs OpenClaw tool names
 There are multiple similarly-named pieces here, so clarity matters:
 
-- **Camoufox** (the browser engine / stealth Firefox build)
-  - Project link referenced in the ecosystem: https://camoufox.com/
-  - GitHub (commonly referenced): https://github.com/daijro/camoufox
+- **Camoufox** (the actual browser engine; stealthy Firefox build)
+  - Project site: https://camoufox.com/
+  - GitHub: https://github.com/daijro/camoufox
 
-- **camofox-browser** (a REST API server wrapping Camoufox)
+- **`camofox-browser`** (a REST API server that wraps Camoufox)
   - GitHub: https://github.com/jo-inc/camofox-browser
 
-- In OpenClaw, the plugin exposes tools like:
+- **OpenClaw tool names** exposed by the plugin are prefixed with `camofox_` (e.g. `camofox_snapshot`, `camofox_scroll`, etc.):
   - `camofox_create_tab(url)`
   - `camofox_snapshot(tabId)`
   - `camofox_scroll(tabId, …)`
@@ -111,7 +111,10 @@ For each tool, I cared about:
 5. **Performance**: rough end-to-end time for “open → wait → count → scroll x5 → count.”
 
 ### Cookie material (sensitive)
-I used an exported Netscape-format cookie file for X.
+I used an exported **Netscape-format** cookie file for X.
+
+To export cookies, I used the Chrome extension **“Get cookies.txt locally”**:
+- https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc
 
 I’m not publishing the cookie contents (obviously). But what matters is that the same cookie material was used across tools wherever possible.
 
@@ -171,7 +174,7 @@ This indicates:
 
 ---
 
-## Part 2 — Camofox (Camoufox via camofox-browser)
+## Part 2 — Camoufox (via `camofox-browser` + OpenClaw `camofox_*` tools)
 
 ### Why I tried it
 X is extremely sensitive to automation fingerprints, and Camoufox is widely positioned as a “stealthy Firefox build” for scraping.
@@ -191,7 +194,7 @@ In my environment, the **OpenClaw gateway** and the **camofox-browser server** w
 
 So the plugin *sent* an Authorization header… but the server rejected it because the key didn’t match.
 
-Once I restarted the camofox server so it inherited the same API key as OpenClaw, cookie import worked.
+Once I restarted the `camofox-browser` server so it inherited the same API key as OpenClaw, cookie import worked.
 
 ### Confirming authenticated state
 After successful cookie import, I opened:
@@ -209,7 +212,7 @@ Using the Camoufox snapshot output, I could see the page structure including mul
 
 After scrolling, the snapshot showed deeper content (more articles), indicating infinite-scroll loading worked.
 
-### Results (Camofox/Camoufox)
+### Results (Camoufox via `camofox-browser`)
 This is not an apples-to-apples metric vs `data-testid='tweet'` counts yet.
 
 But in terms of practical outcomes:
@@ -291,7 +294,7 @@ To make Scrapling competitive on X, I likely need to:
 ### If your goal is “search X and scrape results” locally
 My current recommendation (based on the evidence above):
 
-1. **Camofox/Camoufox** for robustness (best odds against anti-bot).
+1. **Camoufox (via `camofox-browser`)** for robustness (best odds against anti-bot).
 2. **agent-browser** when you want the simplest automation API and it isn’t blocked.
 3. Treat **Scrapling** on X as “needs further tuning” rather than a drop-in solution.
 
@@ -324,18 +327,18 @@ Here’s the protocol I used (and will keep using) for apples-to-apples comparis
 
 7. Record elapsed wall-clock time.
 
-The key improvement for v2 is to make Camofox report the same metric as agent-browser.
+The key improvement for v2 is to make the Camoufox path report the same metric as agent-browser (so we’re comparing like-for-like).
 
 ---
 
 ## Practical engineering notes (what bit me)
 
 ### 1) Cookie import is a security boundary
-Camofox intentionally gates cookie injection behind an API key. That’s correct.
+`camofox-browser` intentionally gates cookie injection behind an API key. That’s correct.
 
 But it also means: **your automation can fail with a confusing 403 even when everything else is correct**.
 
-If you’re running OpenClaw + camofox-browser, make sure:
+If you’re running OpenClaw + `camofox-browser`, make sure:
 - the server and OpenClaw plugin share the same `CAMOFOX_API_KEY`
 
 ### 2) “HTTP 200” can mean “blocked”
