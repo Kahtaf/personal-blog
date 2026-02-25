@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "astro-framework": {
+      "source": "delineas/astro-framework-agents",
+      "sourceType": "github",
+      "computedHash": "2fc21d4df4196b82c97db53412f0a9a735130048fb2178d6e3552b211f93b195"
+    },
+    "humanizer": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "computedHash": "34a38e6acc60d4529612d41ffe740bca0060d3c5e89e2a0d24ae795f67157fbb"
+    },
+    "technical-blog-writing": {
+      "source": "inference-sh-8/skills",
+      "sourceType": "github",
+      "computedHash": "16fc13acf2a73e95d1bfaa4de41f0bff39712ab35a12e2cb01ec601c7601f75c"
+    }
+  }
+}
