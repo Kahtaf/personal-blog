@@ -1,10 +1,10 @@
 ---
 title: "I Benchmarked 3 Browser Automation Tools Against Sites That Don't Want to Be Scraped"
-description: "Comparing agent-browser, Camoufox, and Scrapling on X, Reddit, LinkedIn, and Instagram. Which ones get through, and how fast."
+description: "Comparing agent-browser, Camoufox, and Scrapling across three test modes: with cookies, without cookies, and headless. Only one tool survived all three."
 date: "Mar 04 2026"
 ---
 
-**TL;DR:** I tested three browser automation tools ([agent-browser](https://github.com/vercel-labs/agent-browser), [Camoufox](https://github.com/jo-inc/camofox-browser), and [Scrapling](https://github.com/D4Vinci/Scrapling)) against X, Reddit, LinkedIn, and Instagram to see which ones could reliably load pages and extract structured data without getting blocked. All three scored 100%. The difference came down to speed: agent-browser was fastest on most sites thanks to stock Chromium with no stealth overhead, Camoufox was a close second with the deepest stealth, and Scrapling was the slowest but equally reliable.
+**TL;DR:** I tested three browser automation tools ([agent-browser](https://github.com/vercel-labs/agent-browser), [Camoufox](https://github.com/jo-inc/camofox-browser), and [Scrapling](https://github.com/D4Vinci/Scrapling)) against X, Reddit, LinkedIn, and Instagram under three conditions: headed with cookies, headed without cookies, and headless with cookies. With cookies in headed mode, all three scored 100%. Remove the cookies or switch to headless and only Camoufox holds at 100%. Agent-browser drops to 60% without cookies and 13% headless. Scrapling drops to 60% in both harder modes due to intermittent navigation timeouts.
 
 ## Why this comparison
 
@@ -12,7 +12,7 @@ If you're building anything that touches the real web (monitoring, data collecti
 
 A new generation of tools has emerged to deal with this. They take different approaches: patched browser engines, custom protocols, fingerprint spoofing at the C++ level. But which ones actually work? Marketing pages will tell you they all do. I wanted numbers.
 
-So I picked three tools with fundamentally different stealth strategies and ran them against four sites that actively resist automation.
+So I picked three tools with fundamentally different stealth strategies and ran them against four sites that actively resist automation. The first round of testing (with pre-authenticated cookies) showed no differences — all three scored 100%. That prompted me to test under harder conditions: without cookies and in headless mode. That's where the real story emerged.
 
 ## The contenders
 
@@ -26,7 +26,7 @@ These sit at different points on the stealth spectrum. Agent-browser doesn't try
 
 ## What we tested
 
-Each tool hit five URLs, three times each, in headed mode:
+Each tool hit five URLs, three times each, under three different modes — 45 attempts per mode, 135 total:
 
 | Site | Page type | What we extracted |
 |------|-----------|-------------------|
@@ -36,13 +36,17 @@ Each tool hit five URLs, three times each, in headed mode:
 | [Instagram](https://www.instagram.com/instagram/) | Profile | Username, URL |
 | [example.com](https://example.com) | Control | Page title |
 
-The control site (example.com) has no anti-bot protection. If a tool fails there, the problem is setup, not detection.
+The control site (example.com) has no anti-bot protection. If a tool fails there, the problem is the tool, not detection.
+
+**The three modes:**
+
+- **Headed + cookies** — the easy test. Pre-authenticated cookies, visible browser window. Simulates a logged-in user browsing normally.
+- **Headed + no cookies** — the stealth test. No cookies, no pre-existing session. Can the tool access content unauthenticated, or does the site gate it?
+- **Headless + cookies** — the headless detection test. Cookies are present, but the browser runs headless. Can sites detect the headless environment despite having valid session cookies?
 
 For each attempt, the benchmark navigates to the URL, waits for JS rendering, captures the page HTML and screenshot, then runs a three-layer extraction pipeline (JSON-LD, Open Graph, regex fallback) to pull structured data. Extracted fields are validated against known ground truth values.
 
-## Results
-
-### Who got through
+## Results: the easy test (headed + cookies)
 
 | Tool | Sites passed (3/3) | Total attempts | Overall |
 |------|:------------------:|:--------------:|:-------:|
@@ -50,11 +54,61 @@ For each attempt, the benchmark navigates to the URL, waits for JS rendering, ca
 | **Camoufox** | **5/5** | **15/15** | **100%** |
 | **Scrapling** | **5/5** | **15/15** | **100%** |
 
-All three tools achieved perfect scores. Every site, every attempt, 100% correctness against ground truth. No tool was blocked, no data was missing. The differentiation is entirely about speed.
+All three tools achieved perfect scores. Every site, every attempt, correct data extracted. This is the baseline — it tells you that the benchmark works and the extraction pipeline is sound, but it doesn't differentiate the tools at all.
 
-### How fast
+With pre-authenticated cookies in headed mode, stealth doesn't matter. The sites see a valid session from what looks like a normal browser. Any tool can pass this test.
 
-Navigation time isolates page load and JS rendering, stripping out tool setup overhead:
+## Results: without cookies (headed + no cookies)
+
+Remove the cookies and things get interesting.
+
+| Tool | X | Reddit | LinkedIn | Instagram | Control | Total |
+|------|:-:|:------:|:--------:|:---------:|:-------:|:-----:|
+| **Camoufox** | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | **15/15 (100%)** |
+| **agent-browser** | 3/3 | 3/3 | 0/3 | 0/3 | 3/3 | **9/15 (60%)** |
+| **Scrapling** | 2/3 | 2/3 | 1/3 | 2/3 | 2/3 | **9/15 (60%)** |
+
+**Camoufox (100%)** passed every site including LinkedIn and Instagram without any cookies. Its Firefox engine and C++-level fingerprint spoofing made it indistinguishable from a regular browser, even without an authenticated session.
+
+**Agent-browser (60%)** handled X and Reddit fine (both serve public content to unauthenticated users) but crashed on LinkedIn and Instagram. The failures were `browser-closed` errors — the tool itself crashed, not an anti-bot block. LinkedIn also had one soft-block (a "Join LinkedIn" gate). The control site passed perfectly, confirming the tool works when there's no adversarial environment.
+
+**Scrapling (60%)** hit `navigation-timeout` errors intermittently across every site — including the control site (example.com). This isn't anti-bot detection; it's a reliability issue. When Scrapling didn't timeout, it extracted data correctly. But one-in-three attempts failing on a control site with no bot protection points to something in Scrapling's navigation pipeline, not in the target sites.
+
+## Results: headless mode (headless + cookies)
+
+Now give the cookies back, but switch to headless mode.
+
+| Tool | X | Reddit | LinkedIn | Instagram | Control | Total |
+|------|:-:|:------:|:--------:|:---------:|:-------:|:-----:|
+| **Camoufox** | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | **15/15 (100%)** |
+| **Scrapling** | 2/3 | 1/3 | 2/3 | 1/3 | 3/3 | **9/15 (60%)** |
+| **agent-browser** | 0/3 | 0/3 | 1/3 | 1/3 | 0/3 | **2/15 (13%)** |
+
+**Camoufox (100%)** was untouched. Headed or headless, cookies or not — it doesn't matter. 100% across all conditions.
+
+**Scrapling (60%)** showed the same timeout pattern as the no-cookies test. The control site passed 3/3 this time, but other sites had intermittent `navigation-timeout` failures. The consistency of this pattern across modes suggests it's a tool-level reliability issue rather than headless detection.
+
+**Agent-browser (13%)** nearly collapsed. It crashed with `browser-closed` errors on almost everything — including the control site (0/3 on example.com). These aren't anti-bot blocks; a site with zero bot protection shouldn't crash your tool. Agent-browser's headless mode appears to have fundamental stability issues. The two successes (one LinkedIn, one Instagram) look like lucky attempts rather than consistent behavior.
+
+## The full picture
+
+| Tool | Headed + Cookies | Headed + No Cookies | Headless + Cookies |
+|------|:----------------:|:-------------------:|:------------------:|
+| **Camoufox** | 100% | 100% | 100% |
+| **agent-browser** | 100% | 60% | 13% |
+| **Scrapling** | 100% | 60% | 60% |
+
+The pattern is clear:
+
+**Camoufox is the only tool that works under all conditions.** Whether you're running headed or headless, with cookies or without, it delivers 100%. The Firefox engine with C++-level fingerprint spoofing and the Juggler protocol (invisible to page JavaScript) gives it defenses that Chromium-based tools can't match through patches alone.
+
+**Agent-browser only works in the easiest mode.** It's fine when you hand it cookies and a headed browser — but that's the scenario where stealth doesn't matter anyway. Without cookies it crashes on hardened sites. In headless mode it crashes on everything, including a control site with no bot protection. These are tool-level stability issues, not anti-bot detection.
+
+**Scrapling has a reliability problem independent of stealth.** Its 60% score in both harder modes comes from intermittent `navigation-timeout` errors spread across all sites, including the control. When it works, it works correctly. But the timeouts are unpredictable and site-independent, suggesting an issue in Scrapling's navigation pipeline rather than in its stealth capabilities.
+
+## Speed comparison
+
+From the headed + cookies baseline where all tools succeeded, here's how fast they navigate:
 
 | Site | agent-browser | Camoufox | Scrapling |
 |------|:-------------:|:--------:|:---------:|
@@ -64,66 +118,21 @@ Navigation time isolates page load and JS rendering, stripping out tool setup ov
 | Instagram | **7.1s** | 9.8s | 15.7s |
 | Control | **6.8s** | 9.0s | 13.0s |
 
-Bold = fastest per site. Agent-browser is quickest on 4 of 5 sites, which makes sense since it's running stock Chromium with no stealth overhead. Camoufox wins on Reddit.
+Bold = fastest per site. Agent-browser is quickest on 4 of 5 sites, which makes sense since it's stock Chromium with no stealth overhead. Camoufox wins on Reddit. Scrapling is consistently 1.5-2x behind Camoufox.
 
-Scrapling is consistently the slowest, running 1.5-2x behind Camoufox across all sites. Patchright's stealth patches appear to add meaningful overhead to the Chromium startup and navigation pipeline.
-
-### What each tool actually extracted
-
-Here's the raw data from the first attempt on each site, so you can see exactly what came back.
-
-All three tools returned identical, correct data on every site. No differences worth showing per-tool.
-
-**X (Twitter),** Jack Dorsey's first tweet:
-
-| Field | Value |
-|-------|-------|
-| post_text | "just setting up my twttr" |
-| author_handle | jack |
-| timestamp | 3:50 PM - Mar 21, 2006 |
-| canonical_url | x.com/jack/status/20 |
-
-**Reddit, LinkedIn, Instagram:** all identical across tools as well.
-
-### Stability
-
-All outcomes were deterministic across 3 attempts. No flaky results. Navigation time standard deviations stayed under 1 second (median stdev: 0.17s). Anti-bot decisions appear to be fingerprint and reputation-based, not probabilistic. You either pass or you don't, and the answer doesn't change between runs.
-
-| Metric | agent-browser | Camoufox | Scrapling |
-|--------|:-------------:|:--------:|:---------:|
-| Stability score | 100% | 100% | 100% |
-| Nav time stdev (typical) | 0.04-0.14s | 0.08-0.98s | 0.03-0.21s |
-| Setup overhead | ~3.5s | ~2.5s | ~0.5s |
-
-Setup overhead covers browser launch, cookie import, and post-capture steps. Agent-browser's higher overhead comes from its CLI architecture (multiple sequential commands per attempt). Scrapling has the lowest setup cost at ~0.5s.
-
-## What the numbers mean
-
-**All three tools achieved perfect scores.** 5/5 sites, 15/15 attempts, 100% correctness. The story here isn't about which tool works. They all do. It's about speed and what you're paying for stealth.
-
-**Agent-browser is the fastest.** Stock Chromium with no stealth patches means the lowest overhead. It was quickest on 4 of 5 sites, including X. If the sites you're targeting don't actively fingerprint and block, there's no reason to add stealth complexity.
-
-**Camoufox has the deepest stealth for when you need it.** The Firefox engine with C++-level fingerprint spoofing and the Juggler protocol (invisible to page JavaScript) gives it defenses that Chromium-based tools can't match through patches alone. It's slightly slower than agent-browser but faster than Scrapling. If you're targeting sites with aggressive bot detection, this is the safest bet.
-
-**Scrapling is the reliable Chromium option.** If your workflow depends on Chrome-specific behavior or the Chromium DevTools protocol, Scrapling delivers with stealth patches included. You'll just pay a speed penalty. Navigation times run about 1.5-2x slower than Camoufox.
-
-**No site blocked any tool.** LinkedIn loads reCAPTCHA Enterprise scripts as standard page infrastructure, but this didn't translate to active blocking. Reddit and Instagram served content without challenge pages. For these four sites, stealth wasn't necessary, but that won't be true for every site you target.
-
-## Why cookies, and how we got them
-
-Every site in this benchmark requires authentication to show full content. Without cookies, X shows a login wall, Instagram redirects to a sign-in page, LinkedIn gates company pages behind "Join LinkedIn", and Reddit serves a degraded version with missing post bodies. The benchmark isn't testing whether these tools can bypass login walls. It's testing whether they can load and extract content from pages that a normal logged-in user would see.
-
-To keep things fair, all three tools got the same cookies. I logged into each site in a regular Chrome session, then exported the cookies using [Get cookies.txt locally](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc), a Chrome extension that dumps your session cookies in Netscape format (the same tab-separated `.txt` format that curl and wget understand). One file per site: `x.txt`, `reddit.txt`, `linkedin.txt`, `instagram.txt`.
-
-The benchmark loads these at startup and converts them into each tool's native cookie format before navigating. Every tool starts with an identical authenticated session, so any differences in results come from the tool itself, not from cookie handling.
+Speed matters, but only when the tool actually works. Agent-browser's speed advantage is irrelevant if it crashes in headless mode. Camoufox trades a few seconds of navigation time for the only reliable performance across all conditions.
 
 ## Methodology
 
-Each tool/site combination ran 3 attempts in headed mode (some tools, like Camoufox's cursor humanization, only work headed). The first attempt used a cold profile; subsequent ones were warm with a 2-second delay between them.
+**Test matrix:** 3 tools x 5 sites x 3 attempts x 3 modes = 135 total attempts. The first attempt used a cold browser profile; subsequent ones were warm with a 2-second delay between them.
 
-The extraction pipeline runs three layers: JSON-LD structured data, Open Graph meta tags, and regex fallback. Extracted fields are validated against ground truth (e.g., Jack's tweet text must contain "just setting up my twttr", Reddit author must be "iEslam").
+**Cookies:** All three tools got the same cookies, exported from a regular Chrome session using [Get cookies.txt locally](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) in Netscape format. One file per site. The "no cookies" mode omitted these entirely.
 
-The benchmark classifies each attempt as success, partial, blocked, timeout, or crash. Correctness is only reported for successful outcomes.
+**Extraction:** Three-layer pipeline — JSON-LD structured data, Open Graph meta tags, regex fallback. Extracted fields are validated against ground truth (e.g., Jack's tweet text must contain "just setting up my twttr", Reddit author must be "iEslam"). The benchmark classifies each attempt as success, partial, blocked, timeout, or crash.
+
+**Environment:** All tests ran from the same machine on a residential IP. No proxies, no IP rotation. This means the results reflect the tools' browser fingerprint stealth and reliability, not IP reputation. Sites with IP-level blocking (rate limiting, datacenter IP detection) would produce different results.
+
+**Sample size:** 3 attempts per tool/site/mode combination. This is sufficient to show clear pass/fail patterns — a tool either works consistently or it doesn't — but not enough for statistically significant speed comparisons. Treat the timing numbers as directional, not precise.
 
 Full benchmark code and results: [browser-automation-benchmark](https://github.com/Kahtaf/research/tree/main/browser-automation-benchmark)
 
