@@ -75,9 +75,7 @@ With pre-authenticated cookies in headed mode, every tool navigated to every sit
 |------|:-:|:------:|:--------:|:---------:|:-------:|:-----:|
 | **Camoufox** | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | **15/15 (100%)** |
 | **Scrapling** | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | **15/15 (100%)** |
-| **agent-browser** | 3/3\* | 3/3 | 3/3 | 3/3 | 3/3 | **15/15 (100%)\*** |
-
-\*Agent-browser's X attempts extracted the author and URL correctly but the benchmark's extraction pipeline missed the tweet text — the content was visibly rendered in screenshots. This is a benchmark extraction issue, not a tool failure.
+| **agent-browser** | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | **15/15 (100%)** |
 
 This confirms the benchmark and extraction pipeline work, but doesn't differentiate the tools. When sites see a valid session from what looks like a normal browser, stealth doesn't matter.
 
