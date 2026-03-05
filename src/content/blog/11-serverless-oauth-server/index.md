@@ -4,7 +4,7 @@ description: "Deploying Ory Hydra on Google Cloud Run for a fully serverless, Op
 date: "Sep 12 2024"
 ---
 
-**TL;DR:** You can run a fully serverless [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) server by deploying [Ory Hydra](https://www.ory.sh/hydra/) v2.1.2 as two Google Cloud Run services (public and admin), backed by Cloud SQL for Postgres and Doppler for secrets management. The whole setup is two 3-line Dockerfiles, one config template, and a deploy script. Full source: [vana-oauth on GitHub](https://github.com/vana-com/vana-oauth).
+**TL;DR:** You can run a fully serverless [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) server by deploying [Ory Hydra](https://www.ory.sh/hydra/) as two services on serverless infrastructure like Google Cloud Run (one public, one admin), backed by Postgres. The whole setup is two 3-line Dockerfiles, one config template, and a deploy script. Full source: [vana-oauth on GitHub](https://github.com/vana-com/vana-oauth).
 
 ## OAuth in 60 seconds
 
@@ -16,7 +16,7 @@ Managed OAuth providers like [Auth0](https://auth0.com/intro-to-iam/what-is-oaut
 
 [Ory Hydra](https://www.ory.sh/docs/hydra/) is a headless OAuth 2.0 and OpenID Connect server. It's a single Go binary, [OpenID Certified](https://openid.net/certification/), and API-driven. It handles the OAuth protocol (token issuance, client management, consent challenges) and delegates everything else (login UI, user management, consent screens) to your application through redirect-based flows.
 
-Keycloak does something similar but ships as a full identity platform with its own login pages, user database, and admin console. That's a lot of surface area when you just need the OAuth plumbing. Dex is lighter but limited to upstream identity federation; it can't act as a standalone authorization server with its own client registry.
+[Keycloak](https://www.keycloak.org/) does something similar but ships as a full identity platform with its own login pages, user database, and admin console. That's a lot of surface area when you just need the OAuth plumbing. [Dex](https://dexidp.io/) is lighter but limited to upstream identity federation; it can't act as a standalone authorization server with its own client registry.
 
 Hydra sits in between. It does one thing (OAuth/OIDC) and does it correctly, and it lets you build everything else however you want.
 
@@ -50,7 +50,7 @@ The **public** service handles user-facing OAuth flows: authorization, token exc
 
 The **admin** service handles client registration, key management, and token introspection. It's locked behind [Cloud Run IAM authentication](https://cloud.google.com/run/docs/authenticating/overview), so only service accounts with the right permissions can call it.
 
-Both services connect to the same Cloud SQL Postgres instance. Secrets (database URL, system secret, OIDC salt) live in [Doppler](https://www.doppler.com/) and get injected at deploy time.
+Both services connect to the same Cloud SQL Postgres instance. Secrets (database URL, system secret, OIDC salt) are managed by a secrets manager and injected at deploy time. (This repo uses [Doppler](https://www.doppler.com/), but any secrets manager works.)
 
 Cloud SQL works fine here but isn't serverless in the scale-to-zero sense. For a stack where the database also scales to zero, [Neon](https://neon.tech) is a better fit since it scales to zero and bills per query.
 
@@ -121,7 +121,7 @@ Subject identifiers support both `pairwise` (different subject ID per client, fo
 
 Token TTLs are set to 168 hours (7 days). That's generous, but appropriate when the OAuth server is used for first-party applications where long-lived sessions are acceptable.
 
-Every `$VARIABLE` in the template gets replaced with real values from Doppler before the config is baked into the Docker image.
+Every `$VARIABLE` in the template gets replaced with real values from the secrets manager before the config is baked into the Docker image.
 
 ## Dockerfiles
 
@@ -219,7 +219,7 @@ jobs:
         run: bash scripts/deploy-hydra.sh public ${{ env.ENVIRONMENT }}
 ```
 
-The branch name maps directly to the environment. Push to `development`, and the script deploys to the development GCP project with development secrets from Doppler. The same code path handles all three environments. Doppler and GCP credentials are stored as GitHub Actions secrets.
+The branch name maps directly to the environment. Push to `development`, and the script deploys to the development GCP project with the corresponding secrets. The same code path handles all three environments. Secrets manager and GCP credentials are stored as GitHub Actions secrets.
 
 ## The consent flow
 
