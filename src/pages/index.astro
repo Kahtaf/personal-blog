@@ -42,9 +42,10 @@ const work = await Promise.all(
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I'm a software engineer in Toronto. I lead teams at startups,
-            mostly building at the intersection of security, data privacy and AI.
-            I run a small studio on the side for ideas I can't let go of.
+            I'm a software engineer in Toronto. I lead teams at startups, mostly
+            building secure distributed systems and infrastructure for
+            user-owned data. I run a small studio on the side for ideas I can't
+            let go of.
           </p>
         </article>
       </section>
@@ -62,8 +63,9 @@ const work = await Promise.all(
                   external
                   aria-label={`AutoMate - Car Dashboard`}
                 >
-                  app
-                </Link> that hit 1M+ downloads. <Link
+                  dashboard app
+                </Link> that hit 1M+ downloads.
+                <Link
                   href={"https://lifehacker.com/automate-turns-your-phone-into-an-android-auto-style-da-1695925050"}
                   external
                   aria-label={`AutoMate - Car Dashboard`}
@@ -80,7 +82,7 @@ const work = await Promise.all(
                   aria-label={`Vana Data Portability Protocol`}
                 >
                   Vana Data Portability Protocol
-                </Link>
+                </Link>, a decentralized architecture for user-owned AI data
               </p>
             </li>
             <li>
@@ -125,7 +127,8 @@ const work = await Promise.all(
                   aria-label={`BitSpice Software Studio`}
                 >
                   BitSpice
-                </Link>, a small software studio where I build things I want to exist
+                </Link>, a small software studio where I build things I want to
+                exist
               </p>
             </li>
           </ul>
@@ -138,7 +141,7 @@ const work = await Promise.all(
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">Latest posts</h5>
-          <Link href="/blog"> See all posts </Link>
+          <Link href="/blog">See all posts</Link>
         </div>
         <ul class="flex flex-col gap-4">
           {
@@ -156,7 +159,7 @@ const work = await Promise.all(
           <h5 class="font-semibold text-black dark:text-white">
             Work Experience
           </h5>
-          <Link href="/work"> See all work </Link>
+          <Link href="/work">See all work</Link>
         </div>
         <ul class="flex flex-col space-y-4">
           {
@@ -168,7 +171,9 @@ const work = await Promise.all(
                 <div class="flex justify-between">
                   <div class="text-sm opacity-75">
                     {entry.data.companyUrl ? (
-                      <Link href={entry.data.companyUrl} external>{entry.data.company}</Link>
+                      <Link href={entry.data.companyUrl} external>
+                        {entry.data.company}
+                      </Link>
                     ) : (
                       entry.data.company
                     )}
@@ -186,32 +191,30 @@ const work = await Promise.all(
         </ul>
       </section>
 
-      {projects.length > 0 && (
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap gap-y-2 items-center justify-between">
-            <h5 class="font-semibold text-black dark:text-white">
-              Recent projects
-            </h5>
-            <Link href="/projects"> See all projects </Link>
-          </div>
-          <ul class="flex flex-col gap-4">
-            {
-              projects.map((project) => (
+      {
+        projects.length > 0 && (
+          <section class="animate space-y-6">
+            <div class="flex flex-wrap gap-y-2 items-center justify-between">
+              <h5 class="font-semibold text-black dark:text-white">
+                Recent projects
+              </h5>
+              <Link href="/projects"> See all projects </Link>
+            </div>
+            <ul class="flex flex-col gap-4">
+              {projects.map((project) => (
                 <li>
                   <ArrowCard entry={project} />
                 </li>
-              ))
-            }
-          </ul>
-        </section>
-      )}
+              ))}
+            </ul>
+          </section>
+        )
+      }
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
         <article>
-          <p>
-            Say hi, send me a link, tell me I'm wrong about something.
-          </p>
+          <p>Say hi, send me a link, tell me I'm wrong about something.</p>
         </article>
         <ul class="flex flex-wrap gap-2">
           {
