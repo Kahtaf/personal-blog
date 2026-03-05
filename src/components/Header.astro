@@ -1,7 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+
+const hasProjects = (await getCollection("projects")).some((p) => !p.data.draft);
 ---
 
 <header>
@@ -22,10 +25,12 @@ import { SITE } from "@consts";
           {`/`}
         </span>
         <Link href="/work"> work </Link>
-        <span>
-          {`/`}
-        </span>
-        <Link href="/projects"> projects </Link>
+        {hasProjects && (
+          <>
+            <span>{`/`}</span>
+            <Link href="/projects"> projects </Link>
+          </>
+        )}
       </nav>
     </div>
   </Container>
