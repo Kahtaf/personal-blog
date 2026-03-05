@@ -1,5 +1,5 @@
 ---
-title: "Setting Up a Serverless OAuth Server"
+title: "Your Own OAuth Server, No Servers Required"
 description: "Deploying Ory Hydra on Google Cloud Run for a fully serverless, OpenID Connect-certified OAuth 2.0 server."
 date: "Sep 12 2024"
 ---
@@ -8,7 +8,7 @@ date: "Sep 12 2024"
 
 ## OAuth in 60 seconds
 
-OAuth 2.0 is a delegation protocol. A user grants a third-party application limited access to their resources without sharing their password. [OpenID Connect](https://openid.net/developers/how-connect-works/) (OIDC) adds an identity layer on top, giving the application a standardized way to verify who the user is. [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) (Proof Key for Code Exchange) extends the authorization code flow to protect against interception attacks, which matters for public clients like single-page apps that can't keep a client secret.
+OAuth 2.0 is a delegation protocol. A user grants a third-party application limited access to their resources without sharing their password. [OpenID Connect](https://openid.net/developers/how-connect-works/) (OIDC) adds an identity layer on top, giving the application a standardized way to verify who the user is. [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) (Proof Key for Code Exchange) extends the authorization code flow to protect against interception attacks, which matters for public clients like single-page apps that can't keep a client secret. (For a longer primer, see [OAuth 2.0 Simplified](https://aaronparecki.com/oauth-2-simplified/) or the [OAuth 2.0](https://oauth.net/2/) reference site.)
 
 Managed OAuth providers like [Auth0](https://auth0.com/intro-to-iam/what-is-oauth-2) handle all of this for you. They work well until you need full control over token lifetimes, consent flows, subject identifier strategies, or multi-tenant client management through an API. At that point, you need your own server.
 
@@ -116,10 +116,6 @@ Both admin and public listen on port 8080, which is Cloud Run's default. The COR
 The cookie config uses `SameSite=None` with `secure: true`. This is necessary because the consent flow involves cross-origin redirects between the OAuth server and the login application. `same_site_legacy_workaround` handles older browsers that don't understand `SameSite=None`.
 
 Under `urls`, the `consent`, `login`, `logout`, and `error` entries point to a separate login application. Hydra redirects the user there during the authorization flow, and that application calls back to the admin API to accept or reject the consent challenge. This is the headless pattern: Hydra handles the protocol, your app handles the UI.
-
-Subject identifiers support both `pairwise` (different subject ID per client, for privacy) and `public` (same subject ID everywhere). The pairwise salt ensures that the same user gets different IDs across different clients, so clients can't correlate users by comparing IDs.
-
-Token TTLs are set to 168 hours (7 days). That's generous, but appropriate when the OAuth server is used for first-party applications where long-lived sessions are acceptable.
 
 Every `$VARIABLE` in the template gets replaced with real values from the secrets manager before the config is baked into the Docker image.
 
@@ -280,7 +276,7 @@ sendPostRequest(config.token_endpoint, {
 
 **Multi-tenant client management.** Hydra's admin API lets you create, update, and delete OAuth clients programmatically. If you're building a platform where each tenant needs their own OAuth client with its own redirect URIs and scopes, you can automate the entire lifecycle through the admin API.
 
-**Data portability with user-controlled scopes.** Custom scopes let users grant fine-grained access to their data. A research partner could request access to `posts:read` without getting `messages:read`. The user sees exactly what's being requested in the consent screen and decides what to share.
+**Full control over the consent experience.** Since Hydra is headless, you build the consent UI yourself. You can integrate it with an existing auth system, add custom approval logic, or build consent screens that match your product exactly. Managed providers give you a themed login box; self-hosting gives you a blank page.
 
 ## Further reading
 
