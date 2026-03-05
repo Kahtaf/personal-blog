@@ -1,24 +1,22 @@
 ---
-title: "Testing Browser Automation Tools Against Sites That Don't Want to Be Scraped"
-description: "Comparing agent-browser, Camoufox, and Scrapling across three test modes: with cookies, without cookies, and headless."
+title: "Scrapers vs. Sites That Don't Want to Be Scraped"
+description: "Comparing agent-browser, Camoufox, and Scrapling to find the best stealth scraper for AI agents."
 date: "Mar 04 2026"
 ---
 
-**TL;DR:** I tested three tools with different stealth strategies: [agent-browser](https://github.com/vercel-labs/agent-browser) (stock Chromium), [Scrapling](https://github.com/D4Vinci/Scrapling) (stealth-patched Chromium via Patchright), and [Camoufox](https://github.com/jo-inc/camofox-browser) (a Firefox fork with C++-level fingerprint spoofing). With cookies in headed mode, all three scored 100%. Remove the cookies or switch to headless and the gaps appear: Camoufox came out on top, maintaining full scores where the Chromium-based tools dropped.
+**TL;DR:** I tested three tools with different stealth strategies: [agent-browser](https://github.com/vercel-labs/agent-browser) (stock Chromium), [Scrapling](https://github.com/D4Vinci/Scrapling) (stealth-patched Chromium via Patchright), and [Camoufox](https://github.com/jo-inc/camofox-browser) (a Firefox fork with C++-level fingerprint spoofing). When we provide authenticated cookies in a headful environment, all three did well. However, without authentication or in a headless environment: Camoufox came out on top.
 
-## Why this comparison
+## Why this comparison exists
 
-If you're building anything that touches the real web (monitoring, data collection, testing against production sites) you've probably noticed that "just use Playwright" doesn't cut it anymore. Major sites fingerprint automated browsers and serve degraded content or outright block them.
+AI agents are browsing the web now. Tools like [OpenClaw](https://openclaw.ai/) let agents control browsers easily, and both [Camoufox](https://github.com/openclaw/skills/tree/main/skills/goodgoodjm/camoufox) and [agent-browser](https://github.com/openclaw/skills/blob/main/skills/thesethrose/agent-browser/SKILL.md) are available as OpenClaw skills. But when an agent hits anti-bot detection, it's stuck. It can't solve a CAPTCHA or click through a login wall. Browsers can deploy stealth tactics to emulate a real user to get around this.
 
-A new generation of tools has emerged to deal with this. They take different approaches: patched browser engines, custom protocols, fingerprint spoofing at the C++ level. But which ones actually work? Marketing pages will tell you they all do. I wanted numbers.
-
-So I picked three tools with fundamentally different stealth strategies and ran them against four sites that actively resist automation. I tested under three conditions: with cookies, without cookies, and headless. Here's what I found.
+I picked three tools with different stealth strategies and ran them against four sites that actively fight automation. Tested with cookies, without cookies, and headless, and here's what holds up.
 
 ## The contenders
 
 | Tool | Version | Engine | Stealth approach |
 |------|---------|--------|-----------------|
-| [agent-browser](https://github.com/vercel-labs/agent-browser) | 0.15.1 | Chromium (Playwright 1.56.0) | No built-in anti-bot. Stock browser with daemon-based session persistence. |
+| [agent-browser](https://github.com/vercel-labs/agent-browser) | 0.15.1 | Chromium (Playwright 1.56.0) | No built-in anti-bot mechanisms. Stock browser with daemon-based session persistence. |
 | [Camoufox](https://github.com/jo-inc/camofox-browser) | 0.4.11 (Firefox 135.0.1) | Firefox fork | C++-level fingerprint spoofing, Juggler protocol (invisible to page JS), cursor humanization. |
 | [Scrapling](https://github.com/D4Vinci/Scrapling) | 0.4.1 | Chromium (Patchright 1.56.0) | Stealth-patched Playwright fork. Patches WebDriver flags, navigator overrides. |
 
@@ -43,9 +41,9 @@ with StealthySession(user_data_dir="./profile", cookies=cookies) as session:
     response = session.fetch(url, headless=False)
 ```
 
-## What we tested
+## What I tested
 
-Each tool hit five URLs, three times each, under three different modes (45 attempts per mode, 135 total). **A caveat on sample size:** n=3 per combination is enough to reveal clear pass/fail patterns (a tool either works or it doesn't) but not enough for statistically significant conclusions. Treat the percentages as directional: they show trends, not precise rates.
+Each tool hit five URLs, three times each, under three different modes. A caveat on sample size: n=3 per combination is enough to reveal clear pass/fail patterns (a tool either works or it doesn't) but not enough for statistically significant conclusions. Treat the percentages as directional: they show trends, not precise rates.
 
 | Site | Page type | What we extracted |
 |------|-----------|-------------------|
@@ -63,9 +61,9 @@ The control site (example.com) has no anti-bot protection. If a tool fails there
 - **Headed + no cookies:** the stealth test. No cookies, no pre-existing session. Can the tool access content unauthenticated, or does the site gate it?
 - **Headless + cookies:** the headless detection test. Cookies are present, but the browser runs headless. Can sites detect the headless environment despite having valid session cookies?
 
-For each attempt, the benchmark navigates to the URL, waits for JS rendering, captures the page HTML and screenshot, then runs a three-layer extraction pipeline (JSON-LD, Open Graph, regex fallback) to pull structured data. Extracted fields are validated against known ground truth values.
+For each attempt, the benchmark navigates to the URL, waits for JS rendering, captures the page HTML and screenshot, then attempts to pull structured data. Extracted fields are validated against known ground truth values.
 
-This benchmark did not run synthetic fingerprint detection tests (CreepJS, BotD, Sannysoft). It only measures whether tools can load and extract data from real sites. A tool could ace fingerprint test pages and still fail on production sites, or vice versa. The two measure different things.
+This benchmark did not run synthetic fingerprint detection tests (via something like CreepJS, BotD, or Sannysoft). It only measures whether tools can load and extract data from real sites. A tool could ace fingerprint test pages and still fail on production sites, or vice versa. The two measure different things.
 
 ## Results: the easy test (headed + cookies)
 
@@ -139,13 +137,7 @@ Now give the cookies back, but switch to headless mode.
 
 ## Methodology
 
-**Test matrix:** 3 tools x 5 sites x 3 attempts x 3 modes = 135 total attempts. The first attempt used a cold browser profile; subsequent ones were warm with a 2-second delay between them.
-
-**Cookies:** All three tools got the same cookies, exported from a regular Chrome session using [Get cookies.txt locally](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) in Netscape format. One file per site. The "no cookies" mode omitted these entirely.
-
-**Extraction:** Three-layer pipeline: JSON-LD structured data, Open Graph meta tags, regex fallback. Extracted fields are validated against ground truth (e.g., Jack's tweet text must contain "just setting up my twttr", Reddit author must be "iEslam"). The benchmark classifies each attempt as success, partial, blocked, timeout, or crash.
-
-**Environment:** All tests ran from the same machine on a residential IP. No proxies, no IP rotation. This means the results reflect the tools' browser fingerprint stealth and reliability, not IP reputation. Sites with IP-level blocking (rate limiting, datacenter IP detection) would produce different results.
+3 tools x 5 sites x 3 attempts x 3 modes = 135 total attempts. All three tools got the same cookies, exported from a regular Chrome session using [Get cookies.txt locally](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) in Netscape format, omitted entirely for "no cookies" mode. Extraction used a three-layer pipeline (JSON-LD, Open Graph, regex fallback) validated against ground truth, classifying each attempt as success, partial, blocked, timeout, or crash. All tests ran on the same machine, residential IP, no proxies — so these results reflect browser fingerprint stealth, not IP reputation.
 
 Full benchmark code and results: [browser-automation-benchmark](https://github.com/Kahtaf/research/tree/main/browser-automation-benchmark)
 
