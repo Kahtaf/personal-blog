@@ -4,7 +4,7 @@ description: "Deploying Ory Hydra on Google Cloud Run for a fully serverless, Op
 date: "Sep 12 2024"
 ---
 
-**TL;DR:** You can run a fully serverless [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) server by deploying [Ory Hydra](https://www.ory.sh/hydra/) as two services on serverless infrastructure like Google Cloud Run (one public, one admin), backed by Postgres. The whole setup is two 3-line Dockerfiles, one config template, and a deploy script. Full source: [vana-oauth on GitHub](https://github.com/vana-com/vana-oauth).
+**TL;DR:** You can run a fully serverless [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) server by deploying [Ory Hydra](https://www.ory.sh/hydra/) on serverless infrastructure like Google Cloud Run, backed by Postgres. The whole setup is two short Dockerfiles, one config template, and a deploy script. Full source: [vana-oauth on GitHub](https://github.com/vana-com/vana-oauth).
 
 ## OAuth in 60 seconds
 
@@ -16,7 +16,7 @@ Managed OAuth providers like [Auth0](https://auth0.com/intro-to-iam/what-is-oaut
 
 [Ory Hydra](https://www.ory.sh/docs/hydra/) is a headless OAuth 2.0 and OpenID Connect server. It's a single Go binary, [OpenID Certified](https://openid.net/certification/), and API-driven. It handles the OAuth protocol (token issuance, client management, consent challenges) and delegates everything else (login UI, user management, consent screens) to your application through redirect-based flows.
 
-[Keycloak](https://www.keycloak.org/) does something similar but ships as a full identity platform with its own login pages, user database, and admin console. That's a lot of surface area when you just need the OAuth plumbing. [Dex](https://dexidp.io/) is lighter but focused on federating upstream identity providers — it supports static client configuration but lacks dynamic client registration and the full OAuth 2.0 grant type surface.
+[Keycloak](https://www.keycloak.org/) does something similar but ships as a full identity platform with its own login pages, user database, and admin console. That's a lot of surface area when you just need the OAuth plumbing. [Dex](https://dexidp.io/) is lighter but focused on federating upstream identity providers. It supports static client configuration but lacks dynamic client registration and several OAuth 2.0 grant types.
 
 Hydra sits in between. It does one thing (OAuth/OIDC) and does it correctly, and it lets you build everything else however you want.
 
@@ -143,7 +143,7 @@ Three lines each. The base image is the official Hydra v2.1.2 image, which conta
 
 Before the first deployment (or after upgrading Hydra), you need to run database migrations: `hydra migrate sql --yes $DATABASE_URL`. Without this, Hydra won't start against a fresh Postgres instance.
 
-The `hydra.yml` that gets copied in is the already-resolved version (after `envsubst` ran on the template), so secrets are baked into the image at build time. This is a simplification — in production, you'd want to use Cloud Run's native [secrets support](https://cloud.google.com/run/docs/configuring/services/secrets) to inject secrets as environment variables or mounted volumes at runtime, avoiding secrets in the image entirely. The approach here trades that off for a simpler deploy script. Either way, store images in a private container registry. The deploy script uses Google Container Registry (`gcr.io`).
+The `hydra.yml` that gets copied in is the already-resolved version (after `envsubst` ran on the template), so secrets are baked into the image at build time. This is a simplification. In production, you'd use Cloud Run's native [secrets support](https://cloud.google.com/run/docs/configuring/services/secrets) to inject secrets as environment variables or mounted volumes at runtime, so nothing sensitive ends up in the image. The approach here trades that off for a simpler deploy script. Either way, store images in a private container registry. The deploy script uses Google Container Registry (`gcr.io`).
 
 ## The deploy script
 
@@ -259,7 +259,7 @@ async function pkceChallengeFromVerifier(v) {
 }
 ```
 
-PKCE matters here because this is a public client (a browser app) — though OAuth 2.1 recommends PKCE for all clients, it's especially critical for public ones. There's no client secret to authenticate the token exchange request. Without PKCE, anyone who intercepts the authorization code can exchange it for tokens. With PKCE, the token endpoint requires the original `code_verifier` that only the legitimate client has. The authorization server compares `SHA256(code_verifier)` against the `code_challenge` it received earlier. If they don't match, the exchange is rejected.
+PKCE matters here because this is a public client (a browser app). OAuth 2.1 recommends PKCE for all clients, but it's especially important for public ones. There's no client secret to authenticate the token exchange request. Without PKCE, anyone who intercepts the authorization code can exchange it for tokens. With PKCE, the token endpoint requires the original `code_verifier` that only the legitimate client has. The authorization server compares `SHA256(code_verifier)` against the `code_challenge` it received earlier. If they don't match, the exchange is rejected.
 
 After the user authorizes, the server redirects back with an authorization code. The client exchanges it for tokens by sending the code along with the stored `code_verifier`:
 
