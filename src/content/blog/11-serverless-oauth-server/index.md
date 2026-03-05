@@ -10,13 +10,13 @@ date: "Sep 12 2024"
 
 OAuth 2.0 is a delegation protocol. A user grants a third-party application limited access to their resources without sharing their password. [OpenID Connect](https://openid.net/developers/how-connect-works/) (OIDC) adds an identity layer on top, giving the application a standardized way to verify who the user is. [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) (Proof Key for Code Exchange) extends the authorization code flow to protect against interception attacks, which matters for public clients like single-page apps that can't keep a client secret. (For a longer primer, see [OAuth 2.0 Simplified](https://aaronparecki.com/oauth-2-simplified/) or the [OAuth 2.0](https://oauth.net/2/) reference site.)
 
-Managed OAuth providers like [Auth0](https://auth0.com/intro-to-iam/what-is-oauth-2) handle all of this for you. They work well until you need full control over token lifetimes, consent flows, subject identifier strategies, or multi-tenant client management through an API. At that point, you need your own server.
+Managed OAuth providers like [Auth0](https://auth0.com/intro-to-iam/what-is-oauth-2) handle all of this for you. They work well until per-MAU pricing starts adding up at scale, you hit data residency requirements they can't meet, or you need protocol-level control they don't expose (custom grant types, non-standard flows). At that point, you need your own server.
 
 ## Why Ory Hydra
 
 [Ory Hydra](https://www.ory.sh/docs/hydra/) is a headless OAuth 2.0 and OpenID Connect server. It's a single Go binary, [OpenID Certified](https://openid.net/certification/), and API-driven. It handles the OAuth protocol (token issuance, client management, consent challenges) and delegates everything else (login UI, user management, consent screens) to your application through redirect-based flows.
 
-[Keycloak](https://www.keycloak.org/) does something similar but ships as a full identity platform with its own login pages, user database, and admin console. That's a lot of surface area when you just need the OAuth plumbing. [Dex](https://dexidp.io/) is lighter but limited to upstream identity federation; it can't act as a standalone authorization server with its own client registry.
+[Keycloak](https://www.keycloak.org/) does something similar but ships as a full identity platform with its own login pages, user database, and admin console. That's a lot of surface area when you just need the OAuth plumbing. [Dex](https://dexidp.io/) is lighter but focused on federating upstream identity providers — it supports static client configuration but lacks dynamic client registration and the full OAuth 2.0 grant type surface.
 
 Hydra sits in between. It does one thing (OAuth/OIDC) and does it correctly, and it lets you build everything else however you want.
 
@@ -111,6 +111,8 @@ ttl:
   id_token: 168h
 ```
 
+The 168h (7-day) access token TTL is intentionally long for this use case. Most deployments should use much shorter access tokens (15 minutes to 1 hour) and rely on refresh tokens to get new ones.
+
 Both admin and public listen on port 8080, which is Cloud Run's default. The CORS origins are restricted to `$LOGIN_URL` (the consent/login app), and `allow_credentials: true` is required because the OAuth flow involves cookies.
 
 The cookie config uses `SameSite=None` with `secure: true`. This is necessary because the consent flow involves cross-origin redirects between the OAuth server and the login application. `same_site_legacy_workaround` handles older browsers that don't understand `SameSite=None`.
@@ -139,7 +141,9 @@ CMD ["serve", "admin", "-c", "/etc/config/hydra/hydra.yml"]
 
 Three lines each. The base image is the official Hydra v2.1.2 image, which contains the Go binary. The only thing added is the resolved config file. The `CMD` tells Hydra which mode to run in.
 
-The `hydra.yml` that gets copied in is the already-resolved version (after `envsubst` ran on the template), so secrets are baked into the image at build time. This means the images should be stored in a private container registry. The deploy script uses Google Container Registry (`gcr.io`).
+Before the first deployment (or after upgrading Hydra), you need to run database migrations: `hydra migrate sql --yes $DATABASE_URL`. Without this, Hydra won't start against a fresh Postgres instance.
+
+The `hydra.yml` that gets copied in is the already-resolved version (after `envsubst` ran on the template), so secrets are baked into the image at build time. This is a simplification — in production, you'd want to use Cloud Run's native [secrets support](https://cloud.google.com/run/docs/configuring/services/secrets) to inject secrets as environment variables or mounted volumes at runtime, avoiding secrets in the image entirely. The approach here trades that off for a simpler deploy script. Either way, store images in a private container registry. The deploy script uses Google Container Registry (`gcr.io`).
 
 ## The deploy script
 
@@ -155,6 +159,7 @@ image_name="gcr.io/corsali-${env}/ory-hydra-${hydra_service}"
 # Pull secrets from Doppler and export as env vars
 doppler setup --project vana-oauth --config ${env}
 doppler secrets download --no-file --format env > .env
+# Note: this works for simple key=value pairs but will break on values with spaces or special characters
 export $(cat .env | xargs)
 
 # Resolve template variables and clean up
@@ -254,7 +259,7 @@ async function pkceChallengeFromVerifier(v) {
 }
 ```
 
-PKCE matters here because this is a public client (a browser app). There's no client secret to authenticate the token exchange request. Without PKCE, anyone who intercepts the authorization code can exchange it for tokens. With PKCE, the token endpoint requires the original `code_verifier` that only the legitimate client has. The authorization server compares `SHA256(code_verifier)` against the `code_challenge` it received earlier. If they don't match, the exchange is rejected.
+PKCE matters here because this is a public client (a browser app) — though OAuth 2.1 recommends PKCE for all clients, it's especially critical for public ones. There's no client secret to authenticate the token exchange request. Without PKCE, anyone who intercepts the authorization code can exchange it for tokens. With PKCE, the token endpoint requires the original `code_verifier` that only the legitimate client has. The authorization server compares `SHA256(code_verifier)` against the `code_challenge` it received earlier. If they don't match, the exchange is rejected.
 
 After the user authorizes, the server redirects back with an authorization code. The client exchanges it for tokens by sending the code along with the stored `code_verifier`:
 
