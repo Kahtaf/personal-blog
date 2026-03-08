@@ -1,0 +1,121 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import { RESUME } from "@consts";
+
+const entries = await getCollection("resume");
+const entry = entries[0];
+const { Content } = await entry.render();
+---
+
+<PageLayout title={RESUME.TITLE} description={RESUME.DESCRIPTION}>
+  <Container>
+    <div class="relative">
+      <button
+        onclick="window.print()"
+        class="no-print absolute right-0 top-0 text-sm border border-black/15 dark:border-white/25 px-3 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-current cursor-pointer"
+      >
+        PDF
+      </button>
+      <article class="resume-content">
+        <Content />
+      </article>
+    </div>
+  </Container>
+</PageLayout>
+
+<style is:global>
+  @media print {
+    header,
+    footer,
+    .no-print {
+      display: none !important;
+    }
+
+    html, html.dark {
+      color-scheme: light;
+    }
+
+    body, html.dark body {
+      background: white !important;
+      color: black !important;
+      display: block;
+    }
+
+    main {
+      padding: 0 !important;
+    }
+
+    .animate {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    main > div {
+      max-width: none !important;
+    }
+
+    .resume-content {
+      color: black !important;
+      font-size: 11pt;
+      line-height: 1.4;
+    }
+
+    .resume-content h2 {
+      color: black !important;
+      font-size: 13pt;
+      margin-top: 12pt;
+      margin-bottom: 4pt;
+    }
+
+    .resume-content ul {
+      margin-top: 2pt;
+      margin-bottom: 2pt;
+    }
+
+    .resume-content li {
+      margin-top: 0;
+      margin-bottom: 1pt;
+    }
+
+    .resume-content strong {
+      color: black !important;
+    }
+
+    .resume-content a {
+      color: black !important;
+      text-decoration: none !important;
+    }
+
+    .resume-header a {
+      color: black !important;
+      text-decoration: none !important;
+    }
+
+    .resume-header h1 {
+      color: black !important;
+    }
+
+    .resume-header p {
+      color: black !important;
+    }
+
+    .resume-content hr {
+      border-color: #ccc;
+    }
+
+    h2, h3 {
+      break-after: avoid;
+    }
+
+    li, .flex {
+      break-inside: avoid;
+    }
+
+    @page {
+      margin: 0.5in 0.6in;
+      size: letter;
+    }
+  }
+</style>

@@ -28,6 +28,11 @@ export const ABOUT: Metadata = {
   DESCRIPTION: "More about me and what I've been working on.",
 };
 
+export const RESUME: Metadata = {
+  TITLE: "Resume",
+  DESCRIPTION: "Kahtaf Alam — Full Stack Software Engineer",
+};
+
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
   DESCRIPTION: "A collection of my projects, with links to repositories and demos.",
