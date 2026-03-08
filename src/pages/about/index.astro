@@ -5,12 +5,12 @@ import { ABOUT } from "@consts";
 import Link from "@components/Link.astro";
 ---
 
-<PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
+<PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION} page="about">
   <Container>
     <div class="space-y-10">
-      <div class="animate font-semibold text-black dark:text-white">
+      <h1 class="animate font-semibold text-black dark:text-white">
         About Me
-      </div>
+      </h1>
 
       <section>
         <article class="space-y-4">
@@ -30,7 +30,7 @@ import Link from "@components/Link.astro";
       </section>
 
       <section class="animate space-y-6">
-        <h5 class="font-semibold text-black dark:text-white">On AI</h5>
+        <h2 class="font-semibold text-black dark:text-white">On AI</h2>
         <article class="space-y-4">
           <p class="animate">
             Like many people, AI has changed how I work. I use coding agents
@@ -42,9 +42,9 @@ import Link from "@components/Link.astro";
       </section>
 
       <section class="animate space-y-6">
-        <h5 class="font-semibold text-black dark:text-white">
+        <h2 class="font-semibold text-black dark:text-white">
           What I'm doing now
-        </h5>
+        </h2>
         <article class="space-y-4">
           <p class="animate">
             I'm a tech lead at <Link
@@ -73,9 +73,9 @@ import Link from "@components/Link.astro";
       </section>
 
       <section class="animate space-y-6">
-        <h5 class="font-semibold text-black dark:text-white">
+        <h2 class="font-semibold text-black dark:text-white">
           What I've done in the past
-        </h5>
+        </h2>
         <article class="space-y-4">
           <p class="animate">
             Before Vana, I was tech lead on <Link

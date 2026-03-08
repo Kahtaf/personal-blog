@@ -7,15 +7,19 @@ import { SITE } from "@consts";
 type Props = {
   title: string;
   description: string;
+  type?: "website" | "article";
+  publishDate?: Date;
+  author?: string;
+  page?: "home" | "about";
 };
 
-const { title, description } = Astro.props;
+const { title, description, type, publishDate, author, page } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <Head title={`${title} | ${SITE.NAME}`} description={description} />
+    <Head title={`${title} | ${SITE.NAME}`} description={description} type={type} publishDate={publishDate} author={author} page={page} />
   </head>
   <body>
     <Header />

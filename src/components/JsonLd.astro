@@ -1,0 +1,56 @@
+---
+import { SITE, SOCIALS } from "@consts";
+
+interface Props {
+  type: "website" | "article";
+  title: string;
+  description: string;
+  url: URL;
+  publishDate?: Date;
+  author?: string;
+  page?: "home" | "about";
+}
+
+const { type, title, description, url, publishDate, author, page } = Astro.props;
+
+const schemas: Record<string, unknown>[] = [];
+
+// WebSite schema on all pages
+schemas.push({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.NAME,
+  url: Astro.site?.toString(),
+});
+
+// Person schema on home and about pages
+if (page === "home" || page === "about") {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.NAME,
+    url: Astro.site?.toString(),
+    sameAs: SOCIALS.map((s) => s.HREF),
+  });
+}
+
+// Article schema on blog posts
+if (type === "article" && publishDate) {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description: description,
+    datePublished: publishDate.toISOString(),
+    author: {
+      "@type": "Person",
+      name: author || SITE.NAME,
+    },
+    url: url.toString(),
+  });
+}
+---
+
+{schemas.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}
