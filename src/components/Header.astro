@@ -11,7 +11,8 @@ const hasProjects = (await getCollection("projects")).some((p) => !p.data.draft)
   <Container>
     <div class="flex flex-wrap gap-y-2 justify-between">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
+        <div class="group font-semibold flex items-center gap-2">
+          <img src="/k-logo.svg" alt="" class="h-5 w-5 opacity-50 group-hover:opacity-100 dark:invert dark:opacity-75 dark:group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
           {SITE.NAME}
         </div>
       </Link>
