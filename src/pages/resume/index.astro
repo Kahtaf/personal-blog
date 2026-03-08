@@ -26,6 +26,63 @@ const { Content } = await entry.render();
 </PageLayout>
 
 <style is:global>
+  .resume-header h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: black;
+  }
+
+  html.dark .resume-header h1 {
+    color: white;
+  }
+
+  .resume-header p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .resume-header p:first-of-type {
+    color: rgb(0 0 0 / 0.75);
+  }
+
+  .resume-header p:last-of-type {
+    color: rgb(0 0 0 / 0.5);
+  }
+
+  html.dark .resume-header p:first-of-type {
+    color: rgb(255 255 255 / 0.75);
+  }
+
+  html.dark .resume-header p:last-of-type {
+    color: rgb(255 255 255 / 0.5);
+  }
+
+  .resume-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1.5rem;
+  }
+
+  .resume-entry strong {
+    font-weight: 600;
+    color: black;
+  }
+
+  html.dark .resume-entry strong {
+    color: white;
+  }
+
+  .resume-entry span {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
+
   @media print {
     header,
     footer,
@@ -109,7 +166,7 @@ const { Content } = await entry.render();
       break-after: avoid;
     }
 
-    li, .flex {
+    li, .resume-entry {
       break-inside: avoid;
     }
 

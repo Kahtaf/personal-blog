@@ -21,7 +21,7 @@ const allwork = (await getCollection("work"))
   .sort(
     (a, b) =>
       new Date(b.data.dateStart).valueOf() -
-      new Date(a.data.dateStart).valueOf()
+      new Date(a.data.dateStart).valueOf(),
   )
   .slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
 
@@ -29,7 +29,7 @@ const work = await Promise.all(
   allwork.map(async (item) => {
     const { Content } = await item.render();
     return { ...item, Content };
-  })
+  }),
 );
 ---
 
@@ -42,10 +42,10 @@ const work = await Promise.all(
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I'm a software engineer in Toronto. I lead teams at startups, mostly
-            building secure distributed systems and infrastructure for
-            user-owned data. I run a small studio on the side for ideas I can't
-            let go of.
+            I'm a father and experienced software engineer from Toronto. I lead
+            teams at startups, mostly building and scaling consumer applications
+            and infrastructure for user-owned data. These days, I'm always
+            looking for new ways to scale myself through AI.
           </p>
         </article>
       </section>
@@ -56,24 +56,6 @@ const work = await Promise.all(
         </h5>
         <article class="space-y-4">
           <ul class="animate list-disc">
-            <li>
-              <p>
-                Built an Android <Link
-                  href={"https://bitspice.net/automate/"}
-                  external
-                  aria-label={`AutoMate - Car Dashboard`}
-                >
-                  dashboard app
-                </Link> that hit 1M+ downloads.
-                <Link
-                  href={"https://lifehacker.com/automate-turns-your-phone-into-an-android-auto-style-da-1695925050"}
-                  external
-                  aria-label={`AutoMate - Car Dashboard`}
-                >
-                  Lifehacker
-                </Link> picked it up
-              </p>
-            </li>
             <li>
               <p>
                 Led the design and implementation of the <Link
@@ -100,6 +82,24 @@ const work = await Promise.all(
                 >
                   TechCrunch
                 </Link> wrote about it
+              </p>
+            </li>
+            <li>
+              <p>
+                Built an Android <Link
+                  href={"https://bitspice.net/automate/"}
+                  external
+                  aria-label={`AutoMate - Car Dashboard`}
+                >
+                  dashboard app
+                </Link> that hit 1M+ downloads.
+                <Link
+                  href={"https://lifehacker.com/automate-turns-your-phone-into-an-android-auto-style-da-1695925050"}
+                  external
+                  aria-label={`AutoMate - Car Dashboard`}
+                >
+                  Lifehacker
+                </Link> picked it up
               </p>
             </li>
             <li>
