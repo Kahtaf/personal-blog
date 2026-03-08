@@ -24,7 +24,7 @@ export const WORK: Metadata = {
 };
 
 export const ABOUT: Metadata = {
-  TITLE: "ABOUT",
+  TITLE: "About",
   DESCRIPTION: "More about me and what I've been working on.",
 };
 
