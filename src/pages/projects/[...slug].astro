@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
-import { readingTime } from "@lib/utils";
+import { readingTime, cleanSlug } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
 import Link from "@components/Link.astro";
 
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
     .filter(post => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: cleanSlug(project.slug) },
     props: project,
   }));
 }
