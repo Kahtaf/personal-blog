@@ -1,7 +1,7 @@
 ---
-title: "How Browser-Based Web Proxies Actually Work"
+title: "Browsing Inside a Browser: How Web Proxies Work"
 description: "Service workers, URL rewriting, and the Scramjet generation. An explainer on browser-based web proxies, how they differ from traditional proxies, and where they break."
-date: "Mar 26 2026"
+date: "Dec 26 2025"
 ---
 
 **TL;DR:** Browser-based web proxies like [Scramjet](https://github.com/MercuryWorkshop/scramjet) use a [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) to intercept HTTP requests from a page, rewrite URLs to route through a proxy backend, and patch browser APIs so the page behaves as if it loaded from the original site. They run entirely in a browser tab, need no installation, and can bypass network-level filters. Scramjet is the current best option, using a WASM-compiled Rust rewriter for speed. It handles simple sites well but frequently breaks on Google Sign-in, Cloudflare challenges, DRM content, and complex SPAs. These are useful tools for specific situations, but they are not a VPN replacement, and you should never type a password into one.
@@ -22,13 +22,11 @@ Before getting into how these work, it's worth understanding what you're trustin
 
 The proxy operator can see everything you do. HTTPS between your browser and the proxy protects the connection *to the proxy*, but TLS terminates at the proxy server. The proxy process decrypts your request, makes its own connection to the target site, and relays the response back. At that point, the operator's code has access to the cleartext: every URL you visit, every form submission, every cookie, every response body. They can log it, modify it, or inject content into it.
 
-This is the same trust model as a corporate TLS-intercepting proxy, except without the organizational accountability. Free public proxy sites have strong incentives to monetize traffic data and few reasons not to. Even well-intentioned operators make mistakes with logging, retention, and server security.
-
 If you wouldn't type a password into a random computer at a public library, you shouldn't type it into a web proxy.
 
 ## How they work
 
-There are three layers to a browser-based web proxy: request interception, backend transport, and runtime emulation. Most explanations focus on the first two, but the third is what makes modern sites actually load.
+There are three layers to a browser-based web proxy: request interception, backend transport, and runtime emulation. 
 
 ### Request interception
 
@@ -40,7 +38,7 @@ Here's the interception flow for a single page load:
 Browser Tab              Service Worker             Proxy Backend            Target Site
     |                         |                          |                       |
     |-- fetch(example.com) -> |                          |                       |
-    |                         |-- encode URL, forward --> |                       |
+    |                         |-- encode URL, forward -->|                       |
     |                         |                          |-- GET example.com --> |
     |                         |                          |<-- response --------- |
     |                         |<-- rewrite body & hdrs   |                       |
@@ -54,7 +52,7 @@ Browser Tab              Service Worker             Proxy Backend            Tar
 5. It also rewrites response headers. `Location` redirects need to point through the proxy. `Set-Cookie` domains get adjusted. `Content-Security-Policy` directives that reference the original domain need updating, or the browser will block resources. `Access-Control-Allow-Origin` headers need to match the proxy's origin for CORS to work.
 6. The rewritten response is served to the page, and the service worker intercepts each subsequent resource request (stylesheets, scripts, images, API calls) the same way.
 
-The page thinks it's talking to `example.com`. The browser thinks it's talking to `proxy-site.com`. The network only sees traffic to `proxy-site.com`.
+The page thinks it's talking to `example.com`. The browser thinks it's talking to `proxy-site.com`. 
 
 ### Backend transport
 
@@ -64,9 +62,7 @@ The **Bare Server** protocol (part of the [TompHTTP specification](https://githu
 
 The **Wisp protocol** ([spec](https://github.com/MercuryWorkshop/wisp-protocol)) is newer. It multiplexes multiple TCP and UDP sockets over a single WebSocket connection. Instead of opening a new HTTP request for every resource, the service worker sends lightweight messages over an existing WebSocket, and the server fans them out. Fewer connections, less overhead, and better performance on pages that load dozens of resources in parallel.
 
-Other transports exist (you could back a web proxy with anything that can make HTTP requests on the server side), but Bare and Wisp are what most projects in this space use.
-
-The backend is also where your traffic actually exits to the internet. The target site sees the proxy server's IP address, not yours.
+The backend is also where your traffic actually exits to the internet. The target site (`example.com`) sees the proxy server's IP address, not yours.
 
 ### Runtime emulation
 
@@ -74,24 +70,14 @@ Intercepting requests and rewriting responses gets you partway there, but modern
 
 The major APIs that need patching:
 
-- **`window.location` and `document.location`** need to return the original site's URL, not the proxy's. The proxy overrides these getters so code that checks `location.hostname` or `location.href` sees the expected values.
-- **`history.pushState()` and `history.replaceState()`** need intercepting. SPAs use these to update the URL bar during client-side navigation. The proxy wraps these calls to translate between the original URLs the app expects and the encoded proxy URLs the browser actually uses.
-- **`document.cookie`** access needs scoping. Since all proxied sites share the proxy's origin, the proxy has to maintain separate cookie jars per proxied domain and intercept cookie reads/writes to return the right set.
-- **`localStorage` and `sessionStorage`** have the same problem: they're keyed by origin, and the proxy is one origin. Proxies that handle this typically namespace storage access by the proxied domain.
-- **`Worker` and `SharedWorker` constructors** need their script URLs rewritten, or web workers will try to load scripts from the original domain and fail.
-- **`postMessage` origin checks** may need patching if the page validates the origin of incoming messages.
+- `window.location` and `document.location` need to return the original site's URL, not the proxy's. The proxy overrides these getters so code that checks `location.hostname` or `location.href` sees the expected values.
+- `history.pushState()` and `history.replaceState()` need intercepting. SPAs use these to update the URL bar during client-side navigation. The proxy wraps these calls to translate between the original URLs the app expects and the encoded proxy URLs the browser actually uses.
+- `document.cookie` access needs scoping. Since all proxied sites share the proxy's origin, the proxy has to maintain separate cookie jars per proxied domain and intercept cookie reads/writes to return the right set.
+- `localStorage` and `sessionStorage` have the same problem: they're keyed by origin, and the proxy is one origin. Proxies that handle this typically namespace storage access by the proxied domain.
+- `Worker` and `SharedWorker` constructors need their script URLs rewritten, or web workers will try to load scripts from the original domain and fail.
+- `postMessage` origin checks may need patching if the page validates the origin of incoming messages.
 
 This runtime emulation layer is what separates a working proxy from one that loads a page but breaks on the first user interaction. It's also the most fragile part of the system, because every new browser API that exposes origin or URL information is another thing the proxy needs to intercept.
-
-### URL rewriting approaches
-
-The body rewriting from step 4 above deserves more detail, because it's the biggest performance bottleneck and the most common source of breakage.
-
-Web pages contain URLs everywhere: in HTML attributes, CSS properties, inline JavaScript, dynamically constructed strings, `import()` statements, `new URL()` calls, `postMessage` payloads. Miss one and the page breaks. An image fails to load, a script throws a CORS error, or navigation goes to the raw target URL and bypasses the proxy entirely.
-
-Ultraviolet tackled this with **AST-based rewriting**. It parses JavaScript into an abstract syntax tree, walks every node looking for URL-shaped values, rewrites them, and serializes the tree back to source code. The advantage is thoroughness: parsing the syntax means fewer missed URLs. The cost is speed, since building and serializing an AST for every script on a page adds latency.
-
-Scramjet takes a different approach: **byte-span rewriting** using a WASM-compiled Rust parser. Instead of building a full AST, it scans the source as a byte stream, identifies spans that contain URLs (by recognizing patterns like `http://`, `https://`, or relative path structures in known contexts), and rewrites them in place. The Scramjet project claims this is significantly faster than AST-based parsing. Independent benchmarks are hard to find, but the architectural reasoning is sound: skipping the parse-and-serialize round trip should be cheaper. The trade-off is that pattern-matching on raw text is less precise than syntax-aware rewriting, and it can miss URLs constructed in unusual ways.
 
 ## How they differ from traditional proxies
 
@@ -120,9 +106,9 @@ The honest answer: the primary real-world use case is bypassing network filters 
 
 Beyond that, there are some legitimate scenarios:
 
-- **Temporary access to a blocked resource.** You're on a restricted network, you need to check one page, and setting up a VPN is overkill. A web proxy gets you there in seconds.
-- **Quick testing.** You want to see how a site behaves when accessed through an intermediary, or how it looks from a different IP, without configuring a proxy at the system level.
-- **Educational use.** Understanding how service workers, URL rewriting, and request interception work is interesting computer science. These projects are well-documented and make good case studies.
+- Temporary access to a blocked resource
+- Quick testing
+- Educational use
 
 What they are not good for: anything requiring persistent sessions, authentication, sensitive data entry, or reliability. More on that next.
 
@@ -132,7 +118,7 @@ What they are not good for: anything requiring persistent sessions, authenticati
 
 This is the core architectural tension. Every site you visit through the proxy shares the proxy's origin. From the browser's perspective, `proxy-site.com/encoded-gmail` and `proxy-site.com/encoded-reddit` are the same origin.
 
-The browser's native isolation between sites is gone. Cookies, storage, and security policies that the browser normally scopes per-domain all collapse into one bucket. Proxies can try to reimplment this isolation in JavaScript (namespacing cookies by proxied domain, partitioning storage), but it's an imperfect emulation of what the browser does natively. For example, `HttpOnly` cookies can't be read from JavaScript at all, so a proxy that manages cookies in JS can't fully replicate that restriction. `SameSite` cookie policies, CSRF protections that check the `Origin` header, and other browser-enforced security boundaries all need to be reimplemented by the proxy, with varying degrees of success.
+The browser's native isolation between sites is gone. Cookies, storage, and security policies that the browser normally scopes per-domain all collapse into one bucket. Proxies can try to reimplement this isolation in JavaScript (namespacing cookies by proxied domain, partitioning storage), but it's an imperfect emulation of what the browser does natively. For example, `HttpOnly` cookies can't be read from JavaScript at all, so a proxy that manages cookies in JS can't fully replicate that restriction. `SameSite` cookie policies, CSRF protections that check the `Origin` header, and other browser-enforced security boundaries all need to be reimplemented by the proxy, with varying degrees of success.
 
 This isn't a bug that can be patched out. It's a consequence of running everything through a single origin.
 
@@ -149,25 +135,17 @@ Single-page applications hit all of these at once. React Router, Next.js, and si
 
 ### What frequently breaks
 
-Some categories of sites cause consistent problems across all current proxy implementations, though the specifics vary by proxy version, deployment, and even IP reputation:
-
-**Google Sign-in** frequently fails because Google's BotGuard system runs integrity checks on the browser environment. Scramjet's docs list Google support, and some deployments report partial success, but the experience is unreliable. The proxy environment triggers enough anomalies that sign-in often stalls or errors out.
-
-**Cloudflare-protected sites** are hit-or-miss. Cloudflare's bot detection examines TLS fingerprints, header ordering, and JavaScript execution behavior. Whether you get a challenge page, a block, or clean access depends on the proxy's backend TLS configuration, the site's Cloudflare settings, and the IP reputation of the proxy server. Some Cloudflare-protected sites work fine; others block consistently.
-
-**DRM content.** Netflix, Disney+, and Spotify use [Widevine](https://www.widevine.com/) or [FairPlay](https://developer.apple.com/streaming/fps/) for content protection. These DRM systems verify the origin and integrity of the playback environment. A proxied page typically fails those checks.
-
-**WebRTC.** WebRTC connections use [STUN](https://datatracker.ietf.org/doc/html/rfc8489) to discover your public IP address via UDP. These connections bypass the service worker entirely (service workers only intercept fetch events, not UDP traffic). Any site using WebRTC can discover your real IP address, which includes most video calling and some real-time communication features.
+Google Sign-in often fails because BotGuard's integrity checks flag the proxy environment. Cloudflare-protected sites are hit-or-miss depending on the proxy's TLS fingerprint, header ordering, and IP reputation. DRM content (Netflix, Disney+, Spotify) won't play because [Widevine](https://www.widevine.com/) and [FairPlay](https://developer.apple.com/streaming/fps/) verify the playback origin. And WebRTC connections bypass the service worker entirely — they use [STUN](https://datatracker.ietf.org/doc/html/rfc8489) over UDP to discover your public IP, so any site with video calling or real-time features can see your real address.
 
 ### Detection vectors
 
 Networks and sites have multiple ways to detect and block these proxies:
 
-- **Domain blocking.** Proxy sites get added to blocklists. New mirrors get added shortly after.
-- **Service worker fingerprinting.** Detecting the presence of a non-standard service worker in the page scope is a signal.
-- **URL pattern recognition.** Encoded URLs in the path (like base64 or XOR-encoded strings) have a distinctive structure that's easy to identify with a regex.
-- **TLS fingerprinting.** The proxy backend's TLS ClientHello doesn't match a real browser. Tools like [JA3](https://github.com/salesforce/ja3) can fingerprint TLS handshakes and flag mismatches.
-- **Header anomalies.** Missing, reordered, or inconsistent HTTP headers that a real browser would send in a predictable pattern.
+- Domain blocking: Proxy sites get added to blocklists. New mirrors get added shortly after.
+- Service worker fingerprinting: Detecting the presence of a non-standard service worker in the page scope is a signal.
+- URL pattern recognition: Encoded URLs in the path (like base64 or XOR-encoded strings) have a distinctive structure that's easy to identify with a regex.
+- TLS fingerprinting: The proxy backend's TLS ClientHello doesn't match a real browser. Tools like [JA3](https://github.com/salesforce/ja3) can fingerprint TLS handshakes and flag mismatches.
+- Header anomalies: Missing, reordered, or inconsistent HTTP headers that a real browser would send in a predictable pattern.
 
 ## Where things stand today
 
