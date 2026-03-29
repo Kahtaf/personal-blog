@@ -137,23 +137,13 @@ Single-page applications hit all of these at once. React Router, Next.js, and si
 
 Google Sign-in often fails because BotGuard's integrity checks flag the proxy environment. Cloudflare-protected sites are hit-or-miss depending on the proxy's TLS fingerprint, header ordering, and IP reputation. DRM content (Netflix, Disney+, Spotify) won't play because [Widevine](https://www.widevine.com/) and [FairPlay](https://developer.apple.com/streaming/fps/) verify the playback origin. And WebRTC connections bypass the service worker entirely — they use [STUN](https://datatracker.ietf.org/doc/html/rfc8489) over UDP to discover your public IP, so any site with video calling or real-time features can see your real address.
 
-### Detection vectors
-
-Networks and sites have multiple ways to detect and block these proxies:
-
-- Domain blocking: Proxy sites get added to blocklists. New mirrors get added shortly after.
-- Service worker fingerprinting: Detecting the presence of a non-standard service worker in the page scope is a signal.
-- URL pattern recognition: Encoded URLs in the path (like base64 or XOR-encoded strings) have a distinctive structure that's easy to identify with a regex.
-- TLS fingerprinting: The proxy backend's TLS ClientHello doesn't match a real browser. Tools like [JA3](https://github.com/salesforce/ja3) can fingerprint TLS handshakes and flag mismatches.
-- Header anomalies: Missing, reordered, or inconsistent HTTP headers that a real browser would send in a predictable pattern.
-
 ## Where things stand today
 
-As of early 2026, [Scramjet](https://github.com/MercuryWorkshop/scramjet) is the most capable option in this space. Its WASM-compiled Rust rewriter is faster than Ultraviolet's AST parser, and it handles a wider range of sites. YouTube, Twitter, Reddit, Discord, and Spotify all work to varying degrees. For mostly-static sites and light browsing, it gets the job done.
+As of late 2025, [Scramjet](https://github.com/MercuryWorkshop/scramjet) is the most capable option in this space. Its WASM-compiled Rust rewriter is faster than Ultraviolet's AST parser, and it handles a wider range of sites. YouTube, Twitter, Reddit, and Discord all work to varying degrees. For mostly-static sites and light browsing, it gets the job done.
 
 But for anything involving complex authentication flows, third-party sign-in (Google, Apple, Microsoft), aggressive bot detection (Cloudflare, Akamai), or DRM-protected media, it still falls short. These aren't bugs to be fixed. They're architectural constraints. Rewriting web content at the application layer is a game of catch-up against an evolving web platform. Every new browser API, every new way to construct a URL in JavaScript, every new fingerprinting technique is another thing the rewriter needs to handle.
 
-Scramjet pushes the limits of what you can do with service workers and WASM, and the engineering is genuinely good. But the web was built on the assumption that origins matter and that browsers enforce security boundaries. Web proxies break those assumptions on purpose. For simple sites, that works fine. For the modern web with all its auth flows and bot detection and DRM, it's always going to be an approximation.
+Scramjet pushes the limits of what you can do with service workers and WASM, and the engineering is genuinely good. But the web was built on the assumption that origins matter and that browsers enforce security boundaries. Web proxies break those assumptions on purpose. For simple sites, that works fine. For the modern web with all its complexities, it's always going to be a hit or miss.
 
 ## Further reading
 
@@ -162,4 +152,3 @@ Scramjet pushes the limits of what you can do with service workers and WASM, and
 - [TompHTTP Bare Server specification](https://github.com/tomphttp/specifications) - Protocol spec for proxy backends
 - [Wisp protocol](https://github.com/MercuryWorkshop/wisp-protocol) - Multiplexed TCP/UDP transport over WebSocket
 - [Service Worker API (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) - The browser API that makes request interception possible
-- [Service Worker fetch event (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) - What the service worker can and cannot intercept
