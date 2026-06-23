@@ -1,12 +1,13 @@
 ---
-title: "What Building a Financial Agent Taught Me About Agent Development"
-description: "What building OpenCandle taught me about specs, evals, traces, review loops, UI references, and keeping product judgment with the human."
+title: "Lessons from Building a Domain Agent"
+description: "What building OpenCandle taught me about specs, evals, dogfooding loops, UI references, and keeping product judgment with the human."
 date: "Jun 22 2026"
 ---
 
-**TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle), a financial research agent, on top of [Pi](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/), an inspectable coding-agent loop, to learn what actually helps when agents are helping build software that itself uses agents. Agents moved shockingly fast when the rails were clear: specs, evals, traces, UI references, and review loops made them useful. When I let them make core product decisions, they mostly made the system bigger without adding much meaningful value.
+**TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle) on top of [Pi](https://pi.dev/) to learn what actually helps when agents are helping build software that itself uses agents. Agents moved shockingly fast when the rails were clear: specs, evals, traces, UI references, and review loops made them useful. When I let them make core product decisions, they mostly made the system bigger without adding much meaningful value.
 
-OpenCandle is the finance research app and workbench I built; Pi is the inspectable agent loop underneath it. The finance domain is the case study, not the point. It was useful because it put pressure on the parts of agent development that are easy to hand-wave: tools, state, routing, evidence contracts, failure handling, and evals.
+![OpenCandle GUI showing a tool call](https://raw.githubusercontent.com/Kahtaf/OpenCandle/refs/heads/feat/replace-reddit-with-rdt-cli/docs/pr-evidence/replace-reddit-with-rdt-cli/gui-tool-call.png)
+
 
 This post is partly inspired by Mario Zechner's writeup, [What I learned building an opinionated and minimal coding agent](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/). Mario built Pi because he wanted a coding agent he could understand, inspect, and control. I had the opposite starting point: I already had Pi as the agent substrate, and wanted to see how far I could push it into a domain-specific agent for finance.
 
@@ -23,8 +24,7 @@ The loop I wanted was:
 ```text
 understand the question
   -> pick an investigation path
-  -> gather market evidence
-  -> preserve missing-source warnings and data freshness
+  -> gather market evidence by invoking the right tools
   -> synthesize after the evidence exists
 ```
 
@@ -47,11 +47,9 @@ If a finance agent gives a bad answer, I need to know why:
 
 A generic chat wrapper would have made the first prototype easy and the later debugging miserable. Pi made it easier to treat the finance layer as an extension: tools, prompts, workflows, state, GUI, traces, and evals on top of a core loop I could inspect.
 
-That was the right tradeoff.
-
 ## What the build taught me
 
-The finance use case mattered less as finance than as pressure on the agent-building process. It had enough real complexity to expose weak spots: provider setup, missing data, stale data, routing ambiguity, workflow state, GUI presentation, and evals that needed to judge usefulness rather than demo success.
+The finance use case mattered less as finance than as pressure on the agent-building process. It had enough real complexity to expose weak spots: provider setup, missing or stale data, routing ambiguity, workflow state, GUI presentation, and evals that needed to judge usefulness rather than demo success.
 
 The lesson for agent builders is that a domain agent becomes product engineering quickly. The hard work was not making the model sound more financial. It was deciding which layer owned each responsibility:
 
@@ -69,20 +67,20 @@ A small routing bug made this concrete. One ambiguous market-data request looked
 
 ## Spec-driven development was the biggest unlock
 
-The best process decision was using [OpenSpec](https://github.com/Fission-AI/openspec) as the shared planning surface between me and the agents.
+The best process decision was using [OpenSpec](https://github.com/Fission-AI/openspec) as the shared planning surface between me and the agents. A Claude or Codex plan usually stops at a certain length, no matter how complex the feature is, so complex behavior cannot be captured up front in a single chat plan.
 
 The useful loop was not "write a giant spec, then code." It was conversational and incremental:
 
 1. Use `/opsx:explore` to go back and forth with an agent until the idea was clear.
 2. Use `/opsx:propose` to put the decision, acceptance criteria, and task breakdown on paper.
 3. Run a review loop with another agent, usually through [`acpx`](https://github.com/openclaw/acpx), before implementation.
-4. Use `/opsx:apply` to make the change against the accepted proposal.
+4. Use `/opsx:apply` to make the change against the accepted proposal. For larger OpenSpecs, the `/goal` command in Claude and Codex was useful because it let the agent work through the accepted plan in a more durable way.
 
 In this setup, those `/opsx:*` commands were repo-local OpenSpec workflows for exploration, proposal writing, and implementation.
 
 That flow mattered because agents are extremely literal. If the task says "fix routing," an agent may patch a prompt and move on. If the spec says where routing lives, what the acceptance gate is, what observability must exist, and which layer owns the failure, the agent has a much better chance of doing durable work.
 
-Specs are not bureaucracy when agents are writing the implementation. They are the steering wheel.
+Once implemented, I archived the OpenSpec docs with `/opsx:archive`, which turned them into a log of decisions over time.
 
 ## Agents need evals, not encouragement
 
@@ -101,9 +99,13 @@ So I added several eval layers:
 
 The trace is the important part. If a change makes an answer worse, I do not want to debate whether the prose sounds more polished. I want to know whether the route changed, whether the tool bundle changed, whether the evidence plan changed, and whether the answer stopped carrying the right risk caveat.
 
-## Dogfooding beat synthetic prompts
+## Dogfooding tested the whole loop
 
-The best eval prompts were mundane because real user questions are mundane in the best way.
+Dogfooding was not just a source of better prompts. It was the end-to-end check that the agent still worked across both surfaces: the TUI and the browser GUI.
+
+Every meaningful change needed a small dogfood pass. I would run realistic finance questions through the TUI harness, inspect the trace, then exercise the GUI with browser automation to make sure the same behavior was visible and usable in the workbench. The agents had tools for both sides of that loop: a TUI harness for driving the finance agent like a user, and browser automation for checking the GUI.
+
+The prompts were still ordinary user questions:
 
 ```text
 What is AAPL trading at?
@@ -114,11 +116,9 @@ What is Reddit and news sentiment saying about META?
 How should falling rates affect growth stocks over the next year?
 ```
 
-These prompts exposed issues that normal tests missed.
+But the point was not synthetic versus mundane prompts. The point was whether a real question survived the whole path: routing, tool calls, trace, final answer, and GUI presentation. Sometimes the agent asked for clarification when a reasonable default existed. Sometimes it used the wrong tool. Sometimes it let setup problems, like missing provider keys, dominate the answer instead of presenting them as caveats. Sometimes it fetched useful data and then wrote a generic answer anyway. Sometimes the GUI had the right data but presented it in a way that did not help the user make a decision.
 
-Sometimes the agent asked for clarification when a reasonable default existed. Sometimes it used the wrong tool. Sometimes it let setup problems, like missing provider keys, dominate the answer instead of presenting them as caveats. Sometimes it fetched useful data and then wrote a generic answer anyway. Sometimes the GUI had the right data but presented it in a way that did not help the user make a decision.
-
-Dogfooding changed the product because it kept pulling the work back to user intent. The useful question was: does OpenCandle take the right investigation path for this class of financial question?
+Dogfooding changed the product because it kept pulling the work back to user intent. The useful question was: does OpenCandle take the right investigation path, and can I verify that path end to end?
 
 ## Review loops beat trusting one agent
 
@@ -162,13 +162,13 @@ Agents are strong translators when the source and target are clear. They are muc
 
 ## Phone coding actually mattered
 
-The surprising lesson from phone coding was that agent workflows need to be steerable in small, reviewable chunks.
+The surprising lesson from phone coding was that agent workflows need to be steerable in small, reviewable chunks. I would estimate that about 60% of the prompts I issued for OpenCandle came from my phone.
 
 I was busy with a newborn. I did not always have a clean two-hour desk block. But I did have small gaps: holding the baby, waiting somewhere, sitting with one hand free. Agents made those gaps useful.
 
 The rails I had set up meant I could give a rough thought and let the agent figure out the next concrete step. A vague idea could become an OpenSpec exploration, a small proposal, a fixture, or a review request instead of disappearing until I was back at my desk.
 
-The mobile tooling mattered too. In my setup, the Codex and Claude mobile apps could connect back to the desktop session, so the real repo and dev server stayed in one place while I steered from the phone. I also used [t3.codes](https://github.com/pingdotgg/t3code) heavily for quick side conversations, drafts, and second opinions.
+The mobile tooling mattered too. In my setup, the Codex and Claude mobile apps could connect back to the desktop session, so the real repo and dev server stayed in one place while I steered from my phone. I also used [t3.codes](https://github.com/pingdotgg/t3code) heavily for quick side conversations, drafts, and second opinions.
 
 The phone became a steering device. I could keep the project warm while life was fragmented.
 
