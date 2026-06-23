@@ -1,10 +1,12 @@
 ---
-title: "What I Learned Building a Financial Agent"
-description: "Specs, evals, review loops, UI references, and what I would not hand over to coding agents after building a finance agent on Pi."
+title: "What Building a Financial Agent Taught Me About Agent Development"
+description: "What building OpenCandle taught me about specs, evals, traces, review loops, UI references, and the product decisions you should not delegate to agents."
 date: "Jun 22 2026"
 ---
 
 **TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle), a financial research agent on top of [Pi](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/), to learn what actually helps when agents are building agentic software. Agents moved shockingly fast when the rails were clear: specs, evals, traces, UI references, and review loops made them useful. When I let them make core product decisions, they mostly made the system bigger without adding much meaningful value.
+
+OpenCandle is the app and workbench I built; Pi is the inspectable agent loop underneath it. The finance domain is the case study, not the point. It was useful because it put pressure on the parts of agent development that are easy to hand-wave: tools, state, routing, evidence contracts, failure handling, and evals.
 
 This post is partly inspired by Mario Zechner's writeup, [What I learned building an opinionated and minimal coding agent](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/). Mario built Pi because he wanted a coding agent he could understand, inspect, and control. I had the opposite starting point: I already had Pi as the agent substrate, and wanted to see how far I could push it into a domain-specific agent for finance.
 
@@ -51,7 +53,7 @@ That was the right tradeoff.
 
 The financial-agent surface itself was less interesting than the pressure it put on the agent-building process. It had enough real complexity to expose weak spots: provider setup, missing data, stale data, routing ambiguity, workflow state, GUI presentation, and evals that needed to judge usefulness rather than demo success.
 
-The lesson for agent builders is that a domain agent becomes product engineering quickly. The hard work was not making the model sound more financial. It was deciding which layer owned each behavior:
+The lesson for agent builders is that a domain agent becomes product engineering quickly. The hard work was not making the model sound more financial. It was deciding which layer owned each responsibility:
 
 - tools fetch and normalize evidence
 - workflows preserve the investigation path
@@ -60,6 +62,10 @@ The lesson for agent builders is that a domain agent becomes product engineering
 - evals decide whether a change helped
 
 Whenever those boundaries were explicit, agents were productive. Whenever they were fuzzy, agents added surface area.
+
+The same was true for answer contracts. For each class of question, the answer needed to preserve a contract: what evidence it should cite, what uncertainty it should keep visible, what it should refuse to infer, and what action it should not pretend to recommend. Without that contract, the agent could fetch good data and still produce a weak answer.
+
+A small routing bug made this concrete. One ambiguous input looked like a prompt problem, so an agent tried to fix it by adding more instruction text. The durable fix was a fixture that captured the case, a narrow router change, and an eval proving the route stayed stable. The prompt patch looked cheaper, but it made the system harder to reason about.
 
 ## Spec-driven development was the biggest unlock
 
@@ -154,7 +160,7 @@ Agents are strong translators when the source and target are clear. They are muc
 
 ## Phone coding actually mattered
 
-The least technical lesson might be the most personal one: coding from my phone helped a lot.
+The surprising lesson from phone coding was that agent workflows need to be steerable in small, reviewable chunks.
 
 I was busy with a newborn. I did not always have a clean two-hour desk block. But I did have small gaps: holding the baby, waiting somewhere, sitting with one hand free. Agents made those gaps useful.
 
@@ -200,7 +206,7 @@ For this project, those decisions were things like:
 
 When I held those lines, agents were great. When I left them fuzzy, agents overbuilt. They added workflows when a better answer contract would do. They added prompt text when a router fixture was needed. They added UI states when the product probably needed a sharper no.
 
-The hard part is not getting an agent to write code. The hard part is deciding what code deserves to exist.
+The hard part is not getting an agent to write code. The hard part is building a process that decides what code deserves to exist.
 
 ## The loop I would reuse
 
