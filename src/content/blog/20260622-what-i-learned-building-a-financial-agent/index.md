@@ -1,12 +1,12 @@
 ---
 title: "What Building a Financial Agent Taught Me About Agent Development"
-description: "What building OpenCandle taught me about specs, evals, traces, review loops, UI references, and the product decisions you should not delegate to agents."
+description: "What building OpenCandle taught me about specs, evals, traces, review loops, UI references, and keeping product judgment with the human."
 date: "Jun 22 2026"
 ---
 
-**TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle), a financial research agent on top of [Pi](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/), to learn what actually helps when agents are building agentic software. Agents moved shockingly fast when the rails were clear: specs, evals, traces, UI references, and review loops made them useful. When I let them make core product decisions, they mostly made the system bigger without adding much meaningful value.
+**TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle), a financial research agent, on top of [Pi](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/), an inspectable coding-agent loop, to learn what actually helps when agents are helping build software that itself uses agents. Agents moved shockingly fast when the rails were clear: specs, evals, traces, UI references, and review loops made them useful. When I let them make core product decisions, they mostly made the system bigger without adding much meaningful value.
 
-OpenCandle is the app and workbench I built; Pi is the inspectable agent loop underneath it. The finance domain is the case study, not the point. It was useful because it put pressure on the parts of agent development that are easy to hand-wave: tools, state, routing, evidence contracts, failure handling, and evals.
+OpenCandle is the finance research app and workbench I built; Pi is the inspectable agent loop underneath it. The finance domain is the case study, not the point. It was useful because it put pressure on the parts of agent development that are easy to hand-wave: tools, state, routing, evidence contracts, failure handling, and evals.
 
 This post is partly inspired by Mario Zechner's writeup, [What I learned building an opinionated and minimal coding agent](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/). Mario built Pi because he wanted a coding agent he could understand, inspect, and control. I had the opposite starting point: I already had Pi as the agent substrate, and wanted to see how far I could push it into a domain-specific agent for finance.
 
@@ -24,7 +24,7 @@ The loop I wanted was:
 understand the question
   -> pick an investigation path
   -> gather market evidence
-  -> preserve source gaps and freshness
+  -> preserve missing-source warnings and data freshness
   -> synthesize after the evidence exists
 ```
 
@@ -51,7 +51,7 @@ That was the right tradeoff.
 
 ## What the build taught me
 
-The financial-agent surface itself was less interesting than the pressure it put on the agent-building process. It had enough real complexity to expose weak spots: provider setup, missing data, stale data, routing ambiguity, workflow state, GUI presentation, and evals that needed to judge usefulness rather than demo success.
+The finance use case mattered less as finance than as pressure on the agent-building process. It had enough real complexity to expose weak spots: provider setup, missing data, stale data, routing ambiguity, workflow state, GUI presentation, and evals that needed to judge usefulness rather than demo success.
 
 The lesson for agent builders is that a domain agent becomes product engineering quickly. The hard work was not making the model sound more financial. It was deciding which layer owned each responsibility:
 
@@ -63,9 +63,9 @@ The lesson for agent builders is that a domain agent becomes product engineering
 
 Whenever those boundaries were explicit, agents were productive. Whenever they were fuzzy, agents added surface area.
 
-The same was true for answer contracts. For each class of question, the answer needed to preserve a contract: what evidence it should cite, what uncertainty it should keep visible, what it should refuse to infer, and what action it should not pretend to recommend. Without that contract, the agent could fetch good data and still produce a weak answer.
+The same was true for answer contracts. For each class of question, the answer needed to preserve a contract: what evidence it should cite, what uncertainty it should keep visible, what it should refuse to infer, and what action it should not pretend to recommend. Without that contract, the agent could fetch good data and still produce a weak answer. For example, a current-price answer should cite the provider and timestamp, avoid pretending delayed data is live, and say when the price is unavailable. A portfolio-construction answer should explain assumptions and risk, not present itself as personalized financial advice.
 
-A small routing bug made this concrete. One ambiguous input looked like a prompt problem, so an agent tried to fix it by adding more instruction text. The durable fix was a fixture that captured the case, a narrow router change, and an eval proving the route stayed stable. The prompt patch looked cheaper, but it made the system harder to reason about.
+A small routing bug made this concrete. One ambiguous market-data request looked like a prompt problem, so an agent tried to fix it by adding more instruction text. The durable fix was a fixture that captured the case, a narrow router change, and an eval proving the route stayed stable. The prompt patch looked cheaper, but it made the system harder to reason about.
 
 ## Spec-driven development was the biggest unlock
 
@@ -77,6 +77,8 @@ The useful loop was not "write a giant spec, then code." It was conversational a
 2. Use `/opsx:propose` to put the decision, acceptance criteria, and task breakdown on paper.
 3. Run a review loop with another agent, usually through [`acpx`](https://github.com/openclaw/acpx), before implementation.
 4. Use `/opsx:apply` to make the change against the accepted proposal.
+
+In this setup, those `/opsx:*` commands were repo-local OpenSpec workflows for exploration, proposal writing, and implementation.
 
 That flow mattered because agents are extremely literal. If the task says "fix routing," an agent may patch a prompt and move on. If the spec says where routing lives, what the acceptance gate is, what observability must exist, and which layer owns the failure, the agent has a much better chance of doing durable work.
 
@@ -94,14 +96,14 @@ So I added several eval layers:
 - a TUI harness that lets another agent drive the finance agent like a user
 - trace capture for tool calls, tool results, workflow dispatch, custom entries, interactions, final answer, and duration
 - product evals over prompts a real user might ask
-- competitive finance evals that run the same prompt through the finance agent and generic no-tool Claude, Codex, and Gemini baselines through [`acpx`](https://github.com/openclaw/acpx)
+- competitive finance evals that use [`acpx`](https://github.com/openclaw/acpx) to compare the finance agent with no-tool Claude, Codex, and Gemini baselines
 - judge reports that classify failures by layer: routing, planning, evidence, tool capability, answer contract, synthesis, or harness
 
 The trace is the important part. If a change makes an answer worse, I do not want to debate whether the prose sounds more polished. I want to know whether the route changed, whether the tool bundle changed, whether the evidence plan changed, and whether the answer stopped carrying the right risk caveat.
 
 ## Dogfooding beat synthetic prompts
 
-The best eval prompts were boring because real users are boring in the best way.
+The best eval prompts were mundane because real user questions are mundane in the best way.
 
 ```text
 What is AAPL trading at?
@@ -114,9 +116,9 @@ How should falling rates affect growth stocks over the next year?
 
 These prompts exposed issues that normal tests missed.
 
-Sometimes the agent asked for clarification when a reasonable default existed. Sometimes it used the wrong tool. Sometimes it disclosed missing provider keys too loudly. Sometimes it fetched useful data and then wrote a generic answer anyway. Sometimes the GUI had the right data but presented it in a way that did not help the user make a decision.
+Sometimes the agent asked for clarification when a reasonable default existed. Sometimes it used the wrong tool. Sometimes it let setup problems, like missing provider keys, dominate the answer instead of presenting them as caveats. Sometimes it fetched useful data and then wrote a generic answer anyway. Sometimes the GUI had the right data but presented it in a way that did not help the user make a decision.
 
-Dogfooding changed the product because it kept pulling the work back to user intent. The useful question was: does this specific workbench take the right path for this class of financial question?
+Dogfooding changed the product because it kept pulling the work back to user intent. The useful question was: does OpenCandle take the right investigation path for this class of financial question?
 
 ## Review loops beat trusting one agent
 
@@ -150,7 +152,7 @@ It did not replace using the browser. It made the first pass less subjective.
 Two UI references helped a lot:
 
 - [trendy-design/llmchat](https://github.com/trendy-design/llmchat)
-- components and visual direction from [efferd.com](https://efferd.com/)
+- component styling and visual direction from [efferd.com](https://efferd.com/)
 
 This is a simple lesson, but it changed the speed of the project. If you want agents to build UI, give them a real reference.
 
@@ -166,7 +168,7 @@ I was busy with a newborn. I did not always have a clean two-hour desk block. Bu
 
 The rails I had set up meant I could give a rough thought and let the agent figure out the next concrete step. A vague idea could become an OpenSpec exploration, a small proposal, a fixture, or a review request instead of disappearing until I was back at my desk.
 
-The mobile tooling mattered too. Both the Codex and Claude mobile apps could connect back to the desktop session, so the real repo and dev server stayed in one place while I steered from the phone. I also used [t3.codes](https://github.com/pingdotgg/t3code) heavily for quick side conversations, drafts, and second opinions.
+The mobile tooling mattered too. In my setup, the Codex and Claude mobile apps could connect back to the desktop session, so the real repo and dev server stayed in one place while I steered from the phone. I also used [t3.codes](https://github.com/pingdotgg/t3code) heavily for quick side conversations, drafts, and second opinions.
 
 The phone became a steering device. I could keep the project warm while life was fragmented.
 
@@ -181,7 +183,7 @@ This finance agent accumulated breadth quickly: tools, providers, workflows, GUI
 If I were doing it again, every feature request would include a deletion question:
 
 - can this use an existing provider wrapper?
-- does this belong in a tool, router, workflow, policy card, or answer contract?
+- does this belong in a tool, router, workflow, UI, or answer contract?
 - what can be deleted if this lands?
 - what eval proves this matters?
 - what real user prompt gets better?
@@ -199,9 +201,9 @@ For this project, those decisions were things like:
 - the agent is read-only research software, not a trading bot
 - answers start from evidence, not vibes
 - missing provider data should be visible instead of hidden
-- tools fetch and format; the model synthesizes
-- risk should be loud
-- education prompts should not get fake current-data ceremony
+- layer ownership should stay explicit
+- risk and uncertainty should be visible, not buried
+- educational questions should not trigger fake current-data workflows
 - evals should judge usefulness, not just tool usage
 
 When I held those lines, agents were great. When I left them fuzzy, agents overbuilt. They added workflows when a better answer contract would do. They added prompt text when a router fixture was needed. They added UI states when the product probably needed a sharper no.
@@ -230,4 +232,4 @@ That loop is slower than "agent, build feature." It is much faster than cleaning
 
 Building on Pi was the right call because it kept the core loop inspectable. Building with agents was the right call because it let me move through a large product surface while life was busy and interrupted.
 
-But the value did not come from treating agents as autonomous product builders. It came from treating them as fast implementers inside a system that made the important things explicit: what the product is, what evidence should look like, how behavior is evaluated, and where human judgment owns the call.
+But the value did not come from treating agents as autonomous product builders. It came from treating them as fast implementers inside a system that made the important things explicit: what the product is, what counts as evidence, how behavior is evaluated, and which decisions stay with the human.
