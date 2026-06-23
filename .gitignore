@@ -7,6 +7,9 @@ dist/
 # dependencies
 node_modules/
 
+# local blog review/edit state
+.blog-edits/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
