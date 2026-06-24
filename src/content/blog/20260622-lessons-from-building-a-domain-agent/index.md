@@ -229,14 +229,12 @@ That loop is slower than "agent, build feature." It is much faster than cleaning
 
 ## Final take
 
-The biggest lesson was that agents do not remove the need for product judgment. They move the bottleneck toward it.
+The biggest lesson for me was that agents do not remove the need for product judgment. They move the bottleneck toward it.
 
-OpenCandle was useful as a finance project because finance made the hidden parts of agent design hard to ignore. The system could not just sound confident. It had to know when to fetch evidence, which tools owned which facts, how to expose missing data, what uncertainty to preserve, and what kind of answer it was allowed to give. Those constraints are not finance-specific. They are what make a domain agent legible.
+OpenCandle was useful as a finance project because finance made the hidden parts of agent design hard to ignore. The system could not just sound confident. It had to know when to fetch evidence, which tools owned which facts, how to expose missing data, what uncertainty to preserve, and what kind of answer it was allowed to give. Those constraints are not finance-specific. They are what make a domain agent credible.
 
 Building on Pi helped because the core loop stayed inspectable. Building with agents helped because I could move quickly across specs, tools, evals, UI, docs, and reviews. But speed was only valuable when the rails were clear. When the product invariant, answer contract, eval, or ownership boundary was vague, agents did what they are naturally good at: they added more code.
 
 That is the trap of agent-built software. The code gets cheaper before the judgment gets better.
 
 If I were taking one lesson into the next project, it would be this: use agents to accelerate implementation, exploration, review, and cleanup, but do not outsource the core decisions. Decide what the product is, what evidence counts, what failure looks like, what should stay visible to the user, and what should be deleted. Then let agents work inside those constraints.
-
-The best agent workflow is not “go build this.” It is a loop that keeps asking: what behavior are we trying to preserve, how will we know it improved, and does this code deserve to exist?
