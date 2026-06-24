@@ -1,17 +1,16 @@
 ---
 title: "Lessons from Building a Domain Agent"
-description: "What building OpenCandle taught me about specs, evals, dogfooding loops, UI references, and keeping product judgment with the human."
+description: "What building a financial agent taught me about specs, evals, dogfooding, and building products with agents at high velocity."
 date: "Jun 22 2026"
 ---
 
-**TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle) on top of [Pi](https://pi.dev/) to learn what actually helps when agents are helping build software that itself uses agents. Agents moved shockingly fast when the rails were clear: specs, evals, traces, UI references, and review loops made them useful. When I let them make core product decisions, they mostly made the system bigger without adding much meaningful value.
+**TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle), a financial research agent, to learn what helps when agents build software that itself uses agents. I was able to move fast when the rails were clear: specs, evals, traces, UI references, and review loops. However, when I let agents make core product decisions, they mostly made the system bigger without adding much meaningful value.
 
-![OpenCandle GUI showing a tool call](https://raw.githubusercontent.com/Kahtaf/OpenCandle/refs/heads/feat/replace-reddit-with-rdt-cli/docs/pr-evidence/replace-reddit-with-rdt-cli/gui-tool-call.png)
-
-
-This post is partly inspired by Mario Zechner's writeup, [What I learned building an opinionated and minimal coding agent](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/). Mario built Pi because he wanted a coding agent he could understand, inspect, and control. I had the opposite starting point: I already had Pi as the agent substrate, and wanted to see how far I could push it into a domain-specific agent for finance.
+This post is partly inspired by Mario Zechner's writeup on Pi, [What I learned building an opinionated and minimal coding agent](https://mariozechner.at/posts/2025-11-30-pi-coding-agent/). Mario built [Pi](https://pi.dev/) because he wanted a coding agent he could understand, inspect, and control. I had the opposite starting point: I based OpenCandle on Pi as the agent substrate, and I wanted to see how far I could push it into a domain-specific agent for finance.
 
 This is more of a build log: what worked, what did not, and what I would do again.
+
+![OpenCandle GUI showing a tool call](https://raw.githubusercontent.com/Kahtaf/OpenCandle/refs/heads/feat/replace-reddit-with-rdt-cli/docs/pr-evidence/replace-reddit-with-rdt-cli/gui-tool-call.png)
 
 ## Why build a financial agent at all?
 
@@ -49,21 +48,21 @@ A generic chat wrapper would have made the first prototype easy and the later de
 
 ## What the build taught me
 
-The finance use case mattered less as finance than as pressure on the agent-building process. It had enough real complexity to expose weak spots: provider setup, missing or stale data, routing ambiguity, workflow state, GUI presentation, and evals that needed to judge usefulness rather than demo success.
+The finance use case, for me, was a great way to get my hands dirty with the agent-building process. It had enough real complexity to expose weak spots: provider setup, missing or stale data, routing ambiguity, workflow state, GUI presentation, and evals that needed to judge usefulness.
 
-The lesson for agent builders is that a domain agent becomes product engineering quickly. The hard work was not making the model sound more financial. It was deciding which layer owned each responsibility:
+The real work was not making the model sound more financial. It was deciding which layer owned each responsibility:
 
 - tools fetch and normalize evidence
 - workflows preserve the investigation path
 - prompts synthesize after evidence exists
 - UI makes gaps and caveats visible
-- evals decide whether a change helped
+- evals decide whether a change helped or hurt
 
 Whenever those boundaries were explicit, agents were productive. Whenever they were fuzzy, agents added surface area.
 
 The same was true for answer contracts. For each class of question, the answer needed to preserve a contract: what evidence it should cite, what uncertainty it should keep visible, what it should refuse to infer, and what action it should not pretend to recommend. Without that contract, the agent could fetch good data and still produce a weak answer. For example, a current-price answer should cite the provider and timestamp, avoid pretending delayed data is live, and say when the price is unavailable. A portfolio-construction answer should explain assumptions and risk, not present itself as personalized financial advice.
 
-A small routing bug made this concrete. One ambiguous market-data request looked like a prompt problem, so an agent tried to fix it by adding more instruction text. The durable fix was a fixture that captured the case, a narrow router change, and an eval proving the route stayed stable. The prompt patch looked cheaper, but it made the system harder to reason about.
+A small routing bug made this concrete. One ambiguous market data request looked like a prompt problem, so an agent tried to fix it by adding more instruction text. The durable fix was a fixture that captured the case, a narrow router change, and an eval proving the route stayed stable. The prompt patch looked cheaper, but it made the system harder to reason about.
 
 ## Spec-driven development was the biggest unlock
 
@@ -116,7 +115,7 @@ What is Reddit and news sentiment saying about META?
 How should falling rates affect growth stocks over the next year?
 ```
 
-But the point was not synthetic versus mundane prompts. The point was whether a real question survived the whole path: routing, tool calls, trace, final answer, and GUI presentation. Sometimes the agent asked for clarification when a reasonable default existed. Sometimes it used the wrong tool. Sometimes it let setup problems, like missing provider keys, dominate the answer instead of presenting them as caveats. Sometimes it fetched useful data and then wrote a generic answer anyway. Sometimes the GUI had the right data but presented it in a way that did not help the user make a decision.
+Dogfooding prompts like this through the system tested if it survived the whole path: routing, tool calls, trace, final answer, and GUI presentation. Sometimes the agent asked for clarification when a reasonable default existed. Sometimes it used the wrong tool. Sometimes it let setup problems, like missing provider keys, dominate the answer instead of presenting them as caveats. Sometimes it fetched useful data and then wrote a generic answer anyway. Sometimes the GUI had the right data but presented it in a way that did not help the user make a decision.
 
 Dogfooding changed the product because it kept pulling the work back to user intent. The useful question was: does OpenCandle take the right investigation path, and can I verify that path end to end?
 
@@ -230,6 +229,14 @@ That loop is slower than "agent, build feature." It is much faster than cleaning
 
 ## Final take
 
-Building on Pi was the right call because it kept the core loop inspectable. Building with agents was the right call because it let me move through a large product surface while life was busy and interrupted.
+The biggest lesson was that agents do not remove the need for product judgment. They move the bottleneck toward it.
 
-But the value did not come from treating agents as autonomous product builders. It came from treating them as fast implementers inside a system that made the important things explicit: what the product is, what counts as evidence, how behavior is evaluated, and which decisions stay with the human.
+OpenCandle was useful as a finance project because finance made the hidden parts of agent design hard to ignore. The system could not just sound confident. It had to know when to fetch evidence, which tools owned which facts, how to expose missing data, what uncertainty to preserve, and what kind of answer it was allowed to give. Those constraints are not finance-specific. They are what make a domain agent legible.
+
+Building on Pi helped because the core loop stayed inspectable. Building with agents helped because I could move quickly across specs, tools, evals, UI, docs, and reviews. But speed was only valuable when the rails were clear. When the product invariant, answer contract, eval, or ownership boundary was vague, agents did what they are naturally good at: they added more code.
+
+That is the trap of agent-built software. The code gets cheaper before the judgment gets better.
+
+If I were taking one lesson into the next project, it would be this: use agents to accelerate implementation, exploration, review, and cleanup, but do not outsource the core decisions. Decide what the product is, what evidence counts, what failure looks like, what should stay visible to the user, and what should be deleted. Then let agents work inside those constraints.
+
+The best agent workflow is not “go build this.” It is a loop that keeps asking: what behavior are we trying to preserve, how will we know it improved, and does this code deserve to exist?
