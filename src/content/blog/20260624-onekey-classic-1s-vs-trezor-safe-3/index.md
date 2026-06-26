@@ -4,120 +4,109 @@ description: "A tight comparison of two affordable hardware wallets: Trezor Safe
 date: "Jun 24 2026"
 ---
 
-**TL;DR:** Trezor Safe 3 is the better boring wallet. OneKey Classic 1S is the better active wallet. Both are affordable hardware wallets with small OLED screens, physical confirmation, open-source security claims, and EAL6+ secure elements. The difference is workflow: Trezor is desktop-first, battery-free, backup-focused, and built around conservative custody. OneKey is thin, portable, Bluetooth-capable, app-centered, and better suited to users who actually move across chains, Solana, swaps, NFTs, or DeFi.
+**TL;DR:** Trezor Safe 3 is the better conservative custody wallet. OneKey Classic 1S is the better active crypto wallet. Both are affordable hardware wallets with secure-element protection, physical confirmation, open-source claims, and small screens. The difference is workflow: Trezor is USB-powered, desktop-first, backup-focused, and built around long-term self-custody. OneKey is slimmer, Bluetooth-capable, app-centered, and better suited to users who regularly move across chains, apps, swaps, NFTs, or DeFi.
 
-OneKey reached out about a collaboration on the Classic 1S. Their brief explicitly allows comparison posts, honest criticism, and side-by-side reviews; the restrictions are about referral-code distribution, not product opinions.[1] This is a research-backed comparison before my full hands-on pass. I reviewed OneKey's collaboration PDF, official product docs, Trezor's product and security docs, written reviews, and YouTube transcripts. Before publishing a final review, I still want to initialize the OneKey myself, pair it to mobile, sign a small transaction, try a DeFi-style flow, and check whether the screen and app feel calm under real use.
+This comparison focuses on buying fit, not a universal winner. If the wallet mostly protects long-term holdings, Trezor Safe 3 is easier to recommend. If the wallet needs to pair with a phone, support a broader app workflow, and reduce mistakes while signing active Web3 transactions, OneKey Classic 1S has the stronger case.
 
-## The split
+## Quick comparison
 
-The obvious comparison is security. Both devices make serious claims.
-
-OneKey lists an EAL6+ secure element, Bluetooth, USB-C, 30,000+ coins, clear signing preview, SignGuard, open-source firmware/apps, reproducible builds, tamper-evident packaging, and firmware authenticity verification on first activation.[2] Trezor lists an EAL6+ secure element, open-source design, on-device confirmation, PIN/passphrase protection, a 0.96-inch monochrome OLED, two-button input, USB-C, Trezor Suite, and support for thousands of coins and tokens.[3]
-
-That looks close until you ask how you use the wallet.
-
-If the wallet mostly lives in a drawer and comes out for deliberate desktop sessions, Trezor Safe 3 makes more sense. If the wallet needs to travel, pair with your phone, and support a messier multi-chain life, OneKey Classic 1S looks more practical.
+OneKey lists an EAL6+ secure element, Bluetooth, USB-C, 30,000+ coins, clear signing preview, SignGuard, open-source firmware/apps, reproducible builds, tamper-evident packaging, firmware authenticity checks, and a $99 Classic 1S / $79 Classic 1S Pure split.[1] Trezor lists Secure Element protection, open-source design, on-device confirmation, PIN/passphrase protection, Trezor Suite, thousands of supported coins and tokens, USB-C, a two-button pad, and a 0.96-inch monochrome OLED.[6]
 
 | Feature | OneKey Classic 1S | Trezor Safe 3 |
 | --- | --- | --- |
-| Best fit | Active crypto users, mobile users, Solana/DeFi users | Conservative self-custody, desktop users, long-term holders |
-| Price in research | $99 Classic 1S; $79 Classic 1S Pure / BTC-only Pure [2] | $59 offer price captured from Trezor product metadata [3] |
-| Security hardware | EAL6+ secure element; separate MCU mentioned in review [2][5] | EAL6+ OPTIGA Trust M (V3) secure element [4] |
-| Connectivity | USB-C and Bluetooth [2][5] | USB-C only, no battery [3][7] |
-| App workflow | OneKey App, swaps, DeFi, NFTs, Jupiter, WalletConnect-style workflows [1][5] | Trezor Suite: send, receive, trade, stake, portfolio, coin control, Tor [3] |
-| Backup story | Seed phrase recovery and passphrase support in reviews [5][8] | SLIP39 single/multi-share plus BIP39 12/18/24-word recovery [7] |
-| Main compromise | Small OLED, slower button navigation, app polish still needs testing [5][6] | Less mobile flexibility; two-button USB-only flow can feel limiting [3][7][9] |
+| Best fit | Active crypto users, mobile users, multi-chain users | Conservative self-custody, desktop users, long-term holders |
+| Price in official pages | $99 Classic 1S; $79 Classic 1S Pure / BTC-only Pure [1] | $59 offer price in Trezor product metadata [6] |
+| Security hardware | EAL6+ secure element [1] | EAL6+ OPTIGA Trust M (V3) secure element [7] |
+| Connectivity | USB-C and Bluetooth [1] | USB-C; no battery [6][8] |
+| App workflow | OneKey App, swaps, staking, perps, risk detection, hardware pairing [3] | Trezor Suite for send, receive, buy, sell, swap, stake, portfolio, privacy tools [9] |
+| Signing focus | Clear Signing + SignGuard risk alerts [2] | On-device confirmation with Trezor Suite and supported third-party apps [6][9] |
+| Backup story | Recovery phrase, passphrase, hidden wallets [4][5] | SLIP39 single/multi-share backups plus BIP39 12/18/24-word recovery [8] |
+| Main trade-off | More app surface and more active-use complexity | Less mobile flexibility; USB-powered desktop ritual |
 
 ## Security
 
-Trezor has the cleaner conservative security story. Trezor says the Safe 3 and Safe 5 use the OPTIGA Trust M (V3) secure element, which helps protect against physical attacks if the device is stolen.[4] The chip enforces PIN protection, helps verify the device is genuine, and contributes entropy during wallet creation. After 16 incorrect PIN attempts, it erases a secret and the device resets; you recover with your wallet backup.[4]
+Trezor has the cleaner conservative security story. Trezor says Safe 3 uses the OPTIGA Trust M (V3) secure element to strengthen protection against physical attacks.[7] The chip helps enforce PIN protection, verify device authenticity, and contribute entropy during wallet creation. After 16 incorrect PIN attempts, it erases a secret and the device resets; the wallet can be recovered from the backup.[7]
 
-That explanation is useful because it is concrete. It does not pretend the secure element solves everything. It explains the chip's job and where the user's backup still matters.
+That explanation is concrete. It does not imply the secure element solves every risk. It explains the chip's job and makes the backup model central.
 
-OneKey's security story is strong too, but it is more tied to active signing. The Classic 1S page says keys stay offline, the device uses EAL6+ secure chips, firmware and apps are open source with reproducible builds, and the device supports tamper checks and firmware verification during activation.[2] StakePoint's hands-on review lists an EAL6+ secure element, separate MCU, open-source firmware, SlowMist audit, physical confirmation, and automatic reset after 10 failed PIN attempts.[5]
+OneKey's security story is also serious, but it is framed more around active signing. OneKey says Classic 1S keeps keys offline, uses EAL6+ secure chips, supports open-source firmware/apps with reproducible builds, and includes tamper-evident packaging plus firmware authenticity checks during activation.[1] Its authentication guide also tells buyers to inspect the package, confirm the holographic seal, make sure recovery cards are blank, and generate recovery phrases only on the device screen.[4]
 
-The most interesting OneKey feature is not the chip. It is clear signing and SignGuard. OneKey says the wallet helps users review transaction details and identify scams before confirmation.[2] Igor Gaponov's review makes the practical warning explicit: hardware wallets do not save you if you approve a bad transaction. You still have to check what you sign.[6]
+The more distinctive OneKey feature is SignGuard plus Clear Signing. OneKey says Clear Signing makes transaction data human-readable, while SignGuard provides real-time risk detection for malicious contracts, suspicious approvals, phishing sites, and abnormal behavior before signing.[2] That matters because a hardware wallet does not protect users from approving a transaction they do not understand. OneKey is trying to make the approval itself safer.
 
-So the security trade-off is not "which chip is better?" It is which failure mode you care about most. Trezor is optimized around custody discipline: keep the seed safe, keep the device simple, make recovery robust. OneKey is optimized around active signing: people connect apps, swap, move across chains, and need help avoiding bad approvals.
+So the security split is not just chip versus chip. Trezor is optimized for custody discipline: simple device, strong recovery model, deliberate signing. OneKey is optimized for active signing: more app connectivity, more transaction types, and more help understanding what is being approved.
 
 ## Trust and open source
 
-Both companies lean on open source. OneKey says its firmware and apps are open source, use reproducible builds, can be verified on GitHub, and are backed by third-party audits.[2] The collaboration brief also says OneKey firmware and hardware schematics are publicly auditable.[1]
+Both companies lean on transparency. OneKey says its firmware and apps are open source with reproducible builds, independent GitHub verification, and third-party security audits.[1] Trezor puts open-source design on the Safe 3 product page and says it chose a secure element path that does not require NDAs or compromise its open-source philosophy.[6][7][8]
 
-Trezor has the stronger history here. The Safe 3 page puts open-source design next to secure-element protection as a headline feature.[3] The FAQ says Trezor added the Safe 3's secure element without compromising the open-source nature of the device, and that older Trezors avoided secure elements partly because available chips required NDAs that conflicted with Trezor's philosophy.[7]
-
-That matters. Hardware wallets are trust products. You buy the device, but you also buy the company's update habits, documentation habits, and response to ugly edge cases. OneKey has meaningful ecosystem credibility: the brief says it is backed by YZi Labs, formerly Binance Labs, and Coinbase Ventures, and is co-branded or adopted by Binance, OKX, Bybit, and Bitget.[1] Still, if I had to pick a trust winner today, I would give that category to Trezor.
+Trezor has the trust advantage because of history. Hardware wallets are trust products: the buyer is trusting not only the device, but also the company's updates, docs, supply chain, and incident response. OneKey's open-source and audit claims are meaningful, but Trezor's longer public track record still makes it the easier conservative choice.
 
 ## Hardware and portability
 
-OneKey wins portability. StakePoint describes the Classic 1S as "credit card dimensions, 20 grams" and says it slips into a wallet.[5] Crypto-Corner's long-term review says the Classic 1S is paper-light, discreet, and the device the author takes while traveling.[8]
+OneKey wins portability and connectivity. The Classic 1S line is built around a slim form factor, USB-C, Bluetooth, and a choice between a battery model and a battery-free Pure model.[1] That gives buyers a useful fork: choose the standard Classic 1S for mobile convenience, or choose the Pure if battery-free storage matters more.
 
-Trezor Safe 3 is small too: 59 x 32 x 7.4 mm, 14 g, 0.96-inch monochrome OLED, 128 x 64 resolution, two-button pad, and USB-C.[3] But it is not a mobile wallet. The FAQ says it has no battery and only turns on when plugged into a computer.[7]
+Trezor Safe 3 is also small: 59 x 32 x 7.4 mm and 14 g, with a two-button pad, 0.96-inch monochrome OLED, and USB-C.[6] But it is not trying to be a Bluetooth mobile wallet. Trezor's FAQ says Safe 3 has no battery and only turns on when plugged into a computer.[8]
 
-That no-battery design is a feature for long-term storage. No battery means no charging habit, no battery aging, and one fewer component to worry about. For active use, OneKey's design is better. The Classic 1S has a built-in battery at $99; the Pure removes the battery and drops to $79.[2] Crypto-Corner notes the same split between the battery model and USB-C-powered Pure.[8]
+That is a real advantage for long-term storage. No battery means no charging habit, no battery aging concern, and one fewer component to worry about. It also makes the device less flexible. Trezor feels like a wallet for deliberate sessions. OneKey feels like a wallet for people who expect to carry and use it more often.
 
-## Daily use
+## App workflow
 
-OneKey is broader. StakePoint says setup took under 10 minutes: power on, choose language, generate a seed phrase, set a PIN, and pair with the mobile app over Bluetooth.[5] The app is central: StakePoint lists staking, swaps, portfolio tracking, DeFi access, NFT support, and Jupiter integration, and says Jupiter worked smoothly.[5] OneKey's materials also mention MetaMask, WalletConnect v2, Rabby, swaps, DeFi Earn/Borrow, perps, and free USDT transfers.[1][2]
+OneKey has the broader app workflow. The OneKey App official page presents a full multi-chain wallet: buy, sell, send, receive, swap, stake, market tracking, app lock, malicious dApp blocking, transaction preview, similar-address detection, hardware connection verification, 30,000+ coins, multi-network dApp connectivity, perps, and cold-wallet pairing.[3]
 
-Trezor is cleaner. Safe 3 runs through Trezor Suite for send, receive, trade, stake, portfolio tracking, coin control, and Tor.[3] The limitation is mobile: the product extraction says iOS does not support swap, send, setup, or device management for Safe 3, and the FAQ says the device only turns on when connected to a computer.[3][7]
+That breadth is the point of OneKey Classic 1S. It is not just a seed-storage device with a companion app. It is meant to be part of a larger active crypto workflow.
 
-That makes Trezor a deliberate desktop ritual: plug in, open Trezor Suite, verify on-device, put it away. Good. Some people should want exactly that.
+Trezor Suite is narrower, but polished around custody. Trezor describes Suite as the official app for managing a Trezor wallet: send, receive, buy, sell, swap, stake, track crypto, use coin control, connect through Tor, and use supported third-party wallet apps when needed.[9] Safe 3 also supports third-party wallet apps, but Trezor's product page notes an iOS limitation: no swap, send, setup, or device management on iOS.[6]
 
-OneKey's convenience is useful, but it adds surface area. More app features mean more prompts, more integrations, and more transaction types. OneKey answers with clear signing and SignGuard.[2] I still would not treat the app ecosystem as pure upside. It makes the wallet more useful for active crypto, but less vault-like.
+For a buyer, the question is whether breadth is useful or distracting. OneKey's app gives active users more to do. Trezor's app gives long-term holders fewer moving parts.
 
 ## Coins, chains, and DeFi
 
-OneKey has the stronger multi-chain case. Its product page says Classic 1S supports 30,000+ coins.[2] StakePoint lists 30,000+ assets across 100+ blockchains and specifically tested Solana, SPL tokens, NFTs, DeFi interactions, and Jupiter.[5] Crypto-Corner's older review says the Classic supports 60+ blockchains and thousands of tokens, including Bitcoin, Ethereum, Solana, DeFi, and NFTs.[8]
+OneKey's official positioning is stronger for multi-chain activity. The Classic 1S product page and OneKey App page both claim support for 30,000+ coins.[1][3] The app page also emphasizes multi-network dApp connectivity, swaps, staking, perps, risk detection, and hardware-wallet pairing.[3]
 
-The exact asset counts differ by source and date, so I would verify the current matrix before publishing. Directionally, though, the point is clear: OneKey is built for a broad multi-chain world.
+Trezor also supports a broad set of assets. Safe 3 supports thousands of coins and tokens, and Trezor's coin page lists major assets such as Bitcoin, Ethereum, USDT, BNB, USDC, XRP, Solana, TRON, Dogecoin, Cardano, and more, with support varying by model and wallet app.[6][9]
 
-Trezor Safe 3 supports thousands of coins and tokens through Trezor Suite, including Bitcoin, Ethereum, Ethereum Classic, Litecoin, XRP, Bitcoin Cash, Dogecoin, Zcash, Cardano, and many tokens.[7] That is enough for many holders. But if your crypto life includes Solana DeFi, WalletConnect flows, app-based swaps, NFTs, and phone signing, OneKey is the more natural fit.
+The difference is emphasis. Trezor can handle a lot of assets. OneKey is more explicitly designed around a multi-chain app experience. If the buyer mostly holds BTC, ETH, or major assets, Trezor is enough. If the buyer expects to use swaps, dApps, perps, and phone-based workflows often, OneKey is the more natural fit.
 
 ## Backups and recovery
 
-Trezor wins this category. Safe 3 supports SLIP39 backups, including single-share and multi-share backups, plus BIP39 recovery with 12-, 18-, and 24-word backups.[7] Its product page also frames backup as a major feature, with 12-word, 20-word, 24-word, single-share, and advanced multi-share options.[3]
+Trezor wins the backup category. Safe 3 supports SLIP39 wallet backups, including single-share and multi-share backups, and can recover existing BIP39 backups with 12, 18, or 24 words.[8] Trezor's product page also makes backup options a major part of the Safe 3 pitch.[6]
 
-That matters because the backup is the wallet. If the device is lost, stolen, wiped, or destroyed, recovery planning decides whether your self-custody worked.
+OneKey covers the standard self-custody basics. Its authentication guide says recovery phrases are the only way to recover assets, must be generated on the device screen, and should never be stored digitally.[4] OneKey also supports passphrases and hidden wallets; its help page explains that a passphrase creates a separate wallet and warns that losing the passphrase means losing access to that hidden wallet.[5]
 
-OneKey has standard seed phrase recovery and passphrase support in reviews. Crypto-Corner says the Classic supports 12-, 18-, or 24-word seed phrases and passphrase options.[8] StakePoint says recovery happens through the seed phrase.[5] Gaponov recommends a 24-word seed, 6+ digit PIN, and optional passphrase for hidden wallets.[6] Solid, but less differentiated than Trezor's backup story.
+Both are viable. Trezor's backup story is simply more differentiated. If a buyer is designing a long-term recovery plan for serious holdings, Safe 3 has the edge.
 
 ## Weak spots
 
-OneKey's obvious weakness is the small screen and button navigation. StakePoint calls the 128 x 64 monochrome OLED the compromise and says navigation can be slow, especially with longer addresses or deeper menus.[5] Gaponov also mentions occasional Android app unresponsiveness and says the device supports only one recovery phrase.[6] I would test both on current firmware before treating them as final, but they are exactly the kinds of issues that matter for an app-centered wallet.
+OneKey's weakness is complexity. The app surface is broad: swaps, staking, perps, dApp connectivity, risk detection, hidden wallets, and hardware pairing.[3][5] That is useful for active users, but it creates more decisions. The buyer needs to be comfortable reading prompts, managing approvals, and understanding when an app feature adds convenience versus risk.
 
-Trezor's weakness is flexibility. USB-C only, no battery, no iOS setup/send/swap/device management in the product extraction.[3][7] The two-button interface is simple, but it can be tedious. One Chinese comparison transcript dismissed the Safe 3 largely because two-button navigation felt too limiting.[9] I would not adopt that whole take, but the friction is real.
+Trezor's weakness is flexibility. Safe 3 is USB-powered, has no battery, uses a two-button interface, and has iOS limits for swap, send, setup, and device management.[6][8] That makes it a calmer custody device, but a less convenient daily crypto device.
 
 ## Recommendation
 
-Choose Trezor Safe 3 if you want conservative self-custody: desktop sessions, major assets, no battery, mature open-source trust, and stronger backup options. The case comes from its EAL6+ secure element, Trezor Suite workflow, USB-powered hardware, and SLIP39/BIP39 support.[3][4][7]
+Choose **Trezor Safe 3** if the goal is conservative self-custody: long-term holdings, desktop sessions, mature open-source trust, no battery, and stronger backup options. It is the cleaner pick for someone who wants a hardware wallet to be boring, deliberate, and easy to reason about.
 
-Choose OneKey Classic 1S if you actually use crypto on your phone or across chains. It is better for Solana, NFTs, DeFi, WalletConnect-style flows, Bluetooth, portability, and app-based signing. The case comes from its USB-C/Bluetooth support, $99 price, $79 Pure option, 30,000+ coin claim, open-source firmware/apps, SignGuard, thin form factor, and StakePoint's Solana DeFi testing.[2][5][8]
+Choose **OneKey Classic 1S** if the wallet needs to fit active crypto habits: phone use, Bluetooth, multi-chain assets, swaps, staking, dApps, perps, risk alerts, and clearer signing previews. It is the better fit for someone who expects the hardware wallet to participate in daily Web3 workflows rather than sit in a drawer.
 
-My final read: **Trezor Safe 3 is the better boring wallet. OneKey Classic 1S is the better active wallet.**
+The simplest version: **Trezor Safe 3 is the better boring wallet. OneKey Classic 1S is the better active wallet.**
 
-If the biggest risk is losing access years from now, choose the wallet with the recovery model and simplicity you trust most. That points me toward Trezor.
-
-If the biggest risk is making mistakes while actively using crypto across apps and chains, choose the wallet that fits that workflow and shows you more before you sign. That points me toward OneKey.
-
-Before I would publish this as a final hands-on review, I would test five things directly: initial setup, mobile Bluetooth pairing, a basic receive/send flow, one realistic app-signing flow, and screen readability for a long address or approval. The research makes OneKey look more flexible. The device still has to prove that the flexibility does not make the experience noisier. Trezor has less to prove there because its workflow is already intentionally narrow.
+That is not a knock on either product. For self-custody, boring can be a feature. For active crypto, convenience and transaction clarity can also be security features. The right choice depends on which risk is bigger: losing access years from now, or approving the wrong thing while using crypto today.
 
 ## Sources
 
-[1] OneKey Creator Partnership Proposal 2026, provided collaboration brief. Relevant sections: editorial freedom, comparison content guidance, written content length, open-source/public audit claims, and brand/product positioning.
+[1] [OneKey Classic 1S official product page](https://onekey.so/products/onekey-classic-1s/). Pricing, EAL6+ secure element, Bluetooth/USB-C, 30,000+ coins, Clear Signing Preview, SignGuard, open-source firmware/apps, reproducible builds, tamper protection, firmware verification.
 
-[2] [OneKey Classic 1S official product page](https://onekey.so/products/onekey-classic-1s/). Relevant sections: pricing, EAL6+ secure element, Bluetooth/USB-C, 30,000+ coins, SignGuard, open-source firmware/apps, reproducible builds, tamper protection, firmware verification.
+[2] [OneKey Help Center: SignGuard and Clear Signing](https://help.onekey.so/en/articles/12058229-signguard-and-clear-signing-how-they-protect-you-from-web3-phishing-and-scams). Risk alerts, transaction previews, human-readable signing, malicious-contract and phishing detection.
 
-[3] [Trezor Safe 3 official product page](https://trezor.io/trezor-safe-3). Relevant sections: EAL6+ secure element, open-source design, Trezor Suite, OLED/two-button hardware, USB-C, iOS limitation, coin control/Tor, backup options.
+[3] [OneKey App official page](https://onekey.so/mobile-app/). App workflow, swaps, staking, perps, risk detection, 30,000+ coins, multi-network dApp connectivity, hardware-wallet pairing.
 
-[4] [Trezor secure elements documentation](https://trezor.io/learn/security-privacy/how-trezor-keeps-you-safe/secure-elements-in-trezor-safe-devices). Relevant sections: OPTIGA Trust M (V3), physical-attack protection, PIN enforcement, device authenticity, entropy, and reset after failed PIN attempts.
+[4] [OneKey Help Center: Authenticate OneKey Classic 1S](https://help.onekey.so/en/articles/11461091-authenticate-onekey-classic-1s). Package inspection, holographic seal, blank recovery cards, device-generated recovery phrase, recovery safety guidance.
 
-[5] [StakePoint OneKey Classic 1S review](https://stakepoint.app/blog/onekey-classic-1s-review). Relevant sections: Solana DeFi testing, credit-card dimensions/20g, EAL6+, SlowMist, setup under 10 minutes, Bluetooth mobile/USB desktop, Jupiter integration, small OLED/buttons compromise.
+[5] [OneKey Help Center: Passphrases and hidden wallets](https://help.onekey.so/en/articles/11461220-passphrases-and-hidden-wallets). Passphrase support, hidden wallets, recovery warnings, Classic 1S support.
 
-[6] [Igor Gaponov's OneKey Classic 1S review on Medium](https://medium.com/@igaponov/review-for-crypto-hardware-wallet-onekey-classic-1s-98e06ec7f78b). Relevant sections: BIP39 seed phrase explanation, hardware-wallet risks, OneKey security history, SignGuard mention, recommendation of 24-word seed/PIN/passphrase, and drawbacks around one recovery phrase and Android responsiveness.
+[6] [Trezor Safe 3 official product page](https://trezor.io/trezor-safe-3). Secure Element protection, open-source design, Trezor Suite, OLED/two-button hardware, USB-C, iOS limitation, dimensions, price metadata, backup positioning.
 
-[7] [Trezor Safe 3 FAQ](https://trezor.io/guides/trezor-devices/trezor-safe-3/trezor-safe-3-faqs). Relevant sections: dedicated Secure Element, open-source nature, SLIP39 support, BIP39 12/18/24-word recovery, supported coins, USB-powered/no battery.
+[7] [Trezor Knowledge Base: Secure Elements in Trezor Safe devices](https://trezor.io/learn/security-privacy/how-trezor-keeps-you-safe/secure-elements-in-trezor-safe-devices). OPTIGA Trust M (V3), EAL6+, physical-attack protection, PIN enforcement, authenticity checks, entropy, reset after failed PIN attempts.
 
-[8] [Crypto-Corner OneKey Classic review](https://crypto-corner.com/2025/07/27/hardware-wallets-in-2025-onekey-classic-review/). Relevant sections: travel use, 20g form factor, Classic vs Pure battery difference, SE/MCU chips, open-source firmware, seed phrase options, passphrase support, chain support.
+[8] [Trezor Safe 3 FAQ](https://trezor.io/guides/trezor-devices/trezor-safe-3/trezor-safe-3-faqs). Secure element, open-source philosophy, SLIP39 support, BIP39 12/18/24-word recovery, supported coins, USB-powered/no-battery design.
 
-[9] YouTube transcript saved in the research folder: `youtube/transcripts/comparison-jhCMwJi-vpQ-how-to-choose-a-hardware-wallet-which-is-better-onekey-or-trezor-cold-wallet.md`. Used as a perspective source on button-interface friction and app/language workflow preferences, not as official product evidence.
+[9] [Trezor Suite official page](https://trezor.io/trezor-suite) and [Trezor supported coins page](https://trezor.io/coins). Suite workflow, buy/sell/swap/stake/send/receive, privacy tools, third-party wallets, supported assets.
