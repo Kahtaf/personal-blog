@@ -23,7 +23,8 @@ const { images, label } = Astro.props;
         const src = typeof image.src === "string" ? image.src : image.src.src;
         const width = typeof image.src === "string" ? undefined : image.src.width;
         const height = typeof image.src === "string" ? undefined : image.src.height;
-        const caption = image.caption ?? image.alt;
+        const caption = image.caption;
+        const accessibleLabel = caption ?? image.alt;
 
         return (
           <a
@@ -34,10 +35,10 @@ const { images, label } = Astro.props;
             data-pswp-src={src}
             data-pswp-width={width}
             data-pswp-height={height}
-            aria-label={`Open image ${index + 1} of ${images.length}: ${caption}`}
+            aria-label={`Open image ${index + 1} of ${images.length}: ${accessibleLabel}`}
           >
             <Image src={image.src} alt={image.alt} loading="lazy" decoding="async" />
-            <span class="blog-image-gallery__caption">{caption}</span>
+            {caption && <span class="blog-image-gallery__caption">{caption}</span>}
           </a>
         );
       })
