@@ -8,6 +8,8 @@ date: "Jun 24 2026"
 
 **TL;DR:** Trezor Safe 3 is the better conservative custody wallet. OneKey Classic 1S is the better active crypto wallet. Both are affordable hardware wallets with secure-element protection, physical confirmation, open-source claims, and small screens. The difference is workflow: Trezor is USB-powered, desktop-first, backup-focused, and built around long-term self-custody. OneKey is slimmer, Bluetooth-capable, app-centered, and better suited to users who regularly move across chains, apps, swaps, NFTs, or DeFi. If iPhone use is central to your wallet workflow, Trezor Safe 3's iOS limitations matter.
 
+![OneKey Classic 1S box, device tray, recovery sheets, and quick-start card on a wooden table](./onekey-classic-1s-box-accessories.webp)
+
 This comparison focuses on buying fit, not a universal winner. If the wallet mostly protects long-term holdings, Trezor Safe 3 is easier to recommend. If the wallet needs to pair with a phone, support a broader app workflow, and reduce mistakes while signing active Web3 transactions, OneKey Classic 1S has the stronger case. The sourcing here is intentionally limited to official product pages and help docs, so check the current official compatibility pages for your exact assets and chains before buying.
 
 ## Quick comparison
@@ -33,6 +35,8 @@ That explanation is concrete. It does not imply the secure element solves every 
 
 OneKey's security story is also serious, but it is framed more around active signing. OneKey says Classic 1S keeps keys offline, uses [EAL6+ secure chips](https://onekey.so/products/onekey-classic-1s/), supports open-source firmware/apps with reproducible builds, and includes tamper-evident packaging plus firmware authenticity checks during activation. Its [authentication guide](https://help.onekey.so/en/articles/11461091-authenticate-onekey-classic-1s) also tells buyers to inspect the package, confirm the holographic seal, make sure recovery cards are blank, and generate recovery phrases only on the device screen.
 
+![OneKey Classic 1S setup screen showing language selection](./onekey-classic-1s-language-screen.webp)
+
 The more distinctive OneKey feature is [SignGuard plus Clear Signing](https://help.onekey.so/en/articles/12058229-signguard-and-clear-signing-how-they-protect-you-from-web3-phishing-and-scams). OneKey says Clear Signing makes transaction data human-readable, while SignGuard provides real-time risk detection for malicious contracts, suspicious approvals, phishing sites, and abnormal behavior before signing. That matters because a hardware wallet does not protect users from approving a transaction they do not understand. OneKey is trying to make the approval itself safer, though risk alerts reduce blind signing rather than guarantee safety.
 
 So the security split is not just chip versus chip. Trezor is optimized for custody discipline: simple device, strong recovery model, deliberate signing. OneKey is optimized for active signing: more app connectivity, more transaction types, and more help understanding what is being approved.
@@ -46,6 +50,8 @@ Trezor has the trust advantage because of history. Hardware wallets are trust pr
 ## Hardware and portability
 
 OneKey wins portability and connectivity. The [Classic 1S line](https://onekey.so/products/onekey-classic-1s/) is built around a slim form factor, USB-C, Bluetooth, and a choice between a battery model and a battery-free Pure model. That gives buyers a useful fork: choose the standard Classic 1S for mobile convenience, or choose the Pure if battery-free storage matters more. Bluetooth is the same kind of trade-off: useful if mobile use matters, unnecessary if you prefer fewer wireless components.
+
+![OneKey Classic 1S slim black hardware wallet standing upright on a wooden table](./onekey-classic-1s-device-home.webp)
 
 Trezor Safe 3 is also small: [59 x 32 x 7.4 mm and 14 g](https://trezor.io/trezor-safe-3), with a two-button pad, 0.96-inch monochrome OLED, and USB-C. But it is not trying to be a Bluetooth mobile wallet. Trezor's FAQ says Safe 3 has [no battery](https://trezor.io/guides/trezor-devices/trezor-safe-3/trezor-safe-3-faqs) and only turns on when plugged into a computer.
 
