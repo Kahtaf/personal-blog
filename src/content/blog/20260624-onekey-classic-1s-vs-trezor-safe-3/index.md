@@ -10,11 +10,19 @@ date: "Jun 24 2026"
 
 ![OneKey Classic 1S box, device tray, recovery sheets, and quick-start card on a wooden table](./onekey-classic-1s-box-accessories.webp)
 
+![OneKey Classic 1S retail box close-up](./onekey-classic-1s-retail-box-closeup.webp)
+
 This comparison focuses on buying fit, not a universal winner. If the wallet mostly protects long-term holdings, Trezor Safe 3 is easier to recommend. If the wallet needs to pair with a phone, support a broader app workflow, and reduce mistakes while signing active Web3 transactions, OneKey Classic 1S has the stronger case. The sourcing here is intentionally limited to official product pages and help docs, so check the current official compatibility pages for your exact assets and chains before buying.
 
 ## Quick comparison
 
 OneKey lists an [EAL6+ secure element](https://onekey.so/products/onekey-classic-1s/), Bluetooth, USB-C, 30,000+ coins, clear signing preview, SignGuard, open-source firmware/apps, reproducible builds, tamper-evident packaging, firmware authenticity checks, and a $99 Classic 1S / $79 Classic 1S Pure split. Trezor lists [Secure Element protection](https://trezor.io/trezor-safe-3), open-source design, on-device confirmation, PIN/passphrase protection, Trezor Suite, thousands of supported coins and tokens, USB-C, a two-button pad, and a 0.96-inch monochrome OLED.
+
+![OneKey Classic 1S and Trezor Safe 3 side by side during setup](./onekey-classic-1s-trezor-language-comparison-wide.webp)
+
+![Close-up of the OneKey Classic 1S setup screen with a Trezor Safe 3 beside it](./onekey-classic-1s-trezor-language-comparison-close.webp)
+
+![Hardware-wallet comparison photo detail on a wooden table](./onekey-classic-1s-table-detail.webp)
 
 | Feature | OneKey Classic 1S | Trezor Safe 3 |
 | --- | --- | --- |
