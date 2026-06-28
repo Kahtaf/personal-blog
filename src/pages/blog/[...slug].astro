@@ -1,10 +1,11 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime, cleanSlug } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
+import BlogPhotoSwipe from "@components/BlogPhotoSwipe.astro";
 import { SITE } from "@consts";
 
 export async function getStaticPaths() {
@@ -12,14 +13,14 @@ export async function getStaticPaths() {
     .filter(post => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   return posts.map((post) => ({
-    params: { slug: cleanSlug(post.slug) },
+    params: { slug: cleanSlug(post.id) },
     props: post,
   }));
 }
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 const isDev = import.meta.env.DEV;
 ---
 
@@ -37,16 +38,17 @@ const isDev = import.meta.env.DEV;
         </div>
         &bull;
         <div class="font-base text-sm">
-          {readingTime(post.body)}
+          {readingTime(post.body ?? "")}
         </div>
       </div>
       <h1 class="animate text-2xl font-semibold text-black dark:text-white">
         {post.data.title}
       </h1>
     </div>
-    <article class="animate">
+    <article class="animate" data-blog-content>
       <Content />
     </article>
+    <BlogPhotoSwipe />
     {isDev && (
       <>
         <style is:inline>

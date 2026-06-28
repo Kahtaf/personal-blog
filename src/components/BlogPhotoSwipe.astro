@@ -1,0 +1,93 @@
+---
+import "photoswipe/style.css";
+---
+
+<script>
+  import "../scripts/blog-photoswipe";
+</script>
+
+<style is:global>
+  article [data-blog-lightbox-image] {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  article .blog-image-lightbox {
+    margin-block: 2.25rem;
+  }
+
+  article .blog-image-lightbox img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(0 0 0 / 0.08);
+    border-radius: 0.5rem;
+    background: rgb(255 255 255 / 0.55);
+  }
+
+  html.dark article .blog-image-lightbox img {
+    border-color: rgb(255 255 255 / 0.12);
+    background: rgb(255 255 255 / 0.04);
+  }
+
+  article .blog-image-lightbox figcaption {
+    margin-top: 0.65rem;
+    color: rgb(0 0 0 / 0.48);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  html.dark article .blog-image-lightbox figcaption {
+    color: rgb(255 255 255 / 0.58);
+  }
+
+  .pswp__blog-caption {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1;
+    isolation: isolate;
+    margin-inline: auto;
+    max-width: min(42rem, calc(100vw - 2rem));
+    padding-top: 3rem;
+    color: rgb(255 255 255 / 0.86);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: center;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.8);
+    pointer-events: none;
+  }
+
+  .pswp__blog-caption::before {
+    position: absolute;
+    inset: -4rem calc(50% - 50vw) -1rem;
+    z-index: -1;
+    background: linear-gradient(
+      to top,
+      rgb(0 0 0 / 0.74) 0%,
+      rgb(0 0 0 / 0.48) 46%,
+      rgb(0 0 0 / 0) 100%
+    );
+    content: "";
+    pointer-events: none;
+  }
+
+  .pswp__blog-caption:empty {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    .pswp__blog-caption {
+      right: 0.75rem;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      max-width: calc(100vw - 1.5rem);
+      padding-top: 2.5rem;
+      font-size: 0.8125rem;
+    }
+  }
+</style>
