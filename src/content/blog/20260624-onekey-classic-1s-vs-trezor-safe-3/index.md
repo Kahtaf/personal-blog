@@ -4,6 +4,8 @@ description: "A tight comparison of two affordable hardware wallets: Trezor Safe
 date: "Jun 24 2026"
 ---
 
+**Disclosure:** OneKey sent me a free Classic 1S review unit for an honest opinion. If you decide OneKey is the right fit, using my referral link — [onekey.so/r/KAHTAF](https://onekey.so/r/KAHTAF) — should apply a 10% discount and may earn me a commission.
+
 **TL;DR:** Trezor Safe 3 is the better conservative custody wallet. OneKey Classic 1S is the better active crypto wallet. Both are affordable hardware wallets with secure-element protection, physical confirmation, open-source claims, and small screens. The difference is workflow: Trezor is USB-powered, desktop-first, backup-focused, and built around long-term self-custody. OneKey is slimmer, Bluetooth-capable, app-centered, and better suited to users who regularly move across chains, apps, swaps, NFTs, or DeFi. If iPhone use is central to your wallet workflow, Trezor Safe 3's iOS limitations matter.
 
 This comparison focuses on buying fit, not a universal winner. If the wallet mostly protects long-term holdings, Trezor Safe 3 is easier to recommend. If the wallet needs to pair with a phone, support a broader app workflow, and reduce mistakes while signing active Web3 transactions, OneKey Classic 1S has the stronger case. The sourcing here is intentionally limited to official product pages and help docs, so check the current official compatibility pages for your exact assets and chains before buying.
