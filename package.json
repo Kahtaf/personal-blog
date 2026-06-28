@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
+    "@astrojs/markdown-remark": "^7.2.0",
     "@astrojs/mdx": "^7.0.0",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
@@ -28,6 +29,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.32.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
+    "photoswipe": "^5.4.4",
     "sharp": "^0.33.3",
     "tailwind-merge": "^2.2.2",
     "tailwindcss": "^4.3.1",
