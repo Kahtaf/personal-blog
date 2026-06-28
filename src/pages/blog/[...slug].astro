@@ -5,6 +5,7 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime, cleanSlug } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
+import BlogPhotoSwipe from "@components/BlogPhotoSwipe.astro";
 import { SITE } from "@consts";
 
 export async function getStaticPaths() {
@@ -44,9 +45,10 @@ const isDev = import.meta.env.DEV;
         {post.data.title}
       </h1>
     </div>
-    <article class="animate">
+    <article class="animate" data-blog-content>
       <Content />
     </article>
+    <BlogPhotoSwipe />
     {isDev && (
       <>
         <style is:inline>
