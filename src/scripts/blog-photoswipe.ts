@@ -3,9 +3,10 @@ import type PhotoSwipe from "photoswipe";
 
 const articleSelector = "article[data-blog-content]";
 const imageSelector = "a[data-blog-lightbox-image]";
+const gallerySelector = "[data-blog-lightbox-gallery]";
 
-function getAnchors(article: HTMLElement) {
-  return Array.from(article.querySelectorAll<HTMLAnchorElement>(imageSelector));
+function getAnchors(scope: ParentNode) {
+  return Array.from(scope.querySelectorAll<HTMLAnchorElement>(imageSelector));
 }
 
 function getImage(anchor: HTMLAnchorElement) {
@@ -41,8 +42,8 @@ function syncImageData(anchor: HTMLAnchorElement) {
   return syncImageDimensions(anchor);
 }
 
-function prepareImages(article: HTMLElement) {
-  getAnchors(article).forEach((anchor) => {
+function prepareImages(scope: ParentNode) {
+  getAnchors(scope).forEach((anchor) => {
     syncImageData(anchor);
   });
 }
@@ -67,11 +68,20 @@ async function ensureImageData(anchor: HTMLAnchorElement) {
   return syncImageData(anchor);
 }
 
-function updateCaption(element: HTMLElement, pswp: PhotoSwipe) {
-  const trigger = pswp.currSlide?.data.element;
-  const caption = trigger?.closest("figure")?.querySelector("figcaption");
+function getCaption(trigger: Element | undefined) {
+  if (!(trigger instanceof HTMLElement)) return "";
 
-  element.innerHTML = caption?.innerHTML ?? "";
+  return (
+    trigger.dataset.blogLightboxCaption ??
+    trigger.closest("figure")?.querySelector("figcaption")?.innerHTML ??
+    ""
+  );
+}
+
+function updateCaption(element: HTMLElement, pswp: PhotoSwipe) {
+  const caption = getCaption(pswp.currSlide?.data.element);
+
+  element.innerHTML = caption;
   element.hidden = !caption;
 }
 
@@ -91,17 +101,21 @@ function registerCaption(lightbox: PhotoSwipeLightbox) {
   });
 }
 
-function initBlogPhotoSwipe() {
-  window.__blogPhotoSwipeLightbox?.destroy();
-  window.__blogPhotoSwipeLightbox = undefined;
+function getLightboxScopes(article: HTMLElement) {
+  const groupedScopes = Array.from(article.querySelectorAll<HTMLElement>(gallerySelector));
+  const groupedAnchors = new Set(groupedScopes.flatMap((scope) => getAnchors(scope)));
+  const standaloneScopes = getAnchors(article)
+    .filter((anchor) => !groupedAnchors.has(anchor))
+    .map((anchor) => anchor.closest<HTMLElement>("figure") ?? anchor);
 
-  const article = document.querySelector<HTMLElement>(articleSelector);
-  if (!article || !article.querySelector(imageSelector)) return;
+  return [...groupedScopes, ...standaloneScopes].filter((scope) => scope.querySelector(imageSelector));
+}
 
-  prepareImages(article);
+function initLightboxForScope(scope: HTMLElement) {
+  prepareImages(scope);
 
   const lightbox = new PhotoSwipeLightbox({
-    gallery: article,
+    gallery: scope,
     children: imageSelector,
     pswpModule: () => import("photoswipe"),
     bgOpacity: 0.92,
@@ -111,11 +125,11 @@ function initBlogPhotoSwipe() {
   registerCaption(lightbox);
   lightbox.init();
 
-  article.addEventListener(
+  scope.addEventListener(
     "click",
     async (event) => {
       const anchor = (event.target as Element | null)?.closest<HTMLAnchorElement>(imageSelector);
-      if (!anchor || !article.contains(anchor)) return;
+      if (!anchor || !scope.contains(anchor)) return;
 
       if (syncImageData(anchor)) return;
 
@@ -124,7 +138,7 @@ function initBlogPhotoSwipe() {
 
       if (!(await ensureImageData(anchor))) return;
 
-      const index = getAnchors(article).indexOf(anchor);
+      const index = getAnchors(scope).indexOf(anchor);
       if (index >= 0) {
         lightbox.loadAndOpen(index);
       }
@@ -132,7 +146,19 @@ function initBlogPhotoSwipe() {
     { capture: true },
   );
 
-  window.__blogPhotoSwipeLightbox = lightbox;
+  return lightbox;
+}
+
+function initBlogPhotoSwipe() {
+  window.__blogPhotoSwipeLightboxes?.forEach((lightbox) => lightbox.destroy());
+  window.__blogPhotoSwipeLightboxes = undefined;
+  window.__blogPhotoSwipeLightbox?.destroy();
+  window.__blogPhotoSwipeLightbox = undefined;
+
+  const article = document.querySelector<HTMLElement>(articleSelector);
+  if (!article || !article.querySelector(imageSelector)) return;
+
+  window.__blogPhotoSwipeLightboxes = getLightboxScopes(article).map(initLightboxForScope);
 }
 
 document.addEventListener("astro:page-load", initBlogPhotoSwipe);

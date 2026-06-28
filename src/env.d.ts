@@ -4,6 +4,7 @@
 declare global {
   interface Window {
     __blogPhotoSwipeLightbox?: import("photoswipe/lightbox").default;
+    __blogPhotoSwipeLightboxes?: import("photoswipe/lightbox").default[];
   }
 }
 
