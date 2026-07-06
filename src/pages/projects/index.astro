@@ -10,7 +10,7 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<PageLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
+<PageLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION} page="projects" noindex={projects.length === 0}>
   <Container>
     <div class="space-y-10">
       <h1 class="animate font-semibold text-black dark:text-white">

@@ -10,16 +10,17 @@ type Props = {
   type?: "website" | "article";
   publishDate?: Date;
   author?: string;
-  page?: "home" | "about";
+  page?: "home" | "about" | "blog" | "projects" | "resume" | "work";
+  noindex?: boolean;
 };
 
-const { title, description, type, publishDate, author, page } = Astro.props;
+const { title, description, type, publishDate, author, page, noindex } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <Head title={`${title} | ${SITE.NAME}`} description={description} type={type} publishDate={publishDate} author={author} page={page} />
+    <Head title={title === SITE.NAME ? title : `${title} | ${SITE.NAME}`} description={description} type={type} publishDate={publishDate} author={author} page={page} noindex={noindex} />
   </head>
   <body>
     <Header />
