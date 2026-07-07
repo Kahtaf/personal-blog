@@ -2,6 +2,7 @@
 title: "Lessons from Building a Domain Agent"
 description: "What building a financial agent taught me about specs, evals, dogfooding, and building products with agents at high velocity."
 date: "Jun 22 2026"
+image: "https://raw.githubusercontent.com/Kahtaf/OpenCandle/refs/heads/feat/replace-reddit-with-rdt-cli/docs/pr-evidence/replace-reddit-with-rdt-cli/gui-tool-call.png"
 ---
 
 **TL;DR:** I built [OpenCandle](https://github.com/Kahtaf/OpenCandle), a financial research agent, to learn what helps when agents build software that itself uses agents. I was able to move fast when the rails were clear: specs, evals, traces, UI references, and review loops. However, when I let agents make core product decisions, they mostly made the system bigger without adding much meaningful value.

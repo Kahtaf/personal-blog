@@ -7,7 +7,7 @@ export const SITE: Site = {
     "Toronto software engineering leader building AI data infrastructure, consumer applications, and tools for user-owned data.",
   JOB_TITLE: "Software Engineering Lead",
   LOCATION: "Toronto, Canada",
-  IMAGE: "/og-default.png",
+  IMAGE: "/og/home.png",
   KNOWS_ABOUT: [
     "software engineering",
     "AI infrastructure",

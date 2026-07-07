@@ -6,12 +6,13 @@ interface Props {
   title: string;
   description: string;
   url: URL;
+  image?: string;
   publishDate?: Date;
   author?: string;
   page?: "home" | "about" | "blog" | "projects" | "resume" | "work";
 }
 
-const { type, title, description, url, publishDate, page } = Astro.props;
+const { type, title, description, url, image = SITE.IMAGE, publishDate, page } = Astro.props;
 
 const schemas: Record<string, unknown>[] = [];
 const siteURL = Astro.site?.toString();
@@ -19,7 +20,7 @@ const pageURL = url.toString();
 const personId = `${siteURL}#person`;
 const websiteId = `${siteURL}#website`;
 const pageId = `${pageURL}#webpage`;
-const imageURL = new URL(SITE.IMAGE, Astro.site).toString();
+const imageURL = new URL(image, Astro.site).toString();
 
 const person = {
   "@context": "https://schema.org",
