@@ -17,6 +17,11 @@ const HEIGHT = 630;
 const IMAGE_X = 450;
 const AVATAR_SIZE = 64;
 const PROJECT_ROOT = process.cwd();
+const BACKGROUND = "#f5f5f4";
+const TEXT = "#000000";
+const MUTED = "#78716c";
+const BORDER = "#d6d3d1";
+const FONT_SANS = "Inter, ui-sans-serif, system-ui, sans-serif";
 
 function escapeXml(value: string): string {
   return value
@@ -82,9 +87,28 @@ async function prepareAvatar(): Promise<string> {
 }
 
 async function prepareLogo(): Promise<string> {
-  const logoPath = path.join(PROJECT_ROOT, "public", "k-logo-light.svg");
+  const logoPath = path.join(PROJECT_ROOT, "public", "k-logo.svg");
   const logo = await readFile(logoPath);
   return toDataUri(logo, imageMime(logoPath));
+}
+
+async function fontFaceCss(): Promise<string> {
+  const inter400Path = path.join(PROJECT_ROOT, "node_modules", "@fontsource", "inter", "files", "inter-latin-400-normal.woff2");
+  const inter600Path = path.join(PROJECT_ROOT, "node_modules", "@fontsource", "inter", "files", "inter-latin-600-normal.woff2");
+  const [inter400, inter600] = await Promise.all([readFile(inter400Path), readFile(inter600Path)]);
+
+  return `
+    @font-face {
+      font-family: "Inter";
+      src: url("${toDataUri(inter400, "font/woff2")}") format("woff2");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("${toDataUri(inter600, "font/woff2")}") format("woff2");
+      font-weight: 600;
+    }
+  `;
 }
 
 function wrapText(text: string, maxChars: number, maxLines: number): string[] {
@@ -116,7 +140,7 @@ function wrapText(text: string, maxChars: number, maxLines: number): string[] {
 }
 
 function titleLayout(title: string, hasHeroImage: boolean) {
-  const sizes = hasHeroImage ? [52, 48, 44, 40] : [82, 74, 66, 58, 52];
+  const sizes = hasHeroImage ? [48, 44, 40, 36] : [74, 66, 58, 52, 46];
   const availableWidth = hasHeroImage ? 354 : 1030;
   const maxLines = hasHeroImage ? 6 : 4;
 
@@ -141,12 +165,12 @@ function titleLayout(title: string, hasHeroImage: boolean) {
 
 function renderTitle(lines: string[], fontSize: number, lineHeight: number, hasHeroImage: boolean): string {
   const x = hasHeroImage ? 48 : 64;
-  const y = hasHeroImage ? 169 : 160;
+  const y = hasHeroImage ? 168 : 210;
 
   return lines
     .map(
       (line, index) =>
-        `<text x="${x}" y="${y + index * lineHeight}" font-size="${fontSize}" font-weight="600" font-family="Georgia, 'Times New Roman', serif" fill="#f8fafc">${escapeXml(line)}</text>`,
+        `<text x="${x}" y="${y + index * lineHeight}" font-size="${fontSize}" font-weight="600" font-family="${FONT_SANS}" fill="${TEXT}">${escapeXml(line)}</text>`,
     )
     .join("");
 }
@@ -156,29 +180,30 @@ export async function renderOgImage(input: OgImageInput): Promise<Buffer> {
   const hasHeroImage = Boolean(heroImage);
   const avatar = await prepareAvatar();
   const logo = await prepareLogo();
+  const fonts = await fontFaceCss();
   const { lines, fontSize, lineHeight } = titleLayout(input.title, hasHeroImage);
   const authorY = hasHeroImage ? 493 : 500;
   const secondaryText = input.date ? formatDate(input.date) : "kahtaf.com";
-  const panelWidth = hasHeroImage ? IMAGE_X : WIDTH;
+  const logoX = hasHeroImage ? 48 : 64;
+  const logoY = hasHeroImage ? 54 : 62;
+  const avatarX = hasHeroImage ? 48 : 64;
+  const authorX = hasHeroImage ? 128 : 144;
 
   const svg = `
     <svg width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
-      <rect width="${WIDTH}" height="${HEIGHT}" fill="#0f172a"/>
-      <rect width="${panelWidth}" height="${HEIGHT}" fill="#111827"/>
+      <style>${fonts}</style>
+      <rect width="${WIDTH}" height="${HEIGHT}" fill="${BACKGROUND}"/>
       ${heroImage ? `<image href="${heroImage}" x="${IMAGE_X}" y="0" width="${WIDTH - IMAGE_X}" height="${HEIGHT}" preserveAspectRatio="xMidYMid slice"/>` : ""}
-      ${heroImage ? `<rect x="${IMAGE_X}" y="0" width="1" height="${HEIGHT}" fill="#1f2937"/>` : ""}
-      ${!heroImage ? `<path d="M760 -120 C1040 55 1060 270 1320 390" fill="none" stroke="#312e81" stroke-width="190" stroke-opacity="0.22"/>` : ""}
-      ${!heroImage ? `<path d="M790 695 C980 500 1040 420 1260 380" fill="none" stroke="#0f766e" stroke-width="160" stroke-opacity="0.14"/>` : ""}
-      <rect x="${hasHeroImage ? 48 : 64}" y="53" width="64" height="64" rx="8" fill="#4f46e5"/>
-      <image href="${logo}" x="${hasHeroImage ? 60 : 76}" y="65" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+      ${heroImage ? `<rect x="${IMAGE_X}" y="0" width="1" height="${HEIGHT}" fill="${BORDER}"/>` : ""}
+      <image href="${logo}" x="${logoX}" y="${logoY}" width="54" height="44" preserveAspectRatio="xMidYMid meet"/>
       ${renderTitle(lines, fontSize, lineHeight, hasHeroImage)}
       <defs>
-        <clipPath id="avatarClip"><circle cx="${hasHeroImage ? 80 : 96}" cy="${authorY + 31}" r="31"/></clipPath>
+        <clipPath id="avatarClip"><circle cx="${avatarX + 32}" cy="${authorY + 32}" r="30"/></clipPath>
       </defs>
-      <circle cx="${hasHeroImage ? 80 : 96}" cy="${authorY + 31}" r="31" fill="none" stroke="#f8fafc" stroke-width="4"/>
-      <image href="${avatar}" x="${hasHeroImage ? 48 : 64}" y="${authorY}" width="${AVATAR_SIZE}" height="${AVATAR_SIZE}" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
-      <text x="${hasHeroImage ? 128 : 144}" y="${authorY + 20}" font-size="27" font-weight="700" letter-spacing="1.4" font-family="Georgia, 'Times New Roman', serif" fill="#f8fafc">${escapeXml(SITE.NAME.toUpperCase())}</text>
-      <text x="${hasHeroImage ? 128 : 144}" y="${authorY + 58}" font-size="26" font-weight="400" font-family="Georgia, 'Times New Roman', serif" fill="#cbd5e1">${escapeXml(secondaryText)}</text>
+      <circle cx="${avatarX + 32}" cy="${authorY + 32}" r="31" fill="none" stroke="${BORDER}" stroke-width="2"/>
+      <image href="${avatar}" x="${avatarX}" y="${authorY}" width="${AVATAR_SIZE}" height="${AVATAR_SIZE}" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
+      <text x="${authorX}" y="${authorY + 24}" font-size="25" font-weight="600" font-family="${FONT_SANS}" fill="${TEXT}">${escapeXml(SITE.NAME)}</text>
+      <text x="${authorX}" y="${authorY + 56}" font-size="23" font-weight="400" font-family="${FONT_SANS}" fill="${MUTED}">${escapeXml(secondaryText)}</text>
     </svg>
   `;
 
