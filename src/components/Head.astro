@@ -12,6 +12,7 @@ import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
 import { ClientRouter } from "astro:transitions";
 import { SITE } from "@consts";
 import JsonLd from "@components/JsonLd.astro";
+import { getOgImagePath } from "@lib/og-path";
 
 interface Props {
   title: string;
@@ -20,12 +21,15 @@ interface Props {
   type?: "website" | "article";
   publishDate?: Date;
   author?: string;
-  page?: "home" | "about";
+  page?: "home" | "about" | "blog" | "projects" | "resume" | "work";
+  noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const defaultImage = getOgImagePath(Astro.url.pathname);
 
-const { title, description, image = "/k-logo.svg", type = "website", publishDate, author, page } = Astro.props;
+const { title, description, image = defaultImage, type = "website", publishDate, author, page, noindex } = Astro.props;
+const imageURL = new URL(image, Astro.site);
 ---
 
 <!-- Global Metadata -->
@@ -48,6 +52,7 @@ const { title, description, image = "/k-logo.svg", type = "website", publishDate
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex,follow" />}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -59,7 +64,9 @@ const { title, description, image = "/k-logo.svg", type = "website", publishDate
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:site_name" content={SITE.NAME} />
 
 <!-- Twitter -->
@@ -67,7 +74,7 @@ const { title, description, image = "/k-logo.svg", type = "website", publishDate
 <meta name="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:image" content={imageURL} />
 <meta name="twitter:site" content="@kahtaf" />
 <meta name="twitter:creator" content="@kahtaf" />
 
@@ -79,7 +86,7 @@ const { title, description, image = "/k-logo.svg", type = "website", publishDate
 )}
 
 <!-- Structured Data -->
-<JsonLd type={type} title={title} description={description} url={Astro.url} publishDate={publishDate} author={author} page={page} />
+<JsonLd type={type} title={title} description={description} url={Astro.url} image={image} publishDate={publishDate} author={author} page={page} />
 
 <ClientRouter  />
 

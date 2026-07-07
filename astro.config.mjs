@@ -96,7 +96,9 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => page !== "https://kahtaf.com/projects/",
+    }),
     inlineReview({
       storagePath: ".blog-edits/review-loop.json",
     }),

@@ -6,31 +6,92 @@ interface Props {
   title: string;
   description: string;
   url: URL;
+  image?: string;
   publishDate?: Date;
   author?: string;
-  page?: "home" | "about";
+  page?: "home" | "about" | "blog" | "projects" | "resume" | "work";
 }
 
-const { type, title, description, url, publishDate, author, page } = Astro.props;
+const { type, title, description, url, image = SITE.IMAGE, publishDate, page } = Astro.props;
 
 const schemas: Record<string, unknown>[] = [];
+const siteURL = Astro.site?.toString();
+const pageURL = url.toString();
+const personId = `${siteURL}#person`;
+const websiteId = `${siteURL}#website`;
+const pageId = `${pageURL}#webpage`;
+const imageURL = new URL(image, Astro.site).toString();
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": personId,
+  name: SITE.NAME,
+  url: siteURL,
+  image: imageURL,
+  jobTitle: SITE.JOB_TITLE,
+  description: SITE.DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: SITE.LOCATION,
+  },
+  knowsAbout: SITE.KNOWS_ABOUT,
+  sameAs: SOCIALS.map((s) => s.HREF),
+};
 
 // WebSite schema on all pages
 schemas.push({
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": websiteId,
   name: SITE.NAME,
-  url: Astro.site?.toString(),
+  url: siteURL,
+  inLanguage: "en",
+  publisher: {
+    "@id": personId,
+  },
 });
 
-// Person schema on home and about pages
-if (page === "home" || page === "about") {
+schemas.push(person);
+
+if (page === "home" || page === "about" || page === "resume") {
   schemas.push({
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: SITE.NAME,
-    url: Astro.site?.toString(),
-    sameAs: SOCIALS.map((s) => s.HREF),
+    "@type": "ProfilePage",
+    "@id": pageId,
+    url: pageURL,
+    name: title,
+    description,
+    mainEntity: {
+      "@id": personId,
+    },
+  });
+} else if (page === "blog") {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": pageId,
+    url: pageURL,
+    name: title,
+    description,
+    publisher: {
+      "@id": personId,
+    },
+  });
+} else {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": pageId,
+    url: pageURL,
+    name: title,
+    description,
+    isPartOf: {
+      "@id": websiteId,
+    },
+    about: {
+      "@id": personId,
+    },
   });
 }
 
@@ -42,15 +103,46 @@ if (type === "article" && publishDate) {
     headline: title,
     description: description,
     datePublished: publishDate.toISOString(),
+    image: imageURL,
     author: {
-      "@type": "Person",
-      name: author || SITE.NAME,
+      "@id": personId,
     },
-    url: url.toString(),
+    publisher: {
+      "@id": personId,
+    },
+    mainEntityOfPage: {
+      "@id": pageId,
+    },
+    url: pageURL,
+  });
+
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteURL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: new URL("/blog/", Astro.site).toString(),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: pageURL,
+      },
+    ],
   });
 }
 ---
 
 {schemas.map((schema) => (
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 ))}
