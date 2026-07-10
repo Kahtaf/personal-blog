@@ -8,11 +8,11 @@ Peter Steinberger's [monthly reminder](https://x.com/steipete/status/20636971627
 
 The idea is real. A loop can wake an agent on a schedule, find work, hand it off, run checks, save state, and decide what happens next. Claude Code now describes turn-based, goal-based, time-based, and proactive loops in its [own guide](https://claude.com/blog/getting-started-with-loops). OpenAI's [agent-improvement example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) connects traces, feedback, evals, and an implementation handoff into a repeatable cycle. The primitive is here now, not in some distant agent future.
 
-But the conversation keeps putting the interesting engineering on the machine side of the boundary.
+In much of the current conversation, the interesting engineering still sits on the machine side of the boundary.
 
 What wakes the agent? How many subagents can it spawn? Does it use worktrees? Which model judges the goal? What is the token budget?
 
-All good questions. Then the loop emits twelve PRs, each with a green test run and a friendly summary, and the human side of the system is usually: “please review.”
+All good questions. Too often, the loop then emits twelve PRs, each with a green test run and a friendly summary, and the human side of the system is: “please review.” The missing artifact is a review packet that states the change, the evidence, the gaps, and the decision a person actually needs to make.
 
 That is not a review loop. It is an inbox.
 
@@ -24,25 +24,27 @@ People reach for “human in the loop” as if it closes the safety argument. It
 
 A human can be technically in the loop while functionally absent. Give someone fifty opaque agent reports, an unfamiliar diff, and a green checkmark from a test suite they did not write. Put an Approve button at the bottom. You have not added meaningful oversight. You have created a rubber stamp with a person’s name on it.
 
-The difference matters because agent loops change the shape of failure. The obvious failure is a runaway loop that spends too much money or keeps retrying the same broken task. At least that one makes noise. The quieter failure is the loop that exits cleanly and produces something plausible enough that nobody looks closely.
+The difference matters because agent loops change the shape of failure. The obvious failure is a runaway loop that spends too much money or keeps retrying the same broken task. It can be detected—if someone built budgets, stop rules, and alerts. The quieter failure is the loop that exits cleanly and produces something plausible enough that nobody looks closely.
 
-The [human-in-the-loop framework from LoopRails](https://looprails.dev/framework.html/) makes a useful distinction: oversight is only useful when the person has enough context, enough time, and enough ability to detect or correct the failure. A confirmation gate after an opaque plan does not create those things. It mostly records who to blame later.
+[LoopRails frames the problem this way](https://looprails.dev/framework.html/): oversight helps only when the person has enough context, time, and ability to detect or correct the failure. A confirmation gate after an opaque plan does not create those things. It mostly records who to blame later.
 
-This is why I think the missing discipline is **review-loop engineering**.
+For software teams, I’ll call the missing layer **review-loop engineering**: designing the review packet, escalation rules, and feedback path so the person accountable for a change can still understand and redirect it.
 
-Loop engineering designs the system that prompts the agent. Review-loop engineering designs the system that makes the resulting work legible to the person still accountable for it.
+Loop engineering designs the system that prompts the agent. Review-loop engineering designs the handoff between that system and the engineer who must decide whether the work is acceptable.
 
 ## There are really three loops
 
 Andrew Ng recently described [three loops for building products](https://x.com/AndrewYNg/status/2071988145667928442): an agentic coding loop, a developer feedback loop, and an external feedback loop from users and the world. That is a better frame than the popular story that agents simply replace a developer’s loop.
 
-For agent-built software, I would make the split explicit:
+For day-to-day engineering, I use a different operational decomposition. The external-feedback loop stays outside this table; it is the thing that tells you whether the product should change at all. Inside the engineering workflow, the useful split looks like this:
 
 | Loop | Runs at | Job | Typical failure |
 | --- | --- | --- | --- |
-| Agent loop | seconds to minutes | Make a change, use tools, react to feedback | Wrong implementation, hallucinated progress, repeated failure |
-| Verifier loop | minutes | Test, inspect, score, or challenge the change | Weak test, reward hacking, correlated reviewer mistakes |
-| Human loop | hours to days | Set direction, judge trade-offs, improve the system | Comprehension decay, review fatigue, rubber-stamping |
+| Agent loop | machine cadence | Make a change, use tools, react to feedback | Wrong implementation, hallucinated progress, repeated failure |
+| Verifier loop | machine cadence, after changes | Test, inspect, score, or challenge the change | Weak test, reward hacking, correlated reviewer mistakes |
+| Human loop | human attention cadence | Set direction; decide escalations; turn review findings into better specs, checks, and guardrails | Comprehension decay, review fatigue, rubber-stamping |
+
+Review-loop engineering is the interface to that third loop: it decides what reaches a person, what evidence arrives with it, and what becomes durable after the decision.
 
 The first two are getting a lot of attention. They should. A loop without a real check is just a model agreeing with itself.
 
@@ -54,9 +56,9 @@ You cannot solve that mismatch by asking humans to review more output faster. Yo
 
 ## The verifier is necessary, but it is not the finish line
 
-The strongest advice in the loop-engineering material is also the least controversial: do not let the maker grade its own homework.
+One widely repeated rule is also the least controversial: do not let the maker grade its own homework.
 
-Use tests. Use a browser check. Use an invariant. Use a separate evaluator. Run a second agent with a skeptical rubric. Have a human gate irreversible actions. Anthropic's [guide](https://claude.com/blog/getting-started-with-loops) makes the same point in product language: goal-based loops work best when “done” has a quantitative or deterministic check. The [OpenAI cookbook example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) goes further, turning traces and feedback into rerunnable evals rather than treating feedback as a comment thread that disappears.
+Use tests. Use a browser check. Use an invariant. Use a separate evaluator. When it helps, run a second agent with a skeptical rubric—but treat it as another fallible signal, not independent proof. Have a human gate irreversible actions. Anthropic's [guide](https://claude.com/blog/getting-started-with-loops) makes the same point in product language: goal-based loops work best when “done” has a quantitative or deterministic check. The [OpenAI cookbook example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) goes further, turning traces and feedback into rerunnable evals rather than treating feedback as a comment thread that disappears.
 
 That is the right direction. But a verifier is not an all-purpose substitute for engineering judgment.
 
@@ -84,6 +86,9 @@ Something closer to this:
 Goal
 Fix the checkout total when a discount and tax are both present.
 
+Constraint
+Preserve the existing tax calculation for all regions except the explicitly approved rule below.
+
 What changed
 - `checkout.ts`: apply the discount before tax.
 - `checkout.test.ts`: add a case for a 10% discount and regional tax.
@@ -101,7 +106,7 @@ Not verified
 - The browser checkout flow.
 
 Decision needed
-Approve the product rule that discounts apply before tax, or route to finance.
+Decide whether the product rule is “discount before tax” for this region. If not, reject this change; the tests do not establish tax treatment elsewhere.
 ```
 
 The point is not that every run needs a giant report. That would be another kind of failure. The point is that the report should expose the boundary of knowledge.
@@ -129,6 +134,12 @@ The review loop needs its own constraints:
 
 The control plane around agents should optimize for human attention, not merely agent throughput.
 
+### A first review loop
+
+1. Pick one reversible task and write one observable acceptance check.
+2. Require every run to emit: changed files, evidence, non-coverage, and one explicit decision.
+3. After each rejection, change the spec, test, guardrail, or routing rule—not just the next prompt.
+
 ## The engineer moves outward
 
 The scary version of loop engineering says the engineer is being removed from the work. The useful version says the engineer moves outward.
@@ -139,7 +150,7 @@ That last part matters. A good review loop does not just reject bad output. It i
 
 When a reviewer finds that an agent changed the wrong layer, that feedback should become a constraint. When an agent’s browser check missed a visual regression, the check should become part of the loop. When an approval is difficult because the product decision was ambiguous, the ambiguity belongs in the spec, not in the next reviewer’s head.
 
-This is how a loop earns more autonomy without asking for blind trust: it turns human judgment into artifacts the system can reuse.
+This is one way a loop can earn narrowly scoped autonomy: human judgment becomes reusable constraints, while permissions, reversibility, and escalation limits contain what the loop may do.
 
 Karpathy has made a related argument for [explicit, navigable, file-based knowledge](https://x.com/karpathy/status/2040572272944324650). The important part is not merely that the agent remembers. It is that people can inspect what the agent knows, change it, and see where the knowledge ends. The same rule should apply to review state.
 
@@ -151,7 +162,7 @@ The best first loop is not “run my engineering team while I sleep.” It is on
 
 A failing CI check is a good candidate. So is daily issue triage that creates drafts rather than tickets. So is a dependency-update loop that opens a PR but cannot merge it. So is a frontend check that compares a small, known UI state against an expected screenshot and hands a human the diff when it cannot decide.
 
-The [safe-loop guidance from Verdent](https://www.verdent.ai/guides/tutorial/build-coding-agent-loop) gets the basics right: define an observable contract, isolate the work, check each attempt, cap retries and budget, and preserve the failure state for a human rather than spinning forever.
+[Verdent’s safe-loop guide recommends](https://www.verdent.ai/guides/tutorial/build-coding-agent-loop) the basics: define an observable contract, isolate the work, check each attempt, cap retries and budget, and preserve the failure state for a human rather than spinning forever.
 
 Then add a review packet before adding more agents.
 
