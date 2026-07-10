@@ -1,0 +1,758 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2074208949205881033",
+      "text": "https://t.co/v694m8Eaj6",
+      "author": {
+        "id": "2024518793679294464",
+        "name": "ClaudeDevs",
+        "screenName": "ClaudeDevs",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2044472418815893504/xf14RxM8_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 16931,
+        "retweets": 2073,
+        "replies": 310,
+        "quotes": 464,
+        "views": 5544247,
+        "bookmarks": 37139
+      },
+      "createdAt": "Mon Jul 06 19:08:45 +0000 2026",
+      "createdAtLocal": "2026-07-06 15:08",
+      "createdAtISO": "2026-07-06T19:08:45+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074204645845839872"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Getting started with loops "
+    },
+    {
+      "id": "2074798372016247129",
+      "text": "ANTHROPIC ENGINEER LEAKED 21 PDF FILES THAT GIVE 20X PRODUCTIVITY IN DEVELOPMENT WITH CLAUDE CODE - AND REPLACE A $50K/MONTH TEAM\n\n4 seconds to read this - and you will know what took Anthropic engineers years to build and cost $3.4 million to develop\n\nContext → Plan → Execute → Verify → Learn\n\nfive steps, one cycle, improves with every iteration\n\nresults across 312 real engineering tasks: \nspeed up 20.3x, first-time success rate up to 92%, manual edits down 77%, token costs down 84%, post-merge defects down 80%\n\nfive practices behind these numbers: \nRich Context Packs - auto-loads repository and architecture maps, context accuracy +3.6x \nPersistent Memory - stores decisions and patterns between sessions, repeated explanations -67% \nAgent Swarms - specialized agents for planning, coding, testing, multi-step task speed +4.3x \nDeep Toolchain - Git, CI, test runners, databases in one cycle, manual operations -64% \nVerification Loops - auto-tests after every change, confidence +2.6x\n\n94% of engineers reported higher flow state after implementation\n\nthose who understand this first will replace $50,000/month teams with one cycle",
+      "author": {
+        "id": "1623393451340439553",
+        "name": "Noryx",
+        "screenName": "0xNoryxx",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2052996578999185408/99PVSNzP_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 23,
+        "retweets": 2,
+        "replies": 0,
+        "quotes": 0,
+        "views": 1497,
+        "bookmarks": 26
+      },
+      "createdAt": "Wed Jul 08 10:10:54 +0000 2026",
+      "createdAtLocal": "2026-07-08 06:10",
+      "createdAtISO": "2026-07-08T10:10:54+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMsmyJ1XcAA3dmR.jpg",
+          "width": 1018,
+          "height": 1542
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074669139730284735",
+        "text": "https://t.co/XiwUABYZE1",
+        "author": {
+          "screenName": "cyrilXBT",
+          "name": "CyrilXBT"
+        }
+      }
+    },
+    {
+      "id": "2071513914504802525",
+      "text": "this is f*cking dangerous\n\nsomeone just open sourced the entire \"LOOP ENGINEERING\" framework for free\n\nthe guy who built Claude Code at Anthropic said it himself:\n\n\"I don't prompt Claude anymore. I have loops running that prompt Claude. My job is to write loops.\n\nstop prompting your agent. build the thing that prompts it for you.\n\ndiscover → plan → execute → verify → repeat\n\nyou used to be inside that loop\n\nloop engineering is you stepping out of it entirely\n\nthe repo includes:\n\n- 6 production ready patterns (daily triage, CI sweeper, PR babysitter)\n\n- clone and run starters for Claude Code, Codex, and Grok\n\n- a loop readiness CLI that scores your codebase\n\n- SKILL. md templates, STATE.md spine, full safety docs\n\nuse this one command to start(copy/paste):\n\nnpx @cobusgreyling/loop-init • --pattern daily-triage -tool claude-code\n\nbookmark before this blows up\n\nrepo link : https://t.co/cdj8vizgZC",
+      "author": {
+        "id": "1788243647885987840",
+        "name": "MIKE",
+        "screenName": "mikenevermiss",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2004815313108389888/uzJndIfx_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1166,
+        "retweets": 184,
+        "replies": 61,
+        "quotes": 10,
+        "views": 165315,
+        "bookmarks": 2086
+      },
+      "createdAt": "Mon Jun 29 08:39:38 +0000 2026",
+      "createdAtLocal": "2026-06-29 04:39",
+      "createdAtISO": "2026-06-29T08:39:38+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HL9-67SW4AAieeh.jpg",
+          "width": 788,
+          "height": 1401
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2066401066518802637",
+        "text": "https://t.co/tlLZjVprSj",
+        "author": {
+          "screenName": "mikenevermiss",
+          "name": "MIKE"
+        }
+      }
+    },
+    {
+      "id": "2068801141668802792",
+      "text": "Creator of Claude Code:\n\n\"At anthropic, almost every engineer is running 100+ agents with self-improving loops\"\n\n\"The loop makes the agent better every time it runs\"\n\nIn a 1-hour podcast, Boris breaks down how they build agent loops from scratch\n\nClaude + Loops + Routines + Dynamic Workflows\n\nThat's the real setup\n\nBookmark and watch the talk\n\nRead breakdown below",
+      "author": {
+        "id": "1675280785157287938",
+        "name": "rari",
+        "screenName": "0xwhrrari",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2029005608125431808/RHmOjHaB_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 463,
+        "retweets": 66,
+        "replies": 49,
+        "quotes": 7,
+        "views": 116291,
+        "bookmarks": 798
+      },
+      "createdAt": "Sun Jun 21 21:00:03 +0000 2026",
+      "createdAtLocal": "2026-06-21 17:00",
+      "createdAtISO": "2026-06-21T21:00:03+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2068764605803794432/vid/avc1/1282x720/NvaRW03sJ0bUY-pB.mp4?tag=28",
+          "width": 1283,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2065539680146182270",
+        "text": "https://t.co/MI0iMdcW5o",
+        "author": {
+          "screenName": "0xwhrrari",
+          "name": "rari"
+        }
+      }
+    },
+    {
+      "id": "2073078637730189374",
+      "text": "https://t.co/kAZAkoPphh",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 424,
+        "retweets": 61,
+        "replies": 13,
+        "quotes": 11,
+        "views": 511427,
+        "bookmarks": 1474
+      },
+      "createdAt": "Fri Jul 03 16:17:17 +0000 2026",
+      "createdAtLocal": "2026-07-03 12:17",
+      "createdAtISO": "2026-07-03T16:17:17+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2072063473421602816"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Fable 5: A Beginner's Guide to Loop Engineering "
+    },
+    {
+      "id": "2068690663919530207",
+      "text": "Anthropic engineers just showed how they build a full app from scratch, using a loop of agents\n\n40 minutes from the team behind Claude Code\n\nthey used three agents: one to plan, one to build, one to judge, cycling until the app actually works\n\nthe winners won't have the smartest model, they'll have the best loop\n\nwatch it, then read the full guide on how to actually use loops below",
+      "author": {
+        "id": "839423932184870914",
+        "name": "Anatoli Kopadze",
+        "screenName": "AnatoliKopadze",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1634313760444751873/QfwY91Hp_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 8965,
+        "retweets": 1153,
+        "replies": 221,
+        "quotes": 50,
+        "views": 1895472,
+        "bookmarks": 24594
+      },
+      "createdAt": "Sun Jun 21 13:41:03 +0000 2026",
+      "createdAtLocal": "2026-06-21 09:41",
+      "createdAtISO": "2026-06-21T13:41:03+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2068685311551340544/vid/avc1/1920x1080/57Td0XnCYgcGaB1A.mp4?tag=28",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2068328135611822149",
+        "text": "https://t.co/eq0oL4fIaR",
+        "author": {
+          "screenName": "AnatoliKopadze",
+          "name": "Anatoli Kopadze"
+        }
+      }
+    },
+    {
+      "id": "2073045719020343705",
+      "text": "https://t.co/zXM38P3HGs",
+      "author": {
+        "id": "3033730635",
+        "name": "Machina",
+        "screenName": "EXM7777",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1922574051580563456/-OFXIxnm_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2648,
+        "retweets": 291,
+        "replies": 64,
+        "quotes": 50,
+        "views": 1634728,
+        "bookmarks": 8400
+      },
+      "createdAt": "Fri Jul 03 14:06:29 +0000 2026",
+      "createdAtLocal": "2026-07-03 10:06",
+      "createdAtISO": "2026-07-03T14:06:29+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2072712527012888577"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "How to build a second brain with Fable 5"
+    },
+    {
+      "id": "2073644722170523879",
+      "text": "🤖 ClaudeCode-Workflow-Lab\n⭐ 153 stars\n\nBulletproof your Claude Code workflows with red-team-inspired verification pipelines and adversarial budget loops. Perfect for modern AI dev.\n\n🔗 https://t.co/1pDcRYaIHR\n\n#AI #MachineLearning https://t.co/lDGfVaoA0U",
+      "author": {
+        "id": "798728019477168128",
+        "name": "Marco Ramilli",
+        "screenName": "Marco_Ramilli",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1975172551979536384/uGtyi7pM_normal.jpg",
+        "verified": false
+      },
+      "metrics": {
+        "likes": 2,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 141,
+        "bookmarks": 1
+      },
+      "createdAt": "Sun Jul 05 05:46:42 +0000 2026",
+      "createdAtLocal": "2026-07-05 01:46",
+      "createdAtISO": "2026-07-05T05:46:42+00:00",
+      "media": [
+        {
+          "type": "animated_gif",
+          "url": "https://video.twimg.com/tweet_video/HMcQ3v7XoAAgIDT.mp4",
+          "width": 640,
+          "height": 360
+        }
+      ],
+      "urls": [
+        "https://github.com/Frisher1/ClaudeCode-Workflow-Lab"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2062970118033023115",
+      "text": "Claude Code creator:\n\n\"I don’t prompt Claude anymore. What I mostly use now is loops. I create loops - they do the rest of my job.\"\n\nIn 24 minutes, Boris reveals his real daily Claude Code setup:\n\nClaude + loops + routines + dynamic workflows\n\nWorth more than a $500 vibe-coding course",
+      "author": {
+        "id": "1432153372363218948",
+        "name": "Movez",
+        "screenName": "0xMovez",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1998148360478322688/851J4fBL_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1953,
+        "retweets": 234,
+        "replies": 86,
+        "quotes": 20,
+        "views": 466686,
+        "bookmarks": 4832
+      },
+      "createdAt": "Fri Jun 05 18:49:38 +0000 2026",
+      "createdAtLocal": "2026-06-05 14:49",
+      "createdAtISO": "2026-06-05T18:49:38+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2062969645636657152/vid/avc1/1280x720/rhQGC_hA1yCD1a1K.mp4?tag=27",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2062926176117469477",
+        "text": "https://t.co/AJENMSASjD",
+        "author": {
+          "screenName": "0xCodez",
+          "name": "Codez"
+        }
+      }
+    },
+    {
+      "id": "2073143246428221562",
+      "text": "I don't prompt Claude Code anymore.\n\nI have loops running that prompt Fable, and my job is just to write loops.\n\nThis is the Boris Cherny method, and I have to say, it's extremely powerful.\n\nEverything you need to get started with loop engineering (as a complete beginner): https://t.co/ohwQayZMWN",
+      "author": {
+        "id": "1530033576",
+        "name": "Miles Deutscher",
+        "screenName": "milesdeutscher",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2043255869513601025/wFHeLjZX_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2271,
+        "retweets": 360,
+        "replies": 83,
+        "quotes": 4,
+        "views": 427862,
+        "bookmarks": 4711
+      },
+      "createdAt": "Fri Jul 03 20:34:01 +0000 2026",
+      "createdAtLocal": "2026-07-03 16:34",
+      "createdAtISO": "2026-07-03T20:34:01+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMVIy-DbsAANth_.jpg",
+          "width": 1024,
+          "height": 1028
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2073078637730189374",
+        "text": "https://t.co/kAZAkoPphh",
+        "author": {
+          "screenName": "aiedge_",
+          "name": "AI Edge"
+        }
+      }
+    },
+    {
+      "id": "2072383064031023497",
+      "text": "https://t.co/iEhIiQWCPB",
+      "author": {
+        "id": "1530033576",
+        "name": "Miles Deutscher",
+        "screenName": "milesdeutscher",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2043255869513601025/wFHeLjZX_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 845,
+        "retweets": 119,
+        "replies": 46,
+        "quotes": 23,
+        "views": 472601,
+        "bookmarks": 1877
+      },
+      "createdAt": "Wed Jul 01 18:13:20 +0000 2026",
+      "createdAtLocal": "2026-07-01 14:13",
+      "createdAtISO": "2026-07-01T18:13:20+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2072366482990997504"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "How To Master Fable (Fundamentals Guide)"
+    },
+    {
+      "id": "2075042754262921683",
+      "text": "# AI Engineering 001 - Feedfree Digest\n\nHey, providing these articles below in case people missed them. There are many interesting articles floating around X, but they are easy to miss. Here are summaries in case helpful.\n\n## 1. Getting started with loops\nAuthor: ClaudeDevs (@ClaudeDevs)\nDate: July 6, 2026\n\nClaudeDevs gives one of the clearest definitions of loop design: an agent repeats work until a stop condition is met, rather than just answering a prompt once. The article maps out turn-based, goal-based, time-based, and proactive loops, and explains what kind of work fits each one. Its main value is practical: better verification, better stopping rules, and better skills are what keep autonomy useful instead of wasteful.\n\n## 2. Loop Engineering - From Prompting to Looping\nAuthor: kaize (@0x_kaize)\nDate: July 4, 2026\n\nFrom there, kaize pushes the idea further and treats loop engineering as the shift from one-off prompting to programmable agents that can wake up, find work, and return results on their own. The article walks through a concrete local setup with task discovery, gates, verification, and human review. It reads like a build guide for anyone who wants to move from theory into an actual repeatable system.\n\n## 3. How to Set Up Claude Loops That Keep Working While You Sleep (Step by Step)\nAuthor: Hanako (@hanakoxbt)\nDate: June 13, 2026\n\nHanako stays close to the operator view and explains loops as scheduled Claude jobs that keep running after the laptop closes. The article makes the strongest case for many narrow loops in parallel rather than one oversized do-everything agent. It also keeps emphasizing a good constraint: start small, make the stop condition obvious, and keep human approval on anything risky.\n\n## 4. A Field Guide to Fable: Finding Your Unknowns\nAuthor: Thariq (@trq212)\nDate: July 3, 2026\n\nThariq shifts the focus from automation to judgment and argues that Fable is often limited less by the model than by the user's unresolved unknowns. The article breaks those unknowns into categories and shows how they surface before, during, and after implementation. The useful takeaway is that stronger agentic work often comes from exposing ambiguity early instead of pretending the prompt already contains the whole plan.\n\n## 5. I Gave My Second Brain 1,500 Conversations and It Changed Everything\nAuthor: leopardracer (@leopardracer)\nDate: July 4, 2026\n\nThat naturally leads into memory, and leopardracer explores a second-brain setup built from notes, articles, Claude chats, and Claude Code history. The system turns that material into a living wiki that agents can both read and update, so the knowledge base compounds over time. The bigger claim here is not just better recall, but better thinking: the system is meant to generate new ideas, not merely store old ones.\n\n## 6. How to Turn Claude Code Into a Full Team of Specialists:\nAuthor: Madni Aghadi (@hey_madni)\nDate: June 22, 2026\n\nMadni takes the memory problem in a more commercial direction and starts with a familiar frustration: Claude Code forgets your conventions every session. The article presents ClaudeKit as a marketplace of specialist kits that package commands, skills, subagents, and workflow knowledge for distinct roles. The pitch is straightforward but compelling: prebuilt domain context turns a generic assistant into a reusable operator for recurring work.\n\n## 7. How to Build Independent AI Agents That Actually Work in Production\nAuthor: Sumanth (@Sumanth_077)\nDate: July 2, 2026\n\nSumanth zooms out from individual operator setups and asks what happens when agents become shared organizational actors instead of personal chat tools. Using Claude Tag as the entry point, the article argues that production-ready AI coworkers need shared state, continuity, memory, identity, and accountability. It is one of the more useful pieces in this set for people thinking beyond solo workflows and into team-wide systems.\n\n## 8. 10 hidden Claude skills built a $40,000 month while everyone else still types prompts by hand.\nAuthor: Spike 1% (@SpikeCalls)\nDate: June 7, 2026\n\nSpikeCalls brings the discussion back to leverage and makes the case that the edge now comes from reusable Claude skills, not endless hand-written prompting. The article highlights a marketplace of skills for content, AEO, landing pages, finance, memory, and security. It is more of a monetization-oriented roundup than a systems essay, but it is useful as a snapshot of how the skills layer is being packaged and sold.\n\n## 9. Stop Being the Loop. Here's How to Make Claude Work While You Sleep.\nAuthor: Raytar (@Raytar)\nDate: June 23, 2026\n\nRaytar returns to a simpler but important insight: in many workflows, the human is still the actual loop because they keep checking, retrying, and deciding the next step manually. The article uses hallucinated citations as the clearest example of why one-shot prompting breaks down and why measurable verification matters. Its strongest point is that loop design is really about offloading the checking-and-deciding cycle, not just the first draft of the work.\n\n## 10. 20 CLAUDE.md Rules for Getting Ahead of Your Competitors by 5 Years\nAuthor: Cosmo (@0xCosmoo)\nDate: July 2, 2026\n\nCosmo narrows the lens again and focuses on CLAUDE.md as persistent working memory across sessions. The article is broader than coding and shows how the same file can preserve voice, structure, preferences, and operating context for writers, marketers, researchers, and business owners. The core argument is simple and practical: better defaults reduce repetition, reduce correction, and compound into faster high-context work.\n\n## 11. ANTHROPIC RAN THE SAME MODEL TWICE. ONE HARNESS SPENT $200 A RUN, THE OTHER SPENT $9.\nAuthor: belorix (@0xbelorix)\nDate: July 5, 2026\n\nbelorix picks up on the harness question directly and argues that the surrounding system often matters more than the model itself. The article focuses on stop conditions, rejection rules, and verification layers as the real reason one autonomous run becomes useful while another becomes expensive noise. That framing is helpful because it redirects attention from model hype to the operational design that actually controls cost and quality.\n\n## 12. The Claude Fable 5 Playbook: How to Get the Most Out of Anthropic's Strongest Model\nAuthor: rvaniaaa (@rvaniaaaa)\nDate: July 4, 2026\n\nrvaniaaa closes the set by arguing that Fable only looks overrated if you judge it on tasks that smaller models already handle well. The article says the real advantage appears when the work gets larger, messier, and more interconnected, with more tradeoffs surfacing along the way. It is a useful ending note for the whole batch because it reinforces the same broader theme running through many of these pieces: model quality matters, but the real gains show up when the workflow, memory, and problem framing are strong enough to let that quality matter.\n\n[disclosure: for efficiency, this was written with AI with human article selection. If you would like to see more lists like the latest AI advice, please subscribe to my newsletter in my bio]",
+      "author": {
+        "id": "1999623398973145088",
+        "name": "un_contract",
+        "screenName": "un_contract",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2013413502048751618/D-kHEOnu_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1,
+        "retweets": 0,
+        "replies": 2,
+        "quotes": 0,
+        "views": 127,
+        "bookmarks": 0
+      },
+      "createdAt": "Thu Jul 09 02:21:59 +0000 2026",
+      "createdAtLocal": "2026-07-08 22:21",
+      "createdAtISO": "2026-07-09T02:21:59+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2063865685558903149",
+      "text": "https://t.co/DM0CAuyprS",
+      "author": {
+        "id": "6238012",
+        "name": "Matt Van Horn",
+        "screenName": "mvanhorn",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1565403341647400960/55RW_HGX_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 5178,
+        "retweets": 502,
+        "replies": 215,
+        "quotes": 174,
+        "views": 3686611,
+        "bookmarks": 16375
+      },
+      "createdAt": "Mon Jun 08 06:08:18 +0000 2026",
+      "createdAtLocal": "2026-06-08 02:08",
+      "createdAtISO": "2026-06-08T06:08:18+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2063850827694096385"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "WTF Is a Loop? Peter Steinberger vs. Boris Cherny"
+    },
+    {
+      "id": "2073107212491485217",
+      "text": "you can run Claude Fable 5 for $0 with no credit card 👀\n\nzenmux gives free rate-limited access to Fable 5 - Anthropic's #1 Mythos-class model\n\none API key works in Cursor, Claude Code, Hermes Agent, any tool\n\nbenchmarks:\n- №1 on Artificial Analysis Intelligence Index\n- 80.3% on SWE-bench Pro (beats Opus 4.8 at 69% and GPT-5.5 at 58%)\n- 1M token context holds your whole codebase\n- ties Opus on tool use agents actually work\n- 46 tokens/sec throughput on free tier\n\nwhat this replaces:\n\n- Claude Pro: $20/mo for capped access\n- Claude API direct: $15 per million input tokens\n- Cursor Pro: $20/mo just for the IDE\n- total: $40+/mo for what you get free here\n\nhow to grab:\n\n1. go to https://t.co/lEbJrf6R0m\n2. sign up with email no card needed\n3. open the models section\n4. pick \"Claude Fable 5 (Free)\" \n5. generate an API key\n6. base url: https://t.co/0wujiMTx4O\n7. paste into Cursor, Claude Code, Hermes any OpenAI-compatible tool\n\nfree rate limit is generous enough for daily coding. 1M context fits entire repos.\n\n3 things to try:\n\n1. drop your whole codebase in one prompt 1M context captures everything\n2. run agent loops for multi-file refactors Fable 5 doesn't lose track\n3. vibe code client dashboards and tools holds the plot after 20+ iterations\n\nyour buddy pays $40/mo for Claude Pro + Cursor\nyou get Fable 5, the #1 model on the index, for $0\n\nbookmark this before the free tier changes",
+      "author": {
+        "id": "1374938856072441857",
+        "name": "Farea",
+        "screenName": "FareaNFts",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1526240923088482305/YmdeyXCc_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 295,
+        "retweets": 31,
+        "replies": 34,
+        "quotes": 3,
+        "views": 73781,
+        "bookmarks": 488
+      },
+      "createdAt": "Fri Jul 03 18:10:50 +0000 2026",
+      "createdAtLocal": "2026-07-03 14:10",
+      "createdAtISO": "2026-07-03T18:10:50+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMUnjBSbkAEyKRU.png",
+          "width": 767,
+          "height": 379
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2071831402014970345",
+        "text": "FREE $500 of frontier AI API credits, every model included 😳\n\nClaude Opus 4.8, Sonnet 4.6, GPT-5, GPT-5 mini, Deepseek. one key, openai-compatible.\n\nConduit is an API proxy that drops $500 trial credit into every new account. Opus 4.8 alone runs $5/$25 per million tokens, so $500 is real money, not a teaser.\n\nhow to grab yours (5 min):\n\ngo to - https://t.co/RfKM5RfYDm\n\n> open the conduit telegram bot\n> start it and verify from website (one click verify)\n> copy your api key from the dashboard (starts with sk-cdt-)\n> set base url to https://t.co/5MlqvooiFF\n> drop the key into cursor, cline, claude code, any openai-compatible tool\n\nswitch models by changing one string: claude-opus-4-8, openai/gpt-5, deepseek, whatever you need.\n\nif one model is overloaded, swap to another (deepseek is the most stable). it's a third-party proxy, so test with small calls first.\n\nbookmark this before the free tier closes.",
+        "author": {
+          "screenName": "FareaNFts",
+          "name": "Farea"
+        }
+      }
+    },
+    {
+      "id": "2074931943268081903",
+      "text": "https://t.co/aeBaqX9aqN",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 41,
+        "retweets": 5,
+        "replies": 1,
+        "quotes": 2,
+        "views": 58369,
+        "bookmarks": 84
+      },
+      "createdAt": "Wed Jul 08 19:01:40 +0000 2026",
+      "createdAtLocal": "2026-07-08 15:01",
+      "createdAtISO": "2026-07-08T19:01:40+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074870424387923968"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Grok 4.5: The Complete Overview "
+    },
+    {
+      "id": "2074591870735225181",
+      "text": "If I commit to learning CLAUDE in 7 Days\n\nHere is the complete roadmap I will pick: (Blindly)\n\n✦ Claude Skills: https://t.co/XdLGJluAyV\n✦ Claude in Excel: https://t.co/aurqU4KVxl\n✦ Claude Artifacts: https://t.co/skBDr1fC65\n✦ Claude for Chrome: https://t.co/U8enMdP5bs\n✦ Claude Connectors: https://t.co/A1dLdT0ZXd\n✦ How to Build Loops: https://t.co/sK8OeZEcNr\n✦ Claude Skills Mistakes: https://t.co/iYbPP5ZXq0\n✦ Videos Using Claude: https://t.co/6NLS6LLMTf\n✦ 25 ways to use Claude: https://t.co/YQ3D8yqZU3\n✦ Claude + Obsidian 101: https://t.co/84yUCXuv8F\n✦ Claude + Higgsfield MCP: https://t.co/BLi5VYd1EQ\n✦ 7 Advanced Claude Loops: https://t.co/88Y7VSeOeu\n✦ Second Brain with Claude: https://t.co/46zW7TwGur\n✦ Stop Hitting Claude's Limits: https://t.co/6zStDBTxqf\n✦ Learn anything with Claude: https://t.co/NStE9MK2BA\n✦ Claude as a Financial Analyst: https://t.co/WuVqlmJXf3\n✦ Fix your broken Claude code: https://t.co/6blXbiFYsx\n✦ Claude Design Like Anthropic Engineers: https://t.co/r7RQt25c2h\n✦ Faceless YouTube Channel with Claude: https://t.co/nnyLULvKqU\n\n♻️ Repost and be the first one to share it with your network.",
+      "author": {
+        "id": "1686347517238358016",
+        "name": "Dhairya",
+        "screenName": "dkare1009",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1990291466166669312/zfb4ZcaW_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 30,
+        "retweets": 6,
+        "replies": 0,
+        "quotes": 0,
+        "views": 1165,
+        "bookmarks": 27
+      },
+      "createdAt": "Tue Jul 07 20:30:20 +0000 2026",
+      "createdAtLocal": "2026-07-07 16:30",
+      "createdAtISO": "2026-07-07T20:30:20+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMpuTndWgAARHE_.png",
+          "width": 800,
+          "height": 838
+        }
+      ],
+      "urls": [
+        "https://lnkd.in/gva3HK6f",
+        "https://lnkd.in/gj9AYRuV",
+        "https://lnkd.in/gSmrHC38",
+        "https://lnkd.in/g8JBYrvf"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2064279904989147577",
+      "text": "Claude Code's creator said something that stopped me cold:\n\n\"I don't prompt Claude anymore. I write loops — and the loops do the work. My job is to write loops.\"\n\nMost developers are still crafting the perfect prompt.\n\nThe person who built the tool moved past prompting entirely.\n\nIn 30 minutes Boris reveals his actual daily Claude Code setup.\n\nClaude Code + loops + dynamic workflows.\n\nWorth more than any $500 vibe-coding course.\n\nWatch it.\n\nThen read this - everything you need to know about loops to actually apply what he says ↓\n\nBookmark both. This is your weekend.",
+      "author": {
+        "id": "299656190",
+        "name": "Rahul",
+        "screenName": "sairahul1",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1999441729800536065/6-3Y5xyR_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4540,
+        "retweets": 555,
+        "replies": 130,
+        "quotes": 36,
+        "views": 1798970,
+        "bookmarks": 16456
+      },
+      "createdAt": "Tue Jun 09 09:34:16 +0000 2026",
+      "createdAtLocal": "2026-06-09 05:34",
+      "createdAtISO": "2026-06-09T09:34:16+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2064279600142934016/vid/avc1/1920x1080/Y6apjpbv0TEdFJyt.mp4?tag=27",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2064277888216555684",
+        "text": "https://t.co/kZFYtIdHAj",
+        "author": {
+          "screenName": "sairahul1",
+          "name": "Rahul"
+        }
+      }
+    },
+    {
+      "id": "2074158459545854232",
+      "text": "https://t.co/BNuZ1GirbS",
+      "author": {
+        "id": "3033730635",
+        "name": "Machina",
+        "screenName": "EXM7777",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1922574051580563456/-OFXIxnm_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2006,
+        "retweets": 163,
+        "replies": 56,
+        "quotes": 31,
+        "views": 667857,
+        "bookmarks": 5544
+      },
+      "createdAt": "Mon Jul 06 15:48:07 +0000 2026",
+      "createdAtLocal": "2026-07-06 11:48",
+      "createdAtISO": "2026-07-06T15:48:07+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074150113623306240"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Do this on your last day with Fable"
+    },
+    {
+      "id": "2074500978360123500",
+      "text": "Anthropic just published their official guide to running Claude Code in loops.\n\nI spent last week building with this exact workflow. Gave it one prompt, defined what \"done\" looks like, and walked away.\n\nMid-build it hit a broken page, caught the error itself, and fixed it before I ever saw it. That moment is in the clip.\n\nFull 19-minute breakdown is on my channel, link in the reply.",
+      "author": {
+        "id": "1765049183738720256",
+        "name": "Nick Puru",
+        "screenName": "NicholasPuru",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1986828541338484736/2CPHFepo_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 5,
+        "retweets": 1,
+        "replies": 3,
+        "quotes": 0,
+        "views": 1675,
+        "bookmarks": 19
+      },
+      "createdAt": "Tue Jul 07 14:29:10 +0000 2026",
+      "createdAtLocal": "2026-07-07 10:29",
+      "createdAtISO": "2026-07-07T14:29:10+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2074500225553801216/vid/avc1/1920x1080/EjbZgilmY4tmYhFw.mp4?tag=28",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074208949205881033",
+        "text": "https://t.co/v694m8Eaj6",
+        "author": {
+          "screenName": "ClaudeDevs",
+          "name": "ClaudeDevs"
+        }
+      }
+    },
+    {
+      "id": "2074567568635899962",
+      "text": "Claude Code just dropped \"Getting Started with Loops\"\n\nThis is their first official document about Loop Engineering.\n\nSpoiler: prompt engineering didn't survive.\n\nHere's the full guide in one post:\n\n1. Turn-based\n\nEvery prompt you send already runs as a loop: Claude gathers context, takes action, checks its own work, and repeats until it decides the task is done or realizes it needs your input.\n\n2. Goal-based\n\nYou define what \"done\" looks like with /goal, and Claude keeps iterating toward it. Every time it tries to stop, a separate evaluator model checks your condition - if it's not met, Claude gets sent back to work until the goal is reached or the turn limit hits.\n\n3. Time-based\n\nThis is the /loop command: нou set an interval and a prompt fires on schedule. For example, every 5 minutes Claude checks your PR, addresses review comments, and fixes failing CI.\n\n4. Proactive\n\nHere you set up an event once, and the loop triggers itself whenever that event happens - with zero human input.\n\nAnthropic also shared optimization advice - and this part matters most:\n\n- Loop quality depends on system quality.\n- Tokens are the real cost\n\nNone of this is magic. It's the same familiar parts - /goal, /loop, Skills, Hooks - composed into systems that run without you.\n\nI built exactly that kind of system in my article:\n\nLoop that wakes up at 6 AM, finds work on its own, reviews itself, and leaves ready PRs for you. Step by step, from SKILL(.)md to cron trigger:",
+      "author": {
+        "id": "1705329284745764864",
+        "name": "kaize",
+        "screenName": "0x_kaize",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2069535423404163072/zPNK6ZQH_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1581,
+        "retweets": 291,
+        "replies": 37,
+        "quotes": 5,
+        "views": 156717,
+        "bookmarks": 2370
+      },
+      "createdAt": "Tue Jul 07 18:53:46 +0000 2026",
+      "createdAtLocal": "2026-07-07 14:53",
+      "createdAtISO": "2026-07-07T18:53:46+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMpYM2AWAAAFqxS.jpg",
+          "width": 1532,
+          "height": 2048
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2073438517775003671",
+        "text": "https://t.co/8PUvfLawTX",
+        "author": {
+          "screenName": "0x_kaize",
+          "name": "kaize"
+        }
+      }
+    }
+  ]
+}

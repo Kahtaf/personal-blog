@@ -1,0 +1,635 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2074925531519468012",
+      "text": "Tomorrow at 10am PT I'm hosting a live walkthrough of how we progressed from single-player Claude Code to multi-player Claude Tag. Then, we're going deep on how Claude Tag actually works.\n\nAI used to finish your sentence. Then, it wrote entire features. Now, Claude Tag can monitor your channels, do proactive work for you, the whole team can steer it, and it remembers what you told it last week.\n\nRegister: https://t.co/D8Lz61BXn4",
+      "author": {
+        "id": "974757274206978049",
+        "name": "cat",
+        "screenName": "_catwu",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1645578728532246528/Llilll47_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 522,
+        "retweets": 36,
+        "replies": 44,
+        "quotes": 9,
+        "views": 56965,
+        "bookmarks": 316
+      },
+      "createdAt": "Wed Jul 08 18:36:11 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:36",
+      "createdAtISO": "2026-07-08T18:36:11+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "bcherny",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074997911348244930",
+      "text": "This is pretty epic",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 693,
+        "retweets": 15,
+        "replies": 17,
+        "quotes": 1,
+        "views": 189646,
+        "bookmarks": 113
+      },
+      "createdAt": "Wed Jul 08 23:23:48 +0000 2026",
+      "createdAtLocal": "2026-07-08 19:23",
+      "createdAtISO": "2026-07-08T23:23:48+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074973674332123157",
+        "text": "Rewriting Bun in Rust\n\nhttps://t.co/Rl8bcaxBFc",
+        "author": {
+          "screenName": "jarredsumner",
+          "name": "Jarred Sumner"
+        }
+      }
+    },
+    {
+      "id": "2074997570317779038",
+      "text": "New in Claude Code: /checkup\n\nRun /checkup to:\n\n1. Clean up unused skills/MCPs/plugins and save context\n2. Dedup your local CLAUDE.md against the checked in CLAUDE.md\n3. Break up root CLAUDE.md into nested CLAUDE.md's + skills\n4. Turn off slow hooks\n5. Update your Claude Code to the latest version\n6. Enable auto mode by default\n7. Pre-approve frequently denied read-only commands\n\n.. And a few other goodies.\n\n/checkup confirms with you before making any changes. Enjoy!",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 9200,
+        "retweets": 725,
+        "replies": 278,
+        "quotes": 155,
+        "views": 523612,
+        "bookmarks": 7416
+      },
+      "createdAt": "Wed Jul 08 23:22:27 +0000 2026",
+      "createdAtLocal": "2026-07-08 19:22",
+      "createdAtISO": "2026-07-08T23:22:27+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074997571563479143",
+      "text": "Here's what happened when I ran /checkup https://t.co/W6thoLW6rm",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 309,
+        "retweets": 5,
+        "replies": 25,
+        "quotes": 2,
+        "views": 45571,
+        "bookmarks": 100
+      },
+      "createdAt": "Wed Jul 08 23:22:27 +0000 2026",
+      "createdAtLocal": "2026-07-08 19:22",
+      "createdAtISO": "2026-07-08T23:22:27+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMvfCIeXEAIZxtj.jpg",
+          "width": 2534,
+          "height": 1254
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074208949205881033",
+      "text": "https://t.co/v694m8Eaj6",
+      "author": {
+        "id": "2024518793679294464",
+        "name": "ClaudeDevs",
+        "screenName": "ClaudeDevs",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2044472418815893504/xf14RxM8_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 16931,
+        "retweets": 2073,
+        "replies": 310,
+        "quotes": 464,
+        "views": 5544247,
+        "bookmarks": 37139
+      },
+      "createdAt": "Mon Jul 06 19:08:45 +0000 2026",
+      "createdAtLocal": "2026-07-06 15:08",
+      "createdAtISO": "2026-07-06T19:08:45+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074204645845839872"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "bcherny",
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Getting started with loops "
+    },
+    {
+      "id": "2074247226038063316",
+      "text": "This is our first time telling the story of how we first built and launched Claude Code, starting with its origins in Anthropic safety research.\n\nSo much more to do. We are 1% done.",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 3820,
+        "retweets": 270,
+        "replies": 148,
+        "quotes": 19,
+        "views": 413443,
+        "bookmarks": 2076
+      },
+      "createdAt": "Mon Jul 06 21:40:50 +0000 2026",
+      "createdAtLocal": "2026-07-06 17:40",
+      "createdAtISO": "2026-07-06T21:40:50+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074244664199115201",
+        "text": "We've put together a short history of how Claude Code came to be, told by the people who built it and the early users who helped make it what it is today.\n\nhttps://t.co/0gXEPID8lh https://t.co/2qeCVrD6Ep",
+        "author": {
+          "screenName": "claudeai",
+          "name": "Claude"
+        }
+      }
+    },
+    {
+      "id": "2072777472970563995",
+      "text": "Artifacts in Claude Code have been life changing. Excited to expand to Pro and Max!",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2655,
+        "retweets": 133,
+        "replies": 158,
+        "quotes": 18,
+        "views": 408475,
+        "bookmarks": 1200
+      },
+      "createdAt": "Thu Jul 02 20:20:34 +0000 2026",
+      "createdAtLocal": "2026-07-02 16:20",
+      "createdAtISO": "2026-07-02T20:20:34+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072770790114914317",
+        "text": "Artifacts in Claude Code are now also available on Pro and Max plans.\n\nAsk for an artifact, Claude writes the code, publishes it live to claude.a‍i, and updates it in real time while it keeps working. Pages are private to your account and fully self-contained. https://t.co/0xbJnaXx99",
+        "author": {
+          "screenName": "ClaudeDevs",
+          "name": "ClaudeDevs"
+        }
+      }
+    },
+    {
+      "id": "2072429181565288665",
+      "text": "Now that Fable 5 is ready to build (again), we've reset everyone's 5-hour and weekly rate limits.",
+      "author": {
+        "id": "2024518793679294464",
+        "name": "ClaudeDevs",
+        "screenName": "ClaudeDevs",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2044472418815893504/xf14RxM8_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 21209,
+        "retweets": 1166,
+        "replies": 1035,
+        "quotes": 543,
+        "views": 1573015,
+        "bookmarks": 806
+      },
+      "createdAt": "Wed Jul 01 21:16:35 +0000 2026",
+      "createdAtLocal": "2026-07-01 17:16",
+      "createdAtISO": "2026-07-01T21:16:35+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "bcherny",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072105851457019944",
+      "text": "Agree",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1144,
+        "retweets": 13,
+        "replies": 44,
+        "quotes": 4,
+        "views": 182875,
+        "bookmarks": 65
+      },
+      "createdAt": "Tue Jun 30 23:51:47 +0000 2026",
+      "createdAtLocal": "2026-06-30 19:51",
+      "createdAtISO": "2026-06-30T23:51:47+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072024792056909935",
+        "text": "actually insane stuff happening here https://t.co/mLxEHoGSPQ",
+        "author": {
+          "screenName": "paularambles",
+          "name": "“paula”"
+        }
+      }
+    },
+    {
+      "id": "2072000214634742243",
+      "text": "You asked, we listened. Claude Desktop on Linux is here!\n\nDownload link: https://t.co/gjgHZvbKyi",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4311,
+        "retweets": 251,
+        "replies": 345,
+        "quotes": 50,
+        "views": 362497,
+        "bookmarks": 405
+      },
+      "createdAt": "Tue Jun 30 16:52:01 +0000 2026",
+      "createdAtLocal": "2026-06-30 12:52",
+      "createdAtISO": "2026-06-30T16:52:01+00:00",
+      "media": [],
+      "urls": [
+        "https://code.claude.com/docs/en/desktop-linux"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2071988881717871065",
+        "text": "Claude Desktop is now available on Linux (Ubuntu and Debian) in beta.\n\nAlongside the browser and terminal, you now get a first-class desktop experience with Claude Code, Claude Cowork, and chat on all paid plans. https://t.co/m0K9t198t4",
+        "author": {
+          "screenName": "ClaudeDevs",
+          "name": "ClaudeDevs"
+        }
+      }
+    },
+    {
+      "id": "2071653958905467027",
+      "text": "Claude in Microsoft Foundry is now generally available, hosted on Azure.\n\nAzure customers get Claude Opus 4.8 and Claude Haiku 4.5, with Azure authentication, billing, and commitment retirement. https://t.co/4Rz7fa9Bxm",
+      "author": {
+        "id": "1943306828697550848",
+        "name": "Claude",
+        "screenName": "claudeai",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1950950107937185792/QOfEjFoJ_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 5746,
+        "retweets": 369,
+        "replies": 398,
+        "quotes": 119,
+        "views": 1005834,
+        "bookmarks": 630
+      },
+      "createdAt": "Mon Jun 29 17:56:07 +0000 2026",
+      "createdAtLocal": "2026-06-29 13:56",
+      "createdAtISO": "2026-06-29T17:56:07+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HL_rp_cXoAABeGD.png",
+          "width": 3840,
+          "height": 2160
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "bcherny",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2071647677591466098",
+      "text": "In the next version of Claude Code: subagents run in the background by default, so you can keep talking to Claude while your subagents work\n\nIf you want your agent to run in the foreground, just tell Claude",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 9885,
+        "retweets": 404,
+        "replies": 544,
+        "quotes": 136,
+        "views": 635838,
+        "bookmarks": 1155
+      },
+      "createdAt": "Mon Jun 29 17:31:10 +0000 2026",
+      "createdAtLocal": "2026-06-29 13:31",
+      "createdAtISO": "2026-06-29T17:31:10+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2071379474277613732",
+      "text": "As engineering, product, design, DS, etc. melt into a new kind of role, I was reflecting on what roles might look like in the future. For example, when I look at the Claude Code team I see what I think is five archetypes:\n\n1. Prototyper: comes up with brand new ideas; churns out many ideas, most of which don't ship\n2. Builder: quickly turns a prototype/idea into production-grade product/infra\n3. Sweeper: cleans up the UI, simplifies the code and system, unships, optimizes performance\n4. Grower: takes a product that has been built and iterates on it to improve Product-Market Fit\n5. Maintainer: owns a mature system to make it secure, reliable, fast, and efficient as it scales\n\nMany people span across 2 roles, and sometimes 3 roles. I also notice that these roles are not really tied to job function -- eg. across Anthropic, some designers match category 1, some 2, some 3; same for engineers, PM, DS.\n\nA healthy team needs a mix of these, depending on the product:\n\n- A product that is new and pre-PMF needs people that are strong at 1+2+3\n- A product that is growing and has found PMF needs 2+3+4 and some 5\n- A product that has strong PMF needs 3+4+5 and some 2\n\nMaybe product roles of the future will look more like this, and less like the domain-specific roles of today?",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 19635,
+        "retweets": 2359,
+        "replies": 882,
+        "quotes": 646,
+        "views": 3059127,
+        "bookmarks": 19604
+      },
+      "createdAt": "Sun Jun 28 23:45:25 +0000 2026",
+      "createdAtLocal": "2026-06-28 19:45",
+      "createdAtISO": "2026-06-28T23:45:25+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2069474688619958517",
+      "text": "I also have Claude monitoring Slack channels to proactively respond to people to answer their questions and draft PRs, and to react with specific emojis like ✅❌ when a thread is resolved.\n\nTo set it up, just add @.Claude to a channel and ask it to do this^, in natural language.",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 155,
+        "retweets": 3,
+        "replies": 17,
+        "quotes": 0,
+        "views": 52729,
+        "bookmarks": 37
+      },
+      "createdAt": "Tue Jun 23 17:36:29 +0000 2026",
+      "createdAtLocal": "2026-06-23 13:36",
+      "createdAtISO": "2026-06-23T17:36:29+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2069474689819480394",
+      "text": "Tag Claude in a channel, it spins up an instance with its own sandbox. It clones repos, writes code, tests, compiles all in that isolated environment and the sandbox gets thrown away when it's done. One instance per thread, its own memory and permissions per channel.",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 114,
+        "retweets": 2,
+        "replies": 9,
+        "quotes": 2,
+        "views": 44137,
+        "bookmarks": 10
+      },
+      "createdAt": "Tue Jun 23 17:36:29 +0000 2026",
+      "createdAtLocal": "2026-06-23 13:36",
+      "createdAtISO": "2026-06-23T17:36:29+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2069474691010707486",
+      "text": "That's it. Point it at a channel, give it a task, and let it work. It's in beta on Slack today for Claude Enterprise and Team customers. More surfaces coming soon!\n\nLearn more: https://t.co/tcvNSCANlf",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 145,
+        "retweets": 4,
+        "replies": 33,
+        "quotes": 1,
+        "views": 57037,
+        "bookmarks": 59
+      },
+      "createdAt": "Tue Jun 23 17:36:29 +0000 2026",
+      "createdAtLocal": "2026-06-23 13:36",
+      "createdAtISO": "2026-06-23T17:36:29+00:00",
+      "media": [],
+      "urls": [
+        "https://www.anthropic.com/news/introducing-claude-tag"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2069474687323893796",
+      "text": "I tag Claude many times a day to write PRs, address user feedback, investigate incidents, do data analyses, summarize information, etc.\n\nUse it as your company's search engine. \"What's the status on X?\" \"Who owns this service?\" It answers your questions instead of just returning links. It’s been a huge unlock for onboarding new teammates.",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 132,
+        "retweets": 2,
+        "replies": 8,
+        "quotes": 0,
+        "views": 39912,
+        "bookmarks": 26
+      },
+      "createdAt": "Tue Jun 23 17:36:29 +0000 2026",
+      "createdAtLocal": "2026-06-23 13:36",
+      "createdAtISO": "2026-06-23T17:36:29+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2069474685948186797",
+      "text": "We’ve worked hard to make it secure at every level. 1/ At the model training stage, 2/ the classifiers on top of our models and things like auto mode, 3/ we protect what Claude has access to (websites it can access and it can’t see the credential secrets it uses), and 4/ respecting channel/workspace boundaries",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 118,
+        "retweets": 2,
+        "replies": 3,
+        "quotes": 1,
+        "views": 41862,
+        "bookmarks": 13
+      },
+      "createdAt": "Tue Jun 23 17:36:28 +0000 2026",
+      "createdAtLocal": "2026-06-23 13:36",
+      "createdAtISO": "2026-06-23T17:36:28+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2069474684610195914",
+      "text": "Claude is really proactive with Claude Tag. You don’t need to prompt it to do work, it can do work proactively based on your instructions. It has excellent memory and access to your data, so it can behave differently per channel",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 160,
+        "retweets": 3,
+        "replies": 8,
+        "quotes": 1,
+        "views": 43018,
+        "bookmarks": 22
+      },
+      "createdAt": "Tue Jun 23 17:36:28 +0000 2026",
+      "createdAtLocal": "2026-06-23 13:36",
+      "createdAtISO": "2026-06-23T17:36:28+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2069474681749754272",
+      "text": "We're launching Claude Tag today. Tag Claude into Slack and it works in channel with you. It’s proactive, multiplayer, with its own identity and memory.\n\nBut it’s not just a bot in Slack. Over the last few months, it’s totally changed how we use Claude",
+      "author": {
+        "id": "159337660",
+        "name": "Boris Cherny",
+        "screenName": "bcherny",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4629,
+        "retweets": 269,
+        "replies": 292,
+        "quotes": 71,
+        "views": 1373089,
+        "bookmarks": 2247
+      },
+      "createdAt": "Tue Jun 23 17:36:27 +0000 2026",
+      "createdAtLocal": "2026-06-23 13:36",
+      "createdAtISO": "2026-06-23T17:36:27+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2069468693017268244",
+        "text": "Introducing Claude Tag, a new way for teams to work with Claude.\n\nIn Slack, Claude joins as a team member with access to the channels and tools you choose. Tag Claude in and delegate tasks to it while you focus on other work. https://t.co/R2C6A5Kcye",
+        "author": {
+          "screenName": "claudeai",
+          "name": "Claude"
+        }
+      }
+    }
+  ]
+}

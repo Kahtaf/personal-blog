@@ -1,0 +1,625 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2074918176354115886",
+      "text": "My view of: Fable 5 vs GPT-5.6-Sol. They are not easy models to compare, these are my vibes - take them as you will. \n\nMy overall feel is that Fable is a 'wise owl' who is very thoughtful and very well spoken, GPT-5.6-Sol is like a rottweiler who will grab the problem by the throat and not let go until it is done.\n\nIn other words, Fable, is a fundamentally smarter model - even at low reasoning it can be very insightful and writes in a clear compelling way. GPT-5.6-Sol on the other hand is extremely diligent, I can give it a list of 8 things to do and you will be sure that they will be done.\n\nFable feels more arrogant to me, I was both to get it to build a new benchmark for me - 5.6 worked between 6 hours and 2 days (I tried several times) and it came up with very thoroughly tested, working benchmark. Fable came back within 40 minutes (twice) and the benchmark sounded smart, but was ultimately was 'vibe' based slop and since it was Fable's vibes that was doing the judging, it decided that it was good to go (it kept giving Fable 100% score btw).\n\nSome thoughts by category:\n\nUI & App building: Fable will still craft a better UI from scratch, the flow of the app would probably be a bit nicer. But I find that Fable often misses quite key things, which GPT-5.6-Sol doesn't. GPT's Frontend skills are big jump vs previous GPT models, but still not as great overall.\n\nWriting: Fable is better hands down, Sol feels quite difficult to align to what I want to say or explain things to me simply. Though I think the 'Pro' model writes clearer. \n\nRobustness & Reliability: This is where I think GPT-5.6-Sol wins for me hands down. Fable seems to do things of high quality, but I can never relax with it, it always misses something. With 5.6 this just almost never happens.\n\nOther things where I liked GPT-5.6-Sol, but can't compare to Fable directly.\n - Video editing is actually working now, it is not completely perfect, but with the right skill/guidance you can just give it 1h footage and it can give you a 5 min highlight clip no problem\n - Computer use - getting really rather good, very usable\n - Sub agents - it is very fluent at managing sub-agents and speaking to different threads, can help with some new workflows\n - Adhering to existing code patterns - I love this, even without asking it would implement something in a way that aligns with you app - major problem for slop generation\n - Research - I think it is getting quite a bit better, it still has some bad patterns (e.g being too tactical), but it feels like it is more steerable to be a good researcher \n - Multi-day runs - the /goal feature is pretty insane with 5.6-Sol, you can run it for days if you wanted to and it does work. Useful to have another thread or /side to check up on it, but I have some great results with it\n - Token efficiency - it is so much more token efficient and faster than 5.5, in reality it is now much faster than Fable too\n\nOn the downside, you can feel that Fable is naturally smarter, and I did have some baffling moments with 5.6 when I was getting it to make a fairly simple change in 8 turns - it seemed to get stuck in a dumb stream that was hard to get out of. So it is not AGI, don't get too carried away by the hype. \n \nI have some phenomenal examples that I'm honestly blown away by that I'll share, but as a side anecdote, I have a kind of 'swear meter' which counts how often I'm rude to Codex. In GPT-5.5 era, the % was at around 4-5%, it dropped to 1-2% when I was testing GPT-5.6-Sol and it shot up to 7% when I went back to 5.5 - it was so shocking to go back to 5.5 and experience how much worse it was. \n\nSo is GPT-5.6-Sol better than Fable? On pure intelligence - no. But man, I missed it when I just wanted to get sh*t done. It is insanely capable workhorse that you can give any task to and just expect it to be done. No lectures or 'you are absolutely rightisms', nothing is beneath it, if it takes 2 days to do some dirty work, it will do it.\n\nIt feels like the first time in a while when we have quite different types of frontier intelligences that benchmark sort of similarly, but feel very different. If you can, you would be probably better off using both and iteratively finding what you'd use Fable or GPT-5.6-Sol for. Perhaps, something like - an architectural discussion with Fable, implementation with 5.6 and docs & comms with Fable.",
+      "author": {
+        "id": "1934694242414215168",
+        "name": "Peter Gostev",
+        "screenName": "petergostev",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1934694573797670912/1gnGJwlr_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2940,
+        "retweets": 237,
+        "replies": 138,
+        "quotes": 86,
+        "views": 959293,
+        "bookmarks": 1499
+      },
+      "createdAt": "Wed Jul 08 18:06:58 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:06",
+      "createdAtISO": "2026-07-08T18:06:58+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2075136517144535171",
+      "text": "Grok 4.5 on OpenClaw",
+      "author": {
+        "id": "44196397",
+        "name": "Elon Musk",
+        "screenName": "elonmusk",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2053244804520427520/m8mdWZCG_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 6109,
+        "retweets": 1034,
+        "replies": 937,
+        "quotes": 65,
+        "views": 1531229,
+        "bookmarks": 407
+      },
+      "createdAt": "Thu Jul 09 08:34:34 +0000 2026",
+      "createdAtLocal": "2026-07-09 04:34",
+      "createdAtISO": "2026-07-09T08:34:34+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074973471977955556",
+        "text": "Grok 4.5 from @SpaceXAI is live on OpenClaw.\n\nNo OpenClaw update required, just connect your X Premium or SuperGrok subscription, select Grok 4.5 under the xAI provider, and use an Opus-class model that’s fast, low cost, and ready for agentic work. https://t.co/MMA6j2qGNy",
+        "author": {
+          "screenName": "openclaw",
+          "name": "OpenClaw🦞"
+        }
+      }
+    },
+    {
+      "id": "2075176735218483255",
+      "text": "Ya know the little one-liners when OpenClaw starts up?\nTime for some new ones. https://t.co/tqbyg4xnk2",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 138,
+        "retweets": 6,
+        "replies": 25,
+        "quotes": 1,
+        "views": 27125,
+        "bookmarks": 18
+      },
+      "createdAt": "Thu Jul 09 11:14:23 +0000 2026",
+      "createdAtLocal": "2026-07-09 07:14",
+      "createdAtISO": "2026-07-09T11:14:23+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMyCKH2bsAAlFKn.png",
+          "width": 1252,
+          "height": 206
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074972179385720836",
+      "text": "We audited SWE-Bench Pro, one of the most widely used AI coding benchmarks, and found it no longer reliably measures frontier coding capability.\n\nWe find 30% of SWE-Bench Pro tasks to be broken, and are retracting our previous recommendation that the research community use it as a leading coding eval.\nhttps://t.co/wDdSEjBe4F",
+      "author": {
+        "id": "4398626122",
+        "name": "OpenAI",
+        "screenName": "OpenAI",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1885410181409820672/ztsaR0JW_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 6993,
+        "retweets": 499,
+        "replies": 279,
+        "quotes": 310,
+        "views": 1656382,
+        "bookmarks": 1394
+      },
+      "createdAt": "Wed Jul 08 21:41:33 +0000 2026",
+      "createdAtLocal": "2026-07-08 17:41",
+      "createdAtISO": "2026-07-08T21:41:33+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074836917619675154",
+      "text": "When you get access to GPT-5.6-Sol in Codex, be careful with how you are using your tokens. It is trivial to blow though your Pro, if you do everything &amp; /fast via Max/Ultra with 10x sub-agents . Just be patient, do it when necessary, otherwise xHigh is a good default.",
+      "author": {
+        "id": "1934694242414215168",
+        "name": "Peter Gostev",
+        "screenName": "petergostev",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1934694573797670912/1gnGJwlr_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 924,
+        "retweets": 32,
+        "replies": 50,
+        "quotes": 4,
+        "views": 84993,
+        "bookmarks": 138
+      },
+      "createdAt": "Wed Jul 08 12:44:04 +0000 2026",
+      "createdAtLocal": "2026-07-08 08:44",
+      "createdAtISO": "2026-07-08T12:44:04+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074918433314218459",
+      "text": "As part of this launch, we updated the shader used to represent ChatGPT. \n\nI used Blender to quickly sketch a wide variety of options and had Codex inspect the file and translate the material to Metal and WebGL. https://t.co/Cw4MtPn3mT",
+      "author": {
+        "id": "20938766",
+        "name": "Gavin Nelson",
+        "screenName": "Gavmn",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910772072546193408/yFnZH7wE_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 601,
+        "retweets": 19,
+        "replies": 34,
+        "quotes": 8,
+        "views": 43276,
+        "bookmarks": 224
+      },
+      "createdAt": "Wed Jul 08 18:07:59 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:07",
+      "createdAtISO": "2026-07-08T18:07:59+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMuXUbGawAAEzsW.jpg",
+          "width": 2048,
+          "height": 1770
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074910360294068351",
+      "text": "If you have access to GPT Live, test out this prompt. \n\n\"Hey, I want you to teach me about a concept.  <insert concept>  but every time I interrupt you, I want you to get progressively more angry at me and tell me to stop talking and let you finish\"\n\nThere is an amazing feeling when an A.I. pushes back.",
+      "author": {
+        "id": "17203692",
+        "name": "jason",
+        "screenName": "jxnlco",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2057561784047816704/5Su5xy1d_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1516,
+        "retweets": 47,
+        "replies": 80,
+        "quotes": 13,
+        "views": 119024,
+        "bookmarks": 1066
+      },
+      "createdAt": "Wed Jul 08 17:35:54 +0000 2026",
+      "createdAtLocal": "2026-07-08 13:35",
+      "createdAtISO": "2026-07-08T17:35:54+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2075046949896736835",
+      "text": "OpenAI hired me, not OpenClaw.\nThe OpenClaw Foundation is independent, with sponsors rather than owners - and, for the first time, a full-time team keeping the claw alive and stable. 🦞\n\nCouldn’t have done it without Dave and the team. Kudos!",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2771,
+        "retweets": 78,
+        "replies": 74,
+        "quotes": 4,
+        "views": 278349,
+        "bookmarks": 283
+      },
+      "createdAt": "Thu Jul 09 02:38:40 +0000 2026",
+      "createdAtLocal": "2026-07-08 22:38",
+      "createdAtISO": "2026-07-09T02:38:40+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074998755838103836",
+        "text": "Today we’re introducing the OpenClaw Foundation: a nonprofit home for open, independent personal AI.\n\nA full-time team.  Great partners. One mission: bring personal AI to everyone.\n\nWelcome to the age of the lobster.🦞\n\nhttps://t.co/mwdqy3Qwqu",
+        "author": {
+          "screenName": "davemorin",
+          "name": "Dave Morin 🦞"
+        }
+      }
+    },
+    {
+      "id": "2074929399842078839",
+      "text": "We've usually stayed away from model comparisons but 5.6 vs Fable is a unique situation\n\nWe've never had a case where the team is so completely convinced on which one is better\n\nHere's the timeline of our experience with it\n\n- We test early versions of 5.6 for a couple of weeks and have a great time, it feels like a step change improvement, enabling new workflows\n- We get to try Fable and don't think it's not as good, I personally would take this experience with a grain of salt, there tends to be a bias when trying a new model when you already like another\n- Fable and 5.6 are taken away because of the regulatory issues\n- Our team is literally depressed that 5.6 is gone, we are looking for anything that could even partly replace it\n- Fable comes back, and here's where it gets interesting, you would think Fable would be enough, but no, the team is still depressed that 5.6 isn't available \n- Then 5.6 comes back and it's immediately clear that it's just way better than Fable\n\nThis situation was unique in that it was the closest we've ever gotten to having an unbiased comparison of two models",
+      "author": {
+        "id": "5812072",
+        "name": "Jay",
+        "screenName": "jayair",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2035788426537254912/LvNpYSjQ_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 3427,
+        "retweets": 138,
+        "replies": 151,
+        "quotes": 59,
+        "views": 657498,
+        "bookmarks": 634
+      },
+      "createdAt": "Wed Jul 08 18:51:33 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:51",
+      "createdAtISO": "2026-07-08T18:51:33+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074624148215939151",
+      "text": "I often work in multiple machines at the same time and started to mix up the screen shares, so built nameplate to make things very obvious. https://t.co/ZJrim2Ld8H",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 647,
+        "retweets": 36,
+        "replies": 37,
+        "quotes": 7,
+        "views": 87244,
+        "bookmarks": 537
+      },
+      "createdAt": "Tue Jul 07 22:38:36 +0000 2026",
+      "createdAtLocal": "2026-07-07 18:38",
+      "createdAtISO": "2026-07-07T22:38:36+00:00",
+      "media": [],
+      "urls": [
+        "https://nameplate.sh"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074624388301987947",
+      "text": "Bonus: Comes with a skill to show a big alert when agents need your help for additional context, instead of (e.g.) just a no-context 1Password dialog.",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 69,
+        "retweets": 4,
+        "replies": 4,
+        "quotes": 0,
+        "views": 29716,
+        "bookmarks": 13
+      },
+      "createdAt": "Tue Jul 07 22:39:33 +0000 2026",
+      "createdAtLocal": "2026-07-07 18:39",
+      "createdAtISO": "2026-07-07T22:39:33+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074969319042363808",
+      "text": "Here's an example of agents using nameplate to provide additional context when user input is needed. https://t.co/2djfP65LZq https://t.co/xTjwFn5iu1",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 43,
+        "retweets": 1,
+        "replies": 3,
+        "quotes": 0,
+        "views": 12946,
+        "bookmarks": 26
+      },
+      "createdAt": "Wed Jul 08 21:30:11 +0000 2026",
+      "createdAtLocal": "2026-07-08 17:30",
+      "createdAtISO": "2026-07-08T21:30:11+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMvFcnNaQAAOzkI.jpg",
+          "width": 1174,
+          "height": 1512
+        }
+      ],
+      "urls": [
+        "http://nameplate.sh/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074923615817200085",
+      "text": "This is how you wanna talk with your claw.",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 942,
+        "retweets": 25,
+        "replies": 53,
+        "quotes": 3,
+        "views": 162265,
+        "bookmarks": 381
+      },
+      "createdAt": "Wed Jul 08 18:28:34 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:28",
+      "createdAtISO": "2026-07-08T18:28:34+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074906710024892694",
+        "text": "Today, we're launching our third-gen voice model and architecture, GPT-Live. GPT-Live is a full-duplex model with built-in async delegation, which allows it to deliver incredibly natural conversation along with the intelligence you expect from ChatGPT.\nhttps://t.co/6P71MwTfUa",
+        "author": {
+          "screenName": "juberti",
+          "name": "Justin Uberti"
+        }
+      }
+    },
+    {
+      "id": "2074905289237942512",
+      "text": "Every essay I've written this past week started as a ChatGPT Voice conversation on my walk home.\n\nI'd tell it: I'm going to brainstorm and dictate an essay. Don't interrupt unless I make a point worth pulling on or say something that needs clarification.\n\nThen I'd talk for 20 minutes. It might chime in five or six times with small things like \"yep,\" \"I see,\" or \"good idea.\" Just enough to feel like someone was listening. It made me much more comfortable thinking out loud.\n\nThe best part was that if it started responding and I kept talking, it would go, \"oh, sorry, keep going.\"\n\nWhen I finished, I'd ask, \"hey, what was the thing you wanted to mention?\" and we'd pick that thread right back up.\n\nIt is one thing to have a cool demo on YouTube, but it's another to enable this for millions of people around the world. \n\nI have already tested this out to talk to other people in different languages, to brainstorm ideas, to teach me new concepts. \n\nAt OpenAI, our mission is to ensure that artificial general intelligence benefits all of humanity, and I think a model like this is a huge step forward beyond work, for all people, at a scale only we can serve.",
+      "author": {
+        "id": "17203692",
+        "name": "jason",
+        "screenName": "jxnlco",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2057561784047816704/5Su5xy1d_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 846,
+        "retweets": 30,
+        "replies": 43,
+        "quotes": 7,
+        "views": 42365,
+        "bookmarks": 272
+      },
+      "createdAt": "Wed Jul 08 17:15:45 +0000 2026",
+      "createdAtLocal": "2026-07-08 13:15",
+      "createdAtISO": "2026-07-08T17:15:45+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074862990214787301",
+      "text": "I had early access to 5.6/Sol for ~month. Sol is my default. It is faster, plans/judges just as good as Fable, and I think produces better overall work. I’ll reach for Fable still for highly targeted debug or performance work with clear reward functions. \n\nA cheeky way I describe Sol vs Fable to my friends is that Sol is a charismatic, efficient, talented coworker you’re jealous of. Fable is a genius recluse that is brilliant at its fixations but doesn’t go out, doesn’t date, and you don’t want to hang out with them much lol.\n\nFable is undefeated at highly targeted debug/security/performance goals. It’s a sight to behold and I was never able to get Sol to push as hard in this category. I’ll keep using it for this.\n\nSol is better or comparable at everything else, in my experience. Give it a shot, it’s hard to describe but it’s just more enjoyable to work with. \n\n(Disclaimer I have no financial ties to either lab, wasn’t paid for any of this.)",
+      "author": {
+        "id": "12819682",
+        "name": "Mitchell Hashimoto",
+        "screenName": "mitchellh",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1141762999838842880/64_Y4_XB_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 6348,
+        "retweets": 278,
+        "replies": 217,
+        "quotes": 92,
+        "views": 964236,
+        "bookmarks": 1446
+      },
+      "createdAt": "Wed Jul 08 14:27:40 +0000 2026",
+      "createdAtLocal": "2026-07-08 10:27",
+      "createdAtISO": "2026-07-08T14:27:40+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074901528075509985",
+      "text": "Gosh I can't wait for all of you to play with this.",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1376,
+        "retweets": 14,
+        "replies": 63,
+        "quotes": 8,
+        "views": 224659,
+        "bookmarks": 124
+      },
+      "createdAt": "Wed Jul 08 17:00:48 +0000 2026",
+      "createdAtLocal": "2026-07-08 13:00",
+      "createdAtISO": "2026-07-08T17:00:48+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074856006576713973",
+        "text": "i've never hyped a model release, we're generally conservative with how we use these things\n\nbut gpt-5.6 has had a massive impact on our team, we're using 5x the tokens as we used to\n\nit's not even smarter than fable or anything, but it's just so reliable and fun to use",
+        "author": {
+          "screenName": "thdxr",
+          "name": "dax"
+        }
+      }
+    },
+    {
+      "id": "2074713090978132362",
+      "text": "I would like to add that OpenAI has been awesome to work with despite the obvious government-related setbacks.\n\nThey've been more transparent than I'd ever have expected, and they did a good job keeping us in the loop during the confusion.\n\nThe only \"restriction\" is that they've requested is that we wait on posting our formal content about the model (blog posts, videos, podcasts etc) until Thursday. They've given us ZERO restrictions on what we can and can't say.\n\nEvery employee involved with early access program deserves a promotion and a shitload of praise. They're so, idk, real? Hard to find the right words. I'm just thankful they make this so easy for us",
+      "author": {
+        "id": "786375418685165568",
+        "name": "Theo - t3.gg",
+        "screenName": "theo",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1909353910130950147/EeSGdgA5_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2683,
+        "retweets": 43,
+        "replies": 42,
+        "quotes": 16,
+        "views": 255618,
+        "bookmarks": 126
+      },
+      "createdAt": "Wed Jul 08 04:32:01 +0000 2026",
+      "createdAtLocal": "2026-07-08 00:32",
+      "createdAtISO": "2026-07-08T04:32:01+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073798067355353568",
+      "text": "multiple founders over the last few days have told me that their decision to build with OpenAI vs Anthropic is increasingly not technical, especially as the models seemingly “leapfrog each other every few weeks.” rather they say it’s about the experience theyve had with the teams at each lab - how much attention they’ve been given, how they’ve been treated, and most importantly, the vibes. \n\nthoughts? 👀",
+      "author": {
+        "id": "2070534602515746816",
+        "name": "Samantha Trimble",
+        "screenName": "strimblez",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2070534846250954752/Gdqn5ysT_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 355,
+        "retweets": 5,
+        "replies": 49,
+        "quotes": 12,
+        "views": 132396,
+        "bookmarks": 80
+      },
+      "createdAt": "Sun Jul 05 15:56:03 +0000 2026",
+      "createdAtLocal": "2026-07-05 11:56",
+      "createdAtISO": "2026-07-05T15:56:03+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "steipete",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074795172295291224",
+      "text": "defaults write -g ComputerUseAllowForbiddenTargets -bool YES 🤫",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1008,
+        "retweets": 38,
+        "replies": 52,
+        "quotes": 10,
+        "views": 185633,
+        "bookmarks": 1208
+      },
+      "createdAt": "Wed Jul 08 09:58:11 +0000 2026",
+      "createdAtLocal": "2026-07-08 05:58",
+      "createdAtISO": "2026-07-08T09:58:11+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074739318103629979",
+      "text": "\"We’re a very large customer of Anthropic and they still have yet to tell us about the lawsuit. I learned about it from a reporter, not our “partner.” \" https://t.co/O9swsh4U6v",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 886,
+        "retweets": 44,
+        "replies": 101,
+        "quotes": 23,
+        "views": 161667,
+        "bookmarks": 231
+      },
+      "createdAt": "Wed Jul 08 06:16:14 +0000 2026",
+      "createdAtLocal": "2026-07-08 02:16",
+      "createdAtISO": "2026-07-08T06:16:14+00:00",
+      "media": [],
+      "urls": [
+        "https://abnormal.ai/blog/abnormal-response-to-anthropic-lawsuit"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    }
+  ]
+}
