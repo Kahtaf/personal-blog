@@ -4,7 +4,22 @@ description: "Agent loops can write, test, and retry at machine speed. The hard 
 date: "Jul 9 2026"
 ---
 
-Peter Steinberger's [monthly reminder](https://x.com/steipete/status/2063697162748260627) is now the slogan of the moment: stop prompting coding agents and start designing loops that prompt them.
+import TweetCard from "../../../components/TweetCard.astro";
+
+<TweetCard
+  author="Peter Steinberger"
+  handle="steipete"
+  url="https://x.com/steipete/status/2063697162748260627"
+  date="Jun 7, 2026"
+  avatarUrl="https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png"
+  verified
+>
+  Here’s your monthly reminder that you shouldn’t be prompting coding agents anymore.
+
+  You should be designing loops that prompt your agents.
+</TweetCard>
+
+Peter Steinberger's post is now the slogan of the moment.
 
 The idea is real. A loop can wake an agent on a schedule, find work, hand it off, run checks, save state, and decide what happens next. Claude Code now describes turn-based, goal-based, time-based, and proactive loops in its [own guide](https://claude.com/blog/getting-started-with-loops). OpenAI's [agent-improvement example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) connects traces, feedback, evals, and an implementation handoff into a repeatable cycle. The primitive is here now, not in some distant agent future.
 

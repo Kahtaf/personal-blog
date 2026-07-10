@@ -1,0 +1,185 @@
+---
+interface Props {
+  author: string;
+  handle: string;
+  url: string;
+  date: string;
+  avatarUrl?: string;
+  verified?: boolean;
+}
+
+const { author, handle, url, date, avatarUrl, verified = false } = Astro.props;
+const initials = author
+  .split(/\s+/)
+  .map((part) => part[0])
+  .join("")
+  .slice(0, 2)
+  .toUpperCase();
+---
+
+<figure class="tweet-card not-prose">
+  <a class="tweet-card__body" href={url} target="_blank" rel="noopener noreferrer" aria-label={`Open post by ${author} on X`}>
+    <header class="tweet-card__header">
+      <span class="tweet-card__avatar" aria-hidden="true">
+        {
+          avatarUrl ? (
+            <img src={avatarUrl} alt="" width="48" height="48" loading="lazy" decoding="async" />
+          ) : (
+            initials
+          )
+        }
+      </span>
+      <span class="tweet-card__identity">
+        <span class="tweet-card__name">
+          {author}
+          {
+            verified && (
+              <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-label="Verified account" role="img">
+                <path d="M20.4 10.9c0 1.2-1.4 2-1.8 3-.4 1-.1 2.6-.9 3.4-.8.8-2.4.5-3.4.9-1 .4-1.8 1.8-3 1.8s-2-1.4-3-1.8c-1-.4-2.6-.1-3.4-.9-.8-.8-.5-2.4-.9-3.4-.4-1-1.8-1.8-1.8-3s1.4-2 1.8-3c.4-1 .1-2.6.9-3.4.8-.8 2.4-.5 3.4-.9 1-.4 1.8-1.8 3-1.8s2 1.4 3 1.8c1 .4 2.6.1 3.4.9.8.8.5 2.4.9 3.4.4 1 1.8 1.8 1.8 3Z" />
+                <path class="tweet-card__check" d="m7.3 11.1 2.2 2.1 5.2-5" />
+              </svg>
+            )
+          }
+        </span>
+        <span class="tweet-card__handle">@{handle}</span>
+      </span>
+      <svg class="tweet-card__x" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18.9 2.3h3.7l-8.1 9.3L24 21.7h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L0 2.3h7.6L12.9 9l6-6.7Zm-1.3 17.1h2L6.5 4.5H4.4l13.2 14.9Z" />
+      </svg>
+    </header>
+
+    <blockquote class="tweet-card__text"><slot /></blockquote>
+
+    <footer class="tweet-card__footer">
+      <time>{date}</time>
+      <span aria-hidden="true">·</span>
+      <span>View on X</span>
+    </footer>
+  </a>
+</figure>
+
+<style>
+  .tweet-card {
+    margin-block: 2rem;
+  }
+
+  .tweet-card__body {
+    display: block;
+    border: 1px solid rgb(28 25 23 / 0.16);
+    border-radius: 1.1rem;
+    padding: 1rem;
+    color: rgb(28 25 23 / 0.86);
+    background: rgb(255 255 255 / 0.48);
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgb(28 25 23 / 0.025);
+    transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+  }
+
+  :global(html.dark) .tweet-card__body {
+    border-color: rgb(255 255 255 / 0.16);
+    background: rgb(28 25 23 / 0.38);
+    color: rgb(255 255 255 / 0.92);
+  }
+
+  .tweet-card__body:hover {
+    border-color: rgb(28 25 23 / 0.34);
+    background: rgb(255 255 255 / 0.74);
+    transform: translateY(-1px);
+  }
+
+  :global(html.dark) .tweet-card__body:hover {
+    border-color: rgb(255 255 255 / 0.34);
+    background: rgb(28 25 23 / 0.62);
+  }
+
+  .tweet-card__body:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  .tweet-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .tweet-card__avatar {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: 0 0 auto;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #202124;
+    color: white;
+    font: 700 0.78rem/1 var(--font-sans);
+  }
+
+  .tweet-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .tweet-card__identity {
+    display: grid;
+    min-width: 0;
+    gap: 0.05rem;
+  }
+
+  .tweet-card__name {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.22rem;
+    color: inherit;
+    font: 700 0.92rem/1.15 var(--font-sans);
+  }
+
+  .tweet-card__handle,
+  .tweet-card__footer {
+    color: rgb(87 83 78);
+    font: 0.82rem/1.3 var(--font-sans);
+  }
+
+  :global(html.dark) .tweet-card__handle,
+  :global(html.dark) .tweet-card__footer {
+    color: rgb(214 211 209 / 0.7);
+  }
+
+  .tweet-card__verified {
+    width: 1rem;
+    height: 1rem;
+    fill: #1d9bf0;
+  }
+
+  .tweet-card__check {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+  }
+
+  .tweet-card__x {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-left: auto;
+    fill: currentColor;
+    opacity: 0.7;
+  }
+
+  .tweet-card__text {
+    margin: 1rem 0 1.15rem;
+    color: inherit;
+    font: 500 1.08rem/1.45 var(--font-sans);
+    letter-spacing: -0.012em;
+    white-space: pre-line;
+  }
+
+  .tweet-card__footer {
+    display: flex;
+    gap: 0.42rem;
+    align-items: center;
+  }
+</style>
