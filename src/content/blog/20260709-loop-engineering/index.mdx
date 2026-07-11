@@ -71,9 +71,11 @@ You cannot solve that mismatch by asking humans to review more output faster. Yo
 
 ## The verifier is necessary, but it is not the finish line
 
-One widely repeated rule is also the least controversial: do not let the maker grade its own homework.
+Do not rely on the maker’s self-assessment as your only check.
 
 Use tests. Use a browser check. Use an invariant. Use a separate evaluator. When it helps, run a second agent with a skeptical rubric—but treat it as another fallible signal, not independent proof. Have a human gate irreversible actions. Anthropic's [guide](https://claude.com/blog/getting-started-with-loops) makes the same point in product language: goal-based loops work best when “done” has a quantitative or deterministic check. The [OpenAI cookbook example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) goes further, turning traces and feedback into rerunnable evals rather than treating feedback as a comment thread that disappears.
+
+For a high-consequence action that a reviewer cannot realistically catch in time, approval is not the primary safeguard. Prevent or contain the action first: sandbox it, use least-privilege credentials, cap the blast radius, make it reversible, or prohibit it. Review is for decisions a human can actually improve.
 
 That is the right direction. But a verifier is not an all-purpose substitute for engineering judgment.
 
@@ -100,6 +102,12 @@ Something closer to this:
 
 Goal
 Fix the checkout total when a discount and tax are both present.
+
+Plan / issue link
+`<issue or plan link>`
+
+Diff / branch
+`<diff or branch link>`
 
 Constraint
 Preserve the existing tax calculation for all regions except the explicitly approved rule below.
@@ -129,6 +137,8 @@ The point is not that every run needs a giant report. That would be another kind
 What did we change? What did we prove? What did we not prove? What assumption is still carrying the decision? What does the human need to decide?
 
 A green check only answers one of those questions.
+
+Test the review loop like any other verifier: seed representative bad diffs or incomplete evidence, see whether reviewers catch them, and revise the packet or routing when they do not.
 
 ## Review has an attention budget
 
@@ -175,11 +185,10 @@ A failing CI check is a good candidate. So is daily issue triage that creates dr
 
 ### A first review loop
 
-1. Pick one reversible task and write one observable acceptance check.
-2. Require every run to emit: changed files, evidence, non-coverage, and one explicit decision.
-3. After each rejection, change the spec, test, guardrail, or routing rule—not just the next prompt.
-
-Add a review packet before adding more agents.
+1. Pick one reversible task. Run it in a dedicated branch or worktree with no merge, deploy, secret, or destructive-tool permission.
+2. Write one machine-checkable acceptance command and a stop rule: “run `…`; stop after two attempts or 15 minutes.”
+3. On success, retain changed files, evidence, non-coverage, and the routing outcome, including why it escalated if it did. Request a specific human decision only for escalated work; digest or auto-close the rest according to the routing rule.
+4. On a cap, repeated failure, or protected-path touch, preserve the branch and escalate with the failure history. After a rejection, update the approved spec, test, guardrail, or routing rule—not merely the next prompt.
 
 If the packet makes a real engineer faster at finding the wrong thing, you have a loop worth extending. If it only makes the agent look busier, you have an expensive notification system.
 
