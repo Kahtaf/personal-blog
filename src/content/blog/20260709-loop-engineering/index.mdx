@@ -21,9 +21,9 @@ import MagicTweetCard from "../../../components/MagicTweetCard";
 
 Peter Steinberger's post is now the slogan of the moment.
 
-The idea is real. A loop can wake an agent on a schedule, find work, hand it off, run checks, save state, and decide what happens next. Claude Code now describes turn-based, goal-based, time-based, and proactive loops in its [own guide](https://claude.com/blog/getting-started-with-loops). OpenAI's [agent-improvement example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) connects traces, feedback, evals, and an implementation handoff into a repeatable cycle. The primitive is here now, not in some distant agent future.
+The idea is real. A loop can wake an agent on a schedule, find work, hand it off, run checks, save state, and decide what happens next. Anthropic's Claude Code [guide](https://claude.com/blog/getting-started-with-loops) describes turn-based, goal-based, time-based, and proactive loops. OpenAI's [agent-improvement example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) connects traces, feedback, evals, and an implementation handoff into a repeatable cycle. The primitive is here now, not in some distant agent future.
 
-In much of the current conversation, the interesting engineering still sits on the machine side of the boundary.
+In much of the current conversation, the interesting engineering still sits on the machine side of the human–machine boundary.
 
 What wakes the agent? How many subagents can it spawn? Does it use worktrees? Which model judges the goal? What is the token budget?
 
@@ -41,7 +41,7 @@ A human can be technically in the loop while functionally absent. Give someone f
 
 The difference matters because agent loops change the shape of failure. The obvious failure is a runaway loop that spends too much money or keeps retrying the same broken task. It can be detected—if someone built budgets, stop rules, and alerts. The quieter failure is the loop that exits cleanly and produces something plausible enough that nobody looks closely.
 
-[LoopRails frames the problem this way](https://looprails.dev/framework.html/): oversight helps only when the person has enough context, time, and ability to detect or correct the failure. A confirmation gate after an opaque plan does not create those things. It mostly records who to blame later.
+[LoopRails frames the problem this way](https://looprails.dev/framework): oversight helps only when the person has enough context, time, and ability to detect or correct the failure. A confirmation gate after an opaque plan does not create those things. It mostly records who to blame later.
 
 For software teams, I’ll call the missing layer **review-loop engineering**: designing the review packet, escalation rules, and feedback path so the person accountable for a change can still understand and redirect it.
 
@@ -109,7 +109,7 @@ What changed
 - `checkout.test.ts`: add a case for a 10% discount and regional tax.
 
 Evidence
-- Before: `checkout.test.ts` returned 108.00; expected 107.10.
+- Before: `checkout.test.ts` returned 109.00; expected 107.10.
 - After: targeted test, checkout suite, typecheck, and lint pass.
 
 Verifier
@@ -149,12 +149,6 @@ The review loop needs its own constraints:
 
 The control plane around agents should optimize for human attention, not merely agent throughput.
 
-### A first review loop
-
-1. Pick one reversible task and write one observable acceptance check.
-2. Require every run to emit: changed files, evidence, non-coverage, and one explicit decision.
-3. After each rejection, change the spec, test, guardrail, or routing rule—not just the next prompt.
-
 ## The engineer moves outward
 
 The scary version of loop engineering says the engineer is being removed from the work. The useful version says the engineer moves outward.
@@ -179,7 +173,13 @@ A failing CI check is a good candidate. So is daily issue triage that creates dr
 
 [Verdent’s safe-loop guide recommends](https://www.verdent.ai/guides/tutorial/build-coding-agent-loop) the basics: define an observable contract, isolate the work, check each attempt, cap retries and budget, and preserve the failure state for a human rather than spinning forever.
 
-Then add a review packet before adding more agents.
+### A first review loop
+
+1. Pick one reversible task and write one observable acceptance check.
+2. Require every run to emit: changed files, evidence, non-coverage, and one explicit decision.
+3. After each rejection, change the spec, test, guardrail, or routing rule—not just the next prompt.
+
+Add a review packet before adding more agents.
 
 If the packet makes a real engineer faster at finding the wrong thing, you have a loop worth extending. If it only makes the agent look busier, you have an expensive notification system.
 
