@@ -6,6 +6,8 @@ date: "Jul 9 2026"
 
 import MagicTweetCard from "../../../components/MagicTweetCard";
 
+Peter Steinberger's post is now the slogan of the moment.
+
 <MagicTweetCard
   author="Peter Steinberger"
   handle="steipete"
@@ -19,9 +21,7 @@ import MagicTweetCard from "../../../components/MagicTweetCard";
   You should be designing loops that prompt your agents.
 </MagicTweetCard>
 
-Peter Steinberger's post is now the slogan of the moment.
-
-The idea is real. A loop can wake an agent on a schedule, find work, hand it off, run checks, save state, and decide what happens next. Anthropic's Claude Code [guide](https://claude.com/blog/getting-started-with-loops) describes turn-based, goal-based, time-based, and proactive loops. OpenAI's [agent-improvement example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) connects traces, feedback, evals, and an implementation handoff into a repeatable cycle. The primitive is here now, not in some distant agent future.
+The idea is real. A loop can wake an agent on a schedule, find work, hand it off, run checks, save state, and decide what happens next. Anthropic's Claude Code [guide](https://claude.com/blog/getting-started-with-loops) describes turn-based, goal-based, time-based, and proactive loops. OpenAI's [agent-improvement example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) connects traces, feedback, evals, and an implementation handoff into a repeatable cycle.
 
 In much of the current conversation, the interesting engineering still sits on the machine side of the human–machine boundary.
 
@@ -39,9 +39,9 @@ People reach for “human in the loop” as if it closes the safety argument. It
 
 A human can be technically in the loop while functionally absent. Give someone fifty opaque agent reports, an unfamiliar diff, and a green checkmark from a test suite they did not write. Put an Approve button at the bottom. You have not added meaningful oversight. You have created a rubber stamp with a person’s name on it.
 
-The difference matters because agent loops change the shape of failure. The obvious failure is a runaway loop that spends too much money or keeps retrying the same broken task. It can be detected—if someone built budgets, stop rules, and alerts. The quieter failure is the loop that exits cleanly and produces something plausible enough that nobody looks closely.
+The difference matters because agent loops change the shape of failure. The obvious failure is a runaway loop that spends too much money or keeps retrying the same broken task. It can be detected if someone built budgets, stop rules, and alerts. The quieter failure is the loop that exits cleanly and produces something plausible enough that nobody looks closely.
 
-[LoopRails frames the problem this way](https://looprails.dev/framework): oversight helps only when the person has enough context, time, and ability to detect or correct the failure. A confirmation gate after an opaque plan does not create those things. It mostly records who to blame later.
+Oversight helps only when the person has enough context, time, and ability to detect or correct the failure. A confirmation gate after an opaque plan does not create those things. It mostly records who to blame later.
 
 For software teams, I’ll call the missing layer **review-loop engineering**: designing the review packet, escalation rules, and feedback path so the person accountable for a change can still understand and redirect it.
 
@@ -73,7 +73,7 @@ You cannot solve that mismatch by asking humans to review more output faster. Yo
 
 Do not rely on the maker’s self-assessment as your only check.
 
-Use tests. Use a browser check. Use an invariant. Use a separate evaluator. When it helps, run a second agent with a skeptical rubric—but treat it as another fallible signal, not independent proof. Have a human gate irreversible actions. Anthropic's [guide](https://claude.com/blog/getting-started-with-loops) makes the same point in product language: goal-based loops work best when “done” has a quantitative or deterministic check. The [OpenAI cookbook example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) goes further, turning traces and feedback into rerunnable evals rather than treating feedback as a comment thread that disappears.
+Use tests. Use a browser check. Use an invariant. Use a separate evaluator. When it helps, run a second agent with a skeptical rubric, but treat it as another fallible signal, not independent proof. Have a human gate irreversible actions. Anthropic's [guide](https://claude.com/blog/getting-started-with-loops) makes the same point in product language: goal-based loops work best when “done” has a quantitative or deterministic check. The [OpenAI cookbook example](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) goes further, turning traces and feedback into rerunnable evals rather than treating feedback as a comment thread that disappears.
 
 For a high-consequence action that a reviewer cannot realistically catch in time, approval is not the primary safeguard. Prevent or contain the action first: sandbox it, use least-privilege credentials, cap the blast radius, make it reversible, or prohibit it. Review is for decisions a human can actually improve.
 
@@ -148,16 +148,7 @@ If an agent loop generates a trickle of high-quality, well-scoped review packets
 
 This is not a moral failure by reviewers. It is system behavior.
 
-The review loop needs its own constraints:
-
-- **Escalate only when a person can make a meaningful decision.** Do not interrupt someone because the agent is uncertain about a spelling change.
-- **Batch low-risk work, but preserve exceptions.** A dependency bump with a clean lockfile diff is not the same as a migration touching auth.
-- **Show the consequence before the action.** “This merges to production” is more useful than “approval required.”
-- **Show why the item arrived here.** Was the test incomplete? Did two agents disagree? Did a budget cap stop the loop? Did the work touch a protected area?
-- **Make non-coverage explicit.** “Not tested in the browser” is much more valuable than a vague claim that validation passed.
-- **Treat review time as a budget.** If the loop produces more work than a team can understand, reduce the loop’s scope or improve the filters. Do not just hire more approvers.
-
-The control plane around agents should optimize for human attention, not merely agent throughput.
+The review loop needs constraints that respect that limit. Escalate only when a person can make a meaningful decision, and batch low-risk work without hiding exceptions. Every escalation should show the consequence, why it arrived there, and what was not verified. Treat review time as a budget: if the loop produces more work than the team can understand, reduce its scope or improve its filters. The control plane around agents should optimize for human attention, not merely agent throughput.
 
 ## The engineer moves outward
 
@@ -167,30 +158,13 @@ They stop manually carrying every task across every turn. They spend more time d
 
 That last part matters. A good review loop does not just reject bad output. It improves the next run.
 
-When a reviewer finds that an agent changed the wrong layer, that feedback should become a constraint. When an agent’s browser check missed a visual regression, the check should become part of the loop. When an approval is difficult because the product decision was ambiguous, the ambiguity belongs in the spec, not in the next reviewer’s head.
-
-This is one way a loop can earn narrowly scoped autonomy: human judgment becomes reusable constraints, while permissions, reversibility, and escalation limits contain what the loop may do.
-
-Karpathy has made a related argument for [explicit, navigable, file-based knowledge](https://x.com/karpathy/status/2040572272944324650). The important part is not merely that the agent remembers. It is that people can inspect what the agent knows, change it, and see where the knowledge ends. The same rule should apply to review state.
-
-A loop’s memory should not be a pile of transcripts nobody will read. It should be a living record of decisions, failed attempts, known boundaries, and the checks that now exist because a human caught something once.
+When a reviewer finds that an agent changed the wrong layer, that feedback should become a constraint. When an agent’s browser check missed a visual regression, the check should become part of the loop. When an approval is difficult because the product decision was ambiguous, the ambiguity belongs in the spec, not in the next reviewer’s head. I tried to implement those principles in [OpenCandle](/blog/lessons-from-building-a-domain-agent/), where specs, evals, traces, and review loops made agent work easier to inspect and redirect.
 
 ## Start with a boring loop
 
-The best first loop is not “run my engineering team while I sleep.” It is one repeated, bounded task where a bad result is easy to spot and cheap to undo.
+The best first loop is not “run my engineering team while I sleep.” It is one repeated, bounded task where a bad result is easy to spot and cheap to undo: a failing CI check, daily issue triage that produces drafts rather than tickets, or a dependency update that can open a PR but cannot merge it. Give it a dedicated branch or worktree with no merge, deploy, secret, or destructive-tool permission, a machine-checkable acceptance command, and a hard retry or time cap.
 
-A failing CI check is a good candidate. So is daily issue triage that creates drafts rather than tickets. So is a dependency-update loop that opens a PR but cannot merge it. So is a frontend check that compares a small, known UI state against an expected screenshot and hands a human the diff when it cannot decide.
-
-[Verdent’s safe-loop guide recommends](https://www.verdent.ai/guides/tutorial/build-coding-agent-loop) the basics: define an observable contract, isolate the work, check each attempt, cap retries and budget, and preserve the failure state for a human rather than spinning forever.
-
-### A first review loop
-
-1. Pick one reversible task. Run it in a dedicated branch or worktree with no merge, deploy, secret, or destructive-tool permission.
-2. Write one machine-checkable acceptance command and a stop rule: “run `…`; stop after two attempts or 15 minutes.”
-3. On success, retain changed files, evidence, non-coverage, and the routing outcome, including why it escalated if it did. Request a specific human decision only for escalated work; digest or auto-close the rest according to the routing rule.
-4. On a cap, repeated failure, or protected-path touch, preserve the branch and escalate with the failure history. After a rejection, update the approved spec, test, guardrail, or routing rule—not merely the next prompt.
-
-If the packet makes a real engineer faster at finding the wrong thing, you have a loop worth extending. If it only makes the agent look busier, you have an expensive notification system.
+On success, retain changed files, evidence, non-coverage, and the routing outcome. Ask a human for a decision only when the work escalates; digest or auto-close the rest. On a cap, repeated failure, or protected-path touch, preserve the branch and escalate with the failure history. After a rejection, update the approved spec, test, guardrail, or routing rule, not merely the next prompt. If the packet makes a real engineer faster at finding the wrong thing, you have a loop worth extending. If it only makes the agent look busier, you have an expensive notification system.
 
 ## Build the loop. Engineer the review.
 
