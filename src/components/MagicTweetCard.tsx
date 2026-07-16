@@ -28,7 +28,7 @@ export default function MagicTweetCard({
   children,
 }: MagicTweetCardProps) {
   return (
-    <div className="not-prose relative my-8 flex h-fit w-full max-w-lg flex-col gap-4 overflow-hidden rounded-xl border border-stone-900/15 bg-white/50 p-5 text-stone-900 shadow-sm dark:border-white/15 dark:bg-stone-800/50 dark:text-stone-50">
+    <div className="not-prose relative my-8 flex h-fit w-full flex-col gap-4 overflow-hidden rounded-xl border border-stone-900/15 bg-white/50 p-5 text-stone-900 shadow-sm dark:border-white/15 dark:bg-stone-800/50 dark:text-stone-50">
       <div className="flex flex-row items-start justify-between tracking-normal">
         <div className="flex items-center space-x-3">
           <a href={`https://x.com/${handle}`} target="_blank" rel="noreferrer" className="shrink-0 no-underline" aria-label={`Open ${author}'s X profile`}>
