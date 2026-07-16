@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "provided-addy-osmani-loop-engineering",
+    "url": "https://addyosmani.com/blog/loop-engineering/",
+    "final_url": "https://addyosmani.com/blog/loop-engineering/",
+    "title": "AddyOsmani.com - Loop Engineering",
+    "path": "references/articles/provided-addy-osmani-loop-engineering.md",
+    "status": "ok",
+    "error": "",
+    "chars": 15552
+  },
+  {
+    "slug": "provided-anthropic-getting-started-with-loops",
+    "url": "https://claude.com/blog/getting-started-with-loops",
+    "final_url": "https://claude.com/blog/getting-started-with-loops",
+    "title": "Getting started with loops | Claude by Anthropic",
+    "path": "references/articles/provided-anthropic-getting-started-with-loops.md",
+    "status": "ok",
+    "error": "",
+    "chars": 26054
+  },
+  {
+    "slug": "provided-lenny-how-i-ai-agent-loops",
+    "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-to-write-ai-agent-loops",
+    "final_url": "https://www.lennysnewsletter.com/p/how-i-ai-how-to-write-ai-agent-loops",
+    "title": "\ud83c\udf99\ufe0f How I AI: How to write AI agent loops in Claude Code and Codex + How Claude Mythos found a 15-year-old bug in Mozilla Firefox | Brian Grinstead",
+    "path": "references/articles/provided-lenny-how-i-ai-agent-loops.md",
+    "status": "ok",
+    "error": "",
+    "chars": 9907
+  },
+  {
+    "slug": "looprails-human-in-the-loop-framework",
+    "url": "https://looprails.dev/framework.html",
+    "final_url": "https://looprails.dev/framework.html",
+    "title": "looprails-human-in-the-loop-framework",
+    "path": "references/articles/looprails-human-in-the-loop-framework.md",
+    "status": "ok",
+    "error": "",
+    "chars": 19221
+  },
+  {
+    "slug": "looprails-evaluation-driven-development",
+    "url": "https://looprails.dev/article-evaluation-driven-development.html",
+    "final_url": "https://looprails.dev/article-evaluation-driven-development.html",
+    "title": "looprails-evaluation-driven-development",
+    "path": "references/articles/looprails-evaluation-driven-development.md",
+    "status": "ok",
+    "error": "",
+    "chars": 19277
+  },
+  {
+    "slug": "langchain-art-of-loop-engineering",
+    "url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+    "final_url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+    "title": "The Art of Loop Engineering",
+    "path": "references/articles/langchain-art-of-loop-engineering.md",
+    "status": "ok",
+    "error": "",
+    "chars": 10205
+  },
+  {
+    "slug": "openai-agent-improvement-loop",
+    "url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
+    "final_url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
+    "title": "Build an Agent Improvement Loop with Traces, Evals, and Codex",
+    "path": "references/articles/openai-agent-improvement-loop.md",
+    "status": "ok",
+    "error": "",
+    "chars": 124807
+  },
+  {
+    "slug": "eesel-loop-engineering-explained",
+    "url": "https://www.eesel.ai/blog/loop-engineering",
+    "final_url": "https://www.eesel.ai/blog/loop-engineering",
+    "title": "Loop engineering explained: designing AI agent loops in 2026 | eesel AI",
+    "path": "references/articles/eesel-loop-engineering-explained.md",
+    "status": "ok",
+    "error": "",
+    "chars": 22206
+  },
+  {
+    "slug": "verdent-coding-agent-loop-stops-safely",
+    "url": "https://www.verdent.ai/guides/tutorial/build-coding-agent-loop",
+    "final_url": "https://www.verdent.ai/guides/tutorial/build-coding-agent-loop",
+    "title": "How to Build a Coding Agent Loop That Stops Safely - Verdent Guides",
+    "path": "references/articles/verdent-coding-agent-loop-stops-safely.md",
+    "status": "ok",
+    "error": "",
+    "chars": 19863
+  },
+  {
+    "slug": "arxiv-stop-hand-holding-coding-agent",
+    "url": "https://arxiv.org/html/2607.00038v1",
+    "final_url": "https://arxiv.org/html/2607.00038v1",
+    "title": "Stop Hand-Holding Your Coding Agent: Engineering the Loops that Replace Step-by-Step Prompting",
+    "path": "references/articles/arxiv-stop-hand-holding-coding-agent.md",
+    "status": "ok",
+    "error": "",
+    "chars": 66264
+  },
+  {
+    "slug": "cobusgreyling-loop-engineering-github",
+    "url": "https://github.com/cobusgreyling/loop-engineering",
+    "final_url": "https://github.com/cobusgreyling/loop-engineering",
+    "title": "GitHub - cobusgreyling/loop-engineering: Practical patterns, starters &amp; CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost. \u00b7 GitHub",
+    "path": "references/articles/cobusgreyling-loop-engineering-github.md",
+    "status": "ok",
+    "error": "",
+    "chars": 14358
+  },
+  {
+    "slug": "loopengineering-app-tools",
+    "url": "https://loopengineering.app/",
+    "final_url": "https://loopengineering.app/",
+    "title": "Loop Engineering Tools for Safer AI Agent Loops",
+    "path": "references/articles/loopengineering-app-tools.md",
+    "status": "ok",
+    "error": "",
+    "chars": 14915
+  },
+  {
+    "slug": "explainx-loop-engineering-coding-agents",
+    "url": "https://explainx.ai/blog/loop-engineering-coding-agents-claude-code-guide-2026",
+    "final_url": "https://explainx.ai/blog/loop-engineering-coding-agents-claude-code-guide-2026",
+    "title": "Loop Engineering: How to Design Coding Agent Loops That | explainx.ai Blog | explainx.ai",
+    "path": "references/articles/explainx-loop-engineering-coding-agents.md",
+    "status": "ok",
+    "error": "",
+    "chars": 24304
+  },
+  {
+    "slug": "saulius-loop-engineering-systems",
+    "url": "https://saulius.io/blog/loop-engineering-systems-that-drive-agents",
+    "final_url": "https://saulius.io/blog/loop-engineering-systems-that-drive-agents",
+    "title": "Loop Engineering: Designing the System That Drives the Agent Instead of Prompting It | Saulius blog",
+    "path": "references/articles/saulius-loop-engineering-systems.md",
+    "status": "ok",
+    "error": "",
+    "chars": 25364
+  },
+  {
+    "slug": "ai-builder-club-loop-engineering-guide",
+    "url": "https://www.aibuilderclub.com/blog/loop-engineering-guide-2026",
+    "final_url": "https://www.aibuilderclub.com/blog/loop-engineering-guide-2026",
+    "title": "Loop Engineering Guide (2026) | AI Builder Club",
+    "path": "references/articles/ai-builder-club-loop-engineering-guide.md",
+    "status": "ok",
+    "error": "",
+    "chars": 37192
+  }
+]

@@ -1,0 +1,802 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2067619946071515148",
+      "text": "Loop Engineering 精华文章汇总!\n\n2026 年 Agent 开始聚焦在长任务后，重点慢慢变成了：\n\n如何设计一个能够持续思考、执行、观察、验证和演进的循环系统？\n\n从 Codex 到 Claude Code，从 OpenHands 到各种 Coding Agent。\n\n业余项目和生产级系统之间最大的差距是Harness 工程，包括 Loop。\n\nAgent 能不能持续工作几十分钟甚至几个小时？\n\n能不能在失败后恢复？\n\n能不能控制成本？\n\n能不能知道什么时候停下来？\n\n这些问题，最终都落到了 Loop 设计上。\n\n📚 推荐阅读\n\n1. Loop Engineering — Addy Osmani\nhttps://t.co/bPvEN2wJIB\n\n2. Loop Engineering — Firecrawl\nhttps://t.co/38BnoAs2g1\n\n3. What Is the AI Agent Loop? — Oracle\nhttps://t.co/R17XAigxNf\n\n4. Harness Engineering — OpenAI\nhttps://t.co/N3qBMBaybB\n\n5. Harness Engineering for Coding Agent Users — Martin Fowler\nhttps://t.co/341m6RB95h\n\n6. Agentic Loops: From ReAct to Loop Engineering\nhttps://t.co/uZIFZCeOVi\n\n7. Loop Engineering for AI Agents (Memory-First) — Mem0\nhttps://t.co/IbhAUs9CkD\n\n📄 推荐论文\n1. Agentic Harness Engineering\nhttps://t.co/D8CqREgstF\n\n2. From Agent Loops to Structured Graphs\nhttps://t.co/vq34blqjrw\n\n🛠 推荐研究的开源项目\nCodex CLI\nhttps://t.co/8uwQryevJF\n\nOpenHands\nhttps://t.co/YMv6Fy9Jrp\n\nPydanticAI\nhttps://t.co/AgFNXxkiCR\n\nOpenAI Agents SDK\nhttps://t.co/xEnSYXRcVu\n\n重点研究：\nLoop 如何运行\nLoop 如何停止\nLoop 如何验证\nLoop 如何恢复\nLoop 如何调试\n\nPrompt 决定 Agent 如何开始。\nContext 决定 Agent 能看到什么。\nLoop 决定 Agent 最终能走多远。\n\nLoop Engineering：\nThink\n↓\nAct\n↓\nObserve\n↓\nVerify\n↓\nEvolve\n↓\nRepeat\n\n你设计循环。\nAgent 在循环中持续改进。\n每完成一次循环，系统都会比上一次更接近目标。\nAgent 从来不缺 Loop。\n缺的是 Loop 的工程学。",
+      "author": {
+        "id": "1758488993275195392",
+        "name": "烟花老师",
+        "screenName": "teach_fireworks",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1992099311912644608/iMS6msLL_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 822,
+        "retweets": 208,
+        "replies": 50,
+        "quotes": 5,
+        "views": 163068,
+        "bookmarks": 1134
+      },
+      "createdAt": "Thu Jun 18 14:46:24 +0000 2026",
+      "createdAtLocal": "2026-06-18 10:46",
+      "createdAtISO": "2026-06-18T14:46:24+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLGpU1wagAAfC86.jpg",
+          "width": 1402,
+          "height": 1122
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zh",
+      "score": null
+    },
+    {
+      "id": "2068801141668802792",
+      "text": "Creator of Claude Code:\n\n\"At anthropic, almost every engineer is running 100+ agents with self-improving loops\"\n\n\"The loop makes the agent better every time it runs\"\n\nIn a 1-hour podcast, Boris breaks down how they build agent loops from scratch\n\nClaude + Loops + Routines + Dynamic Workflows\n\nThat's the real setup\n\nBookmark and watch the talk\n\nRead breakdown below",
+      "author": {
+        "id": "1675280785157287938",
+        "name": "rari",
+        "screenName": "0xwhrrari",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2029005608125431808/RHmOjHaB_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 463,
+        "retweets": 66,
+        "replies": 49,
+        "quotes": 7,
+        "views": 116291,
+        "bookmarks": 798
+      },
+      "createdAt": "Sun Jun 21 21:00:03 +0000 2026",
+      "createdAtLocal": "2026-06-21 17:00",
+      "createdAtISO": "2026-06-21T21:00:03+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2068764605803794432/vid/avc1/1282x720/NvaRW03sJ0bUY-pB.mp4?tag=28",
+          "width": 1283,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2065539680146182270",
+        "text": "https://t.co/MI0iMdcW5o",
+        "author": {
+          "screenName": "0xwhrrari",
+          "name": "rari"
+        }
+      }
+    },
+    {
+      "id": "2064297704453530046",
+      "text": "SOMEONE BUILT A DIRECTORY OF READY MADE AGENT LOOPS FOR CURSOR AND CLAUDE CODE\n\nhttps://t.co/TF06HPI61X https://t.co/1ZAdkQHGSZ",
+      "author": {
+        "id": "1536693901230321666",
+        "name": "0xMarioNawfal",
+        "screenName": "RoundtableSpace",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012162102283407360/U-fPj6wg_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 122,
+        "retweets": 7,
+        "replies": 18,
+        "quotes": 1,
+        "views": 48244,
+        "bookmarks": 77
+      },
+      "createdAt": "Tue Jun 09 10:45:00 +0000 2026",
+      "createdAtLocal": "2026-06-09 06:45",
+      "createdAtISO": "2026-06-09T10:45:00+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HKXI8hYXwAAZDnr.png",
+          "width": 900,
+          "height": 505
+        }
+      ],
+      "urls": [
+        "https://loops.elorm.xyz"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074498130431684751",
+      "text": "https://t.co/k8wy4FCZ0M",
+      "author": {
+        "id": "1268570190",
+        "name": "robpoz",
+        "screenName": "__robpoz",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2042273027564429312/Mk4nhWHQ_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2,
+        "retweets": 1,
+        "replies": 1,
+        "quotes": 0,
+        "views": 530,
+        "bookmarks": 4
+      },
+      "createdAt": "Tue Jul 07 14:17:51 +0000 2026",
+      "createdAtLocal": "2026-07-07 10:17",
+      "createdAtISO": "2026-07-07T14:17:51+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074364201640792064"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "/howdy: The Missing Endpoint for Coding Agents"
+    },
+    {
+      "id": "2067600313427878336",
+      "text": "you can use GLM 5.2 for FREE the open model that just beat GPT-5.5 on coding benchmarks 😳\n\nno credit card to sign up. one api key, three free models.\n\nwhat you get for $0:\n- glm 5.2: sota open coding model, 1M context, 128K output\n- kimi k2.7 code: 1T-param open coding model, dropped june 12\n- step 3.7 flash: fast model for quick agent loops\n- all three on one openai-compatible key (claude code, cline, cursor, hermes, openclaw)\n\nwhy glm 5.2 is the one:\n- SWE-bench Pro 62.1 (GPT-5.5 scored 58.6)\n- Terminal-Bench 2.1: 81.0, four points off claude opus 4.8\n- FrontierSWE 74.4%, near tied with opus 4.8\n- open weights, runs at ~1/6th the cost of GPT-5.5\n\nhow to get it free (5 min):\n> go to https://t.co/GfUkhZuTqU and sign up with gmail\n> open the models section, pick glm 5.2 (free)\n> click api request, create api, name the key, copy it\n> click view endpoints, copy the base url\n> base url: https://t.co/jzB7gLq4HD (openai-compatible)\n> paste into claude code, cline, cursor, or your hermes agent\n\nimportant:\n- free tier rate-limits fast, not for marathon builds\n- glm 5.2 free is a limited trial window, grab it now\n- works in anything openai-compatible\n- output is genuinely good for zero\n\nsota open coding model that beats GPT-5.5 = $0\nwhile most people pay $20/mo for less\n\nbookmark this before the free tier closes",
+      "author": {
+        "id": "1768766800177836033",
+        "name": "Isra",
+        "screenName": "israfill",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2057303557553246208/0DsDtZg9_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 318,
+        "retweets": 24,
+        "replies": 29,
+        "quotes": 4,
+        "views": 76911,
+        "bookmarks": 361
+      },
+      "createdAt": "Thu Jun 18 13:28:23 +0000 2026",
+      "createdAtLocal": "2026-06-18 09:28",
+      "createdAtISO": "2026-06-18T13:28:23+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLGXE_8bYAAD6Ra.jpg",
+          "width": 1280,
+          "height": 758
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2067185147028644082",
+        "text": "how to use mistral large 3, codestral, and pixtral large model for FREE with zero credit card 😳\n\nmistral large 3 competes with claude opus 4.7 & 4.8. codestral beats gpt-5.5 on coding.\n\nthey are giving 1 billion free tokens on signup, no card needed\n\nwhat you get for $0:\n- mistral large 3 (frontier text reasoning)\n- codestral (elite code generation)\n- mistral medium 3.5 (128B heavy lifter)\n- pixtral large (text + image analysis)\n- mistral small 4 (text, image, code)\n- 256k context windows\n- openai-compatible api\n\nit's openai compatible so you can plug it into any agent or bot\n\njust swap the base url and your existing tools work\n\nfull setup guide (mistral free tier):\n\nstep 1: go to https://t.co/MLulTR9rQI\n> click sign up, no card needed\n\nstep 2: grab your api key\n> navigate to API Keys section\n> copy your fresh key\n\nstep 3: test your endpoint\n> curl https://t.co/QljNlGYCd6 \\\n-H \"Authorization: Bearer *** \\\n-H \"Content-Type: application/json\" \\\n-d '{\"model\":\"mistral-small-latest\",\"messages\":[{\"role\":\"user\",\"content\":\"Hi\"}]}'\n\nstep 4: swap your base url\n> replace your openai endpoint with https://t.co/XHr3oFfFox\n> all your existing tools and agents just work\n\nstep 5: opt out if privacy matters\n> settings > data training > disable\n> keeps your prompts private\n\nyou can also use mistral's api as a drop-in for gpt in any client:\n\nhermes, cursor, continue dev, aider, open-interpreter\n\n3 things to test with 1 billion free tokens:\n1. run a full agent pipeline across all their models in parallel\n2. benchmark mistral large 3 vs your current paid provider\n3. process 100+ documents with the 256k context window\n\nthis is the most generous free api allocation live right now\n\na full frontier model suite for the same price as an empty billing page\n\nmistral won't keep this open forever\n\nbookmark this before they close the free tier",
+        "author": {
+          "screenName": "israfill",
+          "name": "Isra"
+        }
+      }
+    },
+    {
+      "id": "2073247950575124777",
+      "text": "What AI engineers talked about this week:\n\n→ Prompt injection hit 90+ enterprises in 2025\n→ 12-step agent loops: <28% end-to-end success\n→ Claude Code tripled output; the bottleneck is now PM\n→ RAG is the new attack surface\n\nFull feed: https://t.co/u4Y8Ie4E3S #AIEngineering #AIWeekly",
+      "author": {
+        "id": "2001661557940588547",
+        "name": "TheAISignal",
+        "screenName": "ainewshublive",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2054615891812446208/LJAL5ayp_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 42,
+        "bookmarks": 0
+      },
+      "createdAt": "Sat Jul 04 03:30:05 +0000 2026",
+      "createdAtLocal": "2026-07-03 23:30",
+      "createdAtISO": "2026-07-04T03:30:05+00:00",
+      "media": [],
+      "urls": [
+        "http://ainewshub.live"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074807772571414815",
+      "text": "Learn Claude Code — a nano agent harness built from scratch to teach you how agent frameworks actually work.\n\n70K stars. MIT. Python.\n\nThe premise: \"Bash is all you need.\" This is a minimal, educational implementation of a Claude Code-like agent harness, built from 0 to 1. No abstractions hiding the internals — you can read every line and understand how tool calling, context management, and agent loops work.\n\nWhy this matters: most developers use agent frameworks as black boxes. Call the API, get results, move on. Learn Claude Code strips that away and shows you the actual mechanics — how the agent decides which tool to call, how it manages conversation context, how it handles errors and retries.\n\nBuilt by shareAI-lab. Last pushed June 26. If you've ever wondered \"how does Claude Code actually work under the hood?\" — this is the clearest explanation I've seen in code form.",
+      "author": {
+        "id": "1458050975596531717",
+        "name": "Teksart",
+        "screenName": "TeksCreate",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2054295508462518272/sWU1qecv_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 43,
+        "bookmarks": 0
+      },
+      "createdAt": "Wed Jul 08 10:48:15 +0000 2026",
+      "createdAtLocal": "2026-07-08 06:48",
+      "createdAtISO": "2026-07-08T10:48:15+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMsypp5XYAAfIGk.jpg",
+          "width": 2080,
+          "height": 2080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2041921566414663720",
+      "text": "This might be the wildest AI engineering breakdown on the internet right now 🤯\n\nAfter the Anthropic leak…\n\nSomeone turned the ENTIRE Claude Code system into a readable playbook.\n👉 https://t.co/d6OptOkWbC⁠\n\nWe’re talking:\n* 500K+ lines of real production AI agent logic\n* Broken down into 18 chapters you can actually learn from\n* Multi-agent systems, tool pipelines, memory, orchestration… all exposed\n\nThis isn’t theory\nThis is how a top-tier AI coding agent actually works under the hood\n\nKey ideas you’ll steal instantly:\n→ Agent loops with async execution\n→ Multi-agent “teams” coordinating tasks\n→ File-based memory (no DB 🤯)\n→ Context compression tricks\n→ Tool execution pipelines at scale\n\nBasically…\nInstead of guessing how to build AI agents\nyou now have a blueprint from a real system used by thousands of devs \nhttps://t.co/8R2lBSfn3C\n\nCrazy part?\nThe whole thing was analyzed + rewritten in HOURS using AI agents \nhttps://t.co/8R2lBSfn3C\n\nIf you're building: \n• AI agents\n* Dev tools\n* LLM products\n* or learning MLOps\n\nThis is not optional\nThis is a cheat code",
+      "author": {
+        "id": "1863571201060392960",
+        "name": "Vaishnavi",
+        "screenName": "_vmlops",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2017673694068543493/h06eTOL0_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 635,
+        "retweets": 124,
+        "replies": 13,
+        "quotes": 3,
+        "views": 67919,
+        "bookmarks": 958
+      },
+      "createdAt": "Wed Apr 08 16:50:13 +0000 2026",
+      "createdAtLocal": "2026-04-08 12:50",
+      "createdAtISO": "2026-04-08T16:50:13+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HFZbRDpboAAvn6X.jpg",
+          "width": 1372,
+          "height": 832
+        }
+      ],
+      "urls": [
+        "https://claude-code-from-source.com/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2065321014066913629",
+      "text": "use minimax M3 for FREE through tokenrouter - 1M context, zero cost 😳\n\nM3 beats GPT-5.5 on coding benchmarks (SWE-Bench Pro: 59% vs 58.6%)\n\nwhat you get for $0:\n- SWE-Bench Pro 59% (ahead of GPT-5.5, trails opus 4.8 by ~10 pts)\n- 1M context window actually usable at 500k+ tokens (opus caps at 200k)\n- 9-15x faster inference at long contexts (sparse attention)\n- free input AND output literally $0/0\n\nM3's real edge over opus right now:\n- 1M context for full codebase dumps\n- speed: fast enough for real-time agent loops\n- 1/20th the compute cost of opus for equivalent tasks\n\nhow to set up (3 min):\n\n> go to https://t.co/EtW28QHsgI and sign up (email + verify)\n> open API Key section and create a new key\n> copy the base URL and the key\n> paste into any openai-compatible client (hermes, claude code, cursor, https://t.co/5WBKCvaP6h)\n> base url: https://t.co/fzTiCsLBq2\n> model: minimax/M3\n\nimportant:\n- no credit card, no phone verify, no trial\n- one key also routes GPT, claude, gemini, deepseek\n- rate limits apply on free tier, fine for personal use and agent prototyping\n- free window ends june 17, 5 days left\n\nsota-level coding + 1M context + speed = $0\nwhile everyone else pays $200/mo for claude api\n\nbookmark this before the free window closes",
+      "author": {
+        "id": "1768766800177836033",
+        "name": "Isra",
+        "screenName": "israfill",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2057303557553246208/0DsDtZg9_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 496,
+        "retweets": 43,
+        "replies": 47,
+        "quotes": 5,
+        "views": 73502,
+        "bookmarks": 564
+      },
+      "createdAt": "Fri Jun 12 06:31:16 +0000 2026",
+      "createdAtLocal": "2026-06-12 02:31",
+      "createdAtISO": "2026-06-12T06:31:16+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HKl-GD7acAArZMP.jpg",
+          "width": 1520,
+          "height": 672
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2064771594862608545",
+        "text": "use kimi k2.6 for FREE through nvidia's api AND their new desktop app with 300 agents 😳\n\nkimi beats GPT-5 on coding benchmarks\n\nwhat you will get for $0:\n- kimi k2.6: SWE-Bench Pro 58.6, Multilingual 76.7\n- free for 1 year on NVIDIA's API\n- 4,000+ tool calls per session\n- 300 parallel agents\n\nwhat the new desktop app does:\n- runs native agent swarms on mac/windows\n- builds full PPTX, Word, Excel, PDF files\n- agents browse the web, click, type, fill forms for you\n- built-in finance data (yahoo, binance, world bank)\n- remembers your workflow + turns repeated tasks into skills\n\nhow to get both for free (5 min):\n> go to https://t.co/BIIXYD9PJA and sign up (web + desktop)\n> go to https://t.co/V6J008DsGg, search kimi-k2.6\n> generate a free api key\n> paste into any openai-compatible client (cursor, cline, etc)\n> base url: https://t.co/snZSjFRN41\n\nimportant:\n- nvidia tier has ~40 req/min rate limit\n- desktop free tier has some agent limits\n- not for production workloads\n- phone verify may be needed for nvidia\n\nsota coding model + full desktop agent suite = $0\nwhile most people are paying $20/mo for each\n\nbookmark this before the free tiers change",
+        "author": {
+          "screenName": "israfill",
+          "name": "Isra"
+        }
+      }
+    },
+    {
+      "id": "2073107212491485217",
+      "text": "you can run Claude Fable 5 for $0 with no credit card 👀\n\nzenmux gives free rate-limited access to Fable 5 - Anthropic's #1 Mythos-class model\n\none API key works in Cursor, Claude Code, Hermes Agent, any tool\n\nbenchmarks:\n- №1 on Artificial Analysis Intelligence Index\n- 80.3% on SWE-bench Pro (beats Opus 4.8 at 69% and GPT-5.5 at 58%)\n- 1M token context holds your whole codebase\n- ties Opus on tool use agents actually work\n- 46 tokens/sec throughput on free tier\n\nwhat this replaces:\n\n- Claude Pro: $20/mo for capped access\n- Claude API direct: $15 per million input tokens\n- Cursor Pro: $20/mo just for the IDE\n- total: $40+/mo for what you get free here\n\nhow to grab:\n\n1. go to https://t.co/lEbJrf6R0m\n2. sign up with email no card needed\n3. open the models section\n4. pick \"Claude Fable 5 (Free)\" \n5. generate an API key\n6. base url: https://t.co/0wujiMTx4O\n7. paste into Cursor, Claude Code, Hermes any OpenAI-compatible tool\n\nfree rate limit is generous enough for daily coding. 1M context fits entire repos.\n\n3 things to try:\n\n1. drop your whole codebase in one prompt 1M context captures everything\n2. run agent loops for multi-file refactors Fable 5 doesn't lose track\n3. vibe code client dashboards and tools holds the plot after 20+ iterations\n\nyour buddy pays $40/mo for Claude Pro + Cursor\nyou get Fable 5, the #1 model on the index, for $0\n\nbookmark this before the free tier changes",
+      "author": {
+        "id": "1374938856072441857",
+        "name": "Farea",
+        "screenName": "FareaNFts",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1526240923088482305/YmdeyXCc_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 295,
+        "retweets": 31,
+        "replies": 34,
+        "quotes": 3,
+        "views": 73781,
+        "bookmarks": 488
+      },
+      "createdAt": "Fri Jul 03 18:10:50 +0000 2026",
+      "createdAtLocal": "2026-07-03 14:10",
+      "createdAtISO": "2026-07-03T18:10:50+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMUnjBSbkAEyKRU.png",
+          "width": 767,
+          "height": 379
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2071831402014970345",
+        "text": "FREE $500 of frontier AI API credits, every model included 😳\n\nClaude Opus 4.8, Sonnet 4.6, GPT-5, GPT-5 mini, Deepseek. one key, openai-compatible.\n\nConduit is an API proxy that drops $500 trial credit into every new account. Opus 4.8 alone runs $5/$25 per million tokens, so $500 is real money, not a teaser.\n\nhow to grab yours (5 min):\n\ngo to - https://t.co/RfKM5RfYDm\n\n> open the conduit telegram bot\n> start it and verify from website (one click verify)\n> copy your api key from the dashboard (starts with sk-cdt-)\n> set base url to https://t.co/5MlqvooiFF\n> drop the key into cursor, cline, claude code, any openai-compatible tool\n\nswitch models by changing one string: claude-opus-4-8, openai/gpt-5, deepseek, whatever you need.\n\nif one model is overloaded, swap to another (deepseek is the most stable). it's a third-party proxy, so test with small calls first.\n\nbookmark this before the free tier closes.",
+        "author": {
+          "screenName": "FareaNFts",
+          "name": "Farea"
+        }
+      }
+    },
+    {
+      "id": "2042324245024555284",
+      "text": "If you’ve used Claude Code or Codex and thought\n“this is powerful, but I can’t control it properly”\n\nOpenHarness is that missing layer.\n\nComposable agent loops\nMulti-provider support\nCLI + automation ready\n\nBasically: agent infra without the baggage. https://t.co/xvBrH8Wyot",
+      "author": {
+        "id": "1315639147248246785",
+        "name": "GitHub Projects Community",
+        "screenName": "GithubProjects",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1679831765744259073/hoVtsOZ9_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 164,
+        "retweets": 14,
+        "replies": 7,
+        "quotes": 3,
+        "views": 13188,
+        "bookmarks": 178
+      },
+      "createdAt": "Thu Apr 09 19:30:19 +0000 2026",
+      "createdAtLocal": "2026-04-09 15:30",
+      "createdAtISO": "2026-04-09T19:30:19+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HFfLE8KbQAE_gyI.jpg",
+          "width": 1200,
+          "height": 1078
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072228360286077336",
+      "text": "The clearest how-to on building agent loops so far.\n\n@clairevo builds two from scratch in Claude Code and Codex:\n\nA daily loop that reviews aging PRs and schedules itself. A weekly loop that spawns its own subagents to validate its output.\n\nCovers the four loop types, the five things every loop needs, and when each one actually fits.",
+      "author": {
+        "id": "1919352581240877056",
+        "name": "Mari",
+        "screenName": "Tech_girlll",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1931467785466507264/TurPViyh_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 25,
+        "retweets": 3,
+        "replies": 3,
+        "quotes": 0,
+        "views": 2681,
+        "bookmarks": 30
+      },
+      "createdAt": "Wed Jul 01 07:58:35 +0000 2026",
+      "createdAtLocal": "2026-07-01 03:58",
+      "createdAtISO": "2026-07-01T07:58:35+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2072224765750697984/vid/avc1/1280x720/w31ea3DvnMLL89q8.mp4?tag=28",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072023785104982417",
+        "text": "https://t.co/u6MOkIqbMg",
+        "author": {
+          "screenName": "Tech_girlll",
+          "name": "Mari"
+        }
+      }
+    },
+    {
+      "id": "2067971348220055762",
+      "text": "Boris Cherny, creator of Claude Code:\n\n\"Almost 100% of our engineers at Anthropic are running 100+ agents with self-improving loops. Self-improving loops help agents get better with each run.\"\n\n1 hour. He breaks down how they build agent loops from scratch.\n\nClaude plus loops plus routines plus dynamic workflows. That's the actual playbook.\n\nWatch the talk. \n\nThen read how to apply the exact same system to quant trading below.",
+      "author": {
+        "id": "1373665408193036293",
+        "name": "CyrilXBT",
+        "screenName": "cyrilXBT",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2035229727414534145/aWap3Jbq_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 84,
+        "retweets": 18,
+        "replies": 13,
+        "quotes": 1,
+        "views": 19671,
+        "bookmarks": 91
+      },
+      "createdAt": "Fri Jun 19 14:02:45 +0000 2026",
+      "createdAtLocal": "2026-06-19 10:02",
+      "createdAtISO": "2026-06-19T14:02:45+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2067970211748204545/vid/avc1/1280x720/0kLbmYVWpkSB-9Hu.mp4?tag=28",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2067651155623104541",
+        "text": "https://t.co/gASKwesOIp",
+        "author": {
+          "screenName": "cyrilXBT",
+          "name": "CyrilXBT"
+        }
+      }
+    },
+    {
+      "id": "2069828475985551516",
+      "text": "A senior Anthropic engineer just dropped an 11-page PDF on \"How to make perfect agent loops\"\n\nThe shift: you stop guessing when the work is done. You build the signal that tells the agent for you.\n\nRun → Score → Compare → Converge → Stop\n\nEvery loop runs one cycle, five moves:\n\n• Scoring: each cycle gets a number, tests passing or % complete, instead of a vibe check.\n\n• Comparison: the agent checks this cycle's score against the last one, not just the result in front of it.\n\n• Convergence: once two cycles barely move the number, the work has stabilized. That's the real finish line.\n\n• Restraint: past that point, more cycles cost tokens and add nothing, so it stops.\n\n• Verification: stopping only counts if the result held. Accuracy is checked before the loop calls it done.\n\nThe key insight: an agent left to run forever doesn't get more right, it just gets more expensive.\n\nThis 11-page PDF changed how I'm engineering agent loops in Claude Code today.\n\nRead it now, then explore the article below 👇",
+      "author": {
+        "id": "1386319613391253504",
+        "name": "rody",
+        "screenName": "0x_rody",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2041947351120572416/4IBmZ3QT_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 46,
+        "retweets": 6,
+        "replies": 7,
+        "quotes": 0,
+        "views": 3295,
+        "bookmarks": 55
+      },
+      "createdAt": "Wed Jun 24 17:02:18 +0000 2026",
+      "createdAtLocal": "2026-06-24 13:02",
+      "createdAtISO": "2026-06-24T17:02:18+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLlyEN8W8AAwFMR.jpg",
+          "width": 1572,
+          "height": 2236
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2069806981930422587",
+        "text": "https://t.co/BPHRbeCDVL",
+        "author": {
+          "screenName": "0x_rody",
+          "name": "rody"
+        }
+      }
+    },
+    {
+      "id": "2051248449182720248",
+      "text": "An interactive website that explains how agent loops that power Claude Code and Codex work \n\nhttps://t.co/rIjRNicnLj https://t.co/WKB3tioeS6",
+      "author": {
+        "id": "1559533870613032960",
+        "name": "Minjune Song",
+        "screenName": "minjunesh",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1940590227396915200/MJ5juhLt_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 421,
+        "bookmarks": 1
+      },
+      "createdAt": "Mon May 04 10:31:55 +0000 2026",
+      "createdAtLocal": "2026-05-04 06:31",
+      "createdAtISO": "2026-05-04T10:31:55+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2051247747182063616/vid/avc1/3012x1708/2sTkloxud52M8ia0.mp4?tag=27",
+          "width": 3012,
+          "height": 1708
+        }
+      ],
+      "urls": [
+        "https://agent-loop.app.teenyapp.com"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2057799704331821244",
+      "text": "10 GitHub repos that Anthropic, OpenAI, and Google quietly open-sourced in 2026.\n\nMost people have no idea.\n\nThe ones who do are already building.\n\n1. anthropics/skills\nAnthropic's official Skills repo.\nThe exact patterns Anthropic uses internally to extend Claude.\n→ https://t.co/UoY4U3mLM8\n\n2. openai/openai-agents-python\nOpenAI's official multi-agent framework.\n26K+ stars. Same SDK their own engineers use.\n→ https://t.co/UbBeKLlYTQ\n\n3. google/adk-python\nGoogle's Agent Development Kit.\nBuild and deploy agents the way Google does internally.\n→ https://t.co/FGaWzKHq1C\n\n4. anthropics/courses\nFree courses straight from Anthropic.\nConstitutional AI. Prompt engineering. Agent design.\n→ https://t.co/Qch2eYU53e\n\n5. openai/openai-cookbook\nOpenAI's production recipes.\nRAG, evals, fine-tuning, agent loops — all working code.\n→ https://t.co/ohGpBnmm9s\n\n6. google/generative-ai-python\nGoogle's official Gemini SDK.\nDirect access to the models powering Google's own products.\n→ https://t.co/JEePLWQjf7\n\n7. anthropics/claude-code\nClaude Code. Official repo.\nThe AI coding tool running inside FAANG, OpenAI, and Anthropic itself.\n→ https://t.co/MHrxOwjfoU\n\n8. openai/evals\nOpenAI's LLM benchmarking framework.\nThe exact evaluation infrastructure they use in-house.\n→ https://t.co/btVuZ5qxyJ\n\n9. google-research/google-research\nGoogle Research's official code dump.\nML, NLP, vision — working implementations across all of it.\n→ https://t.co/VLGmNUHYpX\n\n10. anthropics/anthropic-cookbook\nAnthropic's working notebooks.\nReal production patterns for building with Claude, from the team itself.\n→ https://t.co/PNSovKCccF\n\nHere's what nobody says out loud:\n\nThe three companies fighting for trillions in AI dominance are quietly handing you their weapons for free.\n\nNo Microsoft contract.\nNo OpenAI API deal.\nNo Google enterprise license.\n\nJust a laptop, a weekend, and a git clone.\n\nYou don't need to be at a lab to build like you're at one.\n\nMost people will scroll past this.\nThe ones who don't will compound.\n\nBookmark this. Build something.\n100% free. 100% open source.",
+      "author": {
+        "id": "1838862957373276160",
+        "name": "Mayank Agarwal 💡",
+        "screenName": "TheAIWorld22",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1848114498902564864/PduWxKj7_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 77,
+        "retweets": 28,
+        "replies": 14,
+        "quotes": 0,
+        "views": 2450,
+        "bookmarks": 54
+      },
+      "createdAt": "Fri May 22 12:24:16 +0000 2026",
+      "createdAtLocal": "2026-05-22 08:24",
+      "createdAtISO": "2026-05-22T12:24:16+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HI7F1NVaoAAt11P.jpg",
+          "width": 667,
+          "height": 520
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HI7F1Nta4AE4xKQ.jpg",
+          "width": 1162,
+          "height": 670
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HI7F6JUbsAE5q_p.jpg",
+          "width": 670,
+          "height": 513
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HI7F6JebwAAZ952.jpg",
+          "width": 1243,
+          "height": 712
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2070091386482020852",
+      "text": "THE CLEAREST BLUEPRINT FOR GIVING YOUR AGENT REAL MEMORY IS FOUR WORDS.\n\nWrite. Consolidate. Recall. Apply.\n\nWrite: after every attempt, the agent records what it tried and what happened.\nConsolidate: it distills the raw attempts into a few reusable lessons, not a transcript dump.\nRecall: before the next task, it reads those lessons first.\nApply: it skips the dead ends it already learned, even on a brand new problem.\n\nThis is exactly how engineers are building agent loops in Claude Code right now.\n\nBookmark this. Follow @cyrilXBT",
+      "author": {
+        "id": "1373665408193036293",
+        "name": "CyrilXBT",
+        "screenName": "cyrilXBT",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2035229727414534145/aWap3Jbq_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 164,
+        "retweets": 21,
+        "replies": 24,
+        "quotes": 2,
+        "views": 17827,
+        "bookmarks": 162
+      },
+      "createdAt": "Thu Jun 25 10:27:01 +0000 2026",
+      "createdAtLocal": "2026-06-25 06:27",
+      "createdAtISO": "2026-06-25T10:27:01+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLpxJUjbYAApzOO.png",
+          "width": 923,
+          "height": 1200
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2069603314744926535",
+        "text": "https://t.co/Lm45mXDhiu",
+        "author": {
+          "screenName": "cyrilXBT",
+          "name": "CyrilXBT"
+        }
+      }
+    },
+    {
+      "id": "2069744750496772379",
+      "text": "A senior Anthropic engineer just published the clearest blueprint  on \"How to give your AI agent a real memory\" and it's a 15-page PDF.\n\nWrite → Consolidate → Recall → Apply\n\n• Write: after every attempt, the agent records what it tried and what happened.\n\n• Consolidate: it distills those raw attempts into a few reusable lessons, not a transcript dump.\n\n• Recall: before the next task, it reads those lessons first.\n\n• Apply: it skips the dead ends it already learned, even on a brand new problem.\n\nThis is exactly how engineers now build agent loops in Claude Code.\n\nRead the paper, then grab the setup below 👇",
+      "author": {
+        "id": "1226636978256564226",
+        "name": "darkzodchi",
+        "screenName": "zodchiii",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1999509933302124544/ABxY9N7S_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 985,
+        "retweets": 159,
+        "replies": 47,
+        "quotes": 10,
+        "views": 120042,
+        "bookmarks": 1547
+      },
+      "createdAt": "Wed Jun 24 11:29:37 +0000 2026",
+      "createdAtLocal": "2026-06-24 07:29",
+      "createdAtISO": "2026-06-24T11:29:37+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLk1GHCXAAAio-L.png",
+          "width": 1628,
+          "height": 2116
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2069713940989231590",
+        "text": "https://t.co/vf5HUE5T5k",
+        "author": {
+          "screenName": "zodchiii",
+          "name": "darkzodchi"
+        }
+      }
+    },
+    {
+      "id": "2068311206491000970",
+      "text": "Agent loops are Claude Code. Outer loops are TAKT.",
+      "author": {
+        "id": "966676253548818432",
+        "name": "nrs",
+        "screenName": "nrslib",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1029963262828273665/Zwhbiw4k_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 5,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 2042,
+        "bookmarks": 7
+      },
+      "createdAt": "Sat Jun 20 12:33:13 +0000 2026",
+      "createdAtLocal": "2026-06-20 08:33",
+      "createdAtISO": "2026-06-20T12:33:13+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2067937943545897143",
+        "text": "https://t.co/Ra4YZLY7dc",
+        "author": {
+          "screenName": "jasonzhou1993",
+          "name": "Jason Zhou"
+        }
+      }
+    },
+    {
+      "id": "2072324662940364805",
+      "text": "Claude Code engineer said:\n\n\"Once we added an orchestrator loop to our workflow, our agent success rate jumped from 20-30% to 80%\"\n\nThis is the full map of how those multi-agent loops actually work inside Anthropic.\n\nBookmark this workflow before it's gone.\n\n20% to 80%. Same models, same tasks.\n\nThe only thing that changed is the shape: one agent became a team run by an orchestrator loop.\n\nSingle agent: one context window. one point of view. works in a line. misses its own mistakes. good for minutes.\n\nThe team: an orchestrator + specialists. parallel. diverse views. catches blind spots. runs for days.\n\nNow map this onto trading.\n\nThe orchestrator runs the desk. One specialist reads the market, one places the trade, one tries to prove it wrong, one reviews.\n\nThey run at the same time and catch what a single bot never sees.\n\nOne trader built same loop and made $500,000 - see his full setup below.",
+      "author": {
+        "id": "1436434634930331682",
+        "name": "cvxv666",
+        "screenName": "antpalkin",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1989384671671562240/d0f5IlI6_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 65,
+        "retweets": 4,
+        "replies": 19,
+        "quotes": 2,
+        "views": 5252,
+        "bookmarks": 73
+      },
+      "createdAt": "Wed Jul 01 14:21:16 +0000 2026",
+      "createdAtLocal": "2026-07-01 10:21",
+      "createdAtISO": "2026-07-01T14:21:16+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2072324548549124096/vid/avc1/978x1214/DhLY0uE7044Jwj3o.mp4?tag=28",
+          "width": 978,
+          "height": 1214
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072083069339943277",
+        "text": "A broke 23-year-old just made $500,000 with an agentic loop that was too expensive to run a month ago.\n\nThen Claude Sonnet 5 came out, and the cost fell off a cliff.\n\nHe'd built the bot last year, in Lisbon, and killed it after a month. The API bills ate everything it made.\n\nWhen Sonnet 5 launched he turned it back on. Same bot, a tiny fraction of the cost.\n\nThis bot wallet: https://t.co/JSA6VkmGuX\n\nAnthropic says it runs on its own at a level that used to take their biggest, priciest models. Running a bot all day used to cost a fortune. Now it barely costs anything.\n\nHere's why the cost was the whole problem.\n\nA real trading bot isn't one question to an AI. It's a loop that runs all day. \n\nIt makes a trade, sees how it went, learns from it, and adjusts. Then it does it again, thousands of times.\n\nEvery step costs money. \n\nOn the old models, running that loop nonstop drained your account before it ever figured anything out.\n\nSonnet 5 runs the same loop for pennies on the dollar.\n\nSo now it can run forever, and the longer it runs the better it gets. It keeps what works, drops what doesn't, and rewrites its own rules every night.\n\nLast month that loop cost him about $4000 a day. Now it's under $4. \n\nThat gap is the difference between \"not worth it\" and $500,000.\n\nSonnet 5 isn't just smarter. It made running a real loop cheap, and that's what put it in reach of regular people.\n\nSave this - it's the post you'll wish you'd read before everyone piles in.",
+        "author": {
+          "screenName": "antpalkin",
+          "name": "cvxv666"
+        }
+      }
+    }
+  ]
+}

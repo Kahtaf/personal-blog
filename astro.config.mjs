@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
 import { unified } from "@astrojs/markdown-remark";
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -96,6 +97,7 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
+    react(),
     sitemap({
       filter: (page) => page !== "https://kahtaf.com/projects/",
     }),

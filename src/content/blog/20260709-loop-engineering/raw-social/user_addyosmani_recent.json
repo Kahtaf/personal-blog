@@ -1,0 +1,659 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2074927530482835916",
+      "text": "https://t.co/YOd4ptcTeD",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1056,
+        "retweets": 147,
+        "replies": 40,
+        "quotes": 26,
+        "views": 680570,
+        "bookmarks": 1650
+      },
+      "createdAt": "Wed Jul 08 18:44:08 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:44",
+      "createdAtISO": "2026-07-08T18:44:08+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074573342187868160"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Own the Outer Loop"
+    },
+    {
+      "id": "2068394292796871019",
+      "text": "https://t.co/m2RuJVMgkp",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2444,
+        "retweets": 310,
+        "replies": 46,
+        "quotes": 29,
+        "views": 1353345,
+        "bookmarks": 4633
+      },
+      "createdAt": "Sat Jun 20 18:03:22 +0000 2026",
+      "createdAtLocal": "2026-06-20 14:03",
+      "createdAtISO": "2026-06-20T18:03:22+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2068150790985011200"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "addyosmani",
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "How modern browsers work"
+    },
+    {
+      "id": "2073140413851123756",
+      "text": "The @aiDotEngineer World's Fair was fantastic! A well curated, info and fun packed event by @swyx &amp; team. Definitely go in future if you have a chance. https://t.co/nS1ccr4qML",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 198,
+        "retweets": 11,
+        "replies": 18,
+        "quotes": 3,
+        "views": 25452,
+        "bookmarks": 10
+      },
+      "createdAt": "Fri Jul 03 20:22:46 +0000 2026",
+      "createdAtLocal": "2026-07-03 16:22",
+      "createdAtISO": "2026-07-03T20:22:46+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMVD0fSakAAIX8y.jpg",
+          "width": 4000,
+          "height": 3000
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072885435312042327",
+      "text": "https://t.co/oxHTdKwDJa",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 796,
+        "retweets": 98,
+        "replies": 30,
+        "quotes": 18,
+        "views": 381611,
+        "bookmarks": 1219
+      },
+      "createdAt": "Fri Jul 03 03:29:34 +0000 2026",
+      "createdAtLocal": "2026-07-02 23:29",
+      "createdAtISO": "2026-07-03T03:29:34+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2071854885818310656"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Agentic Autonomy Levels"
+    },
+    {
+      "id": "2066595308629594363",
+      "text": "https://t.co/BkYXbsx92x",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1692,
+        "retweets": 236,
+        "replies": 75,
+        "quotes": 54,
+        "views": 324766,
+        "bookmarks": 3257
+      },
+      "createdAt": "Mon Jun 15 18:54:51 +0000 2026",
+      "createdAtLocal": "2026-06-15 14:54",
+      "createdAtISO": "2026-06-15T18:54:51+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2066435928739217408"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Agentic Code Review"
+    },
+    {
+      "id": "2066182223213293753",
+      "text": "https://t.co/vLmiBKTtX3",
+      "author": {
+        "id": "20571756",
+        "name": "Satya Nadella",
+        "screenName": "satyanadella",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 41451,
+        "retweets": 8162,
+        "replies": 2901,
+        "quotes": 4586,
+        "views": 66547462,
+        "bookmarks": 56469
+      },
+      "createdAt": "Sun Jun 14 15:33:24 +0000 2026",
+      "createdAtLocal": "2026-06-14 11:33",
+      "createdAtISO": "2026-06-14T15:33:24+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2065582894790365184"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "addyosmani",
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "A frontier without an ecosystem is not stable"
+    },
+    {
+      "id": "2064127981161959567",
+      "text": "https://t.co/hIe0UX7z6T",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 8037,
+        "retweets": 1267,
+        "replies": 357,
+        "quotes": 358,
+        "views": 2353222,
+        "bookmarks": 18709
+      },
+      "createdAt": "Mon Jun 08 23:30:35 +0000 2026",
+      "createdAtLocal": "2026-06-08 19:30",
+      "createdAtISO": "2026-06-08T23:30:35+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2064122477731852288"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Loop Engineering."
+    },
+    {
+      "id": "2061696286840279057",
+      "text": "Long-running AI agents can run tasks over hours, days or weeks. Here's a few of my thoughts on them from @googlecloud's Agent Factory. https://t.co/a9mGy9SWEo",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 334,
+        "retweets": 22,
+        "replies": 31,
+        "quotes": 4,
+        "views": 46098,
+        "bookmarks": 266
+      },
+      "createdAt": "Tue Jun 02 06:27:53 +0000 2026",
+      "createdAtLocal": "2026-06-02 02:27",
+      "createdAtISO": "2026-06-02T06:27:53+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2061692769224269824/vid/avc1/1280x720/-uBNLzN6G3h-8y1W.mp4?tag=27",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2059844244907696186",
+      "text": "https://t.co/0DyFIXJueI",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2580,
+        "retweets": 376,
+        "replies": 84,
+        "quotes": 207,
+        "views": 800315,
+        "bookmarks": 4995
+      },
+      "createdAt": "Thu May 28 03:48:32 +0000 2026",
+      "createdAtLocal": "2026-05-27 23:48",
+      "createdAtISO": "2026-05-28T03:48:32+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2059839454370828288"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "The Orchestration Tax "
+    },
+    {
+      "id": "2058281426257358947",
+      "text": "\"Cognitive surrender is when you stop thinking altogether and blindly accept the answer the AI gives you\" https://t.co/qfUVRH7LkB",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1907,
+        "retweets": 287,
+        "replies": 106,
+        "quotes": 59,
+        "views": 141124,
+        "bookmarks": 696
+      },
+      "createdAt": "Sat May 23 20:18:27 +0000 2026",
+      "createdAtLocal": "2026-05-23 16:18",
+      "createdAtISO": "2026-05-23T20:18:27+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2058281092097216512/vid/avc1/1920x1080/_J0SjU3eumPyxCgG.mp4?tag=27",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2058305801215963372",
+      "text": "The full video for our \"fireside chat on the evolution of developer craft\" is live: https://t.co/baSTziDwOz with @rseroter @the_thagomizer &amp; Ciera Jaspan",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 78,
+        "retweets": 16,
+        "replies": 4,
+        "quotes": 2,
+        "views": 27786,
+        "bookmarks": 58
+      },
+      "createdAt": "Sat May 23 21:55:19 +0000 2026",
+      "createdAtLocal": "2026-05-23 17:55",
+      "createdAtISO": "2026-05-23T21:55:19+00:00",
+      "media": [],
+      "urls": [
+        "https://www.youtube.com/watch?v=VTYx7Ex-0bA"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2056791134295273554",
+      "text": "Introducing Gemini Spark ✨\n\nIt’s your 24/7 personal AI agent that helps you navigate your digital life, taking action on your behalf, and under your direction. \n\n🧠 It runs on Gemini 3.5 and is built on @Antigravity, so it can perform long-running tasks easily in the background.\n\n⏱️ And because it runs on dedicated virtual machines on Google Cloud, you don’t even need to keep your laptop open. \n\n🧰 Spark will integrate seamlessly with Google tools, and soon with third parties through MCP. \n\n#GoogleIO",
+      "author": {
+        "id": "20536157",
+        "name": "Google",
+        "screenName": "Google",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2042749771337564160/AgOFPEL3_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 5903,
+        "retweets": 753,
+        "replies": 261,
+        "quotes": 358,
+        "views": 1726346,
+        "bookmarks": 2056
+      },
+      "createdAt": "Tue May 19 17:36:34 +0000 2026",
+      "createdAtLocal": "2026-05-19 13:36",
+      "createdAtISO": "2026-05-19T17:36:34+00:00",
+      "media": [
+        {
+          "type": "animated_gif",
+          "url": "https://video.twimg.com/tweet_video/HIswmanWgAAsl4t.mp4",
+          "width": 960,
+          "height": 540
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "addyosmani",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2056788908021788811",
+      "text": "Meet Gemini 3.5 Flash! ⚡️ It's fast, great for building rich UIs + agents and is stronger from coding to long-horizon tasks and multi-step workflows. https://t.co/KUwlJGICf0",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 278,
+        "retweets": 30,
+        "replies": 30,
+        "quotes": 2,
+        "views": 42566,
+        "bookmarks": 32
+      },
+      "createdAt": "Tue May 19 17:27:43 +0000 2026",
+      "createdAtLocal": "2026-05-19 13:27",
+      "createdAtISO": "2026-05-19T17:27:43+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HIsuY2-a4AEoooc.jpg",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2056078124346228860",
+      "text": "https://t.co/jKCIAEzai7",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 3642,
+        "retweets": 616,
+        "replies": 111,
+        "quotes": 127,
+        "views": 637251,
+        "bookmarks": 4887
+      },
+      "createdAt": "Sun May 17 18:23:19 +0000 2026",
+      "createdAtLocal": "2026-05-17 14:23",
+      "createdAtISO": "2026-05-17T18:23:19+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2055936913211899904"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Don't Outsource the Learning"
+    },
+    {
+      "id": "2053231239721885918",
+      "text": "https://t.co/FSx0reCCLH",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 3390,
+        "retweets": 495,
+        "replies": 89,
+        "quotes": 85,
+        "views": 848065,
+        "bookmarks": 7981
+      },
+      "createdAt": "Sat May 09 21:50:49 +0000 2026",
+      "createdAtLocal": "2026-05-09 17:50",
+      "createdAtISO": "2026-05-09T21:50:49+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2050749611237847040"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Agent Harness Engineering"
+    },
+    {
+      "id": "2052998409213358255",
+      "text": "Move from Markdown to HTML and give AI a richer canvas to communicate output humans will actually read. Think plans, specs even throwaway editors. Like this idea which keeps more humans in the loop.",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 338,
+        "retweets": 28,
+        "replies": 24,
+        "quotes": 6,
+        "views": 50186,
+        "bookmarks": 210
+      },
+      "createdAt": "Sat May 09 06:25:38 +0000 2026",
+      "createdAtLocal": "2026-05-09 02:25",
+      "createdAtISO": "2026-05-09T06:25:38+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2052809885763747935",
+        "text": "https://t.co/MXt5XS4xBX",
+        "author": {
+          "screenName": "trq212",
+          "name": "Thariq"
+        }
+      }
+    },
+    {
+      "id": "2052437310302462173",
+      "text": "The more I replace plans with prototypes, the better the outputs\n\nWho'd have thought that low fidelity prototypes were better than walls of spec\n\nOh yeah, the entire industry for 20 years\n\nStop going against decades of knowledge because someone in SF shipped it as a 'mode'",
+      "author": {
+        "id": "346640777",
+        "name": "Matt Pocock",
+        "screenName": "mattpocockuk",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1666460461884211204/SmBm505D_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2053,
+        "retweets": 114,
+        "replies": 124,
+        "quotes": 37,
+        "views": 335864,
+        "bookmarks": 1086
+      },
+      "createdAt": "Thu May 07 17:16:01 +0000 2026",
+      "createdAtLocal": "2026-05-07 13:16",
+      "createdAtISO": "2026-05-07T17:16:01+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "addyosmani",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2052231563564228779",
+        "text": "i never make plans i hate looking at markdown i don't wanna read markdown files i just plan by having it make changes to the code then i look at the code to see what sucks then i prompt again",
+        "author": {
+          "screenName": "thdxr",
+          "name": "dax"
+        }
+      }
+    },
+    {
+      "id": "2052124873208799378",
+      "text": "https://t.co/ze3x7bgsL4",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 949,
+        "retweets": 185,
+        "replies": 35,
+        "quotes": 52,
+        "views": 201650,
+        "bookmarks": 1431
+      },
+      "createdAt": "Wed May 06 20:34:31 +0000 2026",
+      "createdAtLocal": "2026-05-06 16:34",
+      "createdAtISO": "2026-05-06T20:34:31+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2052119860403187712"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Cognitive Surrender"
+    },
+    {
+      "id": "2052032133724799212",
+      "text": "\"Skills push the agent through the same phases a senior engineer forces themselves through, because shipping the code without them is how you produce incidents.\" https://t.co/7Jvq1OeVl7 &lt; @addyosmani's popular skills encode key parts of Google's engineering culture.",
+      "author": {
+        "id": "48529642",
+        "name": "Richard Seroter",
+        "screenName": "rseroter",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1517719733184868354/erDRiiQZ_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 70,
+        "retweets": 17,
+        "replies": 4,
+        "quotes": 0,
+        "views": 9334,
+        "bookmarks": 87
+      },
+      "createdAt": "Wed May 06 14:26:00 +0000 2026",
+      "createdAtLocal": "2026-05-06 10:26",
+      "createdAtISO": "2026-05-06T14:26:00+00:00",
+      "media": [],
+      "urls": [
+        "https://addyosmani.com/blog/agent-skills/"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "addyosmani",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2051936715192049907",
+      "text": "Democratizing a skill never kills the craft. It just raises the floor and the ceiling. Software still has a promising future.",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 293,
+        "retweets": 26,
+        "replies": 23,
+        "quotes": 4,
+        "views": 33402,
+        "bookmarks": 51
+      },
+      "createdAt": "Wed May 06 08:06:50 +0000 2026",
+      "createdAtLocal": "2026-05-06 04:06",
+      "createdAtISO": "2026-05-06T08:06:50+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2051710472903336302",
+        "text": "Just because anyone can build software now doesn't mean software is dead. Anyone can bake bread in their home right now, yet 99% of us still choose to buy it from someone else. Simple products are complex! I will always be happy to pay someone to handle the nuances.",
+        "author": {
+          "screenName": "FarzaTV",
+          "name": "Farza 🇵🇰🇺🇸"
+        }
+      }
+    }
+  ]
+}

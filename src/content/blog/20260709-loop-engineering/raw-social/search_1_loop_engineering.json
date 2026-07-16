@@ -1,0 +1,711 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2074784303331082648",
+      "text": "*LOOP ENGINEERING IS A FREE OPEN-SOURCE FRAMEWORK FOR BUILDING SELF-IMPROVING TRADING AGENTS.*\n\n(https://t.co/41mB9KJowo)",
+      "author": {
+        "id": "1536693901230321666",
+        "name": "0xMarioNawfal",
+        "screenName": "RoundtableSpace",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012162102283407360/U-fPj6wg_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 81,
+        "retweets": 4,
+        "replies": 10,
+        "quotes": 1,
+        "views": 53661,
+        "bookmarks": 60
+      },
+      "createdAt": "Wed Jul 08 09:15:00 +0000 2026",
+      "createdAtLocal": "2026-07-08 05:15",
+      "createdAtISO": "2026-07-08T09:15:00+00:00",
+      "media": [],
+      "urls": [
+        "https://github.com/cobusgreyling/loop-engineering"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074707287634325576",
+      "text": "The Ultimate Loop Engineering Guide https://t.co/p0YUkZKcSt",
+      "author": {
+        "id": "1863571201060392960",
+        "name": "Vaishnavi",
+        "screenName": "_vmlops",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2017673694068543493/h06eTOL0_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 15,
+        "retweets": 2,
+        "replies": 1,
+        "quotes": 0,
+        "views": 859,
+        "bookmarks": 13
+      },
+      "createdAt": "Wed Jul 08 04:08:58 +0000 2026",
+      "createdAtLocal": "2026-07-08 00:08",
+      "createdAtISO": "2026-07-08T04:08:58+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMrXRymbEAACOq0.jpg",
+          "width": 986,
+          "height": 1381
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2075179471951614381",
+      "text": "https://t.co/6iCX0j0aBP",
+      "author": {
+        "id": "842560988683550721",
+        "name": "Jason Zhou",
+        "screenName": "jasonzhou1993",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1613651966663749632/AuQiWkVc_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 108,
+        "retweets": 16,
+        "replies": 6,
+        "quotes": 3,
+        "views": 10039,
+        "bookmarks": 288
+      },
+      "createdAt": "Thu Jul 09 11:25:15 +0000 2026",
+      "createdAtLocal": "2026-07-09 07:25",
+      "createdAtISO": "2026-07-09T11:25:15+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2075061654791057408"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "What I learnt after running loops for 1 month???"
+    },
+    {
+      "id": "2074757888879546501",
+      "text": "A GOOGLE ENGINEER JUST NAMED THE SHIFT THAT IS QUIETLY REPLACING PROMPT ENGINEERING.\n\nAddy Osmani published an essay called Loop Engineering, and it became the anchor everyone else is now building on.\n\nThe core idea: stop prompting the agent. Design the system that prompts it for you.\n\nThe agent acts, observes the grounded result, and iterates inside its own session until the goal is met.\n\nThis is how real agentic systems get built now:\nNot clever prompts.\nSelf-correcting loops.\n\nRead it, then explore the guide below.\n\nBookmark this. Follow @cyrilXBT",
+      "author": {
+        "id": "1373665408193036293",
+        "name": "CyrilXBT",
+        "screenName": "cyrilXBT",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2035229727414534145/aWap3Jbq_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 128,
+        "retweets": 10,
+        "replies": 13,
+        "quotes": 0,
+        "views": 20566,
+        "bookmarks": 137
+      },
+      "createdAt": "Wed Jul 08 07:30:02 +0000 2026",
+      "createdAtLocal": "2026-07-08 03:30",
+      "createdAtISO": "2026-07-08T07:30:02+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMsFTdFbgAAqPah.png",
+          "width": 985,
+          "height": 1200
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074669139730284735",
+        "text": "https://t.co/XiwUABYZE1",
+        "author": {
+          "screenName": "cyrilXBT",
+          "name": "CyrilXBT"
+        }
+      }
+    },
+    {
+      "id": "2073693375409295522",
+      "text": "A list of useful AI workflows to tackle this weekend (pick a couple):\n\n• Hermes agent setup\n• Second-brain via Claude Code x Obsidian\n• TradingView MCP connection (for traders)\n• Deep financial research via perplexity finance\n• Personal OS dashboard w/ Fable 5\n• Learn loop engineering (full article on this page)\n• NotebookLM for research *any topic*\n• Set up Claude Skills for your repetitive workflows\n• Build Notion database as your central hub (then insert agents to manage it)\n\nSO much to do in AI right now.",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 45,
+        "retweets": 2,
+        "replies": 7,
+        "quotes": 0,
+        "views": 6143,
+        "bookmarks": 75
+      },
+      "createdAt": "Sun Jul 05 09:00:02 +0000 2026",
+      "createdAtLocal": "2026-07-05 05:00",
+      "createdAtISO": "2026-07-05T09:00:02+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2071513914504802525",
+      "text": "this is f*cking dangerous\n\nsomeone just open sourced the entire \"LOOP ENGINEERING\" framework for free\n\nthe guy who built Claude Code at Anthropic said it himself:\n\n\"I don't prompt Claude anymore. I have loops running that prompt Claude. My job is to write loops.\n\nstop prompting your agent. build the thing that prompts it for you.\n\ndiscover → plan → execute → verify → repeat\n\nyou used to be inside that loop\n\nloop engineering is you stepping out of it entirely\n\nthe repo includes:\n\n- 6 production ready patterns (daily triage, CI sweeper, PR babysitter)\n\n- clone and run starters for Claude Code, Codex, and Grok\n\n- a loop readiness CLI that scores your codebase\n\n- SKILL. md templates, STATE.md spine, full safety docs\n\nuse this one command to start(copy/paste):\n\nnpx @cobusgreyling/loop-init • --pattern daily-triage -tool claude-code\n\nbookmark before this blows up\n\nrepo link : https://t.co/cdj8vizgZC",
+      "author": {
+        "id": "1788243647885987840",
+        "name": "MIKE",
+        "screenName": "mikenevermiss",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2004815313108389888/uzJndIfx_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1166,
+        "retweets": 184,
+        "replies": 61,
+        "quotes": 10,
+        "views": 165315,
+        "bookmarks": 2086
+      },
+      "createdAt": "Mon Jun 29 08:39:38 +0000 2026",
+      "createdAtLocal": "2026-06-29 04:39",
+      "createdAtISO": "2026-06-29T08:39:38+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HL9-67SW4AAieeh.jpg",
+          "width": 788,
+          "height": 1401
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2066401066518802637",
+        "text": "https://t.co/tlLZjVprSj",
+        "author": {
+          "screenName": "mikenevermiss",
+          "name": "MIKE"
+        }
+      }
+    },
+    {
+      "id": "2071807005275111658",
+      "text": "个人强烈推荐一个开源的媲美甚至部分超越codex app 的coding IDE：Orca\nhttps://t.co/YQCSx5FVTy\n https://t.co/FMKgEb5Aes\n\nMac/Win/Linux 全平台,  支持所有主流Coding agent CLI(CC, codex, pi, opencode etc.),  这是我用过最强大的套壳，其他的我全都卸载了。\n\n功能：\n. 并行worktree\n. computer use(操作电脑，类似codex的电脑使用)\n. 登录态browser（类似codex @chrome）\n. 嵌入式真实 Chromium + Design Mode\n. orca mobile(手机端app，远程控制电脑！）\n. 自动化（定时任务，loop engineering）\n. 语音输入\n. iOS/Android手机模拟器\n. 远程主机控制\n. token使用追踪\n.  GitHub / Linear 原生：PR、issue、看板里直接开\n. orca CLI\n\n我特别强调，喜欢pi的人也非常推荐用这个。",
+      "author": {
+        "id": "1239771839464783872",
+        "name": "LinearUncle",
+        "screenName": "LinearUncle",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1906323582759874560/6Elwf5WN_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 267,
+        "retweets": 42,
+        "replies": 32,
+        "quotes": 2,
+        "views": 38972,
+        "bookmarks": 443
+      },
+      "createdAt": "Tue Jun 30 04:04:17 +0000 2026",
+      "createdAtLocal": "2026-06-30 00:04",
+      "createdAtISO": "2026-06-30T04:04:17+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMCJKM8WgAAGnBr.jpg",
+          "width": 4096,
+          "height": 2148
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMCJSr6XgAExKc7.jpg",
+          "width": 1279,
+          "height": 2774
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMCJaZiWAAIpz5H.jpg",
+          "width": 578,
+          "height": 2334
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMCJe1xXcAAD-rE.jpg",
+          "width": 1944,
+          "height": 2292
+        }
+      ],
+      "urls": [
+        "https://www.onorca.dev/",
+        "https://github.com/stablyai/orca"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zh",
+      "score": null
+    },
+    {
+      "id": "2074746554607378520",
+      "text": "CLAUDE CODE JUST MADE LOOP ENGINEERING OFFICIAL. https://t.co/1snFllqgVq",
+      "author": {
+        "id": "1536693901230321666",
+        "name": "0xMarioNawfal",
+        "screenName": "RoundtableSpace",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012162102283407360/U-fPj6wg_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 215,
+        "retweets": 19,
+        "replies": 9,
+        "quotes": 1,
+        "views": 69522,
+        "bookmarks": 192
+      },
+      "createdAt": "Wed Jul 08 06:45:00 +0000 2026",
+      "createdAtLocal": "2026-07-08 02:45",
+      "createdAtISO": "2026-07-08T06:45:00+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMruAQzWAAAFzll.jpg",
+          "width": 673,
+          "height": 900
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073542386102501707",
+      "text": "This Anthropic engineer ( @RLanceMartin ) recently shared his full guide on how to run /loops with Fable 5.\n\nIf you're new to loop engineering and want to run fully autonomous Fable workflows, take notes: https://t.co/ngc7CH7bme",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 91,
+        "retweets": 10,
+        "replies": 5,
+        "quotes": 0,
+        "views": 9605,
+        "bookmarks": 208
+      },
+      "createdAt": "Sat Jul 04 23:00:04 +0000 2026",
+      "createdAtLocal": "2026-07-04 19:00",
+      "createdAtISO": "2026-07-04T23:00:04+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMazz7EbwAAu1_2.jpg",
+          "width": 1382,
+          "height": 1162
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2071050963843182801",
+      "text": "You should NEVER write your own /goal or /loop prompts.\n\nYour AI agents should be loop engineering for you.\n\nSteal this prompting structure to have your agents write perfect /goal &amp; /loop prompts - fully autonomously: https://t.co/pxHHANW0bg",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 425,
+        "retweets": 54,
+        "replies": 12,
+        "quotes": 2,
+        "views": 24388,
+        "bookmarks": 794
+      },
+      "createdAt": "Sun Jun 28 02:00:02 +0000 2026",
+      "createdAtLocal": "2026-06-27 22:00",
+      "createdAtISO": "2026-06-28T02:00:02+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HL3Z4FEbIAAXGrp.jpg",
+          "width": 1064,
+          "height": 1342
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073078637730189374",
+      "text": "https://t.co/kAZAkoPphh",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 424,
+        "retweets": 61,
+        "replies": 13,
+        "quotes": 11,
+        "views": 511427,
+        "bookmarks": 1474
+      },
+      "createdAt": "Fri Jul 03 16:17:17 +0000 2026",
+      "createdAtLocal": "2026-07-03 12:17",
+      "createdAtISO": "2026-07-03T16:17:17+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2072063473421602816"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Fable 5: A Beginner's Guide to Loop Engineering "
+    },
+    {
+      "id": "2071988145667928442",
+      "text": "“Loop engineering” is a hot buzzphrase after mentions of it by Boris Cherny (Claude Code’s creator) and Peter Steinberger (OpenClaw's creator) went viral on social media. Loops are now a key part of how we get AI agents to iterate at length to build software. In this letter, I’d like to share my 3 key loops, shown in the image below, for building 0-to-1 products. These loops guide not just how I build software, but also how I decide what software to build.\n\nAgentic coding loop: Given a product specification and optionally a set of evals (that is, a dataset against which to measure performance), we can have an AI agent write code, test its work, and keep iterating until the code is bug-free and meets its specification. This idea of closing the loop took off around the end of last year, and it has been a game changer in enabling coding agents to work longer productively without human intervention. For example, over the weekend, I was building an app for my daughter to practice typing, and my coding agent could easily work for around an hour, using a web browser to check what it had built multiple times before getting back to me, without needing my intervention.\n\nThe engineering loop executes quickly. Every few minutes, the coding agent might build and test a new version of the software. I hear frequently from developers who are finding new ways to engineer more effective engineering loops. This is an active area of invention!\n\nDeveloper feedback loop: In this loop, a developer examines the current product and steers the coding agent to improve it. Last year, a lot of developers (including me) were acting as the QA (quality assurance) function for our coding agents, manually finding bugs and then asking the agent to fix them. But with coding agents much more able to test their own code, the amount of time we need to spend on this function has decreased significantly. This allows us to make higher-level product decisions, such as what key features to offer, where the UI needs improvement, and so on.\n\nThe developer-feedback loop operates over time intervals between tens of minutes and hours — that's how frequently a developer might review a product and give feedback. In the case of the typing app, I changed my mind a few times about the visual design, what cat costumes she can unlock as she learns (she loves cats), and the user flow for a grown-up to log in and steer the child's learning experience.\n\nWhen a developer has a clear vision for what to build, it is still a lot of work to translate that vision into a specification for a coding agent to implement. Further, after the developer has seen an implementation, they might update (or perhaps clarify) the spec to steer it toward what they want. If you find that the system repeatedly runs into certain problems, building a set of evals for the agent becomes useful.\n\nAI-native teams are increasingly using AI to help shape product direction, for example, automating the gathering and analysis of usage data, summarizing written and verbal customer feedback, or carrying out competitive analysis. However, for pretty much all the products I’m involved in, I see humans as having a significant context advantage over current AI systems — we know a lot more than the AI system about the users and the context the product has to operate in — and thus humans play a critical role. Many people describe this human contribution as “taste,” but I prefer to think of it as humans having a context advantage, since that gives us a clearer path to helping AI systems get better. This also speaks to why this step can’t be automated: So long as the human knows something the AI does not, human-in-the-loop is needed to to inject that knowledge into the system.\n\nExternal feedback loop: This includes a wide range of tactics like asking a few friends for feedback, launching to alpha testers, or putting the code into production with A/B testing. These tactics are usually slow, rarely taking less than hours and sometimes taking days or even weeks. This data informs the developer vision, which in turn continues to drive the detailed product spec, which in turn drives the coding agent.\n\nWith coding agents speeding up software development, more engineers are starting to play a partial product management role. For many engineers who are growing into this role, the hardest part is shaping the product vision and striking a balance between building (bridging the gap between vision and spec) and getting user feedback to evolve the vision. It is important to do both!\n\nI will write more about how to do this in future posts, but for now, I find it encouraging that engineers are playing an expanded role (just as product managers and designers now do more engineering).\n\n[Original text: The Batch]",
+      "author": {
+        "id": "216939636",
+        "name": "Andrew Ng",
+        "screenName": "AndrewYNg",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/733174243714682880/oyG30NEH_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 8303,
+        "retweets": 1591,
+        "replies": 373,
+        "quotes": 168,
+        "views": 620701,
+        "bookmarks": 10189
+      },
+      "createdAt": "Tue Jun 30 16:04:04 +0000 2026",
+      "createdAtLocal": "2026-06-30 12:04",
+      "createdAtISO": "2026-06-30T16:04:04+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMEtxp3bsAARJdi.jpg",
+          "width": 1200,
+          "height": 676
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073143246428221562",
+      "text": "I don't prompt Claude Code anymore.\n\nI have loops running that prompt Fable, and my job is just to write loops.\n\nThis is the Boris Cherny method, and I have to say, it's extremely powerful.\n\nEverything you need to get started with loop engineering (as a complete beginner): https://t.co/ohwQayZMWN",
+      "author": {
+        "id": "1530033576",
+        "name": "Miles Deutscher",
+        "screenName": "milesdeutscher",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2043255869513601025/wFHeLjZX_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2271,
+        "retweets": 360,
+        "replies": 83,
+        "quotes": 4,
+        "views": 427862,
+        "bookmarks": 4711
+      },
+      "createdAt": "Fri Jul 03 20:34:01 +0000 2026",
+      "createdAtLocal": "2026-07-03 16:34",
+      "createdAtISO": "2026-07-03T20:34:01+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMVIy-DbsAANth_.jpg",
+          "width": 1024,
+          "height": 1028
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2073078637730189374",
+        "text": "https://t.co/kAZAkoPphh",
+        "author": {
+          "screenName": "aiedge_",
+          "name": "AI Edge"
+        }
+      }
+    },
+    {
+      "id": "2072701981156880769",
+      "text": "오 이거 루프 엔지니어링 관련 꽤 괜찮은 자료네... \n\nhttps://t.co/8skMgC8A25",
+      "author": {
+        "id": "83994816",
+        "name": "승귤",
+        "screenName": "wapj2000",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1879790212831956992/_on-zUCm_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 195,
+        "retweets": 46,
+        "replies": 1,
+        "quotes": 2,
+        "views": 16014,
+        "bookmarks": 346
+      },
+      "createdAt": "Thu Jul 02 15:20:35 +0000 2026",
+      "createdAtLocal": "2026-07-02 11:20",
+      "createdAtISO": "2026-07-02T15:20:35+00:00",
+      "media": [],
+      "urls": [
+        "https://www.langchain.com/blog/the-art-of-loop-engineering"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "ko",
+      "score": null
+    },
+    {
+      "id": "2074752226468471016",
+      "text": "這兩週看到 \"Loop Engineering\" 這個 buzzword 的頻率有點高。這篇很簡明的聊了一下在實作上的一些概念。\n\n\"https://t.co/5wVF8EAPnc - Loop Engineering\" (https://t.co/Tv3grIlwiG)",
+      "author": {
+        "id": "4496321",
+        "name": "OOBE",
+        "screenName": "OOBE",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1999498337436020736/ifRTaTpo_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 12,
+        "retweets": 1,
+        "replies": 0,
+        "quotes": 0,
+        "views": 862,
+        "bookmarks": 8
+      },
+      "createdAt": "Wed Jul 08 07:07:32 +0000 2026",
+      "createdAtLocal": "2026-07-08 03:07",
+      "createdAtISO": "2026-07-08T07:07:32+00:00",
+      "media": [],
+      "urls": [
+        "http://AddyOsmani.com",
+        "https://addyosmani.com/blog/loop-engineering/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zh",
+      "score": null
+    },
+    {
+      "id": "2073346153601704088",
+      "text": "Loop engineering is the biggest shift in AI prompting we've ever seen.\n\nPair it with Fable 5, and you'll have AI agents working for you while you sleep.\n\nThis guide is a literal goldmine: https://t.co/ruTi1DWYzX",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 89,
+        "retweets": 13,
+        "replies": 4,
+        "quotes": 1,
+        "views": 21783,
+        "bookmarks": 152
+      },
+      "createdAt": "Sat Jul 04 10:00:18 +0000 2026",
+      "createdAtLocal": "2026-07-04 06:00",
+      "createdAtISO": "2026-07-04T10:00:18+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2073346101160361984/vid/avc1/1280x720/jCdRncefC6wp4f6h.mp4?tag=14",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2073078637730189374",
+        "text": "https://t.co/kAZAkoPphh",
+        "author": {
+          "screenName": "aiedge_",
+          "name": "AI Edge"
+        }
+      }
+    },
+    {
+      "id": "2074909157543870505",
+      "text": "🚀 5 Real-World Loop Engineering Workflows You Can Build Today\n\nMost people think AI = one prompt → one answer.\n\nThe best AI systems don't work like that.\n\nThey think, check, improve, and repeat.\n\nThat's Loop Engineering.\n\nHere are 5 workflows you can build today👇RT  followme🙏 https://t.co/jgmcM4ripX",
+      "author": {
+        "id": "2065772458079383552",
+        "name": "Lee Garcia",
+        "screenName": "LeeGarciacAi",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2065774905665466368/T0MO9Vca_normal.jpg",
+        "verified": false
+      },
+      "metrics": {
+        "likes": 7,
+        "retweets": 4,
+        "replies": 1,
+        "quotes": 0,
+        "views": 54,
+        "bookmarks": 0
+      },
+      "createdAt": "Wed Jul 08 17:31:07 +0000 2026",
+      "createdAtLocal": "2026-07-08 13:31",
+      "createdAtISO": "2026-07-08T17:31:07+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMuO4NuaQAAC9Db.jpg",
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2075084531648823388",
+      "text": "Loop engineering is your new job: how to design for silence\n\nhttps://t.co/Q4jcE3T1Kx",
+      "author": {
+        "id": "2541047887",
+        "name": "jessica🩶",
+        "screenName": "ds_jessica_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1750744120669417472/cBWCJ_Q8_normal.jpg",
+        "verified": false
+      },
+      "metrics": {
+        "likes": 3,
+        "retweets": 3,
+        "replies": 0,
+        "quotes": 0,
+        "views": 84,
+        "bookmarks": 0
+      },
+      "createdAt": "Thu Jul 09 05:08:00 +0000 2026",
+      "createdAtLocal": "2026-07-09 01:08",
+      "createdAtISO": "2026-07-09T05:08:00+00:00",
+      "media": [],
+      "urls": [
+        "https://www.linkedin.com/feed/update/urn:li:activity:7478304890490933248"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074665595384324473",
+      "text": "Loop Engineering Tools\n\n- Claude Code, Codex, Cursor 같은 AI 코딩 에이전트가 무한 반복·비용 초과·무단 병합 없이 작동하도록 “목표–검증–예산–중단 조건–승인 절차”를 설계하는 무료 웹 도구 모음\n\n- Context Engineering은 에이전트가 “무엇을 받는가”에 집중하고, Loop Engineering은 에이전트가 “어떻게 반복·검증·중단·보고하는가”에 집중합니다.\n\n- AI 에이전트에게 일을 시키는 프롬프트가 아니라, AI 에이전트가 안전하게 반복 작업을 수행하도록 만드는 운영 설계 도구\n\n1. Goal: 무엇이 완료 상태인가?\n\n2. Validation: 무엇으로 성공을 검증할 것인가?\n\n3. Budget: 토큰·시간·반복 횟수 한도는 얼마인가?\n\n4. Stop Rule: 언제 멈출 것인가?\n\n5. Human Approval: 어떤 작업은 사람이 승인해야 하는가?\n\n링크: https://t.co/WmfkbgVfSO",
+      "author": {
+        "id": "1850400616042188800",
+        "name": "Drone",
+        "screenName": "aiwhyclub",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1991316718124429314/p0VFNEGy_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 53,
+        "bookmarks": 0
+      },
+      "createdAt": "Wed Jul 08 01:23:18 +0000 2026",
+      "createdAtLocal": "2026-07-07 21:23",
+      "createdAtISO": "2026-07-08T01:23:18+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "ko",
+      "score": null
+    },
+    {
+      "id": "2073738671858037016",
+      "text": "CANCEL your weekend plans.\n\nYou NEED to:\n\n• Learn Claude Code + Codex handoffs\n• Build 2-3 real workflows with Hermes Agent\n• Set up OpenClaw\n• Learn loop engineering (/goal, specs, evals)\n• Master MCP (Model Context Protocol)\n• Build your own MCP servers\n• Create a personal memory system (Obsidian + QMD)\n• Experiment with agent swarms\n• Try GLM-5.2, Kimi K2.7, GPT-5.5, Fable & Mythos\n• Learn context engineering\n• Build evals and guardrails for your agents\n• Run your own local models\n• Learn n8n for AI automation\n• Use AI Studio for rapid prototyping\n• Build one AI product and ship it publicly\n• Read AI research instead of AI news\n• Start creating content about what you're learning\n• Learn how AI businesses actually make money\n\nYou have way too much to do.",
+      "author": {
+        "id": "1042797252765528064",
+        "name": "Suraj Sharma",
+        "screenName": "suraj_sharma14",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2067813722404585472/xBVFKcwv_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 252,
+        "retweets": 27,
+        "replies": 13,
+        "quotes": 0,
+        "views": 10682,
+        "bookmarks": 339
+      },
+      "createdAt": "Sun Jul 05 12:00:02 +0000 2026",
+      "createdAtLocal": "2026-07-05 08:00",
+      "createdAtISO": "2026-07-05T12:00:02+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2071945864088535126",
+      "text": "After 18 months of writing, coding, and experimenting, Build a Reasoning Model (From Scratch) is \nfinally out!\n\nMy first copies just arrived! 📚\n\n440 full-color pages. Inference scaling, reinforcement learning, and distillation from scratch. https://t.co/647ksI7sLc",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 5993,
+        "retweets": 563,
+        "replies": 274,
+        "quotes": 52,
+        "views": 523226,
+        "bookmarks": 3419
+      },
+      "createdAt": "Tue Jun 30 13:16:03 +0000 2026",
+      "createdAtLocal": "2026-06-30 09:16",
+      "createdAtISO": "2026-06-30T13:16:03+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMEHrKQXUAEE7Kg.jpg",
+          "width": 3072,
+          "height": 4096
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2071945868970791257",
+      "text": "It's available from Manning (already shipping):\nhttps://t.co/fQndtsmUJv\n\nand Amazon (for preorder, shipping in a few weeks):\nhttps://t.co/hsPpE0Vmwj",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 288,
+        "retweets": 20,
+        "replies": 14,
+        "quotes": 2,
+        "views": 26207,
+        "bookmarks": 294
+      },
+      "createdAt": "Tue Jun 30 13:16:04 +0000 2026",
+      "createdAtLocal": "2026-06-30 09:16",
+      "createdAtISO": "2026-06-30T13:16:04+00:00",
+      "media": [],
+      "urls": [
+        "https://mng.bz/Nwr7",
+        "https://amzn.to/4aAKiFY"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2070871630201463137",
+      "text": "I put together a new article on setting up local coding agents with open-weight models. Everything runs 100% locally.\n\nI thought it might be useful putting this together because many people asked me about my setup in the past, and I thought it would also motivate people to get started tinkering with local models for serious work (yes, things got incredibly capable this year with better LLMs and better harnesses).\n\nSo, here's a walkthrough of how to connect a local LLM to a local coding harness (could be Claude Code or Codex, which you may already be familiar with).\n\nI also included some assessment notes that are useful as a checklist to select between and consider certain LLMs over others:\n\n- Checking RAM usage at long contexts to see if the model is suitable for real work\n- Measuring prefill and decoding tok/sec to see whether it's fast enough to not be annoying\n- Making sure the model has sufficient tool-calling capabilities in theory\n- Assessing whether the model can solve some more challenging tasks when used in a coding harness.\n\nOf course, there are always more specialized tools that can squeeze a bit more performance out of things, but I hope this is a good starter kit that stays flexible; that is you can easily switch to newer models as they are released or even tap into cloud models in your familiar harness if the current ones are not sufficient enough for a given task.",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2281,
+        "retweets": 370,
+        "replies": 85,
+        "quotes": 20,
+        "views": 112367,
+        "bookmarks": 2421
+      },
+      "createdAt": "Sat Jun 27 14:07:26 +0000 2026",
+      "createdAtLocal": "2026-06-27 10:07",
+      "createdAtISO": "2026-06-27T14:07:26+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HL02gJ5WEAAaJI3.jpg",
+          "width": 1698,
+          "height": 1964
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2070871632759927196",
+      "text": "Link to the full article: https://t.co/GoDQ9Vbscn",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 156,
+        "retweets": 27,
+        "replies": 5,
+        "quotes": 1,
+        "views": 13410,
+        "bookmarks": 178
+      },
+      "createdAt": "Sat Jun 27 14:07:26 +0000 2026",
+      "createdAtLocal": "2026-06-27 10:07",
+      "createdAtISO": "2026-06-27T14:07:26+00:00",
+      "media": [],
+      "urls": [
+        "https://magazine.sebastianraschka.com/p/using-local-coding-agents"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2070518167399698490",
+      "text": "Have been taking different local open-weight LLMs for a test drive in different harnesses (Qwen-Code, Codex, Claude Code).\n\n30B Mixture-of-Expert models are kind of a nice sweet spot and can solve challenging problems. And they get roughly 40 tok/sec on a Mac or DGX Spark, which is similar to GPT 5.5 in a Pro subscription and totally useable for everyday work.\n\nMore interesting is also the harness choice! Claude Code seems to be using 2x many tokens as Codex.\n\nGemma 4 E2B is here just for reference to show that the tasks can't be trivially solved by smaller models.\n\nJust finishing a longer write-up about this and will share soon (likely tomorrow)!",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 888,
+        "retweets": 105,
+        "replies": 116,
+        "quotes": 10,
+        "views": 60377,
+        "bookmarks": 388
+      },
+      "createdAt": "Fri Jun 26 14:42:54 +0000 2026",
+      "createdAtLocal": "2026-06-26 10:42",
+      "createdAtISO": "2026-06-26T14:42:54+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLv1SWNXwAEb6dR.jpg",
+          "width": 2496,
+          "height": 1448
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2067612153020838055",
+      "text": "Just caught up with the recent GLM-5.2 release. The best open-weight model today.\n\nArchitecture-wise, it's build on the GLM-5 and GLM-5.1 architecture that I covered previously, which means it's reusing the Multi-head Latent Attention (MLA) and DeepSeek Sparse Attention (DSA) mechanisms from DeepSeek V3.2. (I wrote about it here: https://t.co/tuunazfQ8y)\n\nWhat's new is that they added an IndexShare mechanism. (That's a cross-layer reuse trick for DSA where instead of recomputing the sparse-attention top-k indexer in every layer, GLM-5.2 runs the full indexer only once every four layers and lets the following layers reuse those selected token indices. This keeps the same DSA idea but makes 1M-token inference much cheaper.)",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1902,
+        "retweets": 248,
+        "replies": 62,
+        "quotes": 11,
+        "views": 104058,
+        "bookmarks": 929
+      },
+      "createdAt": "Thu Jun 18 14:15:26 +0000 2026",
+      "createdAtLocal": "2026-06-18 10:15",
+      "createdAtISO": "2026-06-18T14:15:26+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLGiRS6WgAACvRH.jpg",
+          "width": 1622,
+          "height": 1604
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2067036636181848528",
+      "text": "Crazy model! It actually uses the old Qwen2.5-Coder-3B stack and got really great performance with their post-training stack. \nNeed to use it in the next days to see if vibes of VibeCoder actually check out in practice. But impressive first impression!\n\nBased on the tech report, some of the important pieces of their post-training stack:\n\n1. High-signal synthetic data (math problems with credible solutions, code with tests)\n\n2. Multiple reasoning paths for each answer\n\n3. Filtering, filtering, filtering\n\n4. 2-stage SFT (start with broad training, then train on hard long-reasoning samples)\n\n5. Use target (pass@k) accuracy over validation loss for checkpoint selection\n\n6. MGPO (MaxEnt-Guided Policy Optimization) for RLVR: basically a GRPO-style RL method with an extra weighting that favors examples that are neither too easy nor too hard for the current policy\n\n7. Single 64k long-context RL (they found that the usual progressive context expansion hurt this model because early truncation damaged long-thinking behavior) \n\n8. Training data order: they do Math RL, then Code RL, then STEM RL in this particular oder which they found helped overall\n\n9. After optimizing for accuracy, they add a stage that rewards shorter correct trajectories; basically making the model more efficient without accuracy degradation",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1344,
+        "retweets": 175,
+        "replies": 51,
+        "quotes": 10,
+        "views": 116824,
+        "bookmarks": 983
+      },
+      "createdAt": "Wed Jun 17 00:08:32 +0000 2026",
+      "createdAtLocal": "2026-06-16 20:08",
+      "createdAtISO": "2026-06-17T00:08:32+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HK-WyIPWcAAMXkF.jpg",
+          "width": 1320,
+          "height": 1492
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2066876960073281582",
+        "text": "WHAT THE HELL is happening in AI?\n\nA 3B parameter model just put up coding benchmark scores in the same league as Claude Opus 4.5.\n\n3 BILLION.\n\nThe weights are on Hugging Face, anyone can test it.\n\nI genuinely don't know if this is a breakthrough or if the benchmarks are broken. https://t.co/8nVIbwjLUQ",
+        "author": {
+          "screenName": "orcus108",
+          "name": "orcus108"
+        }
+      }
+    },
+    {
+      "id": "2065778965273354545",
+      "text": "Cool new open-weight model by Cohere: a new lightweight 30B open-weight model for agentic coding tasks.\n\nThis one builds on Command A+ using the parallel transformer design. Interestingly, even though it's almost half as big, it almost doubles the number of layers.\n\nAlso, they say that it's been specifically developed for agentic coding, not just coding. I.e., the evaluation is inside a workflow, not just on a single prompt-to-code-answer task.\n\nFor Terminal-Bench, the model has to use a terminal, inspect the environment, run commands, read outputs, etc.\n\nFor SWE-Bench the model works on real GitHub-style software issues where it has to understand the repository, find relevant files, make a patch, pass tests, etc.\n\nSciCode and LiveCodeBench are more traditional because they mostly test whether the model can produce correct code for a specified problem. Sure, this still requires reasoning, but it's more like “Implement a numerical routine to compute a scientific quantity from given equations and inputs.” which doesn't require any interaction with the environment, existing files, tests, etc.\n\nThe focus on the agentic code benchmarks is probably why it's far ahead of Gemma 4 on those.\n\nOverall, it's pretty competitive although not quite Qwen3.6-level performance.",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 765,
+        "retweets": 99,
+        "replies": 45,
+        "quotes": 3,
+        "views": 51172,
+        "bookmarks": 390
+      },
+      "createdAt": "Sat Jun 13 12:51:00 +0000 2026",
+      "createdAtLocal": "2026-06-13 08:51",
+      "createdAtISO": "2026-06-13T12:51:00+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HKpsnQsXAAAS9HE.jpg",
+          "width": 4096,
+          "height": 3570
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2064425877656543710",
+      "text": "Turns out Fable 5 is shadowbanning AI researchers  🫤",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1343,
+        "retweets": 98,
+        "replies": 69,
+        "quotes": 14,
+        "views": 83329,
+        "bookmarks": 129
+      },
+      "createdAt": "Tue Jun 09 19:14:19 +0000 2026",
+      "createdAtLocal": "2026-06-09 15:14",
+      "createdAtISO": "2026-06-09T19:14:19+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2064399902684139852",
+        "text": "mythos will be bad ON PURPOSE on ai \"frontier llm research\" tasks, this is very very sad for the research community\n\nalso the fact that this is un purpose not visible to the user is crazy https://t.co/n3p4niUKJ2",
+        "author": {
+          "screenName": "eliebakouch",
+          "name": "elie"
+        }
+      }
+    },
+    {
+      "id": "2064384777663193498",
+      "text": "Always back to the basics: \nLatentMoE was probably inspired by MLA, which was inspired by LoRA, which was inspired by SVD, which was inspired by eigendecomposition. https://t.co/bWqo5iOPbP",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 795,
+        "retweets": 93,
+        "replies": 30,
+        "quotes": 4,
+        "views": 35455,
+        "bookmarks": 460
+      },
+      "createdAt": "Tue Jun 09 16:31:00 +0000 2026",
+      "createdAtLocal": "2026-06-09 12:31",
+      "createdAtISO": "2026-06-09T16:31:00+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HKYq-edWsAAaRU0.jpg",
+          "width": 2076,
+          "height": 1174
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2063649136323252397",
+      "text": "https://t.co/L4s34f28oX",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1058,
+        "retweets": 127,
+        "replies": 52,
+        "quotes": 23,
+        "views": 140617,
+        "bookmarks": 1491
+      },
+      "createdAt": "Sun Jun 07 15:47:49 +0000 2026",
+      "createdAtLocal": "2026-06-07 11:47",
+      "createdAtISO": "2026-06-07T15:47:49+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2063647807437705216"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Do AGENTS.md Files Actually Help Coding Agents?"
+    },
+    {
+      "id": "2062575436836536377",
+      "text": "And another open-weight release. Nemotron 3 Ultra has an ultra impressive capability:efficiency ratio! \n\nDesign-wise, it carries forward the Mamba-2-attention hybrid stack and LatentMoE introduced in the previous Super variant. But everything is a bit bigger. https://t.co/nRjbMtY2aI",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 671,
+        "retweets": 95,
+        "replies": 32,
+        "quotes": 4,
+        "views": 44646,
+        "bookmarks": 266
+      },
+      "createdAt": "Thu Jun 04 16:41:19 +0000 2026",
+      "createdAtLocal": "2026-06-04 12:41",
+      "createdAtISO": "2026-06-04T16:41:19+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HJ-9YnrWgAAGj6T.jpg",
+          "width": 2952,
+          "height": 4096
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2062235700636873082",
+        "text": "It's been a while! 4 nice additions to the open-weight local-LLM-on-consumer-hardware ecosystem: https://t.co/8cTXF3aStp",
+        "author": {
+          "screenName": "rasbt",
+          "name": "Sebastian Raschka"
+        }
+      }
+    },
+    {
+      "id": "2062235700636873082",
+      "text": "It's been a while! 4 nice additions to the open-weight local-LLM-on-consumer-hardware ecosystem: https://t.co/8cTXF3aStp",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1068,
+        "retweets": 167,
+        "replies": 34,
+        "quotes": 6,
+        "views": 96072,
+        "bookmarks": 496
+      },
+      "createdAt": "Wed Jun 03 18:11:20 +0000 2026",
+      "createdAtLocal": "2026-06-03 14:11",
+      "createdAtISO": "2026-06-03T18:11:20+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HJ6H8kqWgAASFVd.jpg",
+          "width": 4096,
+          "height": 4096
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2059652784404762711",
+      "text": "The MiniMax M2 series was one of the most widely used open-weight LLM series earlier this year. Now, we got a technical report with some interesting tidbits. I summarized some of them below:\n\n1. Full attention as an anti-trend?:\n\nThey tried hybrid sliding-window attention variants (like so many others, like Xiaomi MiMo, Laguna, Gemma 4, Arcee, Olmo 3, etc.). But even though there were efficiency gains, they said that the production-quality tradeoffs were not worth it for M2.\n\n2. Linear and sparse attention deployment issues:\n\nThey found that linear and sparse attention are attractive on paper because they reduce the cost of long-context attention, but they are harder to make work well in a production agent system. \n\nIn particular, they found that these efficient attention variants may be more fragile when KV-like state or intermediate memory is stored in lower precision.\n\nAlso, they have worse prefix caching support, which matters a lot when using coding agents (which reuse a lot of the context).\n\n3. Fine-grained Mixture-of-Experts (MoEs) are useful:\n\nFinally a recent MoE ablation study! It's only on the 2B-active parameter scale, but hey, better than nothing. \n\nConcretely, they compare a baseline with 32 experts and top-2 routing against a fine-grained setup with 128 experts and top-8 routing. \n\nThe fine-grained setup improves MATH from 19.6 to 24.1 and HumanEval from 29.7 to 32.5. That's clearly a win for more fine-grained experts (confirming what the DeepSeek MoE paper reported ~2 years ago).\n\n4. Sophisticated agent pipeline\n\nIt's probably no surprise, but this papers confirms that training for agent-like behavior on software engineering task is now a big component of the training pipeline. \n\nThey mine GitHub pull requests, builds runnable Docker environments, extracts task-specific test rewards, etc.\n\n5. Interleaved thinking for context management\n\nInterestingly, they found that removing reasoning blocks from previous turns results in worse performance, especially in multi-step agent tasks. (Another point why long-context support is so important these days).\n\n6. Speed rewards\n\nIt's common to have token usage penalties, but what's interesting is that the MiniMax team adds a task-completion-time reward that depends on wall-clock time. This is to minimize unnecessary (slow) tool calls. Also, I'm thinking that this would encourage agent parallelization (if supported by the harness)\n\n7. Self-evolution\n\nLooks like self-evolution is also already a big design component of open-weight LLMs. E.g., the paper says that M2.7 already handles 30 to 50 percent of the daily RL iteration workload, modifies its own scaffold, and completed a 100-round autonomous scaffold optimization cycle with a 30 percent gain on internal evaluations.",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 540,
+        "retweets": 94,
+        "replies": 36,
+        "quotes": 0,
+        "views": 39479,
+        "bookmarks": 261
+      },
+      "createdAt": "Wed May 27 15:07:44 +0000 2026",
+      "createdAtLocal": "2026-05-27 11:07",
+      "createdAtISO": "2026-05-27T15:07:44+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HJVbPnDW0AE7eRC.jpg",
+          "width": 4096,
+          "height": 4096
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2059470969249608089",
+        "text": "Recently, we took time to consolidate all of the work behind M2 and published it here: our M2 paper on arXiv\n\nIt’s been just over six months since we first open-sourced M2 on December 23 last year.\nDuring that time, a number of our ideas and systems have been broadly adopted by the open-source community — including CISPO, Forge RL System, Self-Evolution.\nOver the past six months, we’ve felt incredible enthusiasm from the open-source community. Nearly every model release reached the #1 spot on the Hugging Face leaderboard.\n\nNow it’s time for a new chapter.\nWe’re getting ready for M3.\n\nMSA paper is on the road.\nhttps://t.co/jeLPMhtuIx",
+        "author": {
+          "screenName": "RyanLeeMiniMax",
+          "name": "RyanLee"
+        }
+      }
+    },
+    {
+      "id": "2058206420927951191",
+      "text": "Added a DeepSeek Sparse Attention (DSA) from-scratch implementation to my LLMs-from-scratch repo thanks to an awesome new reader contrib. \nWith motivation, overview, and GPT-style model reference implementation as standalone example code: https://t.co/o2PMhjF0TN https://t.co/jjKyt3aPcR",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1787,
+        "retweets": 243,
+        "replies": 45,
+        "quotes": 6,
+        "views": 75616,
+        "bookmarks": 1129
+      },
+      "createdAt": "Sat May 23 15:20:25 +0000 2026",
+      "createdAtLocal": "2026-05-23 11:20",
+      "createdAtISO": "2026-05-23T15:20:25+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HJA3yp7XoAA-PSQ.jpg",
+          "width": 3155,
+          "height": 4096
+        }
+      ],
+      "urls": [
+        "https://github.com/rasbt/LLMs-from-scratch/tree/main/ch04/09_dsa"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2057599925878169761",
+      "text": "Gated DeltaNet has been one of my favorite \"hybrid attention\" newcomers in the good old transformer stack.\nExcited to see Gated DeltaNet-2. Adding it to my reading stack. In the meantime, I have a primer on Gated DeltaNet here: https://t.co/FoicOLtFE6",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 381,
+        "retweets": 53,
+        "replies": 24,
+        "quotes": 0,
+        "views": 53146,
+        "bookmarks": 229
+      },
+      "createdAt": "Thu May 21 23:10:25 +0000 2026",
+      "createdAtLocal": "2026-05-21 19:10",
+      "createdAtISO": "2026-05-21T23:10:25+00:00",
+      "media": [],
+      "urls": [
+        "https://magazine.sebastianraschka.com/i/177848019/26-gated-deltanet"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2057586630450610673",
+        "text": "Gated DeltaNet-2 is here. 🚀\n\n🔥 New paper: Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention\n\nGated DeltaNet-2 outperforms KDA and Mamba-3, the latest and best recurrent architectures, head to head at 1.3B. 🏆\n\n💡 Here's the idea behind it:\n\nLinear attention squeezes an unbounded KV cache into a fixed-size recurrent state. The hard part isn't just what to forget, it's how to edit that memory without scrambling the associations already in it.\n\nPrior delta-rule models like Gated DeltaNet and KDA use one scalar gate to do two jobs at once: erasing old content and writing new content. But these two decisions act on different axes of the state, so tying them together is a real limitation.\n\nGated DeltaNet-2 decouples them.\n\n✂️ a channel-wise erase gate b_t picks which key-side coordinates to read and remove\n✍️ a channel-wise write gate w_t picks which value-side coordinates to commit\n🔁 recovers KDA when both gates collapse to a scalar, and Gated DeltaNet when the decay collapses too\n⚡ still trains fast: chunkwise WY algorithm with gate-aware backward, fused in Triton\n\n📊 Results:\n\nWe train 1.3B models on 100B tokens of FineWeb-Edu, matched in recurrent state size, against Mamba-2, Gated DeltaNet, KDA, and Mamba-3.\n\nBest average on language modeling + commonsense reasoning, in both recurrent and hybrid settings\nBiggest gains on long-context RULER retrieval. S-NIAH-3 jumps from 63 to 90 over KDA, and multi-key needle retrieval climbs from 28 to 38\n\nJoint work with @YejinChoinka and @jankautz.\n\n📄 Paper: https://t.co/Zw6yXbHjGU \n💻 Code: https://t.co/s8IWwaRU18\n\n#LinearAttention #StateSpaceModels #Mamba #LLM",
+        "author": {
+          "screenName": "ahatamiz1",
+          "name": "Ali Hatamizadeh"
+        }
+      }
+    },
+    {
+      "id": "2057600558375080235",
+      "text": "PS: it can be found in recent Qwen models since Qwen3-Next https://t.co/I73c3w15HA",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 49,
+        "retweets": 4,
+        "replies": 3,
+        "quotes": 0,
+        "views": 8374,
+        "bookmarks": 24
+      },
+      "createdAt": "Thu May 21 23:12:56 +0000 2026",
+      "createdAtLocal": "2026-05-21 19:12",
+      "createdAtISO": "2026-05-21T23:12:56+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HI4QwqRWwAAApAF.jpg",
+          "width": 2048,
+          "height": 1281
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2057241574161932339",
+      "text": "It's been *almost* a bit quiet around LLM architecture releases in the past two weeks 😅\n\nInteresting tidbit is the parallel block design. Via the Cmd-A the tech report \n\"equivalent performance but significant improvement in throughput compared to the vanilla transformer block.\" https://t.co/znIyINCgI0",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 672,
+        "retweets": 79,
+        "replies": 32,
+        "quotes": 4,
+        "views": 67689,
+        "bookmarks": 355
+      },
+      "createdAt": "Wed May 20 23:26:27 +0000 2026",
+      "createdAtLocal": "2026-05-20 19:26",
+      "createdAtISO": "2026-05-20T23:26:27+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HIzKN2GWsAA9fTT.jpg",
+          "width": 1350,
+          "height": 1314
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2057120818551734589",
+        "text": "Introducing: Cohere Command A+\n\nWe’ve created our most powerful LLM yet, optimized it to run on as little hardware as possible, and released it open-source for all. https://t.co/C1KYnvA8JB",
+        "author": {
+          "screenName": "cohere",
+          "name": "Cohere"
+        }
+      }
+    },
+    {
+      "id": "2055637086380650538",
+      "text": "New article: a visual tour of recent LLM architecture advances, from Gemma 4 to DeepSeek V4.\n\nI focus on long-context efficiency tweaks like KV sharing, per-layer embeddings, layer-wise attention budgets, compressed attention, and mHC.\n\nLink: https://t.co/KO81y3kTH7 https://t.co/wTx51QpQu4",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2348,
+        "retweets": 427,
+        "replies": 45,
+        "quotes": 10,
+        "views": 123898,
+        "bookmarks": 1884
+      },
+      "createdAt": "Sat May 16 13:10:47 +0000 2026",
+      "createdAtLocal": "2026-05-16 09:10",
+      "createdAtISO": "2026-05-16T13:10:47+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HIcWzd6WcAAQX_9.jpg",
+          "width": 3324,
+          "height": 4096
+        }
+      ],
+      "urls": [
+        "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2054936440975310910",
+      "text": "Meta observation: DeepSeek is still king of the active-parameter ratio https://t.co/flnfGAMjqq",
+      "author": {
+        "id": "865622395",
+        "name": "Sebastian Raschka",
+        "screenName": "rasbt",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1661187442043486209/a3E4t1eV_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 334,
+        "retweets": 38,
+        "replies": 20,
+        "quotes": 7,
+        "views": 59151,
+        "bookmarks": 96
+      },
+      "createdAt": "Thu May 14 14:46:41 +0000 2026",
+      "createdAtLocal": "2026-05-14 10:46",
+      "createdAtISO": "2026-05-14T14:46:41+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HISZg8ZWsAAmHEX.jpg",
+          "width": 2400,
+          "height": 2656
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    }
+  ]
+}

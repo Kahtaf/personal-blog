@@ -1,0 +1,666 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2064127981161959567",
+      "text": "https://t.co/hIe0UX7z6T",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 8037,
+        "retweets": 1267,
+        "replies": 357,
+        "quotes": 358,
+        "views": 2353222,
+        "bookmarks": 18709
+      },
+      "createdAt": "Mon Jun 08 23:30:35 +0000 2026",
+      "createdAtLocal": "2026-06-08 19:30",
+      "createdAtISO": "2026-06-08T23:30:35+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2064122477731852288"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Loop Engineering."
+    },
+    {
+      "id": "2070592005177328010",
+      "text": "The repo covered everything about Loop engineering\n\nStop prompting your AI coding agents.\nStart designing loops that prompt them for you.\n\nThis is Loop Engineering the next evolution after prompt engineering.\n\nYou build the system once It handles triage, PRs, CI, dependencies, changelogs, and more automatically.\n\nInspired by Addy Osmani, Boris Cherny (Claude Code), and Peter Steinberger:\n\n“You shouldn’t be prompting coding agents anymore, You should be designing loops that prompt your agents.”\n\n- https://t.co/HHboXDGSP8",
+      "author": {
+        "id": "1445347022555340805",
+        "name": "Md Ismail Šojal 🕷️",
+        "screenName": "0x0SojalSec",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2007035104158482432/yKGFeKJD_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 39,
+        "retweets": 11,
+        "replies": 0,
+        "quotes": 0,
+        "views": 3149,
+        "bookmarks": 58
+      },
+      "createdAt": "Fri Jun 26 19:36:18 +0000 2026",
+      "createdAtLocal": "2026-06-26 15:36",
+      "createdAtISO": "2026-06-26T19:36:18+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLw3-zKbkAAqPrO.jpg",
+          "width": 1242,
+          "height": 1780
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074933173318984174",
+      "text": "https://t.co/4RXllGwgyq",
+      "author": {
+        "id": "1506717423709278213",
+        "name": "Li Yin",
+        "screenName": "panda_liyin",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2066230358207844352/MB7KjRMP_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 106,
+        "retweets": 22,
+        "replies": 19,
+        "quotes": 17,
+        "views": 27292,
+        "bookmarks": 131
+      },
+      "createdAt": "Wed Jul 08 19:06:33 +0000 2026",
+      "createdAtLocal": "2026-07-08 15:06",
+      "createdAtISO": "2026-07-08T19:06:33+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074926223831216128"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Loop Engineering For Everyone "
+    },
+    {
+      "id": "2067018861833224664",
+      "text": "Stop making prompts.\nStart designing loops.\nLoop engineering is the new meta.😗\n\nBoris Cherny (Claude Code at Anthropic) and others no longer “prompt” they design loops that prompt themselves.\n\nA loop is a self-running system with memory, automation, isolation, and objective checks.\n\nA single prompt gives you one response. A well-designed loop gives you a system that keeps working long after you close your laptop.\n\n6 key pieces of every working AI agent loop:\n\n1. Automations (triggers that run without you)\n2. Memory files ( STATE.md that survives runs)\n3. Worktrees (isolation so agents don’t collide)\n4. Skills & sub-agents\n5. Evaluator-optimizer pattern (writer vs checker)\n6. Hard stop conditions (not the AI says it’s done)\n\nThis is how you go from chatty AI to production-grade systems.\n\nThis is the exact shift top engineers at Anthropic are making right now.",
+      "author": {
+        "id": "1445347022555340805",
+        "name": "Md Ismail Šojal 🕷️",
+        "screenName": "0x0SojalSec",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2007035104158482432/yKGFeKJD_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 21,
+        "retweets": 7,
+        "replies": 2,
+        "quotes": 1,
+        "views": 3800,
+        "bookmarks": 25
+      },
+      "createdAt": "Tue Jun 16 22:57:54 +0000 2026",
+      "createdAtLocal": "2026-06-16 18:57",
+      "createdAtISO": "2026-06-16T22:57:54+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2066401066518802637",
+        "text": "https://t.co/tlLZjVprSj",
+        "author": {
+          "screenName": "mikenevermiss",
+          "name": "MIKE"
+        }
+      }
+    },
+    {
+      "id": "2073078637730189374",
+      "text": "https://t.co/kAZAkoPphh",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 424,
+        "retweets": 61,
+        "replies": 13,
+        "quotes": 11,
+        "views": 511427,
+        "bookmarks": 1474
+      },
+      "createdAt": "Fri Jul 03 16:17:17 +0000 2026",
+      "createdAtLocal": "2026-07-03 12:17",
+      "createdAtISO": "2026-07-03T16:17:17+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2072063473421602816"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Fable 5: A Beginner's Guide to Loop Engineering "
+    },
+    {
+      "id": "2074829992878567825",
+      "text": "Loop Engineering in one line: \n\n\"Designing loops that prompt your agents\"",
+      "author": {
+        "id": "1818957725319213056",
+        "name": "Gargie ;)",
+        "screenName": "gargieesingh",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2032064125862658048/_H3Xv8DT_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 3,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 59,
+        "bookmarks": 0
+      },
+      "createdAt": "Wed Jul 08 12:16:33 +0000 2026",
+      "createdAtLocal": "2026-07-08 08:16",
+      "createdAtISO": "2026-07-08T12:16:33+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMtG3FvakAAqbsL.jpg",
+          "width": 1280,
+          "height": 640
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074834079732699417",
+      "text": "https://t.co/O1GcSrIYBE",
+      "author": {
+        "id": "1355430540351066112",
+        "name": "Evgush",
+        "screenName": "Pixel_Neuron",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2026716199875149824/iE9LB3Rq_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 0,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 25,
+        "bookmarks": 0
+      },
+      "createdAt": "Wed Jul 08 12:32:47 +0000 2026",
+      "createdAtLocal": "2026-07-08 08:32",
+      "createdAtISO": "2026-07-08T12:32:47+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074833280742932480"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Loop engineering: why prompting agents is already obsolete The skill nobody explained clearly is qu"
+    },
+    {
+      "id": "2074208949205881033",
+      "text": "https://t.co/v694m8Eaj6",
+      "author": {
+        "id": "2024518793679294464",
+        "name": "ClaudeDevs",
+        "screenName": "ClaudeDevs",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2044472418815893504/xf14RxM8_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 16931,
+        "retweets": 2073,
+        "replies": 310,
+        "quotes": 464,
+        "views": 5544247,
+        "bookmarks": 37139
+      },
+      "createdAt": "Mon Jul 06 19:08:45 +0000 2026",
+      "createdAtLocal": "2026-07-06 15:08",
+      "createdAtISO": "2026-07-06T19:08:45+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074204645845839872"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Getting started with loops "
+    },
+    {
+      "id": "2072045517815894441",
+      "text": "I loved @RLanceMartin's 'Designing Loops with Fable 5'\n\nFor agents to be more autonomous and loops to be successful, a company needs an outer loop that is maintain a source of truth.\n\nWithout it you're losing that information to the blackhole.",
+      "author": {
+        "id": "1021864596548681728",
+        "name": "Aryaman Agrawal",
+        "screenName": "AryamanAgrawal5",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1807830026047651840/BTrluuOv_normal.jpg",
+        "verified": false
+      },
+      "metrics": {
+        "likes": 6,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 120,
+        "bookmarks": 0
+      },
+      "createdAt": "Tue Jun 30 19:52:02 +0000 2026",
+      "createdAtLocal": "2026-06-30 15:52",
+      "createdAtISO": "2026-06-30T19:52:02+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072042161261167076",
+        "text": "https://t.co/zDnZsj4FOZ",
+        "author": {
+          "screenName": "AryamanAgrawal5",
+          "name": "Aryaman Agrawal"
+        }
+      }
+    },
+    {
+      "id": "2064019464803483676",
+      "text": "Lots of discussion about designing loops right now (for good reason). As @steipete (AKA the Clawfather) says, you should design loops that prompt your agents.\n\nPrompting agents creates this perceived sense of a productive doom scroll. I want to shift from IN the loop to ON it. https://t.co/scnzRJtIsw",
+      "author": {
+        "id": "14338572",
+        "name": "David Hoang",
+        "screenName": "davidhoang",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910739297415946241/d8GsHRZh_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 19,
+        "retweets": 1,
+        "replies": 2,
+        "quotes": 0,
+        "views": 2547,
+        "bookmarks": 16
+      },
+      "createdAt": "Mon Jun 08 16:19:22 +0000 2026",
+      "createdAtLocal": "2026-06-08 12:19",
+      "createdAtISO": "2026-06-08T16:19:22+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HKTeEOibgAAsQ3Y.jpg",
+          "width": 1456,
+          "height": 1024
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2064277888216555684",
+      "text": "https://t.co/kZFYtIdHAj",
+      "author": {
+        "id": "299656190",
+        "name": "Rahul",
+        "screenName": "sairahul1",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1999441729800536065/6-3Y5xyR_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2963,
+        "retweets": 491,
+        "replies": 108,
+        "quotes": 70,
+        "views": 4699168,
+        "bookmarks": 11940
+      },
+      "createdAt": "Tue Jun 09 09:26:15 +0000 2026",
+      "createdAtLocal": "2026-06-09 05:26",
+      "createdAtISO": "2026-06-09T09:26:15+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2063986184443899905"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Loops: What Every AI Engineer Needs to Know in 2026"
+    },
+    {
+      "id": "2063697162748260627",
+      "text": "Here’s your monthly reminder that you shouldn’t be prompting coding agents anymore.\n\nYou should be designing loops that prompt your agents.",
+      "author": {
+        "id": "25401953",
+        "name": "Peter Steinberger 🦞",
+        "screenName": "steipete",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1131851609774985216/OcsssQ9J_normal.png",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 19841,
+        "retweets": 1415,
+        "replies": 1809,
+        "quotes": 1445,
+        "views": 8461384,
+        "bookmarks": 14302
+      },
+      "createdAt": "Sun Jun 07 18:58:39 +0000 2026",
+      "createdAtLocal": "2026-06-07 14:58",
+      "createdAtISO": "2026-06-07T18:58:39+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2063883301278924857",
+      "text": "A loop without memory starts from zero every run.\nA loop with memory remembers every mistake and repeats it.\nA loop that learns turns those mistakes into rules it has to follow.\n\nMine spent weeks as the second one.\n\nYour job is not designing loops that prompt your agents. It's designing loops that learn from experience.",
+      "author": {
+        "id": "1459767830623178755",
+        "name": "Paweł Huryn",
+        "screenName": "PawelHuryn",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2049244285313359872/geQuKlQP_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 75,
+        "retweets": 3,
+        "replies": 25,
+        "quotes": 2,
+        "views": 12764,
+        "bookmarks": 70
+      },
+      "createdAt": "Mon Jun 08 07:18:18 +0000 2026",
+      "createdAtLocal": "2026-06-08 03:18",
+      "createdAtISO": "2026-06-08T07:18:18+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2063697162748260627",
+        "text": "Here’s your monthly reminder that you shouldn’t be prompting coding agents anymore.\n\nYou should be designing loops that prompt your agents.",
+        "author": {
+          "screenName": "steipete",
+          "name": "Peter Steinberger 🦞"
+        }
+      }
+    },
+    {
+      "id": "2074731559941259659",
+      "text": "https://t.co/KJqRkh6oOk",
+      "author": {
+        "id": "252090733",
+        "name": "Michael Ettlinger",
+        "screenName": "etticat",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1423613184632623110/NY-9WUE6_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2,
+        "retweets": 1,
+        "replies": 0,
+        "quotes": 0,
+        "views": 212,
+        "bookmarks": 1
+      },
+      "createdAt": "Wed Jul 08 05:45:25 +0000 2026",
+      "createdAtLocal": "2026-07-08 01:45",
+      "createdAtISO": "2026-07-08T05:45:25+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074727233738899456"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Scaling loop engineering to the team "
+    },
+    {
+      "id": "2063986022401110507",
+      "text": "You shouldn't be designing loops to prompt your agents anymore. You should be writing state machines that design loops that prompt your agents.",
+      "author": {
+        "id": "16375739",
+        "name": "kwindla",
+        "screenName": "kwindla",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1790772534914551808/YpwkVUIl_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 49,
+        "retweets": 5,
+        "replies": 12,
+        "quotes": 4,
+        "views": 5970,
+        "bookmarks": 12
+      },
+      "createdAt": "Mon Jun 08 14:06:29 +0000 2026",
+      "createdAtLocal": "2026-06-08 10:06",
+      "createdAtISO": "2026-06-08T14:06:29+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074576029499240813",
+      "text": "\"Loop engineering\" isn't the next step after \"prompt engineering.\" It's the bill. \n\nPrompt engineering was always technical debt. Loop engineering just made it visible.\n\nIn a post published in June, Peter Steinberger said out loud what many had been quietly thinking: you shouldn't be prompting coding agents anymore — you should be designing loops that prompt your agents. Boris Cherny of Anthropic described a similar shift: he no longer prompts Claude directly. He builds loops that prompt Claude for him. Addy Osmani mapped the progression clearly: prompt is one layer, context is another, then the harness (the tools, decision logic, error handling, and everything else that turns a model into something that can actually complete work). Sitting on top of all of it is the loop. The industry is celebrating this as a breakthrough. And it really is — for loops. But for everything built below them, it's the end of the road.\n\nHere's the part nobody wants to say out loud. If loops are now what prompt the agents, then every prompt library someone spent the last two or three years carefully curating is no longer an asset. It's scaffolding that has been removed. The individual prompts still work — that was never the issue. The problem is that the step they were standing on has been cut away from above. What used to be the top layer of the stack is now just one component inside something larger.\n\nThis isn't just about one person's carefully tuned prompts suddenly breaking. It's about the entire abstraction layer moving up. Once a harness sits above your prompts, those prompts stop being things you own and curate. They become implementation details the harness generates on the fly.\n\nWe've seen this pattern before. In the early 2000s, SEO experts who had spent years mastering meta tags and keyword density woke up to PageRank and realized their hard-won expertise wasn't wrong — it was simply operating at the wrong layer of the stack. Google didn't invalidate their skill. It just moved the game upstairs. The same thing is happening now with prompt engineering.\n\nThe people building loops today are doing to prompt engineering what Google did to meta-tag SEO. They're mostly not saying it out loud yet — loop engineering is still a new term, and nobody wants to look like they're dismissing an entire community that's still processing the shift. But the economics are straightforward. Generating prompts has become nearly free. Prompt libraries have gone from valuable assets to something close to worthless. What remains scarce is judgment: knowing which loop to build in the first place, when to let it run, and when to step in or shut it down. That was always the real skill. Everything else was just the layer we happened to be working in at the time.\n\nIf you built a prompt library over the last few years and you're feeling defensive reading this, that's a useful signal. The move isn't to defend the library. It's to notice which layer of the stack you were actually working on, and move up to the next one. Building loops isn't harder than writing prompts. It just requires admitting that the old layer is no longer where the leverage is.\n\nWhat layer of the stack were you actually working on this year?\n\nSave this. You'll want it back when the next \"prompt engineering course\" launches and you're trying to remember exactly why you scrolled past it.\n\nFollow for the next one.",
+      "author": {
+        "id": "2071873252784316416",
+        "name": "EchoMind",
+        "screenName": "ai0echomind",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2071909404392194048/jw3vpyBr_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4,
+        "retweets": 1,
+        "replies": 0,
+        "quotes": 0,
+        "views": 306,
+        "bookmarks": 3
+      },
+      "createdAt": "Tue Jul 07 19:27:23 +0000 2026",
+      "createdAtLocal": "2026-07-07 15:27",
+      "createdAtISO": "2026-07-07T19:27:23+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2073438517775003671",
+        "text": "https://t.co/8PUvfLawTX",
+        "author": {
+          "screenName": "0x_kaize",
+          "name": "kaize"
+        }
+      }
+    },
+    {
+      "id": "2064811708481249780",
+      "text": "Designing Loops That Prompt Your Agents: The 2026 Shift Breaking the AI Timeline\n\nhttps://t.co/nwnkCNobCv https://t.co/iMePa5AkgD",
+      "author": {
+        "id": "1669429989450588161",
+        "name": "88 Labs",
+        "screenName": "88LabsAI",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2045352594709561344/xS5nlr8C_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 7,
+        "retweets": 2,
+        "replies": 0,
+        "quotes": 0,
+        "views": 810,
+        "bookmarks": 5
+      },
+      "createdAt": "Wed Jun 10 20:47:28 +0000 2026",
+      "createdAtLocal": "2026-06-10 16:47",
+      "createdAtISO": "2026-06-10T20:47:28+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HKevTdQWkAEr1Dd.jpg",
+          "width": 981,
+          "height": 551
+        }
+      ],
+      "urls": [
+        "https://88labs.ai/blog/designing-loops-that-prompt-your-agents-2026"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2066401066518802637",
+      "text": "https://t.co/tlLZjVprSj",
+      "author": {
+        "id": "1788243647885987840",
+        "name": "MIKE",
+        "screenName": "mikenevermiss",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2004815313108389888/uzJndIfx_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1594,
+        "retweets": 196,
+        "replies": 72,
+        "quotes": 29,
+        "views": 1872488,
+        "bookmarks": 6073
+      },
+      "createdAt": "Mon Jun 15 06:03:00 +0000 2026",
+      "createdAtLocal": "2026-06-15 02:03",
+      "createdAtISO": "2026-06-15T06:03:00+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2066041362298912768"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "How to Create Loops with Claude"
+    },
+    {
+      "id": "2070814679283204507",
+      "text": "You shouldn't be prompting AI agents anymore. You should be designing loops that prompt them.\n\nIt's called Loop Engineering.\n\n→ 7 production-ready patterns to clone and run\n→ Works with Claude Code, Codex, Grok, and Cursor\n→ CLI tools to scaffold, audit, and estimate token cost\n→ Start at L1 report-only before anything runs unattended\n\n100% Open-source.",
+      "author": {
+        "id": "1963821944668876800",
+        "name": "Simplifying AI",
+        "screenName": "simplifyinAI",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1988117046995873792/-5ps0VAO_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 37,
+        "retweets": 6,
+        "replies": 6,
+        "quotes": 1,
+        "views": 3938,
+        "bookmarks": 44
+      },
+      "createdAt": "Sat Jun 27 10:21:08 +0000 2026",
+      "createdAtLocal": "2026-06-27 06:21",
+      "createdAtISO": "2026-06-27T10:21:08+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HL0C3M3W4AAXOHo.jpg",
+          "width": 3075,
+          "height": 2000
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2064343002945085671",
+      "text": "The shift happening right now: stop prompting coding agents, start designing loops that prompt themselves.\n\nDon't use loops. Design state machines.\n\nTHE PEOPLE STILL TYPING PROMPTS BY HAND ARE ALREADY BEHIND.\n https://t.co/FRKKUD28yx",
+      "author": {
+        "id": "1536693901230321666",
+        "name": "0xMarioNawfal",
+        "screenName": "RoundtableSpace",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012162102283407360/U-fPj6wg_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 114,
+        "retweets": 6,
+        "replies": 15,
+        "quotes": 1,
+        "views": 42776,
+        "bookmarks": 74
+      },
+      "createdAt": "Tue Jun 09 13:45:00 +0000 2026",
+      "createdAtLocal": "2026-06-09 09:45",
+      "createdAtISO": "2026-06-09T13:45:00+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2063929869726044160/vid/avc1/1576x1080/lFQmXZ4mDrR2psww.mp4?tag=27",
+          "width": 1576,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    }
+  ]
+}

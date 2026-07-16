@@ -1,0 +1,645 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2074948137182257284",
+      "text": "I've been letting Claude and GLT-5.5 write almost all of my commit messages recently, but I don't feel great about it\n\n\"omitting the higher-level framing needed to understand broadly what the code is doing\" is definitely the key problem there",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 456,
+        "retweets": 17,
+        "replies": 58,
+        "quotes": 4,
+        "views": 62814,
+        "bookmarks": 127
+      },
+      "createdAt": "Wed Jul 08 20:06:01 +0000 2026",
+      "createdAtLocal": "2026-07-08 16:06",
+      "createdAtISO": "2026-07-08T20:06:01+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074924213983740233",
+        "text": "I just declared a moratorium against AI-written change descriptions (e.g. PR and commit messages, also issues/tickets) from my team.\n\nAI was writing change descriptions that were worse than useless to me as I tried to review PRs: outlining details of the code that could easily be seen by looking at the code, but omitting the higher-level framing needed to understand broadly what the code is doing.\n\nI think people like having AI write these things because the output looks structured and thorough, which makes it feel professional in a way. But this isn't actually valuable. Concise, high-level descriptions are better for everyone. If I need to use my own AI to interpret what your AI wrote then something is wrong. Let AI write code, sure, but for the description, I'd rather see your prompt than your output.\n\nWe could maybe have extended agents.md with guidelines on writing descriptions, but this seemed a bit pointless since a good, concise change description only takes a few minutes to write -- not a significant time savings to delegate to AI. At least, it doesn't take long if you understand the code -- and if you don't understand the code, then I'm definitely not merging it.",
+        "author": {
+          "screenName": "KentonVarda",
+          "name": "Kenton Varda"
+        }
+      }
+    },
+    {
+      "id": "2074948354778493232",
+      "text": "Sometimes they DO attempt to do that but guess the rationale incorrectly, which is worse than not adding no a rationale at all\n\nI do try to link commits back to issues though, which are written by me and provide a much better answer to the reason behind a change",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 31,
+        "retweets": 1,
+        "replies": 5,
+        "quotes": 0,
+        "views": 6313,
+        "bookmarks": 4
+      },
+      "createdAt": "Wed Jul 08 20:06:53 +0000 2026",
+      "createdAtLocal": "2026-07-08 16:06",
+      "createdAtISO": "2026-07-08T20:06:53+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074578747106431017",
+      "text": "I released sqlite-utils 4.0, the 124th release but the first major version bump since 3.0 back in 2020\n\nI managed to keep things backwards-compatible all the way up to version 3.39 before the accumulated design mistakes forced me to bump that number!  https://t.co/qQ83UiBOvv",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 87,
+        "retweets": 4,
+        "replies": 17,
+        "quotes": 2,
+        "views": 18616,
+        "bookmarks": 15
+      },
+      "createdAt": "Tue Jul 07 19:38:11 +0000 2026",
+      "createdAtLocal": "2026-07-07 15:38",
+      "createdAtISO": "2026-07-07T19:38:11+00:00",
+      "media": [],
+      "urls": [
+        "https://simonwillison.net/2026/Jul/7/sqlite-utils-4/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074582650422177885",
+      "text": "Since this is a slightly backwards-incompatible change here's a detailed upgrade guide - which you can read, or feed into your coding agent and have it apply the upgrades for you https://t.co/hsb4d3SiFe",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 11,
+        "retweets": 0,
+        "replies": 4,
+        "quotes": 0,
+        "views": 7375,
+        "bookmarks": 1
+      },
+      "createdAt": "Tue Jul 07 19:53:42 +0000 2026",
+      "createdAtLocal": "2026-07-07 15:53",
+      "createdAtISO": "2026-07-07T19:53:42+00:00",
+      "media": [],
+      "urls": [
+        "https://sqlite-utils.datasette.io/en/stable/upgrading.html"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074583235007578619",
+      "text": "I had Claude Fable 5 run a final review of the release using this prompt and it kicked up another four release blockers! https://t.co/JlWYNWVozt https://t.co/rxrhMds99E",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 26,
+        "retweets": 0,
+        "replies": 10,
+        "quotes": 0,
+        "views": 6898,
+        "bookmarks": 6
+      },
+      "createdAt": "Tue Jul 07 19:56:01 +0000 2026",
+      "createdAtLocal": "2026-07-07 15:56",
+      "createdAtISO": "2026-07-07T19:56:01+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMpmTSYboAAHmzn.jpg",
+          "width": 1170,
+          "height": 352
+        }
+      ],
+      "urls": [
+        "https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#claude-fable-5-helped-a-lot"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074564456563232846",
+      "text": "Just found out about this from this little popup message in the Claude chat web UI https://t.co/s3ZJ7sDSpH",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 212,
+        "retweets": 2,
+        "replies": 23,
+        "quotes": 0,
+        "views": 31558,
+        "bookmarks": 11
+      },
+      "createdAt": "Tue Jul 07 18:41:24 +0000 2026",
+      "createdAtLocal": "2026-07-07 14:41",
+      "createdAtISO": "2026-07-07T18:41:24+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMpVXiqacAAwUBH.png",
+          "width": 790,
+          "height": 358
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074548242386178258",
+        "text": "We're extending access to Claude Fable 5 on all paid plans through July 12.",
+        "author": {
+          "screenName": "claudeai",
+          "name": "Claude"
+        }
+      }
+    },
+    {
+      "id": "2074565236619927935",
+      "text": "Now I'm regretting having carefully blasted through 100% of my Fable allotment in time for being cut off at the end of today!\n\n(Presumably \"Wed 12:00 PM\" means I get it back at noon on Wednesday, not at midnight between Tuesday and Wednesday?) https://t.co/zVpWxJagIr",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 119,
+        "retweets": 1,
+        "replies": 19,
+        "quotes": 0,
+        "views": 10879,
+        "bookmarks": 3
+      },
+      "createdAt": "Tue Jul 07 18:44:30 +0000 2026",
+      "createdAtLocal": "2026-07-07 14:44",
+      "createdAtISO": "2026-07-07T18:44:30+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMpVvI1bcAAGsTO.jpg",
+          "width": 1178,
+          "height": 602
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073574214280544746",
+      "text": "Somewhat humbling to have Claude Fable do a final review of some software that you're about to release and have it then find (and fix) FIVE release blockers, for an estimated (unsubsidized) cost of $149.25 https://t.co/9621pMmlmJ",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1156,
+        "retweets": 42,
+        "replies": 85,
+        "quotes": 12,
+        "views": 108775,
+        "bookmarks": 335
+      },
+      "createdAt": "Sun Jul 05 01:06:32 +0000 2026",
+      "createdAtLocal": "2026-07-04 21:06",
+      "createdAtISO": "2026-07-05T01:06:32+00:00",
+      "media": [],
+      "urls": [
+        "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073117641020215566",
+      "text": "The most interesting Fable tip I've heard so far is to let the model use its own judgement as much as possible\n\nI told it \"For all coding tasks use your judgement to decide an appropriate lower power model and run that in a subagent\" and it seems to be saving a lot of tokens",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4877,
+        "retweets": 205,
+        "replies": 213,
+        "quotes": 37,
+        "views": 413275,
+        "bookmarks": 3539
+      },
+      "createdAt": "Fri Jul 03 18:52:16 +0000 2026",
+      "createdAtLocal": "2026-07-03 14:52",
+      "createdAtISO": "2026-07-03T18:52:16+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073117671521210525",
+      "text": "More notes on my blog: https://t.co/R2tCp4ThFH",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 236,
+        "retweets": 8,
+        "replies": 3,
+        "quotes": 1,
+        "views": 37017,
+        "bookmarks": 259
+      },
+      "createdAt": "Fri Jul 03 18:52:24 +0000 2026",
+      "createdAtLocal": "2026-07-03 14:52",
+      "createdAtISO": "2026-07-03T18:52:24+00:00",
+      "media": [],
+      "urls": [
+        "https://simonwillison.net/2026/Jul/3/judgement/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073094174161998184",
+      "text": "Sent out my sponsors-only monthly newsletter for June, which means the May newsletter is now available here https://t.co/0uESSnY7lO - you can sponsor me through GitHub to stay a month ahead of the free copy!",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 79,
+        "retweets": 4,
+        "replies": 8,
+        "quotes": 0,
+        "views": 19532,
+        "bookmarks": 41
+      },
+      "createdAt": "Fri Jul 03 17:19:02 +0000 2026",
+      "createdAtLocal": "2026-07-03 13:19",
+      "createdAtISO": "2026-07-03T17:19:02+00:00",
+      "media": [],
+      "urls": [
+        "https://github.com/simonw/monthly-newsletter-archive/blob/main/2026-05-may.md"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073090126696386570",
+      "text": "\"At least this felt ambitious until fable chewed through each of my requests like it was nothing...\"",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 181,
+        "retweets": 8,
+        "replies": 15,
+        "quotes": 1,
+        "views": 47254,
+        "bookmarks": 71
+      },
+      "createdAt": "Fri Jul 03 17:02:57 +0000 2026",
+      "createdAtLocal": "2026-07-03 13:02",
+      "createdAtISO": "2026-07-03T17:02:57+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072739477118714022",
+        "text": "@simonw I made this 3D video infographic explaining the AuthaGraph map projection, with population density/3D terrain and a moving day-night terminator. At least this felt ambitious until fable chewed through each of my requests like it was nothing... https://t.co/gJZf1AeWqS",
+        "author": {
+          "screenName": "AaronJBecker",
+          "name": "Aaron Becker"
+        }
+      }
+    },
+    {
+      "id": "2072843263732801801",
+      "text": "I absolutely hate how I'm getting to be suspicious of ANY reply to my posts here, especially ones that pose a question, as they are so often from bot accounts\n\nIf you're running a bot like this please stop, you're making the internet a worse place for everyone",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1403,
+        "retweets": 31,
+        "replies": 199,
+        "quotes": 14,
+        "views": 94905,
+        "bookmarks": 40
+      },
+      "createdAt": "Fri Jul 03 00:42:00 +0000 2026",
+      "createdAtLocal": "2026-07-02 20:42",
+      "createdAtISO": "2026-07-03T00:42:00+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072700221524750383",
+      "text": "What's the most ambitious project you have Fable working on right now?",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 722,
+        "retweets": 25,
+        "replies": 332,
+        "quotes": 21,
+        "views": 184654,
+        "bookmarks": 437
+      },
+      "createdAt": "Thu Jul 02 15:13:36 +0000 2026",
+      "createdAtLocal": "2026-07-02 11:13",
+      "createdAtISO": "2026-07-02T15:13:36+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072811052442792309",
+      "text": "I've been blogging a few of my Fable experiments today, most recently I had it more-or-less one-shot a CLI coding agent on top of my LLM Python library https://t.co/xAdaxlYuZH",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 67,
+        "retweets": 3,
+        "replies": 11,
+        "quotes": 0,
+        "views": 14044,
+        "bookmarks": 40
+      },
+      "createdAt": "Thu Jul 02 22:34:00 +0000 2026",
+      "createdAtLocal": "2026-07-02 18:34",
+      "createdAtISO": "2026-07-02T22:34:00+00:00",
+      "media": [],
+      "urls": [
+        "https://simonwillison.net/2026/Jul/2/llm-coding-agent/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072730602344984821",
+      "text": "I really like this \"understand to participate\" framing of the cognitive debt problem when working with coding agents",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 303,
+        "retweets": 25,
+        "replies": 26,
+        "quotes": 2,
+        "views": 54411,
+        "bookmarks": 200
+      },
+      "createdAt": "Thu Jul 02 17:14:19 +0000 2026",
+      "createdAtLocal": "2026-07-02 13:14",
+      "createdAtISO": "2026-07-02T17:14:19+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072522267414901109",
+        "text": "That's where another answer comes in: we can understand to participate.\n\nYou can learn what the agent is doing to make sure you can be an active participant in the creative process. Here's why this matters... 7/",
+        "author": {
+          "screenName": "geoffreylitt",
+          "name": "Geoffrey Litt"
+        }
+      }
+    },
+    {
+      "id": "2072730868502970642",
+      "text": "\"You need a rich set of concepts in your mind to think creatively and fluently about how to move something forward.\"",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 35,
+        "retweets": 2,
+        "replies": 6,
+        "quotes": 1,
+        "views": 13672,
+        "bookmarks": 17
+      },
+      "createdAt": "Thu Jul 02 17:15:23 +0000 2026",
+      "createdAtLocal": "2026-07-02 13:15",
+      "createdAtISO": "2026-07-02T17:15:23+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072522270850080968",
+        "text": "It's never just one loop! A project is many, many loops with the agent.\n\nAnd the understanding you have of the system is part of your ability to come up with the next idea to evolve it. \n\nYou need a rich set of concepts in your mind to think creatively and fluently about how to move something forward. If you're lacking that fluency, your ability to participate in the project is meaningfully limited. 8/",
+        "author": {
+          "screenName": "geoffreylitt",
+          "name": "Geoffrey Litt"
+        }
+      }
+    },
+    {
+      "id": "2072730877176770986",
+      "text": "Blogged about it here: https://t.co/J1XU4r5T8Y",
+      "author": {
+        "id": "12497",
+        "name": "Simon Willison",
+        "screenName": "simonw",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_normal.jpeg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 46,
+        "retweets": 5,
+        "replies": 1,
+        "quotes": 1,
+        "views": 8949,
+        "bookmarks": 58
+      },
+      "createdAt": "Thu Jul 02 17:15:25 +0000 2026",
+      "createdAtLocal": "2026-07-02 13:15",
+      "createdAtISO": "2026-07-02T17:15:25+00:00",
+      "media": [],
+      "urls": [
+        "https://simonwillison.net/2026/Jul/2/understand-to-participate/"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072327112925585751",
+      "text": "@_catwu @simonw and I will be doing a fireside chat about \"This year in Claude\" from 12:30pm-1:30pm at AIE in Expo Stage 2.\n\nWe'll be covering a really wide range of topics and I think it will be really fun, hope to see you there!\n\nhttps://t.co/vk7gr5az89",
+      "author": {
+        "id": "352806502",
+        "name": "Thariq",
+        "screenName": "trq212",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1976939058741039104/r3GgzqRh_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 358,
+        "retweets": 15,
+        "replies": 42,
+        "quotes": 2,
+        "views": 45352,
+        "bookmarks": 58
+      },
+      "createdAt": "Wed Jul 01 14:31:00 +0000 2026",
+      "createdAtLocal": "2026-07-01 10:31",
+      "createdAtISO": "2026-07-01T14:31:00+00:00",
+      "media": [],
+      "urls": [
+        "https://www.ai.engineer/worldsfair/schedule?day=3&session=asn_slot_2026_06_30_main_stage_1230_2026_06_08t09_35_43_039z"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "simonw",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2072106151890809341",
+      "text": "We’ve received notice that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5.\n\nWe'll begin restoring access tomorrow, and will share an update soon.\n\nWe’re grateful to our users for their patience, and to everyone who worked with us on redeploying the models.",
+      "author": {
+        "id": "1353836358901501952",
+        "name": "Anthropic",
+        "screenName": "AnthropicAI",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1798110641414443008/XP8gyBaY_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 84866,
+        "retweets": 12973,
+        "replies": 4104,
+        "quotes": 7052,
+        "views": 14705079,
+        "bookmarks": 7413
+      },
+      "createdAt": "Tue Jun 30 23:52:59 +0000 2026",
+      "createdAtLocal": "2026-06-30 19:52",
+      "createdAtISO": "2026-06-30T23:52:59+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "simonw",
+      "lang": "en",
+      "score": null
+    }
+  ]
+}

@@ -1,0 +1,770 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2071513914504802525",
+      "text": "this is f*cking dangerous\n\nsomeone just open sourced the entire \"LOOP ENGINEERING\" framework for free\n\nthe guy who built Claude Code at Anthropic said it himself:\n\n\"I don't prompt Claude anymore. I have loops running that prompt Claude. My job is to write loops.\n\nstop prompting your agent. build the thing that prompts it for you.\n\ndiscover → plan → execute → verify → repeat\n\nyou used to be inside that loop\n\nloop engineering is you stepping out of it entirely\n\nthe repo includes:\n\n- 6 production ready patterns (daily triage, CI sweeper, PR babysitter)\n\n- clone and run starters for Claude Code, Codex, and Grok\n\n- a loop readiness CLI that scores your codebase\n\n- SKILL. md templates, STATE.md spine, full safety docs\n\nuse this one command to start(copy/paste):\n\nnpx @cobusgreyling/loop-init • --pattern daily-triage -tool claude-code\n\nbookmark before this blows up\n\nrepo link : https://t.co/cdj8vizgZC",
+      "author": {
+        "id": "1788243647885987840",
+        "name": "MIKE",
+        "screenName": "mikenevermiss",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2004815313108389888/uzJndIfx_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1166,
+        "retweets": 184,
+        "replies": 61,
+        "quotes": 10,
+        "views": 165315,
+        "bookmarks": 2086
+      },
+      "createdAt": "Mon Jun 29 08:39:38 +0000 2026",
+      "createdAtLocal": "2026-06-29 04:39",
+      "createdAtISO": "2026-06-29T08:39:38+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HL9-67SW4AAieeh.jpg",
+          "width": 788,
+          "height": 1401
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2066401066518802637",
+        "text": "https://t.co/tlLZjVprSj",
+        "author": {
+          "screenName": "mikenevermiss",
+          "name": "MIKE"
+        }
+      }
+    },
+    {
+      "id": "2074870641829023864",
+      "text": "https://t.co/88in2lunys",
+      "author": {
+        "id": "1303670450837311489",
+        "name": "Harshil Tomar",
+        "screenName": "Hartdrawss",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2043211995139448832/n_HsILf7_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 18,
+        "retweets": 6,
+        "replies": 2,
+        "quotes": 0,
+        "views": 732,
+        "bookmarks": 13
+      },
+      "createdAt": "Wed Jul 08 14:58:04 +0000 2026",
+      "createdAtLocal": "2026-07-08 10:58",
+      "createdAtISO": "2026-07-08T14:58:04+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2072673813029130241"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Everything about loop engineering"
+    },
+    {
+      "id": "2063592868581978517",
+      "text": "Boris Cherny (Claude Code creator):\n\n\"I don't prompt Claude anymore... my job is to write loops.\"\n\nIn his latest interview, he breaks down the setup  step by step.\n\nHe runs /loops + a dynamic workflow + a couple hundred agents that read his GitHub, Slack, and Twitter and decide what to build next.\n\nHis only job now is writing the loops that orchestrate them.\n\nThat's a multi-agent workflow. I broke down how to build your own below ↓",
+      "author": {
+        "id": "1713062826175299584",
+        "name": "Avid",
+        "screenName": "Av1dlive",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2010392290590912512/x7vtAe5W_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 104,
+        "retweets": 22,
+        "replies": 34,
+        "quotes": 6,
+        "views": 26915,
+        "bookmarks": 165
+      },
+      "createdAt": "Sun Jun 07 12:04:14 +0000 2026",
+      "createdAtLocal": "2026-06-07 08:04",
+      "createdAtISO": "2026-06-07T12:04:14+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2063592756069662720/vid/avc1/1920x1080/zzZTWvoU8vnS7Cvj.mp4?tag=27",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2061386872321130782",
+        "text": "https://t.co/Trt5X89PiX",
+        "author": {
+          "screenName": "Av1dlive",
+          "name": "Avid"
+        }
+      }
+    },
+    {
+      "id": "2074812548684083542",
+      "text": "https://t.co/ZPPYZEUWkM",
+      "author": {
+        "id": "1859222391164899328",
+        "name": "Chase",
+        "screenName": "0xChaseTM",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2032881680336187392/XM6_5kMS_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 37,
+        "retweets": 8,
+        "replies": 7,
+        "quotes": 8,
+        "views": 29099,
+        "bookmarks": 77
+      },
+      "createdAt": "Wed Jul 08 11:07:14 +0000 2026",
+      "createdAtLocal": "2026-07-08 07:07",
+      "createdAtISO": "2026-07-08T11:07:14+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2073707727742763008"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "How To Build Your Own Loop (Boris Cherny's Method)"
+    },
+    {
+      "id": "2074814425748348977",
+      "text": "@0xChaseTM the \"my job is to write loops\" line is the whole shift, and you framed it perfectly. saving this one",
+      "author": {
+        "id": "1791574069051047937",
+        "name": "sunick",
+        "screenName": "Serantych",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2062869201044242432/QN-50NOU_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 2,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 91,
+        "bookmarks": 0
+      },
+      "createdAt": "Wed Jul 08 11:14:41 +0000 2026",
+      "createdAtLocal": "2026-07-08 07:14",
+      "createdAtISO": "2026-07-08T11:14:41+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2068423648046916044",
+      "text": "Prompt engineering is dead.\n\nWe're entering the era of \"loop engineering\" - where your agents prompt themselves to complete tasks.\n\nLance Martin ( @RLanceMartin ) from Anthropic just leaked the entire playbook for using loops in Claude properly.\n\nHow to run loops with Claude models (step-by-step)\n\nFirst - understand what a loop actually is.\n\nInstead of prompting Claude manually, you design a system where Claude runs, collects feedback, self-corrects, and keeps going until the goal is met.\n\nThe head of Claude Code (Boris) said it best:\n\n\"My job is to write loops.\"\n\nStep 1. Define a goal or rubric\n\nGive Claude a clear rubric with checkable criteria.\n\nExample: \"Run a baseline, run 20 experiments, document each result, improve on the last.\"\n\nUse /goal in Claude Code or Outcomes in Claude Managed Agents; these are the built-in primitives for applying this.\n\nStep 2. Add a verifier sub-agent\n\nDon't let Claude grade its own work.\n\nInstead, launch a verifier sub-agent that grades the outputs.\n\nOutcomes in Claude Managed Agents handle this automatically.\n\nStep 3. Build a memory system\n\nOpus is most powerful when it has a memory log, allowing it to self-evolve over time.\n\nFail → Investigate → Verify → Distill → Consult\n\nClaude then writes lessons to memory during a session, and in future sessions, retrieves and applies them.\n\nStep 4. Let it run\n\nOnce you set you /loop prompt. Just let it run until the deliverables are met.\n\nI personally like this prompting structure: /loop + <time interval> + <goal>\n\nThis is the most powerful way to run Claude models right now.\n\nBookmark this so you don't forget it.",
+      "author": {
+        "id": "1901654809536843776",
+        "name": "AI Edge",
+        "screenName": "aiedge_",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1910271186442846208/vrYKSYRn_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 65,
+        "retweets": 8,
+        "replies": 5,
+        "quotes": 0,
+        "views": 6059,
+        "bookmarks": 132
+      },
+      "createdAt": "Sat Jun 20 20:00:01 +0000 2026",
+      "createdAtLocal": "2026-06-20 16:00",
+      "createdAtISO": "2026-06-20T20:00:01+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074522743962296603",
+      "text": "Claude Code Creator - Boris Cherny:\n\n\"My job is to write loops.\"\n\nHe doesn't prompt Claude anymore - a loop does it for him\n\nOne documented run: 25 hours straight, 13 million tokens, 30,000 lines of code, zero manual typing.\n\nPeter Steinberger, founder of OpenClaw, posted about this exact shift a few weeks ago.\n\n\"you shouldn't be prompting coding agents anymore\"|\n\nThat post hit 5 million views in a day.\n\n4 free tools to build your own loop - bookmarked below ↓\n\n1. https://t.co/767BjY8CDd\n\n2. https://t.co/8EiPvVWamK\n\n3. https://t.co/RbTsk0Fnx6\n\n4. https://t.co/hUOWvotcR9\n\nBookmark this tweet - so you don't forget this",
+      "author": {
+        "id": "1866241928339054592",
+        "name": "NikitaKoptiev",
+        "screenName": "AllSeeingNik",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2067351973830004736/gSxTnlz-_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1,
+        "retweets": 1,
+        "replies": 0,
+        "quotes": 0,
+        "views": 257,
+        "bookmarks": 0
+      },
+      "createdAt": "Tue Jul 07 15:55:39 +0000 2026",
+      "createdAtLocal": "2026-07-07 11:55",
+      "createdAtISO": "2026-07-07T15:55:39+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2074522664471871488/vid/avc1/1080x1080/qsBfR34oZZkjP4b7.mp4?tag=28",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2073848593018953781",
+        "text": "https://t.co/UJEEJi8Z0w",
+        "author": {
+          "screenName": "AllSeeingNik",
+          "name": "NikitaKoptiev"
+        }
+      }
+    },
+    {
+      "id": "2063855402047971675",
+      "text": "I don't prompt Claude anymore. My job is to write loops.\n\nBoris Cherny, head of Claude Code at Anthropic.\n\nThe guy who BUILDS Claude just told you prompting is dead.\n\nYou're crafting the perfect prompt.\nHe's building systems that craft 10,000 prompts without him.\n\nThat's not an upgrade. That's a different job entirely.\n\nStop writing prompts. Start writing loops. https://t.co/67DRowNO2q",
+      "author": {
+        "id": "424351513",
+        "name": "Vikas gupta",
+        "screenName": "vicky_grok",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1822619307043631104/NrGV_VAt_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 59,
+        "retweets": 14,
+        "replies": 19,
+        "quotes": 2,
+        "views": 4057,
+        "bookmarks": 16
+      },
+      "createdAt": "Mon Jun 08 05:27:27 +0000 2026",
+      "createdAtLocal": "2026-06-08 01:27",
+      "createdAtISO": "2026-06-08T05:27:27+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2062564318961373184/vid/avc1/1080x1080/2_t_b-CjnF5udzKD.mp4?tag=27",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2063574677965189600",
+        "text": "https://t.co/14O6zTos0c",
+        "author": {
+          "screenName": "vicky_grok",
+          "name": "Vikas gupta"
+        }
+      }
+    },
+    {
+      "id": "2074922345525883166",
+      "text": "Creator of Claude Code, Boris Cherny:\n\n\"I don't prompt Claude anymore. I have loops running that prompt Claude for me. My job is to write loops.\"\n\nAround 80% of the code at Anthropic is already written this way.\n\nIn a 30-minute session he walks through his actual daily Claude Code setup, the one behind the number one coding tool in the world.\n\nThe stack behind it: Claude, loops, sub-agents, and dynamic workflows.\n\nWorth more than any $500 vibe-coding course.\n\nWatch it, bookmark, then read the full article below.",
+      "author": {
+        "id": "1490082029953818633",
+        "name": "Andrew",
+        "screenName": "s4yonnara",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2067501150698434560/uX3YcMHd_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 26,
+        "retweets": 1,
+        "replies": 3,
+        "quotes": 0,
+        "views": 1602,
+        "bookmarks": 16
+      },
+      "createdAt": "Wed Jul 08 18:23:32 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:23",
+      "createdAtISO": "2026-07-08T18:23:32+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2074922085546078209/vid/avc1/1920x1080/3qb5ZX7KkLMhBWQW.mp4?tag=28",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074812548684083542",
+        "text": "https://t.co/ZPPYZEUWkM",
+        "author": {
+          "screenName": "0xChaseTM",
+          "name": "Chase"
+        }
+      }
+    },
+    {
+      "id": "2064279904989147577",
+      "text": "Claude Code's creator said something that stopped me cold:\n\n\"I don't prompt Claude anymore. I write loops — and the loops do the work. My job is to write loops.\"\n\nMost developers are still crafting the perfect prompt.\n\nThe person who built the tool moved past prompting entirely.\n\nIn 30 minutes Boris reveals his actual daily Claude Code setup.\n\nClaude Code + loops + dynamic workflows.\n\nWorth more than any $500 vibe-coding course.\n\nWatch it.\n\nThen read this - everything you need to know about loops to actually apply what he says ↓\n\nBookmark both. This is your weekend.",
+      "author": {
+        "id": "299656190",
+        "name": "Rahul",
+        "screenName": "sairahul1",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1999441729800536065/6-3Y5xyR_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4540,
+        "retweets": 555,
+        "replies": 130,
+        "quotes": 36,
+        "views": 1798970,
+        "bookmarks": 16456
+      },
+      "createdAt": "Tue Jun 09 09:34:16 +0000 2026",
+      "createdAtLocal": "2026-06-09 05:34",
+      "createdAtISO": "2026-06-09T09:34:16+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2064279600142934016/vid/avc1/1920x1080/Y6apjpbv0TEdFJyt.mp4?tag=27",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2064277888216555684",
+        "text": "https://t.co/kZFYtIdHAj",
+        "author": {
+          "screenName": "sairahul1",
+          "name": "Rahul"
+        }
+      }
+    },
+    {
+      "id": "2069780786446799242",
+      "text": "My job is to write loops",
+      "author": {
+        "id": "1158812701038194694",
+        "name": "Renny",
+        "screenName": "rennyzucker",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1634038477279952898/1Pvu_IcA_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 56,
+        "retweets": 1,
+        "replies": 1,
+        "quotes": 0,
+        "views": 15576,
+        "bookmarks": 102
+      },
+      "createdAt": "Wed Jun 24 13:52:48 +0000 2026",
+      "createdAtLocal": "2026-06-24 09:52",
+      "createdAtISO": "2026-06-24T13:52:48+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2069414510742671569",
+        "text": "this is f*cking dangerous\n\nbuild hedge fund using \"loop engineering\" that prints alpha 24/7 (Full Guide)\n\nif I had this a year ago, I would've built my hedge fund in a week instead of a year\n\nbookmark before someone takes it down https://t.co/rTAnQcuyaM",
+        "author": {
+          "screenName": "RohOnChain",
+          "name": "Roan"
+        }
+      }
+    },
+    {
+      "id": "2073635394755977285",
+      "text": "みんな大好きLoop Enginnering！プロンプトを磨くだけのAI codingは、もう伸びしろが薄い。Loop Engineeringがはてブ193、関連repoは4800★まで来ていて、Claude Code責任者Boris Chernyの「My job is to write loops.」が現場語彙になり始めた。\n\n要は、Claude Code/Cursor/Codexに毎回お願いするのではなく、Trigger、Goal、Verifier、Memory、Connectorを持つloopを設計する話。自分の運用でも、PR監視やCI修正は単発指示よりloop化した方が強い。まずはloop-init/loop-auditで、1つの定型作業を小さく回してほしい。理解負債だけは放置しない。 #AI駆動開発",
+      "author": {
+        "id": "5372432",
+        "name": "connect24h",
+        "screenName": "connect24h",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1507992429/WS000026_normal.PNG",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 8,
+        "retweets": 2,
+        "replies": 1,
+        "quotes": 0,
+        "views": 1124,
+        "bookmarks": 7
+      },
+      "createdAt": "Sun Jul 05 05:09:39 +0000 2026",
+      "createdAtLocal": "2026-07-05 01:09",
+      "createdAtISO": "2026-07-05T05:09:39+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "ja",
+      "score": null
+    },
+    {
+      "id": "2075159311408665067",
+      "text": "Boris Cherny, creator of Claude Code:\n\n\"I don't prompt Claude anymore, I have loops that are running, they're the ones prompting Claude. My job is to write loops\"\n\nthe skill shifted from typing prompts to building what types for you\n\na prompt is one instruction, a loop is a goal, hand it once and Claude stays in the chair not you\n\na real loop isn’t Claude grading itself, it checks results, remembers last time, and knows when to stop instead of running all night\n\nmany people using Claude are still the engine, the checker, and the memory in one chair\n\nbuild the loop, stop being one",
+      "author": {
+        "id": "1450821446859624454",
+        "name": "Chrome",
+        "screenName": "0xchromium",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1903568036826677248/f_-lT_5u_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 31,
+        "retweets": 2,
+        "replies": 3,
+        "quotes": 0,
+        "views": 1338,
+        "bookmarks": 15
+      },
+      "createdAt": "Thu Jul 09 10:05:09 +0000 2026",
+      "createdAtLocal": "2026-07-09 06:05",
+      "createdAtISO": "2026-07-09T10:05:09+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2075159253271326720/vid/avc1/1280x720/zTbrEa89c2tNVevu.mp4?tag=14",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074831700291355120",
+        "text": "https://t.co/v24aCvDM1Z",
+        "author": {
+          "screenName": "0xchromium",
+          "name": "Chrome"
+        }
+      }
+    },
+    {
+      "id": "2066454549733200047",
+      "text": "THE CREATOR OF CLAUDE CODE NO LONGER WRITES PROMPTS\n\nBoris, the person who built the tool, dropped this in an interview:\n\n\"I no longer write prompts. I write loops, and the loops do the work. my job is to write loops.\"\n\nwhile most devs are still polishing the perfect prompt, he's already moved on to something else.\n\nIn 30 minutes he teaches his real daily setup:\n\n→ Claude Code + loops + dynamic workflows\n→ his everyday workflow\n→ how to apply it starting today\n\nworth more than any 500$ vibe coding course.\n\nfree. subtitled in spanish and english.\n\nand then read this: everything you need to know about loops to apply what he shares ↓\n\nsave both. this is your new week plan.",
+      "author": {
+        "id": "1788243647885987840",
+        "name": "MIKE",
+        "screenName": "mikenevermiss",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2004815313108389888/uzJndIfx_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 85,
+        "retweets": 9,
+        "replies": 12,
+        "quotes": 0,
+        "views": 15864,
+        "bookmarks": 95
+      },
+      "createdAt": "Mon Jun 15 09:35:32 +0000 2026",
+      "createdAtLocal": "2026-06-15 05:35",
+      "createdAtISO": "2026-06-15T09:35:32+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2066452360906334209/vid/avc1/1280x720/jXPxzf-3bLKYp_Be.mp4?tag=27",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2066401066518802637",
+        "text": "https://t.co/tlLZjVprSj",
+        "author": {
+          "screenName": "mikenevermiss",
+          "name": "MIKE"
+        }
+      }
+    },
+    {
+      "id": "2074933173318984174",
+      "text": "https://t.co/4RXllGwgyq",
+      "author": {
+        "id": "1506717423709278213",
+        "name": "Li Yin",
+        "screenName": "panda_liyin",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2066230358207844352/MB7KjRMP_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 106,
+        "retweets": 22,
+        "replies": 19,
+        "quotes": 17,
+        "views": 27292,
+        "bookmarks": 131
+      },
+      "createdAt": "Wed Jul 08 19:06:33 +0000 2026",
+      "createdAtLocal": "2026-07-08 15:06",
+      "createdAtISO": "2026-07-08T19:06:33+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074926223831216128"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Loop Engineering For Everyone "
+    },
+    {
+      "id": "2067934681429905425",
+      "text": "Boris Cherny, Head of Claude Code:\n\n\"I don't prompt Claude anymore. I have loops running that prompt Claude and figure out what to do. My job is to write loops\"\n\nThe best AI builders on Earth already quit writing prompts. They write loops - systems that run, check their own work, and go again until something survives\n\nPeter Steinberger, who built OpenClaw, said same thing the same week: stop prompting your agents, start designing the loops that prompt them.\n\nA prompt is one shot. A loop runs, checks its own work, and goes again until something survives.\n\nI broke down exactly how that loop works - and who just handed it to retail.",
+      "author": {
+        "id": "1436434634930331682",
+        "name": "cvxv666",
+        "screenName": "antpalkin",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1989384671671562240/d0f5IlI6_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 107,
+        "retweets": 8,
+        "replies": 31,
+        "quotes": 0,
+        "views": 8057,
+        "bookmarks": 115
+      },
+      "createdAt": "Fri Jun 19 11:37:03 +0000 2026",
+      "createdAtLocal": "2026-06-19 07:37",
+      "createdAtISO": "2026-06-19T11:37:03+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2067931052778123264/vid/avc1/1920x1080/n34GLo3XPrmcICxN.mp4?tag=28",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2067654927606776122",
+        "text": "ChatGPT can write you a thousand trading strategies from one sentence.\n\n999 will quietly bleed your account dry. Every single one of them looks like a winner.\n\nOne method pulls the real one out. Quant desks have run it for years. It's called loop engineering.\n\nIt's not a smarter prompt. It's a loop: generate a strategy, test it, score why it failed, feed that back, and run it again until one survives data it has never seen.\n\nMan Group runs $150 billion. They built an AI that writes and tests hundreds of strategies a week.\n\nAnd second agent whose only job is to hunt the ones that secretly overfit and kill them before a cent goes live. \n\n> describe an idea -> backtest 5 years in 12 seconds\n> read why it died -> feed that back in\n> run it again until one survives data it never saw\n\nAI can write a thousand strategies. Loop engineering is the only thing that tells you which one was ever real.\n\n89% of retail lost money in 2025. Almost none of it from bad ideas. All of it from trading the first guess and never running it through backtest loop.\n\nHorizon just put the whole thing in a chat box, free while the beta's open: https://t.co/qMCIUPVKGK\n\nYou're not losing to smarter traders. You're losing to the ones who opened the tab.\n\nAnyone can generate a strategy now. Almost no one runs the loop that proves it.\n\nThat gap is the whole edge.\n\nYou'll mean to check it later. Later is a \"waitlist closed\" page.",
+        "author": {
+          "screenName": "antpalkin",
+          "name": "cvxv666"
+        }
+      }
+    },
+    {
+      "id": "2070061189179265244",
+      "text": "THE HEAD OF CLAUDE CODE STOPPED PROMPTING CLAUDE MONTHS AGO.\n\nBoris Cherny's actual words:\n\n\"I don't prompt Claude anymore. I have loops running that prompt Claude and figure out what to do. My job is to write loops.\n\nCompile errors. Static analysis. Tests.\n\nThe loop runs until the code is actually better, not until you got tired of fixing it.\"\n\nThis is the real shift happening in how serious engineers use Claude Code right now.\n\nBookmark this. Follow @cyrilXBT",
+      "author": {
+        "id": "1373665408193036293",
+        "name": "CyrilXBT",
+        "screenName": "cyrilXBT",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2035229727414534145/aWap3Jbq_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 87,
+        "retweets": 14,
+        "replies": 22,
+        "quotes": 1,
+        "views": 10838,
+        "bookmarks": 54
+      },
+      "createdAt": "Thu Jun 25 08:27:02 +0000 2026",
+      "createdAtLocal": "2026-06-25 04:27",
+      "createdAtISO": "2026-06-25T08:27:02+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HLpVrlYaUAAZohS.png",
+          "width": 568,
+          "height": 680
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2067614929537146995",
+      "text": "Boris Cherny famously declared, \"I don't prompt Claude anymore. I have loops running that prompt Claude... My job is to write loops.\"\n\nStage 1 (Autocomplete): Writing code manually while using an inline AI assistant for code completion.\n\nStage 2 (Manual Prompting): Opening parallel agent sessions (e.g., in a browser or IDE) and manually pasting prompts, reading outputs, and replying.\n\nStage 3 (Loop Engineering): Designing independent, continuous routines. The developer gives the system a high-level goal and lets automated control systems manage the agent's actions, tests, and self-corrections",
+      "author": {
+        "id": "2315213164",
+        "name": "𝗿𝗮𝗺𝗮𝗸𝗿𝘂𝘀𝗵𝗻𝗮— 𝗲/𝗮𝗰𝗰",
+        "screenName": "techwith_ram",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2009673102154928128/IuE00fAT_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 12,
+        "retweets": 1,
+        "replies": 0,
+        "quotes": 0,
+        "views": 1108,
+        "bookmarks": 9
+      },
+      "createdAt": "Thu Jun 18 14:26:28 +0000 2026",
+      "createdAtLocal": "2026-06-18 10:26",
+      "createdAtISO": "2026-06-18T14:26:28+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2067614506231181312/vid/avc1/720x1280/yLkWYNrIqtbdxKGq.mp4?tag=28",
+          "width": 720,
+          "height": 1280
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2064925285003542820",
+        "text": "https://t.co/lRwta2McVN",
+        "author": {
+          "screenName": "techwith_ram",
+          "name": "𝗿𝗮𝗺𝗮𝗸𝗿𝘂𝘀𝗵𝗻𝗮— 𝗲/𝗮𝗰𝗰"
+        }
+      }
+    },
+    {
+      "id": "2069183099942928404",
+      "text": "Creator of Claude Code:\n\n\"I don't prompt Claude anymore. I write loops - and the loops do the work. My job is to write loops.\n\nIn 3-6 months, 80% of Claude will be written by loops.\"\n\nIn a 30-minute session, Boris reveals his actual daily Claude Code setup for building the #1 coding tool.\n\nClaude + loops + sub-agents + dynamic workflows - that’s the secret.\n\nWorth more than a $500 vibe-coding course.",
+      "author": {
+        "id": "2054190711243710464",
+        "name": "Codez",
+        "screenName": "0xCodez",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2054197823738871808/3M0Lf362_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 78,
+        "retweets": 2,
+        "replies": 13,
+        "quotes": 1,
+        "views": 9907,
+        "bookmarks": 69
+      },
+      "createdAt": "Mon Jun 22 22:17:49 +0000 2026",
+      "createdAtLocal": "2026-06-22 18:17",
+      "createdAtISO": "2026-06-22T22:17:49+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2069182250961559552/vid/avc1/1920x1080/oUN_COXbm6kh0sRP.mp4?tag=28",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2069138541695967552",
+        "text": "Prompt engineering is dead. The new game is loop engineering.\n\nAnyone can write a good prompt. Almost no one can build an agent that holds its loop across a 40-minute call that keeps changing its mind.\n\n@usebland just raised $100M doing exactly that.\n\nThe difference:\n\n• most voice AI survives one scripted loop, then breaks the second a human goes off-script.\n\n• Bland's agents engineer the whole loop - context held, judgment applied, call finished. 3.5M a week.\n\n• full stack, in-house. Sub-400ms, 100+ languages, data that never leaves your walls.\n\nEveryone else is tuning prompts on someone else's model and praying.\n\nBland engineered the loops for the calls they all hang up on.\n\nWatch it ↓",
+        "author": {
+          "screenName": "0xCodez",
+          "name": "Codez"
+        }
+      }
+    },
+    {
+      "id": "2074234713816940953",
+      "text": "Someone just posted the full blueprint for an AI swarm that does the job of a 200-person quant research team.\n\nSix agents. Running 24/7. Finding brand-new alpha while you sleep.\n\nCitadel needs 100 PhDs to do this. Two Sigma needs 200. This does it with six bots and one laptop.\n\nTwo ways to play this - spend a weekend building your own swarm, or copy the wallet of one that's already up $2M: https://t.co/PKzMvqaxcp\n\nBoris Cherny runs Claude Code at Anthropic. Two weeks ago he said: \n\n\"I don't prompt Claude anymore. I have loops running that prompt Claude. My job is to write loops\"\n\nAlpha research is just a pipeline. So instead of sitting in it, you hand each stage to its own agent:\n\n> one reads every new research paper overnight and pulls out the trade idea\n> one builds the features and cleans the data\n> one backtests it over 20 years, costs and slippage included\n> one runs the hard stats and kills anything overfit\n> one checks it still works in every market regime\n> one strips out plain momentum and value to see if any real edge is left\n\nEach of those six is a job a fund pays a $600,000-a-year quant to do. \n\nHe runs all six for the price of an API bill.\n\nThe rule that makes it work: the agent that builds a signal never gets to approve it. \n\nA separate, stronger agent tries to kill it first. Whatever survives all six by morning is real, new alpha.\n\nOne trader's already running this exact swarm on Polymarket. That $2M wallet is public, every trade on-chain.\n\nThe full build is in the post below - six agents, the tool that runs them, and the five mistakes that kill most people.\n\nBookmark & read this before it's buried.",
+      "author": {
+        "id": "1436434634930331682",
+        "name": "cvxv666",
+        "screenName": "antpalkin",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1989384671671562240/d0f5IlI6_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 314,
+        "retweets": 55,
+        "replies": 36,
+        "quotes": 2,
+        "views": 99376,
+        "bookmarks": 611
+      },
+      "createdAt": "Mon Jul 06 20:51:07 +0000 2026",
+      "createdAtLocal": "2026-07-06 16:51",
+      "createdAtISO": "2026-07-06T20:51:07+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2074232625854595072/vid/avc1/1080x1350/884jUGXai4aYkgPy.mp4?tag=28",
+          "width": 1080,
+          "height": 1350
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074134246784921977",
+        "text": "https://t.co/q9SBesYjPW",
+        "author": {
+          "screenName": "RohOnChain",
+          "name": "Roan"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,773 @@
+{
+  "ok": true,
+  "schema_version": "1",
+  "data": [
+    {
+      "id": "2074724689008857556",
+      "text": "the booth was a great investment",
+      "author": {
+        "id": "17203692",
+        "name": "jason",
+        "screenName": "jxnlco",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2057561784047816704/5Su5xy1d_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 196,
+        "retweets": 5,
+        "replies": 4,
+        "quotes": 0,
+        "views": 46815,
+        "bookmarks": 4
+      },
+      "createdAt": "Wed Jul 08 05:18:07 +0000 2026",
+      "createdAtLocal": "2026-07-08 01:18",
+      "createdAtISO": "2026-07-08T05:18:07+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074713090978132362",
+        "text": "I would like to add that OpenAI has been awesome to work with despite the obvious government-related setbacks.\n\nThey've been more transparent than I'd ever have expected, and they did a good job keeping us in the loop during the confusion.\n\nThe only \"restriction\" is that they've requested is that we wait on posting our formal content about the model (blog posts, videos, podcasts etc) until Thursday. They've given us ZERO restrictions on what we can and can't say.\n\nEvery employee involved with early access program deserves a promotion and a shitload of praise. They're so, idk, real? Hard to find the right words. I'm just thankful they make this so easy for us",
+        "author": {
+          "screenName": "theo",
+          "name": "Theo - t3.gg"
+        }
+      }
+    },
+    {
+      "id": "2075036759571022298",
+      "text": "Fun conversation with @swyx on our journey building the cloud for true elastic inference, sandboxes, and more. And of course, how we're evolving Modal's dev experience to be better for agents.",
+      "author": {
+        "id": "1155187165057282048",
+        "name": "Akshat Bubna",
+        "screenName": "akshat_b",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1971998467359735808/QDSXHs4W_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 46,
+        "retweets": 7,
+        "replies": 3,
+        "quotes": 0,
+        "views": 5577,
+        "bookmarks": 8
+      },
+      "createdAt": "Thu Jul 09 01:58:10 +0000 2026",
+      "createdAtLocal": "2026-07-08 21:58",
+      "createdAtISO": "2026-07-09T01:58:10+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2075007025600504128",
+        "text": "Modal's Agent-Native Cloud: DX→AX, sandboxes, elastic inference, and 100,000 rollouts https://t.co/MVlCcbw5zk\n\n@modal CTO @akshat_b explains why developer experience is becoming agent experience, why agents need infra they can operate instead of YAML they have to reason through, how sandboxes turn the agent loop into something real, why elastic inference and GPU snapshotting matter for production AI, how RL rollouts can require 100,000 sandboxes, and why Modal’s $355M Series C marks a new phase for AI-native cloud infrastructure.",
+        "author": {
+          "screenName": "latentspacepod",
+          "name": "Latent.Space"
+        }
+      }
+    },
+    {
+      "id": "2074953099748450346",
+      "text": "one detail i enjoyed about @theo's keynote is in a world of claudeslopped thin color border \"professional\" looking slides, his went for the hand drawn @excalidraw /@tldraw look which immediately conveys humanity, thoughtfulness, parsimonious concision over badly rewarded verbosity.\n\nfable could never",
+      "author": {
+        "id": "33521530",
+        "name": "swyx",
+        "screenName": "swyx",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2073162797354217472/hNny55eF_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 82,
+        "retweets": 3,
+        "replies": 27,
+        "quotes": 0,
+        "views": 9490,
+        "bookmarks": 22
+      },
+      "createdAt": "Wed Jul 08 20:25:44 +0000 2026",
+      "createdAtLocal": "2026-07-08 16:25",
+      "createdAtISO": "2026-07-08T20:25:44+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMu2jPNakAAl-X3.jpg",
+          "width": 2104,
+          "height": 1592
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074952293120876894",
+        "text": "For the closing keynote of WF26, @theo  provokes you to think bigger:\n\nhttps://t.co/WMhvSzpWGz\n\nIn an age where most startups are just a markdown file running on a cron job now, the barrier for building platforms has collapsed.\n\nBe more ambitious.",
+        "author": {
+          "screenName": "aiDotEngineer",
+          "name": "AI Engineer"
+        }
+      }
+    },
+    {
+      "id": "2074927530482835916",
+      "text": "https://t.co/YOd4ptcTeD",
+      "author": {
+        "id": "35432643",
+        "name": "Addy Osmani",
+        "screenName": "addyosmani",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2012065253623021570/0BReDfMk_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1056,
+        "retweets": 147,
+        "replies": 40,
+        "quotes": 26,
+        "views": 680570,
+        "bookmarks": 1650
+      },
+      "createdAt": "Wed Jul 08 18:44:08 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:44",
+      "createdAtISO": "2026-07-08T18:44:08+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074573342187868160"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "Own the Outer Loop"
+    },
+    {
+      "id": "2074909109229584400",
+      "text": "We raised $130M @ $1B for our series A \n\nTo build the open superintelligence stack for everyone\n\nPre-training concentrated frontier AI in a handful of labs. RL changes who can build frontier AI and just works across almost any verifiable domain. We want to enable everyone to train their own agents.\n\nCompanies can now own their model optimization loop: train directly on your product, optimize for your specific workflows, and build agents that improve continuously in production\n\nOwning this model <> product improvement loop is how you build a compounding moat in the agentic era\n\nSuper grateful to serve over 6k+ customers, including many leading AI startups, neolabs and enterprises already building on our stack, and to our incredible team for shipping hardcore!\n\nWe train open frontier models and ship the same stack to our customers. Its spans the full stack of training, deploying and continuously improving models — compute, large-scale RL, environments, sandboxes, evals, and deployment.\n\nWe're excited to be joined by angels who are building the frontier themselves, many of whom we work closely with:\n@johnschulman2 (Thinking Machines), @dwarkesh_sp, @AravSrinivas (Perplexity), @karimatiyeh (Ramp), @levie (Box), @_milankovac_ (Tesla), @winstonweinberg (Harvey), @amspector100 (Flapping Airplanes), @jeffwang (Cognition), @_arohan_ (Core Automation), @marksaroufim (Core Automation), @mikeknoop (Zapier, Ndea), @eastdakota (Cloudflare), @BrendanFoody (Mercor), @devanshpandey (Standard Intelligence), @hwchase17 (Langchain), @nicoup (Fleet) and many more\n\nWe're a small team building open superintelligence\n> Reach out if you want to partner training, deploying and continuously improving your own frontier models for your use case\n> Join us to build open superintelligence — we're hiring across all roles including RL, inference, distributed systems, full stack engineering and compute.",
+      "author": {
+        "id": "427766081",
+        "name": "Vincent Weisser",
+        "screenName": "vincentweisser",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2027646480438194176/hM1tWDkF_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 723,
+        "retweets": 30,
+        "replies": 114,
+        "quotes": 9,
+        "views": 140872,
+        "bookmarks": 193
+      },
+      "createdAt": "Wed Jul 08 17:30:56 +0000 2026",
+      "createdAtLocal": "2026-07-08 13:30",
+      "createdAtISO": "2026-07-08T17:30:56+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMuJ9rmboAAJphg.jpg",
+          "width": 4096,
+          "height": 2308
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074899489190785419",
+        "text": "Announcing our $130M Series A to build the Open Superintelligence Stack\n\nLed by Radical Ventures, with NVIDIA, Intel Capital, Dell Capital, and existing investors\n\nTrain, deploy, and continuously improve your own models using our stack.\n\nOwn your intelligence. https://t.co/BM31LfVUNQ",
+        "author": {
+          "screenName": "PrimeIntellect",
+          "name": "Prime Intellect"
+        }
+      }
+    },
+    {
+      "id": "2074919183947808881",
+      "text": "most agent labs are shy about acknowledging chinese model use because they need to sell to gov/defense\n\ncog team did the hard part to productionize:\n1. build a multilingual propaganda &amp; censorship eval \n2. successfully correct for it in posttraining\n3. serve at 1000 tok/s cheaply https://t.co/Av85Bh4zUf",
+      "author": {
+        "id": "33521530",
+        "name": "swyx",
+        "screenName": "swyx",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2073162797354217472/hNny55eF_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 138,
+        "retweets": 5,
+        "replies": 14,
+        "quotes": 0,
+        "views": 13904,
+        "bookmarks": 53
+      },
+      "createdAt": "Wed Jul 08 18:10:58 +0000 2026",
+      "createdAtLocal": "2026-07-08 14:10",
+      "createdAtISO": "2026-07-08T18:10:58+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMuXYBIbYAA5Lyp.jpg",
+          "width": 1810,
+          "height": 1700
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMuXi-wbUAAyAPD.jpg",
+          "width": 1834,
+          "height": 1808
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMuXvIRasAAx5I9.jpg",
+          "width": 1860,
+          "height": 1804
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074882968770728416",
+        "text": "Introducing SWE-1.7, the most capable model we’ve trained yet.\n\nIt scores within a few points of the strongest frontier models at a fraction of the cost, and is now available at 1000 tok/s.\n\nRL is not hitting its limit: after refining our recipe, we keep seeing gains as we scale https://t.co/xV2NFTJwlI",
+        "author": {
+          "screenName": "cognition",
+          "name": "Cognition"
+        }
+      }
+    },
+    {
+      "id": "2074617786408845774",
+      "text": "Live tweeting video editing of my AIE talk.\n\nSwyx sent me 4 videos that are about 60GB, I also threw in my HTML deck.\n\nThis is my starting prompt. https://t.co/CtYBTUMuQr",
+      "author": {
+        "id": "352806502",
+        "name": "Thariq",
+        "screenName": "trq212",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1976939058741039104/r3GgzqRh_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 917,
+        "retweets": 47,
+        "replies": 59,
+        "quotes": 11,
+        "views": 143629,
+        "bookmarks": 916
+      },
+      "createdAt": "Tue Jul 07 22:13:19 +0000 2026",
+      "createdAtLocal": "2026-07-07 18:13",
+      "createdAtISO": "2026-07-07T22:13:19+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMp9uV0aAAA9NQj.jpg",
+          "width": 2168,
+          "height": 482
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074584768096907339",
+        "text": "got the raw footage of this talk from @swyx - 59 gb\n\ngoing to see how Fable does editing it https://t.co/O7BbLa0jJr",
+        "author": {
+          "screenName": "trq212",
+          "name": "Thariq"
+        }
+      }
+    },
+    {
+      "id": "2074868085295640976",
+      "text": "We are excited to launch 𝗥𝗲𝘀𝘁𝗮𝘁𝗲 𝗕𝗬𝗢𝗖 (Bring-your-own-Cloud) today.\n\nIt is fully managed @restatedev, with all the features of Restate Cloud, but in your own account, in a dedicated VPC. Data never leaves your infra. \n\nRestate BYOC is already live in production with multiple customers, powering big workloads for AI agents and workflow backends. It has run loads of 100k durable actions/sec. And today we’re finally publicly announcing it.\n\nLearn more here, and let us know what you think!\n\nhttps://t.co/uNt3NnPerp",
+      "author": {
+        "id": "2307883578",
+        "name": "Stephan Ewen",
+        "screenName": "StephanEwen",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/879054335556104192/Ku2nGTSS_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 68,
+        "retweets": 18,
+        "replies": 16,
+        "quotes": 6,
+        "views": 84362,
+        "bookmarks": 15
+      },
+      "createdAt": "Wed Jul 08 14:47:55 +0000 2026",
+      "createdAtLocal": "2026-07-08 10:47",
+      "createdAtISO": "2026-07-08T14:47:55+00:00",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2074857209935106048/vid/avc1/3840x2160/NZTgqmbgi3is4Kov.mp4?tag=28",
+          "width": 3840,
+          "height": 2160
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074571990393090343",
+      "text": "Btw my interview on Local AI from last week with Latent Space was published on the 2nd page of The Daily Context at AIE https://t.co/nvi7woLkey",
+      "author": {
+        "id": "248951926",
+        "name": "Ahmad",
+        "screenName": "TheAhmadOsman",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1831406651829559296/iMbSOxdP_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 217,
+        "retweets": 16,
+        "replies": 14,
+        "quotes": 0,
+        "views": 11310,
+        "bookmarks": 21
+      },
+      "createdAt": "Tue Jul 07 19:11:20 +0000 2026",
+      "createdAtLocal": "2026-07-07 15:11",
+      "createdAtISO": "2026-07-07T19:11:20+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMpcOWla4AAOUQ8.jpg",
+          "width": 4284,
+          "height": 5712
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074683022503490012",
+      "text": "it_happening.gif https://t.co/XiwgDUvyWi",
+      "author": {
+        "id": "33521530",
+        "name": "swyx",
+        "screenName": "swyx",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2073162797354217472/hNny55eF_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 520,
+        "retweets": 10,
+        "replies": 26,
+        "quotes": 6,
+        "views": 61399,
+        "bookmarks": 74
+      },
+      "createdAt": "Wed Jul 08 02:32:32 +0000 2026",
+      "createdAtLocal": "2026-07-07 22:32",
+      "createdAtISO": "2026-07-08T02:32:32+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMrBNjraEAAoifq.jpg",
+          "width": 1906,
+          "height": 1100
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074523670278742457",
+        "text": "First day at @OpenAI today!\n\nCouldn’t be more excited to start working on SCM tools. Many thanks to @tnm, @gdb, @aglover, @iamveeve, @udayruddarraju, and lots of others. Let’s go!",
+        "author": {
+          "screenName": "ttaylorr_b",
+          "name": "Taylor Blau"
+        }
+      }
+    },
+    {
+      "id": "2074349743741010372",
+      "text": "That’s a wrap on AIE from their new HQ!\n\nHonored to have been a guest panelist for Nvidia’s Local Al State of the Union, and to have such a welcoming audience \nfor my workshops and presentation.\n\nThanks to everyone who came out, I’m already looking forward to the next one! https://t.co/CyqmN6tisM",
+      "author": {
+        "id": "248951926",
+        "name": "Ahmad",
+        "screenName": "TheAhmadOsman",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1831406651829559296/iMbSOxdP_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 152,
+        "retweets": 11,
+        "replies": 18,
+        "quotes": 1,
+        "views": 15947,
+        "bookmarks": 8
+      },
+      "createdAt": "Tue Jul 07 04:28:13 +0000 2026",
+      "createdAtLocal": "2026-07-07 00:28",
+      "createdAtISO": "2026-07-07T04:28:13+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMmSGP5a8AICz1t.jpg",
+          "width": 2048,
+          "height": 1536
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2072892897373151546",
+        "text": "In my element, we’re gonna make sure Opensource AI wins https://t.co/3nWh2LjsAR",
+        "author": {
+          "screenName": "TheAhmadOsman",
+          "name": "Ahmad"
+        }
+      }
+    },
+    {
+      "id": "2074354202860769645",
+      "text": "tldr of thariq's AIEWF keynote\n\nhttps://t.co/YagrwF1a71\n\n(more in today's ainews issue) https://t.co/JD73HZXNrd",
+      "author": {
+        "id": "1670869422733393966",
+        "name": "Latent.Space",
+        "screenName": "latentspacepod",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1888346877428641792/rMxtG84Z_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 43,
+        "retweets": 3,
+        "replies": 3,
+        "quotes": 0,
+        "views": 16347,
+        "bookmarks": 6
+      },
+      "createdAt": "Tue Jul 07 04:45:56 +0000 2026",
+      "createdAtLocal": "2026-07-07 00:45",
+      "createdAtISO": "2026-07-07T04:45:56+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMmWGvpbYAAao3A.jpg",
+          "width": 862,
+          "height": 1396
+        }
+      ],
+      "urls": [
+        "https://latent.space/p/ainews-the-field-guide-to-fable"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074163788853760175",
+        "text": "my keynote at AI Engineer World Fair: “A Field Guide to Fable” is live on YouTube!\n\nhttps://t.co/x6WmTovDIx",
+        "author": {
+          "screenName": "trq212",
+          "name": "Thariq"
+        }
+      }
+    },
+    {
+      "id": "2074344727202463832",
+      "text": "imo this is the most impt part of anthropic's J-space paper today. it's a two-parter:\n\n1) ant proved that they can do \"brain surgery\" interventions into reasoning to change topics midstream*\n2) THE MODEL IS ABLE TO DETECT WHAT INTERVENTION WAS DONE - close cousin to eval awareness**\n\n*control > correlation - this convincingly demonstrates understanding\n\n**this was prompted awareness... surely @mlpowered's team also tried to eval unprompted awareness but i didn't see evidence of that",
+      "author": {
+        "id": "33521530",
+        "name": "swyx",
+        "screenName": "swyx",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2073162797354217472/hNny55eF_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 408,
+        "retweets": 28,
+        "replies": 59,
+        "quotes": 5,
+        "views": 53103,
+        "bookmarks": 316
+      },
+      "createdAt": "Tue Jul 07 04:08:17 +0000 2026",
+      "createdAtLocal": "2026-07-07 00:08",
+      "createdAtISO": "2026-07-07T04:08:17+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMmMjpcaYAAn_wt.jpg",
+          "width": 1602,
+          "height": 1682
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMmMxRAaoAAbk-F.jpg",
+          "width": 1672,
+          "height": 1724
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMmM3xkbcAAwM3m.jpg",
+          "width": 2474,
+          "height": 1802
+        }
+      ],
+      "urls": [],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2074185348142280912",
+        "text": "New Anthropic research: A global workspace in language models.\n\nOf everything happening in your brain right now, only a tiny fraction is consciously accessible—thoughts you can describe, hold in mind, and reason with.\n\nWe found a strikingly similar divide inside Claude. https://t.co/aLUPBifxth",
+        "author": {
+          "screenName": "AnthropicAI",
+          "name": "Anthropic"
+        }
+      }
+    },
+    {
+      "id": "2074163788853760175",
+      "text": "my keynote at AI Engineer World Fair: “A Field Guide to Fable” is live on YouTube!\n\nhttps://t.co/x6WmTovDIx",
+      "author": {
+        "id": "352806502",
+        "name": "Thariq",
+        "screenName": "trq212",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1976939058741039104/r3GgzqRh_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 1862,
+        "retweets": 161,
+        "replies": 81,
+        "quotes": 36,
+        "views": 452348,
+        "bookmarks": 1864
+      },
+      "createdAt": "Mon Jul 06 16:09:18 +0000 2026",
+      "createdAtLocal": "2026-07-06 12:09",
+      "createdAtISO": "2026-07-06T16:09:18+00:00",
+      "media": [],
+      "urls": [
+        "https://youtu.be/9fubhllmsBU?is=ejZTRy8t85FIbSGQ"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2074215017956983265",
+      "text": "https://t.co/cMRftfPY6l",
+      "author": {
+        "id": "89318473",
+        "name": "Carter Rabasa",
+        "screenName": "crtr0",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1994065148957609989/Y79Ukkg5_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 30,
+        "retweets": 4,
+        "replies": 4,
+        "quotes": 7,
+        "views": 12094,
+        "bookmarks": 6
+      },
+      "createdAt": "Mon Jul 06 19:32:51 +0000 2026",
+      "createdAtLocal": "2026-07-06 15:32",
+      "createdAtISO": "2026-07-06T19:32:51+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2074146239483195392"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "AIEWF is Putting Community Back into Conferences"
+    },
+    {
+      "id": "2073787796871930308",
+      "text": "183/365 of GPU Programming\n\nThis 4.5 hour lesson on CUDA + ThunderKittens by @bfspector (TK co-author, Stanford PhD student) is one of the best educational videos on kernels out there (think @karpathy level video but solely focused on GPU stuff). It's so criminally underrated, I cannot believe this video only has 5k views. \n\nIt's the highest density GPU programming lecture I've come across in my ~6 months of learning. For better or for worse, Ben talks (and thinks) at the speed of light. But thanks to @qamcintyre it's more of a dialogue between Ben who introduces concepts/ideas based on his experience creating TK and Quinn who intervenes from time to time with pointed questions that help ground the discussion in fundamentals. \n\nRegardless of whether you're just starting out with writing kernels or have some experience, it's an incredible resource because it gives you a behind-the scenes-look of someone who's spent years thinking about how to maximize what you can get out of the hardware (read his Hazy blog post \"We Bought the Whole GPU, So We're Damn Well Going to Use the Whole GPU\"  for context). Even though I was sort of familiar with the topics of the lesson (e.g. GPU architecture and memory consistency), I still came away with pages of notes and questions around TMA accelerated pipelining, coscheduling instructions, pre vs post Hopper, levels of virtualization, cache lines, barriers, TK primitives, et cetera. As @suryaasub so aptly put it in the YT comments: \"greatest video of all time\".",
+      "author": {
+        "id": "1933932995528044544",
+        "name": "levi",
+        "screenName": "levidiamode",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2005322181538983936/KvzCyzRA_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 618,
+        "retweets": 41,
+        "replies": 11,
+        "quotes": 1,
+        "views": 68049,
+        "bookmarks": 848
+      },
+      "createdAt": "Sun Jul 05 15:15:14 +0000 2026",
+      "createdAtLocal": "2026-07-05 11:15",
+      "createdAtISO": "2026-07-05T15:15:14+00:00",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HMd3yXSXYAAm1r3.jpg",
+          "width": 2706,
+          "height": 1714
+        }
+      ],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null,
+      "quotedTweet": {
+        "id": "2073556115170656613",
+        "text": "182/365 of GPU Programming\n\nPreparing my first submissions to the eigendecomp leaderboard today, and gotta say this GPU Mode challenge feels different already. The speed at which competitors have cleared sub 20ms and now 10ms even though we're still more than a week out is quite remarkable (and a step up from the previous QR challenge). Wonder how much of that has to do with Fable coming back a couple days ago. \n\nDon't have any remaining access to Fable (burned through my small usage limits on a couple of side projects) but will try to get the most out of my harness with GPT 5.5 and Opus 4.8. This second challenge is mainly a way for me to iterate on the harness and learn more about linear algebra as well as Blackwell kernels.",
+        "author": {
+          "screenName": "levidiamode",
+          "name": "levi"
+        }
+      }
+    },
+    {
+      "id": "2073100286009483302",
+      "text": "https://t.co/GnJbXVG4JC",
+      "author": {
+        "id": "882616983656726528",
+        "name": "Sean Smith",
+        "screenName": "LegitSeanSmith",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2074224907379195904/xRi-1Bts_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 83,
+        "retweets": 12,
+        "replies": 4,
+        "quotes": 3,
+        "views": 321280,
+        "bookmarks": 83
+      },
+      "createdAt": "Fri Jul 03 17:43:19 +0000 2026",
+      "createdAtLocal": "2026-07-03 13:43",
+      "createdAtISO": "2026-07-03T17:43:19+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2073093772817453056"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "How we run sandboxes for agents at scale"
+    },
+    {
+      "id": "2073704132905476307",
+      "text": "the place that rewards first principles thinkers and builders; that asks \"why not?\" instead of telling you why you cannot; that imperfectly supports optimism, reinvention and perseverance in spite of cynicism. I don't feel fully integrated and probably will never feel fully American, BUT I feel accepted and welcomed, sometimes more so than in my home country, and THAT feeling is something as worth celebrating on July 4 2026 - so beautifully said ❤️",
+      "author": {
+        "id": "1236956351106080768",
+        "name": "Maria",
+        "screenName": "mariadlzollo",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/1785394969513209856/R7UJNGUy_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 8,
+        "retweets": 1,
+        "replies": 5,
+        "quotes": 0,
+        "views": 5465,
+        "bookmarks": 4
+      },
+      "createdAt": "Sun Jul 05 09:42:47 +0000 2026",
+      "createdAtLocal": "2026-07-05 05:42",
+      "createdAtISO": "2026-07-05T09:42:47+00:00",
+      "media": [],
+      "urls": [],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073742888584835478",
+      "text": "loved AI Engineer summits in NY both times, Singapore last month was great, and then ofc this was the one i couldn’t make.\n\nhuge thanks @swyx and everyone who made the stream \nhttps://t.co/zdznfNhkVs",
+      "author": {
+        "id": "945223938518470656",
+        "name": "Niko(la)",
+        "screenName": "nibzard",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2030244176361574400/5eRgiC2i_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 4,
+        "retweets": 1,
+        "replies": 2,
+        "quotes": 0,
+        "views": 4060,
+        "bookmarks": 4
+      },
+      "createdAt": "Sun Jul 05 12:16:47 +0000 2026",
+      "createdAtLocal": "2026-07-05 08:16",
+      "createdAtISO": "2026-07-05T12:16:47+00:00",
+      "media": [],
+      "urls": [
+        "https://axinbox.com/d/01KWJ7BNCV1V5B72C7Q1Q66WSH/index.html/preview"
+      ],
+      "isRetweet": true,
+      "retweetedBy": "swyx",
+      "lang": "en",
+      "score": null
+    },
+    {
+      "id": "2073657149067321412",
+      "text": "https://t.co/2QgCtbaEw7",
+      "author": {
+        "id": "33521530",
+        "name": "swyx",
+        "screenName": "swyx",
+        "profileImageUrl": "https://pbs.twimg.com/profile_images/2073162797354217472/hNny55eF_normal.jpg",
+        "verified": true
+      },
+      "metrics": {
+        "likes": 566,
+        "retweets": 26,
+        "replies": 39,
+        "quotes": 14,
+        "views": 174988,
+        "bookmarks": 358
+      },
+      "createdAt": "Sun Jul 05 06:36:05 +0000 2026",
+      "createdAtLocal": "2026-07-05 02:36",
+      "createdAtISO": "2026-07-05T06:36:05+00:00",
+      "media": [],
+      "urls": [
+        "http://x.com/i/article/2073655200364335104"
+      ],
+      "isRetweet": false,
+      "retweetedBy": null,
+      "lang": "zxx",
+      "score": null,
+      "articleTitle": "What America has meant to me"
+    }
+  ]
+}
