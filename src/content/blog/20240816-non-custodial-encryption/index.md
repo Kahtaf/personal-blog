@@ -1,5 +1,6 @@
 ---
 title: "What If Your Cloud Provider Literally Could Not Read Your Files?"
+seoTitle: "Non-Custodial Encryption for Cloud Storage"
 description: "How non-custodial encryption lets you store data with any provider while keeping the keys to yourself."
 date: "Aug 16 2024"
 ---

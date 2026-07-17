@@ -34,7 +34,7 @@ export default function MagicTweetCard({
           <a href={`https://x.com/${handle}`} target="_blank" rel="noreferrer" className="shrink-0 no-underline" aria-label={`Open ${author}'s X profile`}>
             <img
               title={`Profile picture of ${author}`}
-              alt=""
+              alt={`Profile picture of ${author}`}
               height={48}
               width={48}
               src={avatarUrl}
