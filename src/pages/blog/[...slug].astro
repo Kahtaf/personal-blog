@@ -24,7 +24,7 @@ const { Content } = await render(post);
 const isDev = import.meta.env.DEV;
 ---
 
-<PageLayout title={post.data.title} description={post.data.description} type="article" publishDate={post.data.date} author={SITE.NAME}>
+<PageLayout title={post.data.title} seoTitle={post.data.seoTitle} description={post.data.description} type="article" publishDate={post.data.date} author={SITE.NAME}>
   <Container>
     <div class="animate">
       <BackToPrev href="/blog">

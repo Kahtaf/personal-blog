@@ -6,6 +6,7 @@ import { SITE } from "@consts";
 
 type Props = {
   title: string;
+  seoTitle?: string;
   description: string;
   image?: string;
   type?: "website" | "article";
@@ -15,13 +16,13 @@ type Props = {
   noindex?: boolean;
 };
 
-const { title, description, image, type, publishDate, author, page, noindex } = Astro.props;
+const { title, seoTitle = title, description, image, type, publishDate, author, page, noindex } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <Head title={title === SITE.NAME ? title : `${title} | ${SITE.NAME}`} description={description} image={image} type={type} publishDate={publishDate} author={author} page={page} noindex={noindex} />
+    <Head title={seoTitle === SITE.NAME ? seoTitle : `${seoTitle} | ${SITE.NAME}`} description={description} image={image} type={type} publishDate={publishDate} author={author} page={page} noindex={noindex} />
   </head>
   <body>
     <Header />
