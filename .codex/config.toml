@@ -1,0 +1,7 @@
+[mcp_servers.review-loop]
+command = "node"
+args = [
+    "./node_modules/review-loop/dist/mcp/server.js",
+    "--storage",
+    "./.blog-edits/review-loop.json",
+]
