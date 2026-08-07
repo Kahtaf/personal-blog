@@ -49,6 +49,15 @@ article {
   @apply prose-headings:text-black prose-headings:dark:text-white;
 }
 
+article pre,
+article table {
+  @apply max-w-full overflow-x-auto overscroll-x-contain;
+}
+
+article table {
+  @apply block;
+}
+
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-2;

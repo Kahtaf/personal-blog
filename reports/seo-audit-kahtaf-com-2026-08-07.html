@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kahtaf.com SEO review</title>
+<style>
+  :root { --bg: #e2e9f3; --ink: #122650; --muted: #4f5f79; --rule: #c2cddd; --rule-strong: #122650; }
+  html { background: var(--bg); color-scheme: light; }
+  body { background: var(--bg); color: var(--ink); font-family: Charter, Georgia, "Times New Roman", serif; line-height: 1.55; margin: 0; padding: 3.5rem 1.5rem 5rem; }
+  .page { max-width: 860px; margin: 0 auto; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0.75rem 0 0.25rem; text-wrap: balance; }
+  .subtitle { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.02rem; max-width: 46rem; }
+  .dateline { color: var(--muted); font-size: 0.92rem; margin: 0 0 1.1rem; }
+  h2 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-size: 1.25rem; margin: 3rem 0 0.75rem; }
+  .lede { font-size: 1.05rem; max-width: 46rem; }
+  section > p { max-width: 46rem; }
+  hr.heavy { border: 0; border-top: 2px solid var(--rule-strong); margin: 3rem 0 0; }
+  section .cols:first-of-type { border-top: 1px solid var(--rule); }
+  .cols { display: grid; grid-template-columns: minmax(180px, 5fr) 8fr; gap: 1.25rem; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); }
+  .row-title { font-size: 1.12rem; margin: 0; }
+  .row-title .tag { display: block; margin-top: 0.35rem; }
+  .cols > div p { margin: 0 0 0.6rem; color: var(--muted); font-size: 0.95rem; }
+  .cols > div p:last-child { margin-bottom: 0; }
+  .cols > div p.fix { color: var(--ink); }
+  .fix b { font-weight: 600; }
+  code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.85em; word-break: break-word; }
+  ol { padding-left: 1.3rem; max-width: 44rem; }
+  ol li { margin-bottom: 0.5rem; }
+  ul.plain { list-style: none; padding: 0; max-width: 46rem; }
+  ul.plain li { padding: 0.5rem 0; border-bottom: 1px solid var(--rule); font-size: 0.98rem; }
+  ul.plain li:first-child { border-top: 1px solid var(--rule); }
+  ul.plain .why { color: var(--muted); }
+  footer { margin-top: 4rem; color: var(--muted); font-size: 0.88rem; max-width: 46rem; }
+  @media (max-width: 620px) { .cols { grid-template-columns: 1fr; gap: 0.4rem; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>kahtaf.com</h1>
+    <p class="dateline">Reviewed August 7, 2026</p>
+    <p class="subtitle">The site is live, crawlable, and has strong technical foundations. The main gap is a broken email path on the résumé, so the one thing to do this week is restore those contact links. This review also covers small metadata refinements, a focused content direction, and the strengths already in place.</p>
+  </header>
+
+  <section>
+    <h2>Where the site stands</h2>
+    <p class="lede">The crawl found 32 pages and a healthy public site: the homepage returned HTTP 200, the sitemap is published, and the core pages have titles, descriptions, canonical URLs, and structured data. A canonical URL is the preferred version of a page that search engines should treat as the original.</p>
+    <p class="lede">The one problem worth fixing first is on the résumé. Its two visible email links point to a missing internal Cloudflare address, so visitors and search crawlers reach a 404 page instead of an email action.</p>
+  </section>
+
+  <hr class="heavy">
+
+  <section>
+    <h2>If you only do one thing</h2>
+    <p class="lede">Restore the two email links on the résumé so each opens a new message to <code>kahtaf@gmail.com</code>.</p>
+    <p>This is the only critical crawl finding. The résumé is a high-intent page for prospective employers and collaborators, and its email address is already displayed there, so the expected action needs to work.</p>
+    <ol>
+      <li>Open <code>src/content/resume/index.mdx</code> and keep each email link in the form <code>&lt;a href="mailto:kahtaf@gmail.com"&gt;kahtaf@gmail.com&lt;/a&gt;</code>.</li>
+      <li>Redeploy the site. If someone else maintains it, send: <i>“Please confirm the résumé email links use <code>mailto:kahtaf@gmail.com</code> and are not rewritten to <code>/cdn-cgi/l/email-protection</code>. After deployment, please test both links from the public résumé page.”</i></li>
+      <li>Open <code>https://kahtaf.com/resume/</code> in an incognito window and select each email link. Each should open a mail composer, and <code>https://kahtaf.com/cdn-cgi/l/email-protection</code> should no longer be linked from the page.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Small fixes, in order</h2>
+    <div class="cols">
+      <div><p class="row-title">Broken résumé email links <span class="mono tag">critical</span></p></div>
+      <div><p>The live résumé contains two links beginning <code>href="/cdn-cgi/l/email-protection#…"</code>; the target returns HTTP 404.</p><p class="fix"><b>Fix:</b> Keep both links as plain <code>mailto:kahtaf@gmail.com</code> links, deploy, and test them from the public page.</p></div>
+    </div>
+    <div class="cols">
+      <div><p class="row-title">Loop Engineering description <span class="mono tag">low</span></p></div>
+      <div><p>The crawler measured the description at 163 characters: <code>Agent loops can write, test, and retry at machine speed…</code></p><p class="fix"><b>Fix:</b> Trim it to 160 characters or fewer while keeping “agent loops” and “human review,” for example: <code>How to design the human review point in agent loops, so engineers can understand and redirect work at machine speed.</code></p></div>
+    </div>
+    <div class="cols">
+      <div><p class="row-title">Web Proxies description <span class="mono tag">low</span></p></div>
+      <div><p>The live description is 167 characters: <code>Service workers, URL rewriting, and the Scramjet generation…</code></p><p class="fix"><b>Fix:</b> Shorten it to 160 characters or fewer, for example: <code>How browser-based web proxies use service workers and URL rewriting, how they differ from traditional proxies, and where they break.</code></p></div>
+    </div>
+    <div class="cols">
+      <div><p class="row-title">Three long page titles <span class="mono tag">low</span></p></div>
+      <div><p>The crawler measured these titles at 61–62 characters: <code>The human loop is the one nobody is engineering | Kahtaf Alam</code>, <code>Scrapers vs. Sites That Don't Want to Be Scraped | Kahtaf Alam</code>, and <code>Browsing Inside a Browser: How Web Proxies Work | Kahtaf Alam</code>.</p><p class="fix"><b>Fix:</b> Treat this as a later refinement. Keep the key subject at the start and shorten only if a clearer title is available; the current titles are readable and need no urgent rewrite.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where to focus first</h2>
+    <p>Build around browser automation for AI agents. It matches the existing hands-on comparison of agent-browser, Camoufox, and Scrapling, and the keyword data shows several specific, low-difficulty queries where a practical guide can earn an early foothold.</p>
+    <div class="cols"><div><p class="row-title">agent-browser skill <span class="mono tag">480 searches/mo</span></p></div><div><p>Keyword difficulty 8/100. People want practical help using this specific tool.</p><p class="fix"><b>Make:</b> A setup and troubleshooting guide that links to the existing scraper comparison and includes a small, reproducible example.</p></div></div>
+    <div class="cols"><div><p class="row-title">browser tools MCP <span class="mono tag">480 searches/mo</span></p></div><div><p>Keyword difficulty 26/100. This is a focused query that fits the site’s agent and browser expertise.</p><p class="fix"><b>Make:</b> A guide to choosing and wiring browser tools into an MCP-based agent workflow, with a decision table for local versus remote browsers.</p></div></div>
+    <div class="cols"><div><p class="row-title">web browser engineering <span class="mono tag">40 searches/mo</span></p></div><div><p>Keyword difficulty 9/100. The volume is small, but the search is closely aligned with the site’s technical voice.</p><p class="fix"><b>Make:</b> An opinionated essay on the engineering trade-offs behind reliable browser automation for agents.</p></div></div>
+    <div class="cols"><div><p class="row-title">browser use playwright <span class="mono tag">30 searches/mo</span></p></div><div><p>Keyword difficulty 27/100. It is a narrow comparison query, suitable for a clearly scoped tutorial.</p><p class="fix"><b>Make:</b> A comparison of Browser Use and Playwright for agent workflows, including when direct Playwright control is the simpler choice.</p></div></div>
+  </section>
+
+  <section>
+    <h2>Already working</h2>
+    <ul class="plain">
+      <li>The homepage returns HTTP 200 and the crawl found 32 pages. <span class="why">Search engines can reach the site.</span></li>
+      <li><code>robots.txt</code> allows crawling and names <code>https://kahtaf.com/sitemap-index.xml</code>. <span class="why">This helps crawlers discover public pages.</span></li>
+      <li>The homepage includes a canonical URL, a clear description, and WebSite, Person, and ProfilePage structured data. <span class="why">Structured data is machine-readable context about the site and author.</span></li>
+      <li>OpenSEO recorded 37 backlinks from 30 referring domains, with no broken backlinks reported. <span class="why">The domain already has a small external discovery base.</span></li>
+    </ul>
+  </section>
+
+  <footer><p>Reviewed August 7, 2026. Crawl, backlink, domain, and keyword data came from OpenSEO. OpenSEO found no recorded organic traffic or keyword data for the domain. I independently fetched the homepage, robots file, sitemap, résumé, and affected blog pages; the email target was also verified to return HTTP 404.</p></footer>
+</div>
+</body>
+</html>

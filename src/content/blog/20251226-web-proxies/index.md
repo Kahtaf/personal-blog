@@ -1,6 +1,6 @@
 ---
-title: "Browsing Inside a Browser: How Web Proxies Work"
-description: "Service workers, URL rewriting, and the Scramjet generation. An explainer on browser-based web proxies, how they differ from traditional proxies, and where they break."
+title: "How Browser-Based Web Proxies Work"
+description: "How browser-based web proxies use service workers and URL rewriting, how they differ from traditional proxies, and where they break."
 date: "Dec 26 2025"
 ---
 

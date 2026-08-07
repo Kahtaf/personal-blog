@@ -1,5 +1,5 @@
 ---
-title: "Scrapers vs. Sites That Don't Want to Be Scraped"
+title: "Stealth Browser Tools for AI Agents"
 description: "Comparing agent-browser, Camoufox, and Scrapling to find the best stealth scraper for AI agents."
 date: "Mar 04 2026"
 ---
