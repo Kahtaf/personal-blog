@@ -162,4 +162,10 @@ function initBlogPhotoSwipe() {
 }
 
 document.addEventListener("astro:page-load", initBlogPhotoSwipe);
-document.addEventListener("DOMContentLoaded", initBlogPhotoSwipe);
+
+// Delayed scripts may execute after both initial page-load events have fired.
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initBlogPhotoSwipe, { once: true });
+} else {
+  initBlogPhotoSwipe();
+}
